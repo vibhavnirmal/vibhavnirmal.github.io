@@ -1,0 +1,78 @@
+body {
+    font-family: Bookman old style, cursive;
+}
+
+#name{
+    font-family: Bookman Old Style,cursive;
+    font-size: 70px;
+}
+
+.header {
+    text-align: center;
+    background-color: #F9F9F9;
+    color:#505050;
+    padding: 5px;
+}
+
+#icons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #F9F9F9;
+    font-size: 35px;
+    text-align: center;
+}
+
+#socialIcon{
+    color: #505050;
+}
+
+#msg {
+    font-family: Bookman old style, cursive;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 5px;
+}
+
+#services {
+    background-color: white;
+    font-family: Bookman old style, cursive;
+    text-align: center;
+}
+#about{
+    background-color: #505050;
+    color: #F9F9F9;
+    text-align: center;
+    font-family: Bookman Old Style;
+    font-size: 25px;
+}
+
+#exmp,#chl{
+    font-family: Bookman Old Style;
+    font-size: 20px;
+}
+
+#experience{
+    font-family: Bookman Old Style;
+    font-size: 30px;
+}
+
+#freelance{
+    font-family: Bookman Old Style;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 120px;
+    padding-right: 120px;
+    background-color: #505050;
+    color: #F9F9F9;
+}
+
+#footer{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Bookman Old Style;
+    font-size: 20px;
+}

@@ -1,0 +1,29 @@
+body
+{
+    background-image: url("images/vin.jpg");
+}
+
+#maincontent{
+    margin-top: 60px; 
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+#Name{
+    font-size: 75px;
+}
+
+p{
+    font-size: 25px;
+}
+#links{
+    font-size: 20px !important; 
+}
+#icons {
+    background-color: #F9F9F9;
+    font-size: 35px;
+}
+
+#socialIcon{
+    color: #505050;
+}
