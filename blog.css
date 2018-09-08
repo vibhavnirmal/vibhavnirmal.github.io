@@ -1,6 +1,59 @@
 body{
+/*
     background-image: url("images/vin.jpg");
     background-repeat: no-repeat !important;
+*/
+}
+.container-fluid{
+    background-color: #F9F9F9;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.header {
+    text-align: center;
+    background-color: #F9F9F9;
+    color:#505050;
+    padding: 5px;
+}
+#back{
+    position: fixed;
+    left: 5px;
+    padding: 15px;
+    font-size: 50px;
+    text-decoration: none;   
+}
+#name{
+    font-family: Bookman Old Style,cursive;
+}
+#icons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #F9F9F9;
+    font-size: 35px;
+    text-align: center;
+}
+.discription{
+    font-family: Bookman Old Style;
+    background-color: #F9F9F9;
+    font-size: 20px;
+    padding-top: 10px;
+    border-left: 2px #A0A0A0 dotted;
+}
+.content{
+    background-color: #F9F9F9;
+    font-family: Bookman Old Style;
+    font-size: 30px;
+    text-align: center;
+    border-right: 2px #A0A0A0 dotted;
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
 }
 #workingon{
     text-align: center;
@@ -8,9 +61,11 @@ body{
     font-family: Bookman Old Style;
     font-size: 50px;
 }
-#back{
-    float: left;
-    padding: 15px;
-    font-size: 50px;
-    text-decoration: none;
+#footer{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Bookman Old Style;
+    font-size: 20px;
+    background-color: #F9F9F9;
 }
