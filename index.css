@@ -9,7 +9,10 @@ body
     font-family: "Bookman Old Style";
     text-align: center;
 }
-
+#button{
+    width: 200px;
+    margin-bottom: 5px;
+}
 #Name{
     font-size: 75px;
 }
