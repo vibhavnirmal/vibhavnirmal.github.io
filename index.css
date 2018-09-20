@@ -3,7 +3,6 @@ body
     background-image: url("images/vin.jpg");
     background-repeat: no-repeat !important;
 }
-
 #maincontent{
     margin-top: 60px; 
     font-family: "Bookman Old Style";
@@ -16,7 +15,6 @@ body
 #Name{
     font-size: 75px;
 }
-
 p{
     font-size: 25px;
 }
@@ -27,7 +25,6 @@ p{
     background-color: #F9F9F9;
     font-size: 35px;
 }
-
 #socialIcon{
     color: #505050;
 }
