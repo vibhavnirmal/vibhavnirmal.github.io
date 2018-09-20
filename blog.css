@@ -7,7 +7,6 @@
     text-align: center;
     background-color: #F9F9F9;
     color:#505050;
-    padding: 5px;
 }
 #back{
     position: fixed;
@@ -48,16 +47,23 @@
 .discription{
     font-family: Bookman Old Style;
     background-color: #F9F9F9;
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 10px;
-    border-left: 2px #A0A0A0 dotted;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#disc{
+    font-size: 20px;
 }
 .content{
     background-color: #F9F9F9;
     font-family: Bookman Old Style;
+    text-align: left;
     font-size: 30px;
-    text-align: center;
-    border-right: 2px #A0A0A0 dotted;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 #head,p{
     margin: 0px !important;
@@ -91,9 +97,9 @@ ul{
     font-size: 30px;
     background-color: #F9F9F9;
     text-align: center;
-    padding-top: 15px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
     padding-bottom: 15px;
     margin: 0px;
 }
