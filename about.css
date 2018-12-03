@@ -36,17 +36,12 @@ body {
 }
 #about{
     background-color: #F9F9F9;
-    text-align: center;
     font-family: Bookman Old Style;
     font-size: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 120px;
-    padding-right: 120px;
-    
 }
 #me{
     border-bottom: 2px black solid;
+    text-align: center;
     border-top: 2px black solid;
     font-family: Bookman Old Style;
     font-size: 40px;
