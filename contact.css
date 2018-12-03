@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    background-color: #F9F9F9;
+}
+#Contact{
+    padding-top: 70px;
+    font-family: Bookman Old Style;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 35px;
+    text-align: center;
+}
+#socialIcon{
+    color: #505050;
+}
