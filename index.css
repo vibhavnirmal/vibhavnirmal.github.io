@@ -1,16 +1,14 @@
 body
 {
-    background-image: url("images/vin.jpg");
-    background-repeat: no-repeat !important;
 }
 #maincontent{
-    margin-top: 60px; 
+    margin-top: 20px; 
     font-family: "Bookman Old Style";
     text-align: center;
 }
 #button{
     width: 200px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 #Name{
     font-size: 75px;
@@ -22,9 +20,12 @@ p{
     font-size: 20px !important; 
 }
 #icons {
-    background-color: #F9F9F9;
+    text-align: center;
     font-size: 35px;
 }
 #socialIcon{
     color: #505050;
+}
+#slogan{
+    padding-top: 20px;
 }
