@@ -71,6 +71,10 @@ ul{
     text-align: center;
     margin: 0px;
 }
+#title{
+    font-size: 25px;
+    text-decoration: underline;
+}
 #footer{
     padding-top: 30px;
     padding-bottom: 10px;
