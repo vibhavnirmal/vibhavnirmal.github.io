@@ -10,6 +10,7 @@
 }
 #name{
     font-family: Bookman Old Style,cursive;
+    font-size: 40px;
 }
 #icons {
     margin-top: 5px;
@@ -19,16 +20,17 @@
 #freelance{
     font-family: Bookman Old Style;
     font-size: 35px;
-    text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 120px;
-    padding-right: 120px;
 }
 #Content{
     font-family: Bookman Old Style;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
+}
+#info{
+    font-family: Bookman Old Style;
+    font-size: 25px;
 }
 #discription{
     font-family: Bookman Old Style;

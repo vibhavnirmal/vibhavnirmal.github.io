@@ -9,57 +9,65 @@
    </head>
    <body>     
     <div class="header" id="head">
-        <div> 
-           <a id="back"><i class="fa fa-arrow-circle-left" onclick="window.history.go(-1); return false;"></i></a>
-            <p id="name" style="font-size: 50px;">Welcome to my <span style="color: #000000; font-size: 60px;">First Blog</span></p>
+        <div class="container"> 
+            <a id="back"><i class="fa fa-arrow-circle-left" onclick="window.history.go(-1); return false;"></i></a>
+            <p id="name">Welcome to </p>
+            <p id="name"><span style="color: #000000; font-size: 60px;">First Blog</span></p>
         </div>
         <div id="icons">
             <a href="https://www.instagram.com/techie_vin/"><i id="socialIcon" class="fa fa-instagram"></i></a>
             <a href="https://in.linkedin.com/in/vibhav-nirmal-362b51124"><i id="socialIcon" class="fa fa-linkedin-square"></i></a>
-            <a href="https://twitter.com/vibhavknirmal"><i id="socialIcon" class="fa fa-twitter-square"></i></a>
+            <a href="https://twitter.com/vibhavnirmal"><i id="socialIcon" class="fa fa-twitter-square"></i></a>
             <a href="https://github.com/vibhavnirmal"><i id="socialIcon" class="fa fa-github-square"></i></a>
         </div>
     </div>
     <div id="maintitle">
-            <p>First Blog-17/09/2018 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span style="font-size: 40px;">Get Instagram Chats Offline</span></p>
+        <p>First Blog-17/09/2018</p>
+        <p><span style="font-size: 40px;">Get Instagram Chats Offline</span></p>
     </div>
-    <div id="Content">
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is instagram offline chat save script. I have written this script for those who want to have their instagram chats saved in .txt format.</p><br>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This script works completely offline. And it only works for personal chats right now. But I am working to make it for Group chats also.</p><br>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can fork the script if you want from <a href="https://github.com/vibhavnirmal/InstaChatSave">my github account</a> and do changes as you wish. I am making this open source so that everyone can use it and I can know if there are any flaws in my script.</p><br>
+    <div id="info">
+        <div class="container">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is instagram offline chat save script. I have written this script for those who want to have their instagram chats saved in .txt format.</p><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This script works completely offline. And it only works for personal chats right now. But I am working to make it for Group chats also.</p><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can fork the script if you want from <a href="https://github.com/vibhavnirmal/InstaChatSave">my github account</a> and do changes as you wish. I am making this open source so that everyone can use it and I can know if there are any flaws in my script.</p><br>
+        </div>
         
-        <div style="text-align: center;"><a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip"><button>Download Here</button></a></div><br>
-        <p style="font-size: 25px;">About InstaChatSave</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy to read Instagram messages after downloading json file of the chat.</p><br>
+        <div class="container" id="content">
+            <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip"><button>Download Here</button></a>
+        </div>
         
-        <p style="font-size: 22px;">How To Use:-</p>
+        <br>
+        <div class="container">
+            <p style="font-size: 28px; text-decoration: underline;">About InstaChatSave :-</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy to read Instagram messages after downloading json file of the chat.</p><br>
 
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First of all download the chat backup data from your instagram application's settings.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There will be an option called "Data Download" under privacy and security tab.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One zip file will be sent over your email. You must download that zip file in your computer/laptop.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once that is downloaded and extracted in a folder, download the file which is given here.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now copy/cut Messages.py file in the folder where your messages.json file from instagram backup data is.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then double click on the Messages.py file and enter the username of the person. </p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the chats will be saved as .txt file in that folder.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you find anything to be improved, Please Let me know.</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank You.</p>
-        <p style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Don't Copy the idea and don't use it directly without giving Credits.</p>
-        
+            <p style="font-size: 28px;  text-decoration: underline;">How To Use:-</p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First of all download the chat's backup data from your instagram application's settings. If that is not working try in web-browser.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There will be an option called "Data Download" under privacy and security tab.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One zip file will be sent over your email. You must download that zip file in your computer/laptop.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once that is downloaded and extracted in a folder, download the file which is given <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip">here</a>.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now copy/cut Messages.py file in the folder where your messages.json file from instagram backup data is.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then double click on the Messages.py file and enter the username of the person. </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the chats will be saved as .txt file in that folder.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you find anything to be improved, Please Let me know.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank You.</p>
+            <p style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Don't Copy the idea and don't use it directly without giving Credits.</p>
+        </div>
     </div>
-    <div id="freelance">
-        <p>How can I help You ?</p>
-        <span >
-            I’m currently available for freelance work.
-        <p style="font-size: 25px; font-family: Bookman Old Style;">
-            If you have a project that you want to get started, if you think you need my help with something, then get in touch. My email id is given below.
+    <div class="container" id="freelance">
+        <p style="font-size: 28px;  text-decoration: underline;">
+            How can I help You?
         </p>
-        </span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;I’m currently available for freelance work</span>
+        <p style="font-size: 25px; font-family: Bookman Old Style;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have any project that you want to get started or you want any help with existing project, then get in touch and send me details about it. My email id is given below.
+        </p>
     </div>
     <footer>
        <div id="footer">
         <div>
-            <p>Contect me...<a href="mailto:techie23.vin@gmail.com">techie23.vin@gmail.com</a></p>
+            <p>Contact me...<a href="mailto:techie23.vin@gmail.com">techie23.vin@gmail.com</a></p>
         </div>
         <div>
            © 2018 <a href="https://vibhavnirmal.github.io/">Vibhav Nirmal</a> All Rights Reserved.
