@@ -1,12 +1,5 @@
-.container-fluid{
-    background-color: #F9F9F9;
-    margin: 0px !important;
-    padding: 0px !important;
-}
 .header {
     text-align: center;
-    background-color: #F9F9F9;
-    color:#505050;
 }
 #back{
     position: fixed;
@@ -20,7 +13,6 @@
 }
 #icons {
     margin-top: 5px;
-    background-color: #F9F9F9;
     font-size: 35px;
     text-align: center;
 }
@@ -32,38 +24,18 @@
     padding-bottom: 20px;
     padding-left: 120px;
     padding-right: 120px;
-    background-color: #505050;
-    color: #ffffff;
 }
 #Content{
     font-family: Bookman Old Style;
-    background-color: #F9F9F9;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 100px;
+    font-size: 30px;
+    text-align: center;
 }
-.discription{
+#discription{
     font-family: Bookman Old Style;
-    background-color: #F9F9F9;
     font-size: 25px;
-    padding-top: 10px;
-    padding-left: 200px;
-    padding-right: 200px;
 }
 #disc{
     font-size: 20px;
-}
-.content{
-    background-color: #F9F9F9;
-    font-family: Bookman Old Style;
-    text-align: left;
-    font-size: 30px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 50px;
-    padding-top: 50px;
 }
 #head,p{
     margin: 0px !important;
@@ -79,7 +51,6 @@ ul{
     padding-left: 40px;
 }
 #maintitle{
-    background-color: #F9F9F9;
     font-family: Bookman Old Style;
     font-size: 30px;
     text-align: center;
@@ -95,12 +66,7 @@ ul{
 .quote{
     font-family: Bookman Old Style;
     font-size: 30px;
-    background-color: #F9F9F9;
     text-align: center;
-    padding-top: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 15px;
     margin: 0px;
 }
 #footer{
@@ -109,5 +75,4 @@ ul{
     text-align: center;
     font-family: Bookman Old Style;
     font-size: 20px;
-    background-color: #F9F9F9;
 }
