@@ -15,7 +15,7 @@ body{
     text-decoration: none;   
 }
 #name{
-    font-family: Bookman Old Style,cursive;
+    
     font-size: 40px;
 }
 #icons {
@@ -24,22 +24,22 @@ body{
     text-align: center;
 }
 #freelance{
-    font-family: Bookman Old Style;
+    
     font-size: 35px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 #Content{
-    font-family: Bookman Old Style;
+    
     font-size: 25px;
     text-align: center;
 }
 #info{
-    font-family: Bookman Old Style;
+    
     font-size: 25px;
 }
 #discription{
-    font-family: Bookman Old Style;
+    
     font-size: 25px;
 }
 #disc{
@@ -59,7 +59,7 @@ ul{
     padding-left: 40px;
 }
 #maintitle{
-    font-family: Bookman Old Style;
+    
     font-size: 30px;
     text-align: center;
     border-top: 2px #A0A0A0 dotted;
@@ -68,11 +68,11 @@ ul{
 #workingon{
     text-align: center;
     padding-top: 250px;
-    font-family: Bookman Old Style;
+    
     font-size: 50px;
 }
 .quote{
-    font-family: Bookman Old Style;
+    
     font-size: 30px;
     text-align: center;
     margin: 0px;
@@ -85,6 +85,6 @@ ul{
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
-    font-family: Bookman Old Style;
+    
     font-size: 20px;
 }
