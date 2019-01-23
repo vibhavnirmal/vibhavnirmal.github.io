@@ -46,6 +46,8 @@ p{
 }
 
 .slogan {
+    margin: 4px;
+    padding: 10px;
     background-color: yellow;
     box-shadow: 0px 0px 20px;
 }
