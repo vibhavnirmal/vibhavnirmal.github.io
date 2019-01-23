@@ -23,7 +23,8 @@ body {
 
 #button {
     margin: 5px;
-    width: 200px;
+    min-width: 280px;
+    max-width: 100%;
     font-size: 30px;
     background-color: yellow;
     color: black;
