@@ -1,5 +1,7 @@
 body {
-    font-family: Bookman old style, cursive;
+    font-family: 'Rancho', cursive !important;
+    font-weight: normal;
+    font-style: normal; 
     color: black;
 }
 #name{

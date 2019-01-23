@@ -1,6 +1,8 @@
 body{
     text-align: center;
-    : #F9F9F9;
+    font-family: 'Rancho', cursive !important;
+    font-weight: normal;
+    font-style: normal; 
 }
 #Contact{
     padding-top: 20px;
