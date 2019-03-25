@@ -1,65 +1,88 @@
 body {
-    background: url('images/bg.png') top right no-repeat;
+    /* background-image: linear-gradient(260deg,#2D82B5,#88CDF6, #2D82B5 ); */
+    background-image: radial-gradient(ellipse at bottom, #b2cecf, #D7E4E4);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     font-family: 'Rancho', cursive !important;
-    color: black !important;
+    color: #404040 !important;
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 #header {
-    background-image: linear-gradient(260deg, #2376ae, #c16ecf);
-    border-bottom: 2px solid blue;
     text-align: center;
     width: 100%;
 }
 
 #name {
-    font-size: 50px;
-    font-feature-settings: normal;
+    font-size: 60px;
     font-weight: 900;
     letter-spacing: 4px;
-    color: black;
 }
 
 #social {
-    font-size: 34px;
-    margin-top: 12px;
-    margin-right: 10px;
     text-align: center;
-    color: black;
-}
-
-#main {
-    text-align: center;
+    font-size: 25px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
 }
 
 #socialIcon {
-    text-decoration: none !important;
-    color: black;
+    color: #404040;
 }
 
-#sitemap {
-    border: none;
-    color: black;
-    margin-left: 30px;
-    margin-right: 30px;
+#social :hover {
+    font-size: 30px;
+    color: #d02552 !important;
 }
 
-#slogans {
-    font-size: 50px;
-    text-align: center;
-}
-
-.footer {
+/* Buttons */
+#nav {
     text-align: center;
     font-size: 25px;
+    line-height: 40px;
+    padding: 10px;
 }
 
-#base{
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    position: static;
+#blog {
+    margin: 20px;
+    color: #404040;
+}
+
+a#blog:hover {
+    font-size: 35px;
+    color: #d02552 !important;
+}
+
+#about {
+    margin: 20px;
+    color: #404040;
+}
+
+a#about:hover {
+    font-size: 35px;
+    color: #d02552 !important;
+}
+
+#contact {
+    margin: 20px;
+    color: #404040;
+}
+
+a#contact:hover {
+    font-size: 35px;
+    color: #d02552 !important;
+}
+
+#Me {
+    font-size: 20px;
+}
+
+#Motto {
+    font-size: 30px;
 }
