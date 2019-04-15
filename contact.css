@@ -1,24 +1,39 @@
-body{
-    text-align: center;
+body {
+    background-image: radial-gradient(ellipse at bottom, #b2cecf, #D7E4E4);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     font-family: 'Rancho', cursive !important;
-    font-weight: normal;
-    font-style: normal; 
+    color: #404040 !important;
+    overflow-x: hidden;
 }
-#Contact{
+
+.Contact {
     padding-top: 20px;
     font-size: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 35px;
     text-align: center;
 }
-#socialIcon{
-    color: #505050;
+
+#social {
+    text-align: center;
+    font-size: 25px;
 }
-#back{
+
+#socialIcon {
+    color: #404040;
+}
+
+#social :hover {
+    font-size: 30px;
+    color: #d02552 !important;
+}
+
+#back {
     position: fixed;
     left: 5px;
     padding: 15px;
-    font-size: 50px;
-    text-decoration: none;   
+    font-size: 30px;
+    text-decoration: none;
 }
