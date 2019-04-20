@@ -3,7 +3,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    font-family: 'Rancho', cursive !important;
+    font-family: 'Roboto Slab', sans-serif !important;
     color: #404040 !important;
 }
 
@@ -12,6 +12,7 @@ a {
 }
 
 #back {
+    font-family: 'Rancho', cursive !important;    
     float: left;
     font-size: 35px;
     text-decoration: none;
@@ -20,6 +21,7 @@ a {
 }
 
 #Name {
+    font-family: 'Rancho', cursive !important;
     margin-top: 30px;
     font-size: 70px;
     text-align: center;
@@ -57,20 +59,17 @@ a {
     padding: 5px;
 }
 
-#about {
-    font-size: 25px;
+.about {
+    font-size: 18px;
 }
 
 #me {
+    font-family: 'Rancho', cursive !important;
     border-bottom: 2px black solid;
     text-align: center;
     border-top: 2px black solid;
     font-size: 40px;
     font-weight: 400;
-}
-
-#services {
-    text-align: center;
 }
 
 #exmp,
@@ -79,11 +78,12 @@ a {
 }
 
 #experience {
-    ;
+    font-family: 'Rancho', cursive !important;
     font-size: 40px;
     font-weight: 400;
     border-bottom: 2px black solid;
     border-top: 2px black solid;
+    text-align: center;
 }
 
 #exp {

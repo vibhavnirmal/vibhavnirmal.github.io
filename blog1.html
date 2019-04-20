@@ -1,48 +1,49 @@
 <html>
-   <head>
-   <meta charset="UTF-8">
-   <meta name='viewport' content="width=device-width, initial-scale=1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, LDCE, MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="logos/vin.png" />
+    <meta name="description" content="I am a pyhton Programmer. I am currently working in Machine Learning and Computer Vision.">
     <title>Blog 1</title>
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
-   </head>
-   <body>     
-    <div class="header" id="head">
-        <div class="container"> 
-            <a id="back"><i class="fa fa-arrow-circle-left" onclick="window.history.go(-1); return false;"></i></a>
-            <p id="name">Welcome to </p>
-            <p id="name"><span style="color: #000000; font-size: 60px;">First Blog</span></p>
-        </div>
-        <div id="icons">
-            <a href="https://www.instagram.com/techie_vin/"><i id="socialIcon" class="fa fa-instagram"></i></a>
-            <a href="https://in.linkedin.com/in/vibhav-nirmal-362b51124"><i id="socialIcon" class="fa fa-linkedin-square"></i></a>
-            <a href="https://twitter.com/vibhavnirmal"><i id="socialIcon" class="fa fa-twitter-square"></i></a>
-            <a href="https://github.com/vibhavnirmal"><i id="socialIcon" class="fa fa-github-square"></i></a>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <a id="back"><i class="fa fa-arrow-circle-left" onclick="window.history.go(-1); return false;"></i> <span style="font-size: 22px;">Go Back</span></a>
+    </div>
+    <div class="container header">
+        <div class="container">
+            <p id="welcome">Welcome to my</p>
+            <p id="blogs"><span style="color: #000000; font-size: 45px;">First Blog</span></p>
         </div>
     </div>
     <div id="maintitle">
-        <p>First Blog-17/09/2018</p>
-        <p><span style="font-size: 40px;">Get Instagram Chats Offline</span></p>
-    </div>
-    <div id="info">
+        <p><span style="font-size: 30px;">Instagram Chats Offline</span><span id="title">17/09/2018</span> </p>
+    </div><br>
+    <div class="info">
         <div class="container">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is instagram offline chat save script. I have written this script for those who want to have their instagram chats saved in .txt format.</p><br>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This script works completely offline. And it only works for personal chats right now. But I am working to make it for Group chats also.</p><br>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can fork the script if you want from <a href="https://github.com/vibhavnirmal/InstaChatSave">my github account</a> and do changes as you wish. I am making this open source so that everyone can use it and I can know if there are any flaws in my script.</p><br>
         </div>
-        
-        <div class="container" id="content">
-            <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip"><button>Download Here</button></a>
+
+        <div class="container" id="downloadd">
+            <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip"><button id="dload">Download Here</button></a>
         </div>
-        
+
         <br>
         <div class="container">
-            <p id="title">About InstaChatSave :-</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy to read Instagram messages after downloading json file of the chat.</p><br>
+            <p id="titleabout">About InstaChatSave :-</p>
+            <p style="text-align: center;">Easy to read Instagram messages after downloading json file of the chat.</p><br>
 
-            <p id="title">How To Use:-</p>
+            <p id="howto">How To Use:-</p>
 
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First of all download the chat's backup data from your instagram application's settings. If that is not working try in web-browser.</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There will be an option called "Data Download" under privacy and security tab.</p>
@@ -57,23 +58,24 @@
         </div>
     </div>
     <div class="container" id="freelance">
-        <p id="title">
-            How can I help You?
-        </p>
+        <p id="help">How can I help You?</p>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;I’m currently available for freelance work</span>
         <p style="font-size: 25px; font-family: Bookman Old Style;">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have any project that you want to get started or you want any help with existing project, then get in touch and send me details about it. My email id is given below.
         </p>
     </div>
     <footer>
-       <div id="footer">
-        <div>
-            <p>Contact me...<a href="mailto:techie23.vin@gmail.com">techie23.vin@gmail.com</a></p>
+        <div id="footer">
+            <div class="container-fluid">
+                <p>Contact me.. &#64; <a href="mailto:techie23.vin@gmail.com"><span style="font-family: serif; font-size: 18px;">techie23.vin@gmail.com</span></a></p>
+            </div>
+            <div class="container-fluid" id="social">
+                <!--                <a href="mailto:techie23.vin@gmail.com" id="socialIcon" title="Email Me"><i class="fa fa-envelope"></i></a>-->
+                <a href="https://www.instagram.com/techie_vin/" id="socialIcon" title="Instagram Account"><i class="fab fa-instagram"> </i></a>
+                <a href="https://in.linkedin.com/in/vibhav-nirmal-362b51124" id="socialIcon" title="Linkedin Account"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/vibhavnirmal" id="socialIcon" title="Twitter Account"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://github.com/vibhavnirmal" id="socialIcon" title="Github"><i class="fab fa-github-square"></i></a>
+            </div>
         </div>
-        <div>
-           © 2019 <a href="https://vibhavnirmal.github.io/">Vibhav Nirmal</a> All Rights Reserved.
-        </div>
-       </div>
     </footer>
-   </body>
-</html>
+</body></html>
