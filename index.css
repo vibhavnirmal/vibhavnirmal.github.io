@@ -13,9 +13,10 @@ a {
     text-decoration: none !important;
 }
 
-#header {
+.header {
     text-align: center;
     width: 100%;
+    margin-top: 120px;
 }
 
 #name {
@@ -83,6 +84,21 @@ a#contact:hover {
     font-size: 20px;
 }
 
+.motto{
+    text-align: center;
+    margin-top: 50px;
+}
+
 #Motto {
     font-size: 30px;
+}
+
+@media only screen and (max-device-width: 480px){
+    .header{
+        margin-top: 35px;
+    }
+    
+    .motto{
+        margin: auto;
+    }
 }
