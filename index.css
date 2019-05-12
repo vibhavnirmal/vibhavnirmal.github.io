@@ -25,6 +25,17 @@ a {
     letter-spacing: 4px;
 }
 
+.lilrt {
+    margin-left: 500px;
+}
+
+.img1 {
+    position: absolute;
+    bottom: 0px;
+    z-index: -50;
+    opacity: 0.9;
+}
+
 #social {
     text-align: center;
     font-size: 25px;
@@ -33,7 +44,7 @@ a {
     position: absolute;
 }
 
-#socialIcon {
+.socialIcon {
     color: #404040;
 }
 
@@ -80,11 +91,15 @@ a#contact:hover {
     color: #d02552 !important;
 }
 
+.WMI {
+    margin: 20px;
+}
+
 #Me {
     font-size: 20px;
 }
 
-.motto{
+.motto {
     text-align: center;
     margin-top: 50px;
 }
@@ -93,12 +108,98 @@ a#contact:hover {
     font-size: 30px;
 }
 
-@media only screen and (max-device-width: 480px){
-    .header{
-        margin-top: 35px;
+@media only screen and (max-device-width: 480px) {
+    .header {
+        margin-top: 80px;
     }
-    
-    .motto{
+
+    .motto {
+        margin: 30px 10px 0px 10px;
+    }
+
+    .img1 {
+        display: none;
+    }
+
+    .lilrt {
+        margin: 0px;
+    }
+
+    .WMI {
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 785px) {
+    .header {
+        margin-top: 80px;
+    }
+
+    .motto {
+        margin: 30px 10px 0px 10px;
+    }
+
+    .img1 {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: -50;
+        opacity: 0.4;
+    }
+
+    .lilrt {
+        margin: 0px;
+    }
+
+    .WMI {
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 786px) and (max-device-width: 992px) {
+    .header {
+        margin-top: 80px;
+    }
+
+    .motto {
+        margin: 30px 10px 0px 10px;
+    }
+
+    .img1 {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: -50;
+        opacity: 0.4;
+    }
+
+    .lilrt {
+        margin: 0px;
+    }
+
+    .WMI {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-device-height: 568px) {
+    .header {
+        margin: 20px;
+    }
+
+    .motto {
         margin: auto;
+    }
+
+    .img1 {
+        display: none;
+    }
+
+    .lilrt {
+        margin: 0px;
+    }
+
+    .WMI {
+        margin: 0px;
     }
 }

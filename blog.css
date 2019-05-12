@@ -1,6 +1,6 @@
 body {
     background-image: radial-gradient(ellipse at bottom, #b2cecf, #D7E4E4);
-/*
+    /*
     background-attachment: fixed;
     background-size: cover;
 */
@@ -29,16 +29,6 @@ a {
     top: 10px;
 }
 
-@media only screen and (max-device-width: 480px) {
-    .header {
-        margin-top: 50px;
-    }
-
-    #back {
-        top: 3px;
-    }
-}
-
 #welcome {
     font-size: 35px;
     margin-top: 30px;
@@ -52,14 +42,6 @@ a {
 .discription {
     font-size: 20px;
     margin-right: 50px;
-}
-
-@media only screen and (max-device-width: 480px) {
-    .discription {
-        font-size: 18px;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
 }
 
 #freelance {
@@ -106,6 +88,8 @@ ul {
     font-size: 50px;
 }
 
+.blognames {}
+
 /*
 .quote {
     font-family: 'Rancho', sans-serif;
@@ -131,7 +115,7 @@ ul {
     position: relative;
 }
 
-#socialIcon {
+.socialIcon {
     color: #404040;
     margin-left: 10px;
     padding-top: 20px;
@@ -179,6 +163,9 @@ ul {
     border-radius: 10px;
 }
 
+.orderlist li{
+    padding: 10px 20px 0px 10px !important;
+}
 
 #downloadd {
     text-align: center;
@@ -199,4 +186,27 @@ ul {
     text-align: center;
     border-top: 2px black solid;
     font-size: 35px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .header {
+        margin-top: 50px;
+    }
+
+    #back {
+        top: 3px;
+    }
+
+    .discription {
+        font-size: 18px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    ul.blognames {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        list-style-type: none;
+    }
 }
