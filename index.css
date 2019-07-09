@@ -31,9 +31,17 @@ a {
 
 .img1 {
     position: absolute;
-    bottom: 0px;
+    top: 80px;
     z-index: -50;
     opacity: 0.9;
+}
+
+.center img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 0px;
 }
 
 #social {
@@ -101,7 +109,7 @@ a#contact:hover {
 
 .motto {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 #Motto {
@@ -141,10 +149,10 @@ a#contact:hover {
 
     .img1 {
         position: absolute;
-        left: 0px;
-        bottom: 0px;
+        left: 15%;
+        top: 80px;
         z-index: -50;
-        opacity: 0.4;
+        opacity: 0.15;
     }
 
     .lilrt {
@@ -167,10 +175,10 @@ a#contact:hover {
 
     .img1 {
         position: absolute;
-        left: 0px;
-        bottom: 0px;
+        left: 25%;
+        top: 80px;
         z-index: -50;
-        opacity: 0.4;
+        opacity: 0.15;
     }
 
     .lilrt {
