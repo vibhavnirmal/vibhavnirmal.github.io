@@ -23,6 +23,7 @@ a {
     font-size: 60px;
     font-weight: 900;
     letter-spacing: 4px;
+    color: #ffffffda !important;
 }
 
 .lilrt {
@@ -54,7 +55,7 @@ a {
 }
 
 .socialIcon {
-    color: #404040;
+    color: #ffffffda !important;
 }
 
 #social :hover {
@@ -68,11 +69,12 @@ a {
     font-size: 25px;
     line-height: 40px;
     padding: 10px;
+    color: #ffffffda !important;
 }
 
 #blog {
     margin: 20px;
-    color: #404040;
+    color: #ffffffda !important;
 }
 
 a#blog:hover {
@@ -82,7 +84,7 @@ a#blog:hover {
 
 #about {
     margin: 20px;
-    color: #404040;
+    color: #ffffffda !important;
 }
 
 a#about:hover {
@@ -92,7 +94,7 @@ a#about:hover {
 
 #contact {
     margin: 20px;
-    color: #404040;
+    color: #ffffffda !important;
 }
 
 a#contact:hover {
