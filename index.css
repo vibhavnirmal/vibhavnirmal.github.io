@@ -60,7 +60,7 @@ a {
 
 #social :hover {
     font-size: 30px;
-    color: #d02552 !important;
+    color: #000000 !important;
 }
 
 /* Buttons */
@@ -79,7 +79,7 @@ a {
 
 a#blog:hover {
     font-size: 35px;
-    color: #d02552 !important;
+    color: #000000 !important;
 }
 
 #about {
@@ -89,7 +89,7 @@ a#blog:hover {
 
 a#about:hover {
     font-size: 35px;
-    color: #d02552 !important;
+    color: #000000 !important;
 }
 
 #contact {
@@ -99,7 +99,7 @@ a#about:hover {
 
 a#contact:hover {
     font-size: 35px;
-    color: #d02552 !important;
+    color: #000000 !important;
 }
 
 .WMI {
