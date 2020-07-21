@@ -25,11 +25,17 @@ p{
     color: var(--font-color);
 }
 
+#maintitle{
+    padding: 20px 30px 0px 30px;
+}
+
+.content{
+    padding: 0px 15px 15px 15px;
+}
+
 .contentHere{
-    padding: 20px;
     border-radius: 20px;
-    border: 1px black;
-    border-style: ridge;
+    border: 9px double black;
 }
 
 footer{
@@ -43,4 +49,8 @@ footer{
 #newdate{
     float: none;
     font-size: 20px;
+}
+
+li{
+    color: var(--font-color);
 }

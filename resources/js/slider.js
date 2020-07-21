@@ -1,7 +1,6 @@
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
-  var pp = localStorage.getItem("theme", themeName);
   document.documentElement.className = themeName;
 }
 
@@ -18,10 +17,11 @@ function toggleTheme() {
 (function () {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-dark");
-    document.getElementById("slider").checked = false;
+    // console.log(document.getElementById("slider").checked)
+    // document.getElementById("slider").checked = true;
   } else {
     setTheme("theme-light");
-    document.getElementById("slider").checked = true;
+    // document.getElementById("slider").checked = false;
   }
 })();
 
@@ -31,8 +31,8 @@ function getTheme() {
     // document.documentElement.className = pp;
     console.log(pp);
     if (pp === "theme-dark") {
-      document.getElementById("slider").checked = false;
-    } else {
       document.getElementById("slider").checked = true;
+    } else {
+      document.getElementById("slider").checked = false;
     }
   }
