@@ -1,212 +1,46 @@
-body {
-    background-image: radial-gradient(ellipse at bottom, #b2cecf, #D7E4E4);
-    /*
-    background-attachment: fixed;
-    background-size: cover;
-*/
-    background-position: center;
-    font-family: 'Roboto Slab', sans-serif !important;
-    color: #404040 !important;
-    overflow-x: hidden;
+.theme-light {
+    --color-primary: #343E40;
+    --color-secondary: #F6F6F8;
+    --color-secondary-1: #dadada;
+    --color-border: #616161;
+    --color-accent: #4E6D72;
+    --font-color: #000000;
+    --font-color-hover: #5500c4;
+    --font-color-social: #9881fd;
 }
 
-a {
-    text-decoration: none !important;
+.theme-dark {
+    --color-primary: #84DCC6;
+    --color-secondary: #28313b;
+    --color-secondary-1: #3a4755;
+    --color-border: #535353;
+    --color-accent: #5c799b;
+    --font-color: #ffffff;
+    --font-color-hover: #ff5e5e;
+    --font-color-social: #b6b6b6;
 }
 
-.header {
-    text-align: center;
-    font-family: 'Rancho', cursive;
-}
-
-#back {
-    font-family: 'Rancho', cursive;
-    float: left;
-    font-size: 35px;
-    text-decoration: none;
-    position: absolute;
-    left: 15px;
-    top: 10px;
-}
-
-#welcome {
-    font-size: 35px;
-    margin-top: 30px;
-}
-
-#blogs {
-    font-size: 70px;
-    margin-top: 30px;
-}
-
-.discription {
-    font-size: 20px;
-    margin-right: 50px;
-}
-
-#freelance {
-    font-size: 35px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#Content {
-    font-family: 'Rancho' !important;
-    font-size: 25px;
-}
-
-#disc {
-    font-size: 20px;
-}
-
-#head,
-p {
-    margin: 0px !important;
-    padding: 0px !important;
-}
-
-ul {
-    display: block;
-    list-style-type: disc;
-    padding-top: 15px;
-    margin-bottom: 1px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
-}
-
-#maintitle {
-    font-size: 30px;
-    text-align: center;
-    border-top: 2px #A0A0A0 dotted;
-    border-bottom: 2px #A0A0A0 dotted;
-}
-
-#workingon {
-    text-align: center;
-    padding-top: 250px;
-    font-size: 50px;
-}
-
-.blognames {}
-
-/*
-.quote {
-    font-family: 'Rancho', sans-serif;
-    font-size: 30px;
-    text-align: center;
-    margin: 0px;
-}
-*/
-
-#icons {
-    position: absolute;
-    right: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 35px;
-}
-
-#social {
-    text-align: center;
-    font-size: 25px;
-    right: 0px;
-    bottom: 2px;
-    position: relative;
-}
-
-.socialIcon {
-    color: #404040;
-    margin-left: 10px;
-    padding-top: 20px;
-}
-
-#social :hover {
-    font-size: 30px;
-    color: #d02552 !important;
-}
-
-#footer {
-    font-family: 'Rancho', cursive !important;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 20px;
-}
-
-
-
-/*Blogs*/
-
-#title {
+p{
     font-size: 18px;
+    color: var(--font-color);
 }
 
-#help {
-    font-family: 'Rancho', cursive !important;
-    border-bottom: 2px black solid;
-    text-align: center;
-    border-top: 2px black solid;
-    font-size: 40px;
-    font-weight: 400;
+.contentHere{
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px black;
+    border-style: ridge;
 }
 
-.info {
-    font-size: 18px;
+footer{
+    padding-top: 50px;
 }
 
-#dload {
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    background-color: aliceblue;
-    border-radius: 10px;
+#dload{
+    float: right;
 }
 
-.orderlist li{
-    padding: 10px 20px 0px 10px !important;
-}
-
-#downloadd {
-    text-align: center;
-    align-content: center;
-}
-
-#titleabout {
-    font-family: 'Rancho', cursive !important;
-    border-bottom: 2px black solid;
-    text-align: center;
-    border-top: 2px black solid;
-    font-size: 35px;
-}
-
-#howto {
-    font-family: 'Rancho', cursive !important;
-    border-bottom: 2px black solid;
-    text-align: center;
-    border-top: 2px black solid;
-    font-size: 35px;
-}
-
-@media only screen and (max-device-width: 480px) {
-    .header {
-        margin-top: 50px;
-    }
-
-    #back {
-        top: 3px;
-    }
-
-    .discription {
-        font-size: 18px;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-
-    ul.blognames {
-        padding: 0px;
-        margin: 0px;
-        text-align: center;
-        list-style-type: none;
-    }
+#date{
+    float: none;
+    font-size: 20px;
 }

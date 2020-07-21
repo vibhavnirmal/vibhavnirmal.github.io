@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description"
+        content="I am a pyhton Programmer. I lobe solving problems with Machine Learning, Deep learning and Computer Vision.">
+    <title>Insta Chat Save | Vibhav Nirmal</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\blog.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="..\resources\js\slider.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        window.onload = function () {
+            getTheme()
+        };
+    </script>
+</head>
+
+
+<body class="bg">
+    <header>
+        <div class="topnav">
+            <a href="..\index.html">Home</a>
+            <a href="..\about.html">About Me</a>
+            <!-- <a href="contact.html">Contact Me</a> -->
+            <label id="switch" class="switch" style="position: absolute; right: 30px; top: 15px;">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <div id="main">
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-xs-12" style="text-align: center;" id="nav-socialMedia">
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-xs-12">
+                <div class="contentHere">
+                    <div id="maintitle">
+                        <span id="title">Instagram Chats Offline</span>
+                        <div class="comtainer-fluid">
+                            <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip">
+                                <button type="button" class="btn btn-primary" id="dload">Download</button>
+                            </a>
+                        </div>
+                        <br><span id="date">17/09/2018</span>
+                        <hr>
+                    </div>
+
+                    <div class="container-fluid" id="content" style="text-align: justify;">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is instagram offline chat saving script. I have
+                            written this script for those who want to have their instagram chats saved in .txt format.
+                        </p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This script works completely offline. And it only works
+                            for personal chats right now. But I am working to make it for Group chats also.</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can fork the script if you want from <a
+                                href="https://github.com/vibhavnirmal/InstaChatSave">my github account</a> and do
+                            changes as you wish. I am making this open source so that everyone can use it and I can know
+                            if there are any flaws in my script.</p>
+                    </div>
+                    <hr>
+                    <p id="howto">How To Use:-</p>
+
+                    <ol class="orderlist">
+                        <li>First of all download the chat's backup data from your instagram application's settings.
+                            If that is not working try in web-browser.</li>
+                        <li>There will be an option called "Data Download" under privacy and security tab.</li>
+                        <li>One zip file will be sent over your email. You must download that zip file in your
+                            computer/laptop.</li>
+                        <li>Once that is downloaded and extracted in a folder, download the file which is given <a
+                                href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip">here</a>.
+                        </li>
+                        <li>Now copy/cut Messages.py file in the folder where your messages.json file from instagram
+                            backup data is.</li>
+                        <li>Then double click on the Messages.py file and enter the username of the person. </li>
+                        <li>All the chats will be saved as .txt file in that folder.</li>
+                        <li>If you find anything to be improved, Please Let me know.</li>
+                    </ol>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank You.</p>
+
+                </div>
+            </div>
+
+            <div class="col-sm-5 col-md-5 col-xs-12">
+                <div class="container-fluid" id="nav-placeholder">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="motto">
+            <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
+        </div>
+        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small></p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        $(function () {
+            $("#nav-socialMedia").load("..\\social.html");
+        });
+        $(function () {
+            $("#nav-placeholder").load("..\\sideblog.html");
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+
+</html>

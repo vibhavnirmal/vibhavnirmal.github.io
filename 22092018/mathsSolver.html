@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description"
+        content="I am a pyhton Programmer. I lobe solving problems with Machine Learning, Deep learning and Computer Vision.">
+    <title>Maths Scripts | Vibhav Nirmal</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\blog.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="..\resources\js\slider.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        window.onload = function () {
+            getTheme()
+        };
+    </script>
+</head>
+
+<body class="bg">
+    <header>
+        <div class="topnav">
+            <a href="..\index.html">Home</a>
+            <a href="..\about.html">About Me</a>
+            <!-- <a href="contact.html">Contact Me</a> -->
+            <label id="switch" class="switch" style="position: absolute; right: 30px; top: 15px;">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <div id="main">
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-xs-12" style="text-align: center;" id="nav-socialMedia">
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-xs-12">
+                <div class="contentHere">
+                    <div id="maintitle">
+                        <span id="title">Mathematical Equations Solver</span>
+                        <div class="comtainer-fluid">
+                            <a href="https://github.com/vibhavnirmal/maths4/archive/master.zip">
+                                <button type="button" class="btn btn-primary" id="dload">Download</button>
+                            </a>
+                        </div>
+                        <br><span id="date">22/09/2018</span><hr>
+                    </div>
+                    <div class="container-fluid" id="content" style="text-align: justify;">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This script is used to solve mathematical problems based on bisection method. I wrote this script for fun. </p>
+                        <p>Edit:&nbsp;I have uploaded new scripts, like euler's method, Milne's Predictor-Corrector method, taylor's method etc.. But I have not tried all the scripts with different parameters, it may work with some parameters. As I am not getting much time to improvise these scripts, must check the logic and code before running the scripts (some of them are incomplete)</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can fork and send pull request if you find any issues or wish to update the code, from <a href="https://github.com/vibhavnirmal/MathProblems">this repo</a> and do changes as you wish.</p>
+                    </div>
+                    <hr>
+                    <p id="howto">How To Use:-</p>
+                    <ol>
+                        <li>First of all download the zip file through the given link.</li>
+                        <li>Once you will run the script, you will be asked for inputs.</li>
+                        <li>You must give all parameters requested to get the final answer.</li>
+                    </ol>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank You.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-5 col-md-5 col-xs-12">
+                <div class="container-fluid" id="nav-placeholder">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="motto">
+            <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
+        </div>
+        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small></p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        $(function () {
+            $("#nav-socialMedia").load("..\\social.html");
+        });
+        $(function () {
+            $("#nav-placeholder").load("..\\sideblog.html");
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+
+</html>
