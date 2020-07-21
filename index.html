@@ -15,6 +15,11 @@
     <script src="resources\js\slider.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        window.onload = function () {
+            getTheme()
+        };
+    </script>
 </head>
 
 <body class="bg">
@@ -48,7 +53,7 @@
 
             <div class="col-sm-6 col-md-6 col-xs-12">
                 <div class="container-fluid" id="nav-placeholder">
-                    
+
                 </div>
 
             </div>
@@ -67,17 +72,18 @@
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
     <script>
-     $(function(){
-          $("#nav-socialMedia").load("social.html");
+        $(function () {
+            $("#nav-socialMedia").load("social.html");
         });
-        $(function(){
-          $("#nav-placeholder").load("sideblog.html");
+        $(function () {
+            $("#nav-placeholder").load("sideblog.html");
         });
-        </script>
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    
+
+
 </body>
 
 </html>
