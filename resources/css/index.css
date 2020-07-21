@@ -4,9 +4,9 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    display:flex; 
-    flex-direction:column;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important; 
+    display: flex;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
 
 .theme-light {
@@ -44,49 +44,46 @@ body {
 
 /* Style the navbar */
 .topnav {
-  /* overflow: hidden; */
-  /* width: 100%; */
-  background-color: var(--color-secondary);
+    /* overflow: hidden; */
+    /* width: 100%; */
+    background-color: var(--color-secondary);
 }
 
 /* Navbar links */
 .topnav a {
-  float: left;
-  display: block;
-  color: var(--font-color);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    float: left;
+    display: block;
+    color: var(--font-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 /* Navbar links on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 /* Active/current link */
 .topnav a.active {
-  background-color: #2196F3;
-  color: white;
+    background-color: #2196F3;
+    color: white;
 }
 
 /* Style the input container */
 .topnav .login-container {
-  float: right;
+    float: right;
 }
 
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 600px) {
-  .topnav .login-container {
-    float: none;
-  }
+    .topnav .login-container {
+        float: none;
+    }
 }
-
-
-
 
 
 /* SLIDER */
@@ -164,13 +161,13 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-#tags{
+#tags {
     color: var(--font-color);
 }
 
 #main {
     margin: 0px !important;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -181,7 +178,7 @@ input:checked+.slider:before {
     color: var(--color-primary);
 }
 
-.image{
+.image {
     padding: 20px;
 }
 
@@ -233,16 +230,17 @@ a#linkA:hover {
     color: var(--font-color-hover);
 }
 
-.blogs{
+.blogs {
     font-size: 18px;
 }
 
-li a, span{
+li a,
+span {
     text-decoration: none !important;
     color: var(--font-color) !important;
 }
 
-li a:hover{
+li a:hover {
     color: var(--font-color-hover) !important;
 }
 
@@ -251,34 +249,33 @@ li a:hover{
     border-color: var(--color-border);
 }
 
-.recent{
+.recent {
     color: var(--font-color);
     font-size: 30px;
     font-weight: 400;
 }
 
-#date{
+#date {
     float: right;
     font-size: 15px;
-    
+
 }
 
 
 
-
-
-
 footer {
-    margin-top: auto; 
+    margin-top: auto;
     width: 100%;
     color: var(--font-color);
     text-align: center;
 }
 
-.motto{
+.motto {
     font-size: 20px;
     color: var(--font-color);
 }
+
+
 
 
 @media only screen and (max-device-width: 480px) {
@@ -288,6 +285,14 @@ footer {
 
     #name {
         font-size: 20px;
+    }
+
+    .recent {
+        font-size: 20px;
+    }
+
+    #ulbgcolor li {
+        font-size: 15px;
     }
 
     .motto {
@@ -305,7 +310,8 @@ footer {
     .WMI {
         margin: 10px;
     }
-    #date{
+
+    #date {
         float: none;
     }
 }
@@ -319,6 +325,10 @@ footer {
         font-size: 30px;
     }
 
+    .recent {
+        font-size: 20px;
+    }
+
     .motto {
         margin: 30px 10px 0px 10px;
     }
@@ -330,7 +340,8 @@ footer {
         z-index: -50;
         opacity: 0.15;
     }
-    #date{
+
+    #date {
         float: none;
     }
 }
@@ -351,8 +362,8 @@ footer {
         z-index: -50;
         opacity: 0.15;
     }
-    
-    
+
+
 }
 
 @media only screen and (max-device-height: 568px) {
@@ -369,6 +380,10 @@ footer {
     }
 
     #name {
-    font-size: 30px;
-}
+        font-size: 30px;
+    }
+
+    .recent {
+        font-size: 20px;
+    }
 }
