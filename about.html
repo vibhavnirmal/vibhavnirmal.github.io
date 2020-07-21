@@ -4,81 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhavnirmal, vibhav, MachineLearningBlog, TechieViN">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
     <link rel="shortcut icon" type="image" href="logos/vin.png" />
-    <meta name="description" content="I am Pyhton Programmer and currently working on Machine Learning and Computer Vision.">
-    <title>Vibhav Nirmal</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="about.css">
+    <meta name="description"
+        content="I am a pyhton Programmer. I lobe solving problems with Machine Learning, Deep learning and Computer Vision.">
+    <title>About | Vibhav Nirmal</title>
+    <link rel="stylesheet" href="resources\css\index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources\css\about.css">
+    <script src="resources\js\slider.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>
 
-<body>
-    <a id="back"><i class="fa fa-arrow-circle-left" onclick="window.history.go(-1); return false;"></i> <span style="font-size: 22px;">Go Back</span></a>
-
-    <div class="container" id="header">
-        <div class="container">
-            <p id="Name">Vibhav Nirmal</p>
+<body class="bg">
+    <header>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a class="active" href="">About Me</a>
+            <!-- <a href="contact.html">Contact Me</a> -->
+            <label id="switch" class="switch" style="position: absolute; right: 30px; top: 15px;">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
         </div>
-    </div>
+    </header>
     <!--header -->
-    <div class="about">
-        <div class="container">
-            <p id="me">About me</p>
-            <br>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                I am from Gujarat. &nbsp;I am now pursuing my bachelors of computer science from LD College of Engineering, Ahmedabad. I am making projects based on python, computer vision and machine learning.
-            </p><br>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                I have created my blog site where I will be uploading my projects on which I have been working on in Python Language. You can see my projects on <a href="https://github.com/vibhavnirmal">Github Account</a> as well as here in my <a href="blogs.html">blogs</a> section.
-            </p><br>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                I want to share one thing with everyone that you should not learn to code/program by learning from basics. <span style="font-size: 1.1em; color: black;">"Just take one project or idea in which you are interested(no matter how small it is), <u>Google how do I get started with this idea</u> and learn to use Stack Overflow".</span> It can be just a small script to detect your face, it can be simple script to write words into csv file, it can be script to bifurcate photos captured in one camera or another, it can be anything. You will see, in no time you will be able understand all the basic things related to your idea. Sometimes you will also end up learning some advanced or we can say pro things too. You can excel in just few weeks.
-            </p><br>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is how I learn new things. These are my personal thoughts, there are plenty of tutorials(ie youtube) and online reading materials that you can watch, refer and read. There are some pretty amazing sites too, which lets you interact with other developers.</p>
-            <p>
-                <span style="float: right">-Vibhav Nirmal</span>
+    <div class="about" id="main">
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-xs-12" style="text-align: center;" id="nav-socialMedia">
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-xs-12" style="text-align:justify">
+                <p>My name is Vibhav Nirmal. I live in Gujarat, India. I am currently pursuing bachelors in Computer
+                    Engineering. I am a self taught python programmer. I created this website to share and showcase my
+                    projects. In my spare time I like to work on opensource projects (I'm learning Deep Learning
+                    algorithms at the moment and developing Python applications), attend local meetups and building
+                    stuff with Arduino and RaspberryPi. </p>
+
+                <p>The projects that I have worked on have highlighted the need to pursue a Master’s degree in Computer
+                    Science, and I want to continue on my learning curve. It will be the perfect stepping stone for me
+                    to strengthen my skills and thereby enable me to take up challenging roles. Machine Learning,
+                    Artificial Intelligence, and Deep Learning domains are promising, and I want to learn and contribute
+                    to this burgeoning field. </p>
+
+                <p>I would like to share my experience how I learnt programming. Whenever I have an idea to create a
+                    project (or to program a basic script), I just search for the logic which will be needed. And
+                    gradually from reading and understanding the logic behind the code, I develope the program. I did
+                    not learn coding from books. Books can only help us with understanding the logic how specific
+                    function works, but in real life we have to make changes to that function and apply our own logic to
+                    modify it according to our needs.
+                </p>
+
+                <p>If anyone wants to connect and have a little chat, you can reach out to me here: techie23.vin [at]
+                    gmail [dot] com or any other social media platforms. </p>
                 <br>
-            </p>
-            <br>
-        </div>
-        <div class="container">
-            <p id="experience">Experience</p><br>
-            <div class="row" style="text-align: center;">
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12 exmp">
-                    <a href="https://github.com/vibhavnirmal/helmetdetection">
-                        <span class="fas fa-hard-hat"> Helmet Detection Project</span>
-                        <p>Design Engineering Project for almost a Year</p>
-                    </a>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12 exmp">
-                    <span class="fa fa-graduation-cap"> College</span>
-                    <p>Lalbhai Dalpatbhai College of Engineering, Ahmedabad (LDCE) </p><br>
+            </div>
+
+
+            <div class="col-sm-5 col-md-5 col-xs-12">
+                <div class="container-fluid" id="nav-placeholder">
                 </div>
             </div>
-        </div>
-        <div class="container" id="freelance">
-            <p id="exp">How can I help You?</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m currently available for freelance work.</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have a project that you want to get started with, if you think you need my help/assistance with something related to python or ML, then get in touch. My email id is given below.
-            </p>
+
         </div>
     </div>
-
 
     <footer>
-        <div id="footer">
-            <div class="container-fluid">
-                <p>Contact me.. &#64; <a href="mailto:techie23.vin@gmail.com"><span style="font-family: serif; font-size: 18px;">techie23.vin@gmail.com</span></a></p>
-            </div>
-            <div class="container-fluid" id="social">
-                <a href="https://www.instagram.com/techie_vin/" class="socialIcon" title="Instagram Account"><i class="fab fa-instagram"> </i></a>
-                <a href="https://in.linkedin.com/in/vibhav-nirmal-362b51124" class="socialIcon" title="Linkedin Account"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/vibhavnirmal" class="socialIcon" title="Twitter Account"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://github.com/vibhavnirmal" class="socialIcon" title="Github"><i class="fab fa-github-square"></i></a>
-            </div>
+        <div class="motto">
+            <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
         </div>
+        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small></p>
     </footer>
-</body></html>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+     $(function(){
+          $("#nav-socialMedia").load("social.html");
+        });
+        $(function(){
+          $("#nav-placeholder").load("sideblog.html");
+        });
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</body>
+
+</html>

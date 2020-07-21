@@ -4,52 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, LDCE, MachineLearningBlog, TechieViN">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
     <link rel="shortcut icon" type="image" href="logos/vin.png" />
-    <meta name="description" content="I am a pyhton Programmer and currently working on Machine Learning and Computer Vision software.">
+    <meta name="description"
+        content="I am a pyhton Programmer. I lobe solving problems with Machine Learning, Deep learning and Computer Vision.">
     <title>Vibhav Nirmal</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="resources\css\index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+    <script src="resources\js\slider.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<body>
-    <div id="main" class="container">
-        <div class="img1 center">
-            <img src="images/vin.jpg" alt="Vibhav Nirmal" style="vertical-align: middle;">
+<body class="bg">
+    <header>
+        <div class="topnav">
+            <a class="active" href="">Home</a>
+            <a href="about.html">About Me</a>
+            <!-- <a href="contact.html">Contact Me</a> -->
+            <label id="switch" class="switch" style="position: absolute; right: 30px; top: 15px;">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
         </div>
-
-        <div class="lilrt">
-            <div class="container-fluid WMI" style="text-align: center;">
-                <span id="Me">Python Developer &amp; Open Source Contributer</span><br>
+    </header>
+    <div id="main">
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-xs-12" style="text-align: center;" id="nav-socialMedia">
             </div>
 
-            <div class="container-fluid header">
+            <div class="col-sm-5 col-md-5 col-xs-12" style="text-align: center;">
+                <div class="container-fluid image">
+                    <img src="resources\images\vin.jpg" alt="Vibhav Nirmal" style="vertical-align: middle;">
+                </div>
                 <div class="contanier-fluid" id="title">
-                    <a style="text-decoration: none; color: #404040;" href="https://vibhavnirmal.github.io"><span id="name">VIBHAV NIRMAL</span></a>
+                    <a style="text-decoration: none;" href="https://vibhavnirmal.github.io"><span id="name">VIBHAV
+                            NIRMAL</span></a>
                 </div>
-                <div class="contanier-fluid" style="height: 100px;">
-                    <div class="container-fluid" id="nav">
-                        <a href="blogs.html" id="blog">My Blogs</a><br>
-                        <a href="about.html" id="about">About Me</a><br>
-                        <a href="contact.html" id="contact">Contact Me</a><br>
-                    </div>
-                </div>
+                <p><span id="tags">Python, Machine Learning, Artificial intelligence, Computer vision</span></p>
             </div>
 
-            <div class="motto">
-                <span id="Motto">Don't Try To Be A Programmer, Try To Be A Problem Solver !!!</span>
+
+            <div class="col-sm-6 col-md-6 col-xs-12">
+                <div class="container-fluid" id="nav-placeholder">
+                    
+                </div>
+
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="container-fluid" id="social">
-                <a href="mailto:techie23.vin@gmail.com" class="socialIcon" title="Email Me"><i class="fa fa-envelope"></i></a>
-                <a href="https://www.instagram.com/techie_vin/" class="socialIcon" title="Instagram Account"><i class="fa fa-instagram"> </i></a>
-                <a href="https://in.linkedin.com/in/vibhav-nirmal-362b51124" class="socialIcon" title="Linkedin Account"><i class="fa fa-linkedin-square"></i></a>
-                <a href="https://twitter.com/vibhavnirmal" class="socialIcon" title="Twitter Account"><i class="fa fa-twitter-square"></i></a>
-                <a href="https://github.com/vibhavnirmal" class="socialIcon" title="Github"><i class="fa fa-github-square"></i></a>
-            </div>
-        </div>
+
     </div>
-</body></html>
+    </div>
+
+    <footer>
+        <div class="motto">
+            <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
+        </div>
+        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small></p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+     $(function(){
+          $("#nav-socialMedia").load("social.html");
+        });
+        $(function(){
+          $("#nav-placeholder").load("sideblog.html");
+        });
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+</body>
+
+</html>
