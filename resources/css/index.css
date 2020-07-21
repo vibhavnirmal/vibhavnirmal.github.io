@@ -256,9 +256,11 @@ li a:hover {
 }
 
 #date {
-    float: right;
-    font-size: 15px;
-
+    width: 100%;
+    height: auto;
+    /* float: right; */
+    font-size: 12px;
+    
 }
 
 
