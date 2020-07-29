@@ -18,6 +18,7 @@ body {
     --font-color: #000000;
     --font-color-hover: #5500c4;
     --font-color-social: #9881fd;
+    --font-color-code: #4c4e57;
 }
 
 .theme-dark {
@@ -29,6 +30,7 @@ body {
     --font-color: #ffffff;
     --font-color-hover: #ff5e5e;
     --font-color-social: #b6b6b6;
+    --font-color-code: #c4c4c4;
 }
 
 .toggler {
@@ -193,6 +195,14 @@ img {
     border-radius: 50%;
     border: 0px;
     box-shadow: 0px 0px 50px #636363;
+}
+
+#code {
+    color: var(--font-color-code) !important;
+}
+
+#jicon{
+    color: var(--font-color);
 }
 
 #social {
