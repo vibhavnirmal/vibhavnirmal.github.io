@@ -33,6 +33,11 @@ body {
     --font-color-code: #c4c4c4;
 }
 
+.col-xs-12{
+    margin: 0px;
+}
+
+
 .toggler {
     margin: 20px !important;
     padding: 0.1px;
@@ -199,6 +204,7 @@ img {
 
 #code {
     color: var(--font-color-code) !important;
+    float: right;
 }
 
 #jicon{
@@ -333,6 +339,11 @@ footer {
     #date {
         float: none;
     }
+    
+    #code{
+        float: none !important;
+    }
+
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 785px) {
@@ -382,7 +393,9 @@ footer {
         opacity: 0.15;
     }
 
-
+    #code{
+        float: none !important;
+    }
 }
 
 @media only screen and (max-device-height: 568px) {
