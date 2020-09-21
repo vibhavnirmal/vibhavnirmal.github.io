@@ -10,11 +10,12 @@
         content="I am a pyhton Programmer. I love solving problems with Machine Learning, Deep learning and Computer Vision.">
     <title>Vibhav Nirmal</title>
     <link rel="stylesheet" href="resources\css\index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources\css\bootstrap.min.css">
+    <link rel="stylesheet" href="resources\css\font-awesome.min.css">
     <script src="resources\js\slider.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="resources\js\jquery-3.5.1.min.js"></script>
+    <script src="resources\js\bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script>
         window.onload = function () {
             getTheme()
@@ -28,46 +29,37 @@
             <a class="active" href="">Home</a>
             <a href="about.html">About Me</a>
             <!-- <a href="contact.html">Contact Me</a> -->
-            <label id="switch" class="switch" style="position: absolute; right: 30px; top: 15px;">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round"></span>
-            </label>
         </div>
     </header>
-    <div id="main">
-        <div class="row">
-            <div class="col-sm-1 col-md-1 col-xs-12" style="text-align: center;" id="nav-socialMedia">
-            </div>
-
-            <div class="col-sm-5 col-md-5 col-xs-12" style="text-align: center;">
-                <div class="container-fluid image">
-                    <img src="resources\images\vin.jpg" alt="Vibhav Nirmal" style="vertical-align: middle;">
-                </div>
-                <div class="contanier-fluid" id="title">
-                    <a style="text-decoration: none;" href="https://vibhavnirmal.github.io"><span id="name">VIBHAV
-                            NIRMAL</span></a>
-                </div>
-                <p><span id="tags">Python, Machine Learning, Artificial intelligence, Computer vision</span></p>
-            </div>
-
-
-            <div class="col-sm-6 col-md-6 col-xs-12">
-                <div id="nav-placeholder">
-
-                </div>
-
-            </div>
+    <div class="sidenav">
+        <label id="switch" class="switch" style="position: fixed; right: 20px; top: 15px;">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+        <div class="container-fluid image">
+            <img src="resources\images\vin.jpg" alt="Vibhav Nirmal" style="vertical-align: middle;">
         </div>
-
+        <div class="contanier-fluid" id="title">
+            <a style="text-decoration: none;" href="https://vibhavnirmal.github.io"><span id="name">VIBHAV
+                    NIRMAL</span></a>
+        </div>
+        <div id="nav-socialMedia" style="text-align: center;">
+        </div>
+        <p><span id="tags">Python, Machine Learning, Artificial intelligence, Computer vision</span></p>
     </div>
+    <div id="main">
+        <div class="recent">
+            <p>Recent Work/Blogs/Posts</p>
+        </div>
+        <div id="nav-placeholder">
+        </div>
+        <br>
     </div>
-
     <footer>
         <div class="motto">
             <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
         </div>
-        <p><small>Last Edited on 31 July 2020</small></p>
-        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small></p>
+        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small>&nbsp;<small>Last Edited on 21 Sept 2020</small></p>
     </footer>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -80,11 +72,6 @@
             $("#nav-placeholder").load("sideblog.html");
         });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-
 </body>
 
 </html>

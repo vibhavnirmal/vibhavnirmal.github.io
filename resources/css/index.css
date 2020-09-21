@@ -53,6 +53,8 @@ body {
 .topnav {
     /* overflow: hidden; */
     /* width: 100%; */
+    position: fixed;
+    top: 0;
     background-color: var(--color-secondary);
 }
 
@@ -173,10 +175,10 @@ input:checked+.slider:before {
 }
 
 #main {
-    margin: 0px !important;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
+    margin-left: 50%; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
 }
 
 #name {
@@ -247,8 +249,21 @@ a#linkA:hover {
 }
 
 .blogs {
+    margin-top: 75px;
     font-size: 18px;
 }
+
+.sidenav {
+    text-align: center;
+    width: 50%;
+    position: fixed;
+    z-index: 2;
+    top: 50px;
+    left: 10px;
+    /* background: #eee; */
+    /* overflow-x: hidden; */
+    padding: 8px;
+  }
 
 li a,
 span {
@@ -266,9 +281,15 @@ li a:hover {
 }
 
 .recent {
+    padding-top: 10px;
     color: var(--font-color);
     font-size: 30px;
     font-weight: 400;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    background-color: var(--color-secondary) !important;
+    width: 100%;
 }
 
 #date {
@@ -278,8 +299,6 @@ li a:hover {
     font-size: 12px;
     
 }
-
-
 
 footer {
     margin-top: auto;
@@ -300,6 +319,41 @@ footer {
 
 
 @media only screen and (max-device-width: 480px) {
+    .sidenav {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        left: 0px;
+        /* position: fixed; */
+        /* z-index: ; */
+        /* top: 50px; */
+        /* left: 10px; */
+        /* background: #eee; */
+        /* overflow-x: hidden; */
+        padding: 8px;
+      }
+    
+    #main {
+        position: auto;
+        padding: 20px;
+        width: 100%;
+        margin-left: 0%; /*Same width as the sidebar + left position in px */
+        /* font-size: 28px; Increased text to enable scrolling */
+        /* padding: 0px 10px; */
+    }
+
+    .topnav {
+        /* overflow: hidden; */
+        /* width: 100%; */
+        position: relative;
+        top: 0;
+        background-color: var(--color-secondary);
+    }
+
+    .blogs {
+        margin-top: 10px;
+    }
+
     .header {
         margin-top: 80px;
     }
@@ -309,7 +363,13 @@ footer {
     }
 
     .recent {
-        font-size: 20px;
+        margin-top: 20px;
+        font-size: 22px;
+        position: relative;
+        /* top: 0px; */
+        /* z-index: 1; */
+        /* background-color: var(--color-secondary) !important; */
+        /* width: 100%; */
     }
 
     #title{
@@ -347,6 +407,51 @@ footer {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 785px) {
+    .sidenav {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        left: 0px;
+        /* position: fixed; */
+        /* z-index: ; */
+        /* top: 50px; */
+        /* left: 10px; */
+        /* background: #eee; */
+        /* overflow-x: hidden; */
+        padding: 8px;
+      }
+    
+      .recent {
+        margin-top: 20px;
+        font-size: 28px;
+        position: relative;
+        /* top: 0px; */
+        /* z-index: 1; */
+        /* background-color: var(--color-secondary) !important; */
+        /* width: 100%; */
+    }
+
+    #main {
+        position: auto;
+        padding: 20px;
+        width: 100%;
+        margin-left: 0%; /*Same width as the sidebar + left position in px */
+        /* font-size: 28px; Increased text to enable scrolling */
+        /* padding: 0px 10px; */
+    }
+
+    .topnav {
+        /* overflow: hidden; */
+        /* width: 100%; */
+        position: relative;
+        top: 0;
+        background-color: var(--color-secondary);
+    }
+
+    .blogs {
+        margin-top: 10px;
+    }
+
     .header {
         margin-top: 80px;
     }
@@ -377,6 +482,51 @@ footer {
 }
 
 @media only screen and (min-device-width: 786px) and (max-device-width: 992px) {
+    .sidenav {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        left: 0px;
+        /* position: fixed; */
+        /* z-index: ; */
+        /* top: 50px; */
+        /* left: 10px; */
+        /* background: #eee; */
+        /* overflow-x: hidden; */
+        padding: 8px;
+      }
+    
+      .recent {
+        margin-top: 20px;
+        font-size: 28px;
+        position: relative;
+        /* top: 0px; */
+        /* z-index: 1; */
+        /* background-color: var(--color-secondary) !important; */
+        /* width: 100%; */
+    }
+
+    #main {
+        position: auto;
+        padding: 20px;
+        width: 100%;
+        margin-left: 0%; /*Same width as the sidebar + left position in px */
+        /* font-size: 28px; Increased text to enable scrolling */
+        /* padding: 0px 10px; */
+    }
+
+    .topnav {
+        /* overflow: hidden; */
+        /* width: 100%; */
+        position: relative;
+        top: 0;
+        background-color: var(--color-secondary);
+    }
+
+    .blogs {
+        margin-top: 10px;
+    }
+
     .header {
         margin-top: 80px;
     }

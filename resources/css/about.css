@@ -20,7 +20,17 @@
     --font-color-social: #b6b6b6;
 }
 
+.recent p{
+    font-size: 30px;
+    color: var(--font-color);
+}
+
 p{
     font-size: 18px;
     color: var(--font-color);
+}
+
+.about{
+    text-align: justify;
+    padding: 30px;
 }
