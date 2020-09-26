@@ -33,7 +33,7 @@ body {
     --font-color-code: #c4c4c4;
 }
 
-.col-xs-12{
+.col-xs-12 {
     margin: 0px;
 }
 
@@ -176,8 +176,10 @@ input:checked+.slider:before {
 
 #main {
     padding: 20px;
-    margin-left: 50%; /* Same width as the sidebar + left position in px */
-    font-size: 28px; /* Increased text to enable scrolling */
+    margin-left: 50%;
+    /* Same width as the sidebar + left position in px */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
 
@@ -209,7 +211,7 @@ img {
     float: right;
 }
 
-#jicon{
+#jicon {
     color: var(--font-color);
 }
 
@@ -263,7 +265,16 @@ a#linkA:hover {
     /* background: #eee; */
     /* overflow-x: hidden; */
     padding: 8px;
-  }
+}
+
+.about-sidenav {
+    width: 50%;
+    position: fixed;
+    z-index: 2;
+    top: 50px;
+    left: 10px;
+    padding: 8px;
+}
 
 li a,
 span {
@@ -297,7 +308,7 @@ li a:hover {
     height: auto;
     /* float: right; */
     font-size: 12px;
-    
+
 }
 
 footer {
@@ -313,7 +324,7 @@ footer {
 }
 
 /* BLOG */
-#title{
+#title {
     font-size: 30px;
 }
 
@@ -331,13 +342,21 @@ footer {
         /* background: #eee; */
         /* overflow-x: hidden; */
         padding: 8px;
-      }
-    
+    }
+
+    .about-sidenav {
+        position: relative;
+        width: 100%;
+        left: 0px;
+        padding: 8px;
+    }
+
     #main {
         position: auto;
         padding: 20px;
         width: 100%;
-        margin-left: 0%; /*Same width as the sidebar + left position in px */
+        margin-left: 0%;
+        /*Same width as the sidebar + left position in px */
         /* font-size: 28px; Increased text to enable scrolling */
         /* padding: 0px 10px; */
     }
@@ -372,8 +391,8 @@ footer {
         /* width: 100%; */
     }
 
-    #title{
-        font-size: 20px ;
+    #title {
+        font-size: 20px;
     }
 
     #ulbgcolor li {
@@ -399,8 +418,8 @@ footer {
     #date {
         float: none;
     }
-    
-    #code{
+
+    #code {
         float: none !important;
     }
 
@@ -419,9 +438,16 @@ footer {
         /* background: #eee; */
         /* overflow-x: hidden; */
         padding: 8px;
-      }
-    
-      .recent {
+    }
+
+    .about-sidenav {
+        position: relative;
+        width: 100%;
+        left: 0px;
+        padding: 8px;
+    }
+
+    .recent {
         margin-top: 20px;
         font-size: 28px;
         position: relative;
@@ -435,7 +461,8 @@ footer {
         position: auto;
         padding: 20px;
         width: 100%;
-        margin-left: 0%; /*Same width as the sidebar + left position in px */
+        margin-left: 0%;
+        /*Same width as the sidebar + left position in px */
         /* font-size: 28px; Increased text to enable scrolling */
         /* padding: 0px 10px; */
     }
@@ -494,9 +521,16 @@ footer {
         /* background: #eee; */
         /* overflow-x: hidden; */
         padding: 8px;
-      }
-    
-      .recent {
+    }
+
+    .about-sidenav {
+        position: relative;
+        width: 100%;
+        left: 0px;
+        padding: 8px;
+    }
+
+    .recent {
         margin-top: 20px;
         font-size: 28px;
         position: relative;
@@ -510,7 +544,8 @@ footer {
         position: auto;
         padding: 20px;
         width: 100%;
-        margin-left: 0%; /*Same width as the sidebar + left position in px */
+        margin-left: 0%;
+        /*Same width as the sidebar + left position in px */
         /* font-size: 28px; Increased text to enable scrolling */
         /* padding: 0px 10px; */
     }
@@ -543,7 +578,7 @@ footer {
         opacity: 0.15;
     }
 
-    #code{
+    #code {
         float: none !important;
     }
 }

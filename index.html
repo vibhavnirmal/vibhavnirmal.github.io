@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
     <link rel="shortcut icon" type="image" href="resources\images\logos\vin.png" />
-    <meta name="description"
-        content="I am a pyhton Programmer. I love solving problems with Machine Learning, Deep learning and Computer Vision.">
+    <meta name="description" content="Pyhton Programmer. Love to solve problems. Machine Learning, Deep learning and Computer Vision Enthusiast.">
     <title>Vibhav Nirmal</title>
     <link rel="stylesheet" href="resources\css\index.css">
     <link rel="stylesheet" href="resources\css\bootstrap.min.css">
@@ -16,10 +15,18 @@
     <script src="resources\js\jquery-3.5.1.min.js"></script>
     <script src="resources\js\bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>window.onload = function () {getTheme()};</script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     <script>
-        window.onload = function () {
-            getTheme()
-        };
+        $(function () {
+            $("#nav-socialMedia").load("social.html");
+        });
+        $(function () {
+            $("#nav-sideblog").load("sideblog.html");
+        });
+        $(function () {
+            $("#nav-footer").load("footer.html");
+        });
     </script>
 </head>
 
@@ -28,7 +35,7 @@
         <div class="topnav">
             <a class="active" href="">Home</a>
             <a href="about.html">About Me</a>
-            <!-- <a href="contact.html">Contact Me</a> -->
+            <a href="https://github.com/vibhavnirmal">GitHub <i class="fab fa-github"></i></a>
         </div>
     </header>
     <div class="sidenav">
@@ -40,38 +47,18 @@
             <img src="resources\images\vin.jpg" alt="Vibhav Nirmal" style="vertical-align: middle;">
         </div>
         <div class="contanier-fluid" id="title">
-            <a style="text-decoration: none;" href="https://vibhavnirmal.github.io"><span id="name">VIBHAV
-                    NIRMAL</span></a>
+            <a style="text-decoration: none;" href="https://vibhavnirmal.github.io"><span id="name">VIBHAV NIRMAL</span></a>
         </div>
-        <div id="nav-socialMedia" style="text-align: center;">
-        </div>
+        <!-- <div id="nav-socialMedia" style="text-align: center;"></div> -->
         <p><span id="tags">Python, Machine Learning, Artificial intelligence, Computer vision</span></p>
     </div>
     <div id="main">
         <div class="recent">
             <p>Recent Work/Blogs/Posts</p>
         </div>
-        <div id="nav-placeholder">
-        </div>
+        <div id="nav-sideblog"></div>
         <br>
     </div>
-    <footer>
-        <div class="motto">
-            <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
-        </div>
-        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small>&nbsp;<small>Last Edited on 21 Sept 2020</small></p>
-    </footer>
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
-    <script>
-        $(function () {
-            $("#nav-socialMedia").load("social.html");
-        });
-        $(function () {
-            $("#nav-placeholder").load("sideblog.html");
-        });
-    </script>
+    <div id="nav-footer"></div>
 </body>
-
 </html>

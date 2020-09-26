@@ -7,7 +7,7 @@
     <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
     <link rel="shortcut icon" type="image" href="resources\images\logos\vin.png" />
     <meta name="description" content="About Me. How I learnt coding.">
-    <title>About | Vibhav Nirmal</title>
+    <title>About Me | Vibhav Nirmal</title>
     <link rel="stylesheet" href="resources\css\index.css">
     <link rel="stylesheet" href="resources\css\about.css">
     <link rel="stylesheet" href="resources\css\bootstrap.min.css">
@@ -16,12 +16,19 @@
     <script src="resources\js\jquery-3.5.1.min.js"></script>
     <script src="resources\js\bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>window.onload = function () {getTheme()};</script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     <script>
-        window.onload = function () {
-            getTheme()
-        };
+        $(function () {
+            $("#nav-socialMedia").load("social.html");
+        });
+        $(function () {
+            $("#nav-sideblog").load("sideblog.html");
+        });
+        $(function () {
+            $("#nav-footer").load("footer.html");
+        });
     </script>
-
 </head>
 
 <body class="bg">
@@ -29,59 +36,44 @@
         <div class="topnav">
             <a href="index.html">Home</a>
             <a class="active" href="">About Me</a>
+            <a href="https://github.com/vibhavnirmal">GitHub <i class="fab fa-github"></i></a>
             <!-- <a href="contact.html">Contact Me</a> -->
         </div>
     </header>
     <!--header -->
-    <div class="sidenav about">
+    <div class="about-sidenav">
         <label id="switch" class="switch" style="position: fixed; right: 20px; top: 15px;">
             <input type="checkbox" onchange="toggleTheme()" id="slider">
             <span class="slider round"></span>
         </label>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Vibhav Nirmal. I live in Gujarat, India. I recently graduated
-            with my
-            bachelors in Computer Engineering and working as an AI/ML dev in a startup <a
-                href="https://plushvie.in">plushvie.in</a>.
-            I am a self-taught python programmer. I have created this website to
-            share and showcase my knowledge and projects with Comp-Sci community. In my spare time, I like to work on
-            open source projects (I'm learning Deep
-            Learning algorithms at the moment and developing Python applications), attend local meetups and building
-            stuff with Arduino and Raspberry Pi. I love travelling y yo estoy aprendiendo español. Always learning.</p>
-        <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would like to share my experience how I learnt programming. Whenever I have an idea to create a project (or to program a basic script), I just search for the logic which will be needed. And gradually from reading and understanding the logic behind the code, I develope the script. I did not learn coding through reading books. Books can only help us with understanding the logic how specific function works, but in real life we have to make changes to that function and apply our own logic to modify it according to our needs. I preferred <a href="https://dbader.org/">Dan Bader's</a> and <a href="https://www.youtube.com/user/sentdex">Sentdex's</a> content to learn basics.</p> -->
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If anyone wants to connect and have a little chat, you can reach out to
-            me here: techie23.vin [at] gmail [dot] com or on any other social media platform.</p>
+        <br>
+        <div class="motto">
+            <i><p style="text-align:center; font-size: 22px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Don't Try To Be A Programmer, Try To Be A Problem Solver !</p></i>
+        </div>
+        <ul>
+            Always learning.
+            <li>Recently graduated with my <b>bachelors in Computer Engineering</b></li>
+            <li>Self-taught <b>python programmer</b> and still a learner</li>
+            <li>Currently working as an AI/ML dev in a Jeweltry startup <b><a href="https://plushvie.in"> plushvie.in</a></b></li>
+            <li>Occasionally work on open source projects and attend local tech meetups</li>
+            <li>Passionate about Arduino - Raspberry Pi</li>
+            <li>Casual Gamer</li>
+            <li>Love travelling, reading and photography</li>
+            <li>Yo estoy aprendiendo español</li>
+        </ul>
+        <p style="text-align: center;">Contact me here <span style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">techie23.vin [at] gmail [dot] com </span> or on <a style="text-decoration: none;" href="https://www.linkedin.com/in/vibhavnirmal">LinkedIn.</a></p>
         <div id="nav-socialMedia" style="text-align: center;">
         </div>
 
     </div>
-    </div>
-
     <div id="main">
         <div class="recent">
             <p>Recent Work/Blogs/Posts</p>
         </div>
-        <div id="nav-placeholder">
-        </div>
+        <div id="nav-sideblog"></div>
         <br>
     </div>
-    <footer>
-        <div class="motto">
-            <i><span>Don't Try To Be A Programmer, Try To Be A Problem Solver !</span></i>
-        </div>
-        <p><small>All rights reserved &copy; <span id="year"></span> Vibhav Nirmal</small>&nbsp;<small>Last Edited on 21
-                Sept 2020</small></p>
-    </footer>
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
-    <script>
-        $(function () {
-            $("#nav-socialMedia").load("social.html");
-        });
-        $(function () {
-            $("#nav-placeholder").load("sideblog.html");
-        });
-    </script>
+    <div id="nav-footer"></div>
 </body>
 
 </html>
