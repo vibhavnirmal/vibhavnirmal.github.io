@@ -1,0 +1,89 @@
+.blog{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 20px;
+}
+
+#maintitle{
+    text-align: center;
+}
+
+#title{
+    font-size: 30px;
+}
+
+#nav-footer-blog{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    .blog{
+        position: relative;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    
+    #nav-footer-blog{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 785px) {
+    .blog{
+        position: relative;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    
+    #nav-footer-blog{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-device-width: 786px) and (max-device-width: 992px) {
+    .blog{
+        position: relative;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    
+    #nav-footer-blog{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-device-height: 568px) {
+    .blog{
+        position: relative;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    
+    #nav-footer-blog{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}

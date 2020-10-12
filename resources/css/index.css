@@ -255,6 +255,11 @@ a#linkA:hover {
     font-size: 18px;
 }
 
+#desc, #howto, ol{
+    font-size: 18px;
+    color: var(--font-color);
+}
+
 .sidenav {
     text-align: center;
     width: 50%;
