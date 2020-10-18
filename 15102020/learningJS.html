@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description" content="Save instagram chats offline with python script.">
+    <title>JS projects | ViN Blogs</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\blog.css">
+    <link rel="stylesheet" href="..\resources\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\resources\css\font-awesome.min.css">
+    <script src="..\resources\js\slider.js"></script>
+    <script src="..\resources\js\jquery-3.5.1.min.js"></script>
+    <script src="..\resources\js\bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        window.onload = function () {
+            getTheme()
+        };
+    </script>
+    <script>
+        $(function () {
+            $("#nav-footer-blog").load("..\\footer.html");
+        });
+    </script>
+</head>
+
+<body class="bg">
+    <header>
+        <div class="topnav">
+            <a href="..\index.html">Home</a>
+            <a href="..\about.html">About Me</a>
+            <a href="https://github.com/vibhavnirmal">GitHub <i class="fab fa-github"></i></a>
+        </div>
+    </header>
+    <div class="blog">
+        <label id="switch" class="switch" style="position: fixed; right: 20px; top: 15px;">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+        <div>
+            <div id="maintitle">
+                <span id="title">1. Digital Budget Tracker</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">18/10/2020</span>
+                <div>
+                    <a href="https://vibhavnirmal.github.io/DigitalBudgetTracker">
+                        <button type="button" class="btn btn-primary" id="dload">Open budget Tracker</button>
+                    </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div>
+            <div id="maintitle">
+                <span id="title">2. Pig Dice Game</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">15/10/2020</span>
+                <div>
+                    <a href="https://vibhavnirmal.github.io/PigDiceGame">
+                        <button type="button" class="btn btn-primary" id="dload">Play Game</button>
+                    </a>
+                </div>
+                <hr>
+            </div>
+
+            <div class="container-fluid content" style="text-align: justify;">
+                <p id="desc">Hello everyone. Welcome to Pig Dice Game. I have created this web game from basic
+                    javascript.
+                    This game was part of Udemy Course <a
+                        href="https://www.udemy.com/course/the-complete-javascript-course/">The Complete JavaScript
+                        Course
+                        2020: Build Real Projects!</a> Thank you so much Jonas for this amazing course.</p>
+                <hr>
+                <p id="howto"> <b> Basic rules of this game are:</b></p>
+                <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to
+                    "hold":
+                </p>
+                <ul>
+                    <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+                    <li>If the player rolls any other number, it is added to their turn total and the player's turn
+                        continues.</li>
+                    <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next
+                        player's turn.</li>
+                </ul>
+                <p>The first player to score 100 or more points wins. </p>
+            </div>
+        </div>
+    </div>
+    <div id="nav-footer-blog" style="position: relative;"></div>
+</body>
+
+</html>
