@@ -16,25 +16,71 @@
     --color-border: #535353;
     --color-accent: #5c799b;
     --font-color: #ffffff;
-    --font-color-hover: #ff5e5e;
+    --font-color-hover: #77e245;
     --font-color-social: #b6b6b6;
 }
 
-.recent p{
+.recent p {
     font-size: 30px;
     color: var(--font-color);
 }
 
-p{
+#linkedinA {
+    font-weight: 800;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+#linkedinA:hover {
+    text-decoration: none;
+    color: var(--font-color-hover);
+}
+
+p {
     font-size: 18px;
     color: var(--font-color);
 }
 
-.about{
+#theCodeID {
+    position: absolute;
+    right: 42px;
+}
+
+a small {
+    transform: translateY(-2px);
+    position: absolute;
+    right: 10px;
+}
+
+.about {
     text-align: justify;
     padding: 30px;
 }
 
-ul{
+ul {
     color: var(--font-color);
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+}
+
+ul#aboutList li:before {
+    content: '';
+    position: absolute;
+    border-right: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+    width: 8px;
+    height: 7px;
+    top: calc(50%);
+    left: -15px;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    #theCodeID {
+        position: absolute;
+        right: 38px;
+    }
 }
