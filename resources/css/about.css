@@ -66,6 +66,7 @@ a small {
 ul {
     color: var(--font-color);
     list-style: none;
+    padding-right: 50px;
 }
 
 ul li {
@@ -74,6 +75,7 @@ ul li {
 
 ul#aboutList li:before {
     content: '-> ';
+    padding-right: 5px;
     /* position: absolute; */
     /* border-right: 1px solid var(--font-color); */
     /* border-bottom: 1px solid var(--font-color); */
@@ -85,6 +87,11 @@ ul#aboutList li:before {
 
 
 @media only screen and (max-device-width: 480px) {
+    ul {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #theCodeID {
         position: absolute;
         right: 38px;

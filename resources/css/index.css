@@ -187,7 +187,7 @@ input:checked+.slider:before {
 }
 
 #tags {
-    font-size: 30px;
+    font-size: 25px;
     color: var(--font-color);
 }
 
@@ -358,6 +358,7 @@ footer {
     }
 
     .about-sidenav {
+        top: 0px;
         position: relative;
         width: 100%;
         left: 0px;
@@ -398,8 +399,8 @@ footer {
         font-size: 20px;
     }
     #littleIntro{
-        font-size: 20px;
-        padding: 10px 35px 10px 35px;
+        font-size: 16px;
+        padding: 5px 15px 5px 15px;
     }
 
     .recent {
@@ -421,7 +422,7 @@ footer {
     }
 
     .motto {
-        margin: 30px 10px 0px 10px;
+        margin: 0px 10px 0px 10px;
     }
 
     .img1 {
@@ -448,7 +449,7 @@ footer {
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 785px) {
     #littleIntro{
-        font-size: 20px;
+        font-size: 18px;
         padding: 0px 0px 0px 0px;
     }
 
