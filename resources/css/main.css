@@ -1,0 +1,129 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background-color: #ffffff; */
+    background-color: #8EC5FC;
+background-image: linear-gradient(90deg, #c6d7e9 70%, #b595d4 100%);
+
+
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    /* display: flex; */
+    height: 100%;
+}
+
+.left{
+    margin-right: 400px;
+}
+
+.right{
+    height: 100%;
+    width: 350px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */    
+    margin: 60px 0px 0px 50px;
+}
+
+ul {
+    list-style-type: none;
+    /* margin: 10px; */
+    padding: 0;
+}
+
+li{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    display: block;
+    padding: 10px;
+    /* margin: 15px; */
+    transition: padding 300ms;
+}
+
+li:hover{
+    color: #f1f0f0;
+    background-color: gray;
+    padding: 10px 10px 10px 20px;
+}
+
+#intro{
+    height: 100vh;
+    margin: 50px;
+}
+
+#about{
+    height: 100vh;
+    margin: 50px;
+    /* height: 100%; */
+}
+
+#augment{
+    /* display: block; */
+    height: 100%;
+    margin: 50px;
+    margin-top: 20%;
+    margin-bottom: auto;
+}
+
+.name{
+    padding-left: 50px;
+    font-size: 70px;
+}
+
+.from{
+    padding-left: 50px;
+    font-size: 30px;
+    bottom: 60px;
+    position: absolute;
+}
+
+.bg{
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.story{
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+
+#imageViN{
+    /* margin-right: 30px; */
+    height: 250px;
+}
+
+.animated {
+    text-indent: 8px;
+    color: #130932;
+    font-weight: 500;
+  }
+  
+  .animated:before {
+    content: "Arlington, TX";
+    animation: topToBottom 4s;
+  }
+  
+  @keyframes topToBottom {
+    0% {
+      content: "Arlington, TX";
+    }
+    50% {
+      content: "Gandhinagar, GJ";
+    }
+  }
+  
