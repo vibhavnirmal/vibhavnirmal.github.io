@@ -70,30 +70,21 @@ a small {
 ul {
     color: var(--font-color);
     list-style: square;
+}
+
+ul#aboutList{
     padding-right: 50px;
 }
 
-/* ul li {
+ul li {
     position: relative;
 }
 
-ul#aboutList li:before {
-    content: '>';
-    padding-right: 5px;
-    /* position: absolute; */
-    /* border-right: 1px solid var(--font-color); */
-    /* border-bottom: 1px solid var(--font-color); */
-    /* width: 8px; */
-    /* height: 7px; */
-    /* top: calc(50%); */
-    /* left: -15px; */
-} */
-
 
 @media only screen and (max-device-width: 480px) {
-    ul {
-        padding-left: 10px;
-        padding-right: 10px;
+    ul#aboutList{
+        padding-left: 30px;
+        padding-right: 20px;
     }
 
     #theCodeID {
