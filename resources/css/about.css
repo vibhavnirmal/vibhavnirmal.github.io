@@ -63,18 +63,22 @@ a small {
     padding: 30px;
 }
 
+#titlee{
+    text-decoration: underline !important;
+}
+
 ul {
     color: var(--font-color);
-    list-style: none;
+    list-style: square;
     padding-right: 50px;
 }
 
-ul li {
+/* ul li {
     position: relative;
 }
 
 ul#aboutList li:before {
-    content: '-> ';
+    content: '>';
     padding-right: 5px;
     /* position: absolute; */
     /* border-right: 1px solid var(--font-color); */
@@ -83,7 +87,7 @@ ul#aboutList li:before {
     /* height: 7px; */
     /* top: calc(50%); */
     /* left: -15px; */
-}
+} */
 
 
 @media only screen and (max-device-width: 480px) {
