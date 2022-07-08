@@ -196,7 +196,7 @@ input:checked+.slider:before {
 }
 
 #littleIntro{
-    font-size: 20px;
+    font-size: 16px;
     padding: 20px 100px 0px 100px;
     color: var(--font-color);
 }
