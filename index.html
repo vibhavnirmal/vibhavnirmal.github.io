@@ -1,18 +1,516 @@
-<meta http-equiv="refresh" content="0; URL=main.html" />
+<!DOCTYPE html>
+<html>
 
-<!-- <html>
-    <head>
-        <title>Vibhav Nirmal</title>
-    </head>
-    <body>
-        <h4>My name is Vibhav Nirmal</h4>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="resources\images\logos\vin.png" />
+    <meta name="description" content="Robotics enthusiast. Learning new stuff every day.">
+    <title>Vibhav Nirmal</title>
+    <link rel="stylesheet" href="resources/css/index.css">
+</head>
 
-        <p>I am a graduate student in computer science at the University of Texas at Arlington. I earned my bachelor's degree in computer engineering from LD College of Engineering in Ahmedabad.</p>
-        
-        <p>I have around one year of experience in the software sector. I've worked with the jewelry augmentation startup Plushvie and the service-based corporation Accenture.</p>
+<body>
+    <div class="top-right">
+        <a href="https://github.com/vibhavnirmal" target="_blank">GitHub</a>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h1>About Me</h1>
+            <div id="writeUp">
+                <p>
+                    My name is <b>Vibhav Nirmal</b> and I am a graduate student in computer science at the University of
+                    Texas at Arlington. I received my bachelor's degree in computer engineering from LD College of
+                    Engineering in Ahmedabad and have over one year of professional experience in software development.
+                </p>
+                <p>
+                    I am interested in the field of unmanned vehicle systems and their various applications,
+                    particularly
+                    motion planning, control, and perception. I also enjoy using Arduino and Raspberry Pi to create IoT
+                    solutions through hands-on experimentation. My participation in the University of Texas at
+                    Arlington's AutonoBots club allowed me to work on robot localization and sensor fusion with lidar
+                    data during the National Robotics Challenge in April 2022.
+                </p>
+                <p>
+                    With a strong background in mathematics, programming logic, and cross-platform coding, I am eager to
+                    use my skills to develop innovative solutions in robotics, artificial intelligence, and computer
+                    vision. I believe in the importance of collaboration, effective communication, and creativity in all
+                    my work.
+                </p>
+                <p>
+                    Thank you for stopping by and taking an interest in my work. If you have any questions or comments,
+                    please don't hesitate to reach out to me.
+                </p>
 
-        <p>Robotics and unmanned vehicle systems are two of my passions. Motion planning, control, and perception are the core areas of my research. I have learned some fundamentals of autonomous vehicles using synthetic data, from developing longitudinal and lateral controllers to identifying objects and signs on the road from the Carla simulator. </p>
+                <div id="social">
+                    <a href="https://github.com/vibhavnirmal" class="socialIcon" title="Github">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                    </a>
+                    
+                    <a href="https://medium.com/@vibhavnirmal" class="socialIcon" title="Medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-medium" viewBox="0 0 16 16">
+                            <path
+                                d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vibhavnirmal" class="socialIcon" title="Linkedin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@vibhavnirmal" class="socialIcon" title="Youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/techie_vin/" class="socialIcon" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+                    </a>
 
-        <p>In April 2022, our AutonoBots club team from UTA competed in the National Robotics Challenge (thenrc.org). I worked on robot localisation utilizing a realsense camera and sensor fusion with lidar data using ROS and rtabmap. </p>
-    </body>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Code/Blogposts</h2>
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#">
+                                <h2 class="blog-title">Square root of integer without using sqrt() function</h2>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">July 25, 2022</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            The Newton-Raphson method is an iterative algorithm that can be used to approximate the
+                            square root of a number by improving an initial estimate at each iteration using a formula
+                            based on the equation y * y = x.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="/15102020/learningJS.html">
+                                <h2 class="blog-title">Digital Budget Tracker and Pig Dice Game in Javascript</h2>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/15102020/learningJS.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">October 15, 2020</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            The Digital Budget Tracker is a tool that helps users track and manage their personal or
+                            business finances by providing a platform to input and organize income and expenditure data.
+                            The Pig Dice Game is a simple dice game that involves rolling a dice and earning points
+                            based on the numbers rolled. Both of these applications are designed with Javascript to be
+                            user-friendly and interactive, providing a convenient and enjoyable experience for users.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6">
+                                <h2 class="blog-title">Dart dataset and PyPlot Scatter function Article</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/MachineLearningPrograms/tree/master/Classification/dart"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-medium" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">July 31, 2020</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            The Dart dataset is a collection of data points that can be plotted using the PyPlot Scatter
+                            function in Python. This function allows users to create scatter plots, which are visual
+                            representations of data points that use Cartesian coordinates to display values for
+                            typically two variables for a set of data.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://www.linkedin.com/posts/vibhavnirmal_vibhav-nirmal-techievin-posted-on-instagram-activity-6692415424782487552-mu-x">
+                                <h2 class="blog-title">String compression algorithm</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/algorithms/blob/master/compress.py"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/vibhavnirmal_vibhav-nirmal-techievin-posted-on-instagram-activity-6692415424782487552-mu-x"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">July 24, 2020</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            Iterate through a list of integers and compresses it into a list of tuples, where each tuple
+                            represents a number and the number of times it appears in the original list.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://www.linkedin.com/posts/philipvollet_nlp-machinelearning-graphs-activity-6680030817038725120-pczn/">
+                                <h2 class="blog-title">Knowledge Graph Based QnA Post</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/philipvollet_nlp-machinelearning-graphs-activity-6680030817038725120-pczn/"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </td>
+                       
+                        <td class="blog-date">June 20, 2020</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            Our question answering system uses Entity pairs Extraction and Knowledge Graph Construction
+                            to extract entities from the input paragraph and construct a knowledge graph for answering
+                            user questions. It utilizes dependency parsing tools and techniques, and is effective at
+                            answering "who," "what," "when," and "where" questions. However, the answers obtained are
+                            currently simple and limited in word count.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=u9Nr8wjTPZ8">
+                                <h2 class="blog-title">Knowledge Graph Based QnA YouTube Presentation</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=u9Nr8wjTPZ8" style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">April 5, 2020</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            Implemented a knowledge graph representation project to facilitate question answering by
+                            extracting key entities such as subject, predicate, and object. This innovative approach
+                            leverages the power of structured data to provide more accurate and brief answers to user
+                            inquiries.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://medium.com/@vibhavnirmal/how-to-install-unreal-engine-4-in-arch-linux-1d7b910f375f">
+                                <h2 class="blog-title">How to install Unreal Engine 4 in arch linux Article</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://medium.com/@vibhavnirmal/how-to-install-unreal-engine-4-in-arch-linux-1d7b910f375f"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-medium" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">July 20, 2019</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            This article outlines the steps to install Unreal Engine 4 on an Arch Linux operating
+                            system. It provides detailed instructions on how to properly set up and configure UE4 to run
+                            smoothly on the Linux platform
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="/22092018/mathsSolver.html">
+                                <h2 class="blog-title">Maths Equation Solver Blog</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/MathProblems" style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                        </td>
+
+                        <td class="blog-date">September 22, 2018</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            Explored the different types of equation solvers available and how they can be used to solve
+                            complex mathematical equations with ease.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="/17092018/instaChatSave.html">
+                                <h2 class="blog-title">Instagram Chats Save and read offline Blog</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/InstaChatSave" style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                        </td>
+                        
+                        <td class="blog-date">September 17, 2018</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            This script allows users to save and read Instagram chats in a readable text format offline. It currently only works for personal chats.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="blog-listing">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9">
+                                <h2 class="blog-title">Kaprekars Constant... 6174</h2>
+                            </a>
+                        </td>
+                        <td class="blog-icons">
+                            <a href="https://github.com/vibhavnirmal/misc-scripts/blob/master/oldScripts/kaprekars.py"
+                                style="text-decoration: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                            </a>
+                        </td>
+                        <td class="blog-date">February 13, 2018</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="blog-excerpt">
+                            Kaprekar's Constant is the number 6174, which is obtained through the Kaprekar's Routine
+                            process involving rearranging the digits of a four-digit number and calculating the
+                            difference between the highest and lowest possible numbers until 6174 is reached.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="resources\images\logos\vin.png" />
+    <meta name="description" content="Robotics enthusiast. Learning new stuff every day.">
+    <title>Vibhav Nirmal</title>
+    <link rel="stylesheet" href="resources\css\index.css">
+    <script src="resources\js\slider.js"></script>
+    <script src="resources\js\jquery-3.5.1.min.js"></script>
+    <script>window.onload = function () { getTheme() };</script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    <script>
+        $(function () {
+            $("#nav-socialMedia").load("social.html");
+        });
+        $(function () {
+            $("#nav-sideblog").load("sideblog.html");
+        });
+        $(function () {
+            $("#nav-footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body class="bg">
+    <header>
+        <div class="topnav">
+            <a href="https://github.com/vibhavnirmal">GitHub <i class="fab fa-github"></i></a>
+        </div>
+    </header>
+    <div class="sidenav">
+        <label id="switch" class="switch" style="position: fixed; right: 20px; top: 15px;">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+        <br>
+        <p id="littleIntro">Welcome to my website! My name is <b>Vibhav Nirmal</b> and I am a graduate student in computer science at the University of Texas at Arlington. I received my bachelor's degree in computer engineering from LD College of Engineering in Ahmedabad and have over one year of professional experience in software development.</p>
+
+        <p id="littleIntro">
+            I am interested in the field of unmanned vehicle systems and their various applications, particularly motion planning, control, and perception. I also enjoy using Arduino and Raspberry Pi to create IoT solutions through hands-on experimentation. My participation in the University of Texas at Arlington's AutonoBots club allowed me to work on robot localization and sensor fusion with lidar data during the National Robotics Challenge in April 2022.
+        </p>
+        <p id="littleIntro">
+            With a strong background in mathematics, programming logic, and cross-platform coding, I am eager to use my skills to develop innovative solutions in robotics, artificial intelligence, and computer vision. I believe in the importance of collaboration, effective communication, and creativity in all my work.
+        </p>
+        <p id="littleIntro">
+            Thank you for stopping by and taking an interest in my work. If you have any questions or comments, please don't hesitate to reach out to me.
+        </p>
+        <div id="nav-footer"></div>
+    </div>
+
+    <div id="main">
+        <div class="recent">
+            <p>Recent Work/Blogs/Posts</p>
+        </div>
+        <div id="nav-sideblog"></div>
+        <br>
+    </div>
+</body>
+
 </html> -->
