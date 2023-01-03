@@ -127,3 +127,26 @@ a:hover {
 #singleImg{
     max-width: 80%;
 }
+
+@media screen and (max-width: 700px) {
+
+    #command {
+        font-family: monospace;
+        background-color: #eee;
+        padding: 0.2em 0.5em;
+        border-radius: 3px;
+        width: auto;
+    }
+
+    pre {
+        font-size: 14px;
+        overflow: scroll;
+        width: auto;
+        /* word-wrap: break-word; */
+      }
+
+    #singleImg{
+        max-width: 100%;
+    }
+      
+}
