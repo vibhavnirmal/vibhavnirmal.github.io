@@ -11,6 +11,15 @@ body.bg {
     font-family: Arial, sans-serif;
 }
 
+#desc{
+    color: #404040;
+}
+
+#formula{
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #maintitle {
     font-size: 18px;
     font-weight: bold;
@@ -69,4 +78,52 @@ a {
 
 a:hover {
     color: #000;
+}
+
+#imgsSideBySide {
+    display: flex;
+}
+
+.imgs {
+    flex: 1;
+}
+
+#img {
+    width: 100%;
+}
+
+.resources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resource-link {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+.resource-link:hover {
+    background: #eee;
+}
+
+#command {
+    font-family: monospace;
+    background-color: #eee;
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+#whatItDoes {
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+}
+
+#singleImg{
+    max-width: 80%;
 }

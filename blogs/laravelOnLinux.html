@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description" content="Math equations solver with python.">
+    <title>Laravel with Ubuntu | ViN Blogs</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\style.css">
+</head>
+
+<body class="bg">
+    <div class="blog">
+        <div id="maintitle">
+            <span id="title">Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">11/18/2022</span>
+            <div>
+                <br>
+                <a href="https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb">
+                    <button type="button" class="btn btn-primary" id="dload">Gist</button>
+                </a>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid content">
+            <div id="desc">
+                <h3>
+                    These steps should get PHP and Laravel installed on your Linux machine and ready for development on your project.
+                </h3>
+
+                <p>First, add the apt repository by running this command:</p>
+                <pre id="command">sudo add-apt-repository ppa:ondrej/php</pre>
+                <p id="whatItDoes">
+                    This adds the ppa:ondrej/php repository, which contains various PHP versions and related packages, to the list of sources that APT can use to install packages.
+                </p>
+
+                <p>After adding the repository, update the package list with this command:</p>
+                <pre id="command">sudo apt update</pre>
+                <p id="whatItDoes">
+                    The apt update command updates the package list from the repositories specified in the sources.list file and the added PPAs (Personal Package Archives). This is necessary to make sure that you have access to the latest versions of packages available in the repository.
+                </p>
+                
+                <p>To check if the repository was added correctly and the package can be found, use this command:</p>
+                <pre id="command">sudo apt-cache search php8.1-curl</pre>
+                <p id="whatItDoes">
+                    The apt-cache search command is used to search the package cache for a package with a specific name. In this case, you are searching for the package php8.1-curl, which is the CURL module for PHP 8.1.
+                </p>
+
+                <p>This should return: <pre>php8.1-curl - CURL module for PHP</pre></p>
+                <p>Now that you've added the repository and updated the package list, you can install the desired PHP package with this command:</p>
+                <pre id="command">sudo apt install php8.1-cgi php8.1-cli php8.1-xml php8.1-curl</pre>
+                <p>
+                In addition to PHP, you'll also need to install the composer package to install Laravel. Do so with this command:</p>
+                <pre id="command">sudo apt install composer</pre>
+                <p id="whatItDoes">
+                    The "apt install" command installs one or more packages. In this case, you are installing four PHP packages: php8.1-cgi, php8.1-cli, php8.1-xml, php8.1-curl and composer.
+                </p>
+
+                
+
+                <p>After installing composer, you can create a new Laravel project in the current directory with this command:</p>
+                <pre id="command">composer create-project laravel/laravel myProject</pre>
+                <p id="whatItDoes">
+                    The composer create-project command creates a new Laravel project in the current directory, using the latest stable release of Laravel. You can specify the name of the project directory (in this case, myProject) as an argument.
+                </p>
+
+                Then navigate to the project directory with:
+                <pre id="command">cd myProject</pre>
+                Finally, start the Laravel development server with:
+                <pre id="command">php artisan serve</pre>
+                <p id="whatItDoes">
+                    Finally, the php artisan serve command starts a development server at http://127.0.0.1:8000, which you can use to test your Laravel application.
+                </p>
+
+                <p>This should start the server and print:</p>
+                <pre>INFO Server running on [http://127.0.0.1:8000]</pre>
+                <img id="singleImg" src="https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

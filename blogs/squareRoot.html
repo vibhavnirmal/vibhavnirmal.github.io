@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description" content="Math equations solver with python.">
+    <title>Finding square root | ViN Blogs</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\style.css">
+</head>
+
+<body class="bg">
+    <div class="blog">
+        <div id="maintitle">
+            <span id="title">Square root of any integer without using sqrt() function
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">26/07/2022</span>
+            <div>
+                <br>
+                <a
+                    href="https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3/archive/dc6883f9dd3da42f54a9bf13cbf7dccd091c1bf5.zip">
+                    <button type="button" class="btn btn-primary" id="dload">Download</button>
+                </a>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid content">
+            <p id="desc">
+                <b>The Newton-Raphson method is a way to find the root of an equation.</b>
+            </p>
+            <p id="desc">
+                It starts with an initial guess and then improvs the guess at each step. To do this, the method uses the equation of the tangent line to the curve defined by the equation at the point of the current guess. The tangent line is a line that touches the curve at a single point and has the same slope as the curve at that point.
+
+                The Newton-Raphson method involves iteratively applying the following formula:
+            </p>
+            <div id="imgsSideBySide">
+                <div class="imgs">
+                    <img id="img" src="/resources/images/equation1.jpg" alt="formula">
+                </div>
+                <div class="imgs">
+                    <img id="img" src="/resources/images/nr.png" alt="Newton-Raphson Formula And Derivation" title="Newton-Raphson Formula And Derivation">
+                </div>
+            </div>
+            <p>
+                By using this formula, we can calculate a new approximation for the root at each step and get closer and closer to the actual root. We can stop the iteration when the difference between the current approximation and the previous one is small enough, which means that we have found a good enough approximation for the root.
+            </p>
+            <script src="https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3.js"></script>
+            <h3>How does this work:</h3>
+            <div id="howItWorks">
+                <ul id="desc">
+                    <li>This code defines a function square_root that uses the Newton-Raphson method to approximate the square root of a given number</li>
+                    <li>Initialize two variables, start to 0 and and mid to number/2. Create a loop that continues until start and mid are equal, which indicates that the approximation has converged
+                    </li>
+                    <li>Inside the loop, the function updates start to the value of mid, and then calculates a new value for mid using the formula <span id="formula">mid=(start+(number/start))/2</span>. 
+                    </li>
+                    <li>
+                        This formula is based on the equation of the tangent line to the curve <span id="formula">f(x)=x*x-number</span> at the point x = start, which is used to improve the approximation of the square root.
+                    </li>
+                    <li>
+                        After the loop has completed, the function returns start as the approximate square root of number.
+                    </li>
+                    <li>
+                        By iteratively updating mid using this formula, the function is able to improve its approximation of the square root of number at each step until it has converged to within the desired tolerance.
+                    </li>
+                </ul>
+            </div>
+            <p id="desc">
+                The Newton-Raphson method is a popular and efficient root-finding algorithm, especially for smooth and continuous functions. However, it may not always converge to a root if the initial guess is far from the correct solution. Therefore, it is important to choose a good initial guess to increase the chances of the method converging to the correct root. Despite this potential limitation, the Newton-Raphson method is still widely used and effective in a variety of mathematical and scientific fields due to its ability to quickly improve upon initial guesses.
+            </p>
+            <h4>References:</h4>
+            <ol class="resources-list">
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Newton's_method" target="_blank" class="resource-link">Newton's method on Wikipedia</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=YSl37OYMLFw" target="_blank" class="resource-link">Newton-Raphson Formula And Derivation by Alpha Theta Epsilon on YouTube</a>
+                </li>
+              </ol>
+        </div>
+    </div>
+</body>
+
+</html>
