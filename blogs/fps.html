@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal,vibhav,nirmal,UTA,MachineLearningBlog,TechieViN,game development">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description" content="First person shooter game with unreal engine and blueprints">
+    <title>FPS game | ViN Blogs</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\style.css">
+</head>
+
+<body class="bg">
+    <div class="blog">
+        <div id="maintitle">
+            <span id="title">First person shooter game with Unreal Engine
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">04/24/2023</span>
+            <div>
+                <br>
+                <a href="https://www.dropbox.com/s/knwbbwgy64nfp2x/ShootingGallaryExeFile.zip?dl=0">
+                    <button type="button" class="btn btn-primary" id="dload">Download Executable (dropbox)</button>
+                </a>
+                <a href="https://www.dropbox.com/s/s2ovhpxet79m3jb/ShootingGallary.zip?dl=0">
+                    <button type="button" class="btn btn-primary" id="dload">Download Project Files (dropbox)</button>
+                </a>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid content">
+            <p id="desc">
+                <b>First person shooting range with unreal engine blueprints</b>
+            </p>
+            <p id="desc">
+                Are you ready to create an exciting first-person shooter game using Unreal Engine 5? With the power of
+                Blueprints, you can design your game without ever touching a line of code. In this blog post, I will
+                guide you through the process of creating a thrilling game that features a playable character who can
+                move around the map and shoot at static and dynamic targets in a shooting range.
+            </p>
+            <p id="desc">
+                First, open Unreal Engine and start with an empty template. You can customize the look and feel of your
+                character and gun by using existing assets or creating your own. For my project, I havn't used any
+                weapon assets or character asset. I have just added a camera and box static mesh for the character.
+            </p>
+            <img id="img" class="bigFP" src="../resources/images/viewport.PNG" alt="ViewPort person"
+                title="ViewPort person">
+            <p id="desc">
+                Next, create a new level and design your shooting range using the level editor. You can add different
+                types of targets, such as small or big targets, and assign different scores to them. You can also set a
+                timer for your game, making it more challenging for the player to complete.
+            </p>
+
+            <img id="img" src="../resources/images/crosshair.PNG" alt="crosshair" title="crosshair">
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/SMUDBZ1">
+                <a href="//imgur.com/a/SMUDBZ1">Unreal Engine FPS Shooting Range Game Map</a>
+            </blockquote>
+            <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+            <img id="img" src="../resources/images/shootingLineTrace.PNG" alt="shootingLineTrace"
+                title="shootingLineTrace">
+
+            <img id="img" src="../resources/images/targetBlueprint.PNG" alt="targetBlueprint" title="targetBlueprint">
+
+            <p id="desc">
+                Once your level is designed, it's time to create the logic for your game. This is where Blueprints come
+                in. Blueprints are visual scripting tools that allow you to create gameplay mechanics without writing
+                code. You can create new Blueprints by right-clicking in the Content Browser and selecting "Blueprint
+                Class."
+            </p>
+            <p id="desc">
+                To add movement mechanics, create a new Blueprint for your character and add movement events such as
+                forward, backward, left, and right. You can also add jumping, crouching, and sprinting mechanics to make
+                the movement more dynamic.
+            </p>
+            <img src="../resources/images/movement.PNG" alt="Movement" title="Movement" id="img">
+            <p id="desc">
+                Finally, add a main menu and a pause menu to your game. This will allow the player to start a new game,
+                continue playing, or quit the game. You can also add options to adjust the graphics, audio, and
+                controls.
+            </p>
+            <img src="../resources/images/healthBar.PNG" alt="Health Bar" title="Health Bar" id="img">
+            <img src="../resources/images/mainMenu.PNG" alt="Main Menu" title="Main Menu" id="img">
+            <p id="desc">
+                When I created main menu, I had a cinematic video created by sequencer. By mistake that video got
+                deleted and I was not able to find it again. So, I have a sequencer thats just plain white screen. But,
+                you can add a video to your main menu by adding a sequencer and adding a media player to it.
+            </p>
+            <img src="../resources/images/pauseMenuOnLevelBlueprint.PNG" alt="Pause Menu" title="Pause Menu" id="img">
+            <img src="../resources/images/gameOver.PNG" alt="Game Over" title="Game Over" id="img">
+
+
+            <p id="desc">
+                Congratulations! You have now created a thrilling first-person shooter game using Unreal Engine and
+                Blueprints. With the power of Blueprints, you can easily modify and add new features to your game,
+                making it even more exciting for the players.
+            </p>
+
+            <p id="desc">
+                <b>Gameplay Video: #TODO</b>
+            </p>
+
+            <p id="desc">
+                If you have any questions or comments, please feel free to reach out to me through email or any other
+                social media. I hope you enjoyed this blog post and found it helpful. Thank you for reading!
+            </p>
+
+            <h4>References:</h4>
+            <ol class="resources-list">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=g7Npxo1Myg4" target="_blank" class="resource-link">
+                        FPS Character Movement and Rotation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.unrealengine.com/5.1/en-US/setting-up-user-inputs-in-unreal-engine/"
+                        target="_blank" class="resource-link">Setting up user inputs in Unreal Engine</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=kumZj_mov58" target="_blank" class="resource-link">Unreal
+                        How To Create A Main Menu - Unreal Engine 5</a>
+                </li>
+                <li>
+                    <a href="https://docs.unrealengine.com/4.27/en-US/InteractiveExperiences/UMG/HowTo/CreateMainMenu/"
+                        target="_blank" class="resource-link">Create a Main Menu in Unreal Engine</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=BpS1D6J09KE" target="_blank" class="resource-link">Unreal
+                        On Screen Prompt </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=5-UJT4U-jeg" target="_blank" class="resource-link">Unreal
+                        Blueprint - How To Interact</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=F_nmiotWB24" target="_blank" class="resource-link">Unreal
+                        Use Array to Create a Shooting Range</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=CgPlBjFeu4Y" target="_blank" class="resource-link">Unreal
+                        Shooting with a Single Line Trace</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=0pweCABpteY" target="_blank" class="resource-link">
+                        Damage with Line Trace
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=tFfrDJu77kE" target="_blank" class="resource-link">
+                        Crosshair
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.unrealengine.com/5.1/en-US/statetree-quick-start-guide/" target="_blank"
+                        class="resource-link">
+                        State Tree Quick Start Guide
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=nHK97x6ILYo" target="_blank" class="resource-link">
+                        Unreal Countdown timer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=_CV_Sg3Ffw8" target="_blank" class="resource-link">
+                        Unreal Simple Score / Point System
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=3OCisqQMaVc&t=69s" target="_blank" class="resource-link">
+                        Moving targets
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=XRbpiF4xvW8" target="_blank" class="resource-link">
+                        Game Options String
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=jvte8lNyNJ0" target="_blank" class="resource-link">
+                        How to communicate between Blueprints (button and Door example)
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=stUKcEkDydY&t=51s" target="_blank" class="resource-link">
+                        Video As Main Menu Background
+                    </a>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+</body>
+
+</html>

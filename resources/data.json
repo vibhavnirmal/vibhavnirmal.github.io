@@ -1,6 +1,23 @@
 {
     "projects": [
         {
+            "title": "Unreal Engine 5 First Person Shooter Game (blueprints)",
+            "titleLink": "https://vibhavnirmal.github.io/blogs/fps.html",
+            "description": "The game features a playable character who can move around the map and shoot at static and dynamic targets in the shooting range. The game is timed and has a different score system for different types of targets. The game also features a main menu and a pause menu.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "#"
+                }
+            ],
+            "date": "2023-04-24",
+            "image": "",
+            "tags": [
+                "gamedev",
+                "blog"
+            ]
+        },
+        {
             "title": "Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)",
             "titleLink": "https://vibhavnirmal.github.io/blogs/laravelOnLinux.html",
             "description": "A step-by-step guide on how to install PHP and Laravel on a Linux machine using the apt repository",
@@ -11,7 +28,7 @@
                 }
             ],
             "date": "2022-11-18",
-            "image": "https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png",
+            "image": "",
             "tags": [
                 "github",
                 "webdev",
@@ -30,7 +47,7 @@
                 }
             ],
             "date": "July 25, 2022",
-            "image": "resources/images/sqrt.jpeg",
+            "image": "",
             "tags": [
                 "github",
                 "code",
@@ -49,7 +66,7 @@
                 }
             ],
             "date": "2020-10-15",
-            "image": "resources/images/pigDice.png",
+            "image": "",
             "tags": [
                 "github",
                 "webdev",
@@ -93,7 +110,7 @@
                 }
             ],
             "date": "2020-07-24",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lossless_compression.svg/1200px-Lossless_compression.svg.png",
+            "image": "",
             "tags": [
                 "python",
                 "code",
@@ -113,7 +130,7 @@
                 }
             ],
             "date": "2020-06-20",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Google_Knowledge_Graph_Example.png/1200px-Google_Knowledge_Graph_Example.png",
+            "image": "",
             "tags": [
                 "python",
                 "github",
@@ -133,7 +150,7 @@
                 }
             ],
             "date": "2020-04-05",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Knowledge_graph_logo.svg/1200px-Knowledge_graph_logo.svg.png",
+            "image": "",
             "tags": [
                 "python",
                 "youtube",
