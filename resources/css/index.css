@@ -130,7 +130,17 @@ td {
     width: 20% !important;
 }
 
+#blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
 @media screen and (max-width: 700px) {
+    #blog-container {
+        width: 100%;
+        display: inline-block;
+    }
+
     .container {
         display: block;
     }
