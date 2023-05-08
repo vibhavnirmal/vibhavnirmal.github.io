@@ -1,5 +1,5 @@
- /* Add some styling for the overall layout */
- body {
+/* Add some styling for the overall layout */
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -50,10 +50,17 @@
     margin: 10px;
     background-color: azure;
     /* margin-bottom: 20px;
-    border-bottom: 1px solid gray; */
+border-bottom: 1px solid gray; */
 }
 
-.blog-icons{
+.filter-button {
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.blog-icons {
     text-align: right;
 }
 
@@ -68,7 +75,6 @@
     font-size: 14px;
     color: #999;
     margin-bottom: 10px;
-    width: 20%;
 }
 
 .blog-excerpt {
@@ -80,6 +86,23 @@ a {
     font-size: 14px;
     color: black;
 }
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
 
 table {
     font-size: 16px;
@@ -125,7 +148,7 @@ td {
         margin-top: 20px;
     }
 
-    .blog-excerpt{
+    .blog-excerpt {
         text-align: justify;
     }
 }

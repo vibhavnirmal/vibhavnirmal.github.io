@@ -2,144 +2,212 @@
     "projects": [
         {
             "title": "Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)",
+            "titleLink": "https://vibhavnirmal.github.io/blogs/laravelOnLinux.html",
             "description": "A step-by-step guide on how to install PHP and Laravel on a Linux machine using the apt repository",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb"
+                }
+            ],
             "date": "2022-11-18",
             "image": "https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png",
             "tags": [
-                "github", "webdev", "blog", "linux"
+                "github",
+                "webdev",
+                "blog",
+                "linux"
             ]
         },
         {
             "title": "Square root of integer without using sqrt() function",
+            "titleLink": "https://vibhavnirmal.github.io/blogs/squareRoot.html",
             "description": "The Newton-Raphson method is an iterative algorithm that can be used to approximate the square root of a number by improving an initial estimate at each iteration using a formula based on the equation y * y = x.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3"
+                }
+            ],
             "date": "July 25, 2022",
             "image": "resources/images/sqrt.jpeg",
             "tags": [
-                "github", "code", "python", "blog"
+                "github",
+                "code",
+                "python",
+                "blog"
             ]
         },
         {
             "title": "Digital Budget Tracker and Pig Dice Game in Javascript",
+            "titleLink": "https://vibhavnirmal.github.io/blogs/learningJS.html",
             "description": "The Digital Budget Tracker is a tool that helps users track and manage their personal or business finances by providing a platform to input and organize income and expenditure data. The Pig Dice Game is a simple dice game that involves rolling a dice and earning points based on the numbers rolled. Both of these applications are designed with Javascript to be user-friendly and interactive, providing a convenient and enjoyable experience for users.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://vibhavnirmal.github.io/blogs/learningJS.html",
+            "multipleLinks": [
+                {
+                    "icon": "",
+                    "link": "#"
+                }
+            ],
             "date": "2020-10-15",
             "image": "resources/images/pigDice.png",
             "tags": [
-                "github", "webdev", "code", "blog"
+                "github",
+                "webdev",
+                "code",
+                "blog"
             ]
         },
         {
             "title": "Dart dataset and PyPlot Scatter function Article",
+            "titleLink": "https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6",
             "description": "The Dart dataset is a collection of data points that can be plotted using the PyPlot Scatter function in Python. This function allows users to create scatter plots, which are visual representations of data points that use Cartesian coordinates to display values for typically two variables for a set of data.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Medium_Logo.png",
+                    "link": "https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6"
+                },
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/MachineLearningPrograms/tree/master/Classification/dart"
+                }
+            ],
             "date": "2020-07-31",
-            "image": "https://matplotlib.org/stable/_images/sphx_glr_scatter_001.png",
+            "image": "",
             "tags": [
-                "medium", "python", "machinelearning", "code", "github"
+                "medium",
+                "python",
+                "machinelearning",
+                "code",
+                "github"
             ]
         },
         {
             "title": "String compression algorithm",
+            "titleLink": "https://www.linkedin.com/posts/vibhavnirmal_vibhav-nirmal-techievin-posted-on-instagram-activity-6692415424782487552-mu-x",
             "description": "Iterate through a list of integers and compresses it into a list of tuples, where each tuple represents a number and the number of times it appears in the original list.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://en.wikipedia.org/wiki/Data_compression",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/algorithms/blob/master/compress.py"
+                }
+            ],
             "date": "2020-07-24",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lossless_compression.svg/1200px-Lossless_compression.svg.png",
             "tags": [
-                "python", "code", "github"
+                "python",
+                "code",
+                "github"
             ]
         },
         {
             "title": "Knowledge Graph Based QnA Post",
+            "titleLink": "https://www.linkedin.com/posts/philipvollet_nlp-machinelearning-graphs-activity-6680030817038725120-pczn/",
             "description": "Our question answering system uses Entity pairs Extraction and Knowledge Graph Construction to extract entities from the input paragraph and construct a knowledge graph for answering user questions. It utilizes dependency parsing tools and techniques, and is effective at answering \"who,\" \"what,\" \"when,\" and \"where\" questions. However, the answers obtained are currently simple and limited in word count.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://en.wikipedia.org/wiki/Knowledge_graph",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
+                }
+            ],
             "date": "2020-06-20",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Google_Knowledge_Graph_Example.png/1200px-Google_Knowledge_Graph_Example.png",
             "tags": [
-                "python", "github", "machinelearning", "code"
+                "python",
+                "github",
+                "machinelearning",
+                "code"
             ]
         },
         {
             "title": "Knowledge Graph Based QnA YouTube Presentation",
+            "titleLink": "https://www.youtube.com/watch?v=u9Nr8wjTPZ8",
             "description": "Implemented a knowledge graph representation project to facilitate question answering by extracting key entities such as subject, predicate, and object. This innovative approach leverages the power of structured data to provide more accurate and brief answers to user inquiries.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://www.youtube.com/",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
+                }
+            ],
             "date": "2020-04-05",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Knowledge_graph_logo.svg/1200px-Knowledge_graph_logo.svg.png",
             "tags": [
-                "python", "youtube", "machinelearning"
+                "python",
+                "youtube",
+                "machinelearning",
+                "tutorial"
             ]
         },
         {
             "title": "How to install Unreal Engine 4 in arch linux Article",
+            "titleLink": "https://medium.com/@vibhavnirmal/how-to-install-unreal-engine-4-in-arch-linux-1d7b910f375f",
             "description": "This article outlines the steps to install Unreal Engine 4 on an Arch Linux operating system. It provides detailed instructions on how to properly set up and configure UE4 to run smoothly on the Linux platform",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/UE_Logo_Black_Centered.svg/240px-UE_Logo_Black_Centered.svg.png",
-            "link": "https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Medium_Logo.png",
+                    "link": "https://medium.com/@vibhavnirmal/how-to-install-unreal-engine-4-in-arch-linux-1d7b910f375f"
+                }
+            ],
             "date": "2019-07-20",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/240px-Archlinux-icon-crystal-64.svg.png",
+            "image": "",
             "tags": [
-                "medium", "linux", "gamedev"
+                "medium",
+                "linux",
+                "gamedev"
             ]
         },
         {
             "title": "Maths Equation Solver Blog",
+            "titleLink": "https://vibhavnirmal.github.io/blogs/mathsSolver.html",
             "description": "Explored the different types of equation solvers available and how they can be used to solve complex mathematical equations with ease.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://www.mathsisfun.com/algebra/index.html",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/MathProblems"
+                }
+            ],
             "date": "2018-09-22",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Quadratic_formula.svg/1200px-Quadratic_formula.svg.png",
+            "image": "",
             "tags": [
-                "medium", "python", "code"
+                "github",
+                "python",
+                "code"
             ]
         },
         {
             "title": "Instagram Chats Save and read offline Blog",
+            "titleLink": "https://vibhavnirmal.github.io/blogs/instaChatSave.html",
             "description": "This script allows users to save and read Instagram chats in a readable text format offline. It currently only works for personal chats.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://www.instagram.com/",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/InstaChatSave"
+                }
+            ],
             "date": "2018-09-17",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png",
             "tags": [
-                "medium", "python", "code"
+                "github",
+                "python",
+                "code"
             ]
         },
         {
             "title": "Kaprekars Constant... 6174",
-            "description": "Kaprekar's Constant is the number 6174, which is obtained through the Kaprekar's Routine process involving rearranging the digits of a four-digit number and calculating the difference between the highest and lowest possible numbers until 6174 is reached.",
-            "icon": "resources/images/logos/GitHub_Logo.png",
-            "link": "https://en.wikipedia.org/wiki/Kaprekar%27s_constant",
-            "date": "2018-02-13",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/KaprekarRoutine.svg/1200px-KaprekarRoutine.svg.png",
-            "tags": [
-                "medium", "python", "code"
-            ]
-        },
-        {
-            "title": "Kaprekars Constant... 6174",
+            "titleLink": "https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9",
             "description": "Kaprekar's Constant is the number 6174, which is obtained through the Kaprekar's Routine process involving rearranging the digits of a four-digit number and calculating the difference between the highest and lowest possible numbers until 6174 is reached.",
             "multipleLinks": [
                 {
-                "icon1": "resources/images/logos/GitHub_Logo.png",
-                "link1": "https://en.wikipedia.org/wiki/Kaprekar%27s_constant"
-                },
-                {
-                "icon2": "resources/images/logos/GitHub_Logo.png",
-                "link2": "https://en.wikipedia.org/wiki/Kaprekar%27s_constant"
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/misc-scripts/blob/master/oldScripts/kaprekars.py"
                 }
             ],
             "date": "2018-02-13",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/KaprekarRoutine.svg/1200px-KaprekarRoutine.svg.png",
+            "image": "",
             "tags": [
-                "medium", "python", "code"
+                "github",
+                "python",
+                "code"
             ]
         }
-        
     ]
 }
