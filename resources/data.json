@@ -18,6 +18,23 @@
             ]
         },
         {
+            "title": "Mercado Escolar - School Supplies Ecommerce Website (React)",
+            "titleLink": "https://vxn5253.uta.cloud/",
+            "description": "Mercado Escolar is an ecommerce website that allows users to purchase school supplies online. The website features a main page, a product page, a shopping cart, and a checkout page. The website also features a login page and a registration page for users to create accounts and login to their accounts. Login credentials required for business, admin, and superadmin accounts (Ping me for credentials).",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "#"
+                }
+            ],
+            "date": "2022-11-11",
+            "image": "",
+            "tags": [
+                "webdev",
+                "blog"
+            ]
+        },
+        {
             "title": "Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)",
             "titleLink": "https://vibhavnirmal.github.io/blogs/laravelOnLinux.html",
             "description": "A step-by-step guide on how to install PHP and Laravel on a Linux machine using the apt repository",
@@ -53,6 +70,25 @@
                 "code",
                 "python",
                 "blog"
+            ]
+        },
+        {
+            "title": "The comma.ai Calibration Challenge!",
+            "titleLink": "https://github.com/vibhavnirmal/calibration_challenge",
+            "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle’s direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion. (TODO: Demo)",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "link": "https://github.com/vibhavnirmal/calibration_challenge"
+                }
+            ],
+            "date": "2022-05-10",
+            "image": "",
+            "tags": [
+                "github",
+                "code",
+                "python",
+                "computervision"
             ]
         },
         {
