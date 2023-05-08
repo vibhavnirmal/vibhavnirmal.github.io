@@ -78,7 +78,8 @@
                 "python",
                 "machinelearning",
                 "code",
-                "github"
+                "github",
+                "blog"
             ]
         },
         {
@@ -96,7 +97,9 @@
             "tags": [
                 "python",
                 "code",
-                "github"
+                "github",
+                "linkedin",
+                "instagram"
             ]
         },
         {
@@ -115,7 +118,8 @@
                 "python",
                 "github",
                 "machinelearning",
-                "code"
+                "code",
+                "linkedin"
             ]
         },
         {
@@ -152,7 +156,9 @@
             "tags": [
                 "medium",
                 "linux",
-                "gamedev"
+                "gamedev",
+                "tutorial",
+                "blog"
             ]
         },
         {
@@ -170,7 +176,8 @@
             "tags": [
                 "github",
                 "python",
-                "code"
+                "code",
+                "blog"
             ]
         },
         {
@@ -184,11 +191,13 @@
                 }
             ],
             "date": "2018-09-17",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png",
+            "image": "",
             "tags": [
                 "github",
                 "python",
-                "code"
+                "code",
+                "blog",
+                "instagram"
             ]
         },
         {
@@ -206,7 +215,8 @@
             "tags": [
                 "github",
                 "python",
-                "code"
+                "code",
+                "instagram"
             ]
         }
     ]
