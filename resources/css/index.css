@@ -170,7 +170,7 @@ td {
     }
 
     .blog-excerpt {
-        text-align: justify;
+        /* text-align: justify; */
     }
 
     .blog-icons {
