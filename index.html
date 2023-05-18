@@ -24,7 +24,10 @@
             <h1>About Me</h1>
             <div id="writeUp">
                 <p>
-                    My name is <b>Vibhav Nirmal</b> and I am a <b>graduate student</b> in computer science at the <b>University of Texas at Arlington</b>. I received my bachelor's degree in computer engineering from LD College of Engineering in Ahmedabad and have over one year of professional experience in software development.
+                    My name is <b>Vibhav Nirmal</b> and I am a <b>graduate student</b> in computer science at the
+                    <b>University of Texas at Arlington</b>. I received my bachelor's degree in computer engineering
+                    from LD College of Engineering in Ahmedabad and have over one year of professional experience in
+                    software development.
                 </p>
                 <p>
                     I am interested in the field of unmanned vehicle systems and their various applications,
@@ -87,28 +90,6 @@
         <div class="right">
             <h2>Code/Blogposts</h2>
             <div class="blog-filter">
-                <div class="filter">
-                    <nav>
-                        <ul>
-                            <li class="filter-button" onclick="filterSelection('all')">#All</li>
-                            <li class="filter-button" onclick="filterSelection('code')">#Code</li>
-                            <li class="filter-button" onclick="filterSelection('blog')">#Blog</li>
-                            <li class="filter-button" onclick="filterSelection('tutorial')">#Tutorial</li>
-                            <li class="filter-button" onclick="filterSelection('webdev')">#WebDev</li>
-                            <li class="filter-button" onclick="filterSelection('gamedev')">#GameDev</li>
-                            <li class="filter-button" onclick="filterSelection('machinelearning')">#MachineLearning</li>
-                            <li class="filter-button" onclick="filterSelection('python')">#Python</li>
-                            <li class="filter-button" onclick="filterSelection('computervision')">#ComputerVision</li>
-                            <li class="filter-button" onclick="filterSelection('linux')">#Linux</li>
-                            <li class="filter-button" onclick="filterSelection('github')">#GitHub</li>
-                            <li class="filter-button" onclick="filterSelection('instagram')">#Instagram</li>
-                            <li class="filter-button" onclick="filterSelection('medium')">#Medium</li>
-                            <li class="filter-button" onclick="filterSelection('youtube')">#YouTube</li>
-                            <li class="filter-button" onclick="filterSelection('linkedin')">#Linkedin</li>
-                        </ul>
-                    </nav>
-                    
-                </div>
             </div>
             <div class="mainProjects">
                 <div id="blog-container"></div>
@@ -131,7 +112,45 @@
         fetch('resources/data.json')
             .then(response => response.json())
             .then(data => {
-                // Iterate over projects array
+                const filterElement = document.createElement('div');
+                filterElement.classList.add('filter');
+
+                let alltags = [];
+
+                data.projects.forEach(project => {
+                    project.tags.forEach(tag => {
+                        alltags.push(tag);
+                    });
+                });
+
+                const uniqueTags = new Set(alltags);
+
+                console.log(uniqueTags);
+
+                const filterNavElement = document.createElement('nav');
+                const filterUlElement = document.createElement('ul');
+
+                // Add all button to show all
+                const filterLiElementAll = document.createElement('li');
+                filterLiElementAll.classList.add('filter-button');
+                filterLiElementAll.onclick = function () { filterSelection('all'); };
+                filterLiElementAll.textContent = '#All';
+                filterUlElement.appendChild(filterLiElementAll);
+
+                uniqueTags.forEach(tag => {
+                    const filterLiElement = document.createElement('li');
+                    filterLiElement.classList.add('filter-button');
+                    filterLiElement.onclick = function () { filterSelection(tag); };
+                    filterLiElement.textContent = '#' + tag;
+                    filterUlElement.appendChild(filterLiElement);
+                });
+
+                filterNavElement.appendChild(filterUlElement);
+                filterElement.appendChild(filterNavElement);
+
+                // add this under <div class="blog-filter">
+                document.getElementsByClassName('blog-filter')[0].appendChild(filterElement);
+
                 data.projects.forEach(project => {
                     // Access data for current project
                     const title = project.title;
@@ -150,7 +169,6 @@
                     blogListing.classList.add('blog-listing');
                     blogListing.classList.add('all');
 
-                    // add tags to class list
                     tags.forEach(tag => {
                         blogListing.classList.add(tag);
                     });
@@ -160,7 +178,14 @@
                     titleElement.textContent = title;
 
                     const linkElement = document.createElement('a');
-                    linkElement.href = titleLink;
+                    // if titleLink is # then remove href and mouse pointer
+                    if (titleLink === '#') {
+                        linkElement.onclick = function () { return false; };
+                        linkElement.style.cursor = 'default';
+                    }
+                    else {
+                        linkElement.href = titleLink;
+                    }
 
                     const excerptElement = document.createElement('p');
                     excerptElement.classList.add('blog-excerpt');
@@ -168,25 +193,20 @@
 
                     const dateElement = document.createElement('p');
                     dateElement.classList.add('blog-date');
-                    // dateElement.textContent = 'Published on ' + date;
-                    
-                    // convert date to human readable format
-                    const dateObject = new Date(date);
-                    // add +1 day to dateObject to fix timezone issue
-                    dateObject.setDate(dateObject.getDate() + 1);
-                    const humanDateFormat = dateObject.toLocaleString("en-US", {weekday: "long", year: "numeric", month: "long", day: "numeric"});
-                    dateElement.textContent = 'Published on ' + humanDateFormat;
 
+                    const dateObject = new Date(date);
+                    dateObject.setDate(dateObject.getDate() + 1);
+                    const humanDateFormat = dateObject.toLocaleString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+                    dateElement.textContent = 'Published on ' + humanDateFormat;
 
                     const iconElement = document.createElement('div');
                     iconElement.classList.add('blog-icons');
 
                     multipleLinks.forEach(link => {
-                        if (link.link === '#'){
+                        if (link.link === '#') {
                             iconElement.style.display = 'none';
                         }
-                        else
-                        {
+                        else {
                             const iconLink = document.createElement('a');
                             iconLink.href = link.link;
 

@@ -61,7 +61,10 @@ border-bottom: 1px solid gray; */
 }
 
 .blog-icons {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* or any other desired value */
 }
 
 .blog-title {
@@ -168,5 +171,12 @@ td {
 
     .blog-excerpt {
         text-align: justify;
+    }
+
+    .blog-icons {
+        justify-content: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: max-content;
     }
 }

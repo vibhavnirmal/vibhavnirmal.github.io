@@ -1,13 +1,36 @@
 {
     "projects": [
         {
+            "title": "Real Time appearance based mapping - SLAM",
+            "titleLink": "#",
+            "description": "Real time appearance based mapping is a technique used to create a map of an unknown environment using a single camera. The map is created by extracting features from the camera images and matching them with features from the previous images. The map is then updated with the new features and the camera pose is estimated using the map and the camera images.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "link": "https://www.linkedin.com/posts/vibhavnirmal_exploring-real-time-appearance-based-mapping-activity-7064180676119433217-55Yu"
+                },
+                {
+                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "link": "https://youtu.be/MfN_QANgMqU"
+                }
+            ],
+            "date": "2023-05-14",
+            "image": "",
+            "tags": [
+                "computervision",
+                "github",
+                "ros",
+                "python"
+            ]
+        },
+        {
             "title": "Unreal Engine 5 First Person Shooter Game (blueprints)",
-            "titleLink": "https://vibhavnirmal.github.io/blogs/fps.html",
+            "titleLink": "#",
             "description": "The game features a playable character who can move around the map and shoot at static and dynamic targets in the shooting range. The game is timed and has a different score system for different types of targets. The game also features a main menu and a pause menu.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
-                    "link": "#"
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/fps.html"
                 }
             ],
             "date": "2023-04-24",
@@ -19,12 +42,12 @@
         },
         {
             "title": "Mercado Escolar - School Supplies Ecommerce Website (React)",
-            "titleLink": "https://vxn5253.uta.cloud/",
+            "titleLink": "#",
             "description": "Mercado Escolar is an ecommerce website that allows users to purchase school supplies online. The website features a main page, a product page, a shopping cart, and a checkout page. The website also features a login page and a registration page for users to create accounts and login to their accounts. Login credentials required for business, admin, and superadmin accounts (Ping me for credentials).",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
-                    "link": "#"
+                    "icon": "resources/images/logos/ME_Logo.png",
+                    "link": "https://vxn5253.uta.cloud/"
                 }
             ],
             "date": "2022-11-11",
@@ -36,9 +59,13 @@
         },
         {
             "title": "Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)",
-            "titleLink": "https://vibhavnirmal.github.io/blogs/laravelOnLinux.html",
+            "titleLink": "#",
             "description": "A step-by-step guide on how to install PHP and Laravel on a Linux machine using the apt repository",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/laravelOnLinux.html"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb"
@@ -55,9 +82,13 @@
         },
         {
             "title": "Square root of integer without using sqrt() function",
-            "titleLink": "https://vibhavnirmal.github.io/blogs/squareRoot.html",
+            "titleLink": "#",
             "description": "The Newton-Raphson method is an iterative algorithm that can be used to approximate the square root of a number by improving an initial estimate at each iteration using a formula based on the equation y * y = x.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/squareRoot.html"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3"
@@ -74,7 +105,7 @@
         },
         {
             "title": "The comma.ai Calibration Challenge!",
-            "titleLink": "https://github.com/vibhavnirmal/calibration_challenge",
+            "titleLink": "#",
             "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle’s direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion. (TODO: Demo)",
             "multipleLinks": [
                 {
@@ -93,12 +124,12 @@
         },
         {
             "title": "Digital Budget Tracker and Pig Dice Game in Javascript",
-            "titleLink": "https://vibhavnirmal.github.io/blogs/learningJS.html",
+            "titleLink": "#",
             "description": "The Digital Budget Tracker is a tool that helps users track and manage their personal or business finances by providing a platform to input and organize income and expenditure data. The Pig Dice Game is a simple dice game that involves rolling a dice and earning points based on the numbers rolled. Both of these applications are designed with Javascript to be user-friendly and interactive, providing a convenient and enjoyable experience for users.",
             "multipleLinks": [
                 {
-                    "icon": "",
-                    "link": "#"
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/learningJS.html"
                 }
             ],
             "date": "2020-10-15",
@@ -112,7 +143,7 @@
         },
         {
             "title": "Dart dataset and PyPlot Scatter function Article",
-            "titleLink": "https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6",
+            "titleLink": "#",
             "description": "The Dart dataset is a collection of data points that can be plotted using the PyPlot Scatter function in Python. This function allows users to create scatter plots, which are visual representations of data points that use Cartesian coordinates to display values for typically two variables for a set of data.",
             "multipleLinks": [
                 {
@@ -137,9 +168,17 @@
         },
         {
             "title": "String compression algorithm",
-            "titleLink": "https://www.linkedin.com/posts/vibhavnirmal_vibhav-nirmal-techievin-posted-on-instagram-activity-6692415424782487552-mu-x",
+            "titleLink": "#",
             "description": "Iterate through a list of integers and compresses it into a list of tuples, where each tuple represents a number and the number of times it appears in the original list.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "link": "https://www.linkedin.com/posts/vibhavnirmal_vibhav-nirmal-techievin-posted-on-instagram-activity-6692415424782487552-mu-x"
+                },
+                {
+                    "icon": "resources/images/logos/Instagram_Logo.png",
+                    "link": "https://www.instagram.com/p/CDBo9rXgVK9/"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://github.com/vibhavnirmal/algorithms/blob/master/compress.py"
@@ -157,9 +196,13 @@
         },
         {
             "title": "Knowledge Graph Based QnA Post",
-            "titleLink": "https://www.linkedin.com/posts/philipvollet_nlp-machinelearning-graphs-activity-6680030817038725120-pczn/",
+            "titleLink": "#",
             "description": "Our question answering system uses Entity pairs Extraction and Knowledge Graph Construction to extract entities from the input paragraph and construct a knowledge graph for answering user questions. It utilizes dependency parsing tools and techniques, and is effective at answering \"who,\" \"what,\" \"when,\" and \"where\" questions. However, the answers obtained are currently simple and limited in word count.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "link": "https://www.linkedin.com/posts/philipvollet_nlp-machinelearning-graphs-activity-6680030817038725120-pczn/"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
@@ -177,9 +220,13 @@
         },
         {
             "title": "Knowledge Graph Based QnA YouTube Presentation",
-            "titleLink": "https://www.youtube.com/watch?v=u9Nr8wjTPZ8",
+            "titleLink": "#",
             "description": "Implemented a knowledge graph representation project to facilitate question answering by extracting key entities such as subject, predicate, and object. This innovative approach leverages the power of structured data to provide more accurate and brief answers to user inquiries.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "link": "https://www.youtube.com/watch?v=u9Nr8wjTPZ8"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
@@ -196,7 +243,7 @@
         },
         {
             "title": "How to install Unreal Engine 4 in arch linux Article",
-            "titleLink": "https://medium.com/@vibhavnirmal/how-to-install-unreal-engine-4-in-arch-linux-1d7b910f375f",
+            "titleLink": "#",
             "description": "This article outlines the steps to install Unreal Engine 4 on an Arch Linux operating system. It provides detailed instructions on how to properly set up and configure UE4 to run smoothly on the Linux platform",
             "multipleLinks": [
                 {
@@ -216,9 +263,13 @@
         },
         {
             "title": "Maths Equation Solver Blog",
-            "titleLink": "https://vibhavnirmal.github.io/blogs/mathsSolver.html",
+            "titleLink": "#",
             "description": "Explored the different types of equation solvers available and how they can be used to solve complex mathematical equations with ease.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/mathsSolver.html"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://github.com/vibhavnirmal/MathProblems"
@@ -235,9 +286,13 @@
         },
         {
             "title": "Instagram Chats Save and read offline Blog",
-            "titleLink": "https://vibhavnirmal.github.io/blogs/instaChatSave.html",
+            "titleLink": "#",
             "description": "This script allows users to save and read Instagram chats in a readable text format offline. It currently only works for personal chats.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/instaChatSave.html"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://github.com/vibhavnirmal/InstaChatSave"
@@ -255,9 +310,13 @@
         },
         {
             "title": "Kaprekars Constant... 6174",
-            "titleLink": "https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9",
+            "titleLink": "#",
             "description": "Kaprekar's Constant is the number 6174, which is obtained through the Kaprekar's Routine process involving rearranging the digits of a four-digit number and calculating the difference between the highest and lowest possible numbers until 6174 is reached.",
             "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Instagram_Logo.png",
+                    "link": "https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9"
+                },
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
                     "link": "https://github.com/vibhavnirmal/misc-scripts/blob/master/oldScripts/kaprekars.py"
