@@ -1,13 +1,36 @@
 {
     "projects": [
         {
-            "title": "Real Time appearance based mapping - SLAM",
+            "title": "rtabmap | databaseviewer and localization | Part 2/2",
+            "titleLink": "#",
+            "description": "The RTAB-Map Database Viewer and Localization demo video showcases the capabilities of RTAB-Map in mapping and localizing in robust environments. By utilizing the RTAB-Map database, users can visualize, optimize, edit, refine, and interact with previously collected map data. The video highlights the flexibility of RTAB-Map in handling various odometry approaches and sensor configurations, making it a powerful tool for SLAM implementation.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7066289437231501312/"
+                },
+                {
+                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "link": "https://youtu.be/QAJaO51hcDo"
+                }
+            ],
+            "date": "2023-05-22",
+            "image": "",
+            "tags": [
+                "computervision",
+                "ros",
+                "python",
+                "cpp"
+            ]
+        },
+        {
+            "title": "rtabmap | teleop and mapping | Part 1/2",
             "titleLink": "#",
             "description": "Real time appearance based mapping is a technique used to create a map of an unknown environment using a single camera. The map is created by extracting features from the camera images and matching them with features from the previous images. The map is then updated with the new features and the camera pose is estimated using the map and the camera images.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Linkedin_Logo.png",
-                    "link": "https://www.linkedin.com/posts/vibhavnirmal_exploring-real-time-appearance-based-mapping-activity-7064180676119433217-55Yu"
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7064180676119433217/"
                 },
                 {
                     "icon": "resources/images/logos/Youtube_Logo.png",
@@ -18,7 +41,7 @@
             "image": "",
             "tags": [
                 "computervision",
-                "github",
+                "cpp",
                 "ros",
                 "python"
             ]
