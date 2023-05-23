@@ -20,7 +20,8 @@
                 "computervision",
                 "ros",
                 "python",
-                "cpp"
+                "cpp",
+                "youtube"
             ]
         },
         {
@@ -43,7 +44,8 @@
                 "computervision",
                 "cpp",
                 "ros",
-                "python"
+                "python",
+                "youtube"
             ]
         },
         {
