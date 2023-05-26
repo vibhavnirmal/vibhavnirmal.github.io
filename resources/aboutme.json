@@ -2,16 +2,19 @@
     "writeUp": {
         "paragraphs": [
             {
-                "content": "I grew up in Gujarat, where I attended an immersion school that taught exclusively in Gujarati. I obtained my bachelor's degree in Computer Engineering from LDCE (GTU) in Ahmedabad and have accumulated over 3 years of professional experience in robotics and software development."
+                "content": "I grew up in Gujarat, where I attended an immersion school that taught exclusively in Gujarati. I obtained my bachelor's degree in Computer Engineering from LDCE (GTU) in Ahmedabad and have accumulated over 3 years of professional experience in robotics and end to end software development."
             },
             {
-                "content": "Recently, I completed my Master's degree in Computer Science from UT Arlington. My primary interest lies in the field of unmanned vehicle systems and their diverse applications, specifically in the areas of prediction and perception. I thoroughly enjoy working with edge devices such as Jetson Xavier NX and Raspberry Pi to create IoT and robot solutions through hands-on experimentation. In the spring of 2023, I served as the President of the AutonoBots club at the University of Texas at Arlington, where I worked on robot SLAM (Simultaneous Localization and Mapping) and sensor fusion utilizing lidar and camera data during the National Robotics Challenge held in April 2023"
+                "content": "Recently, I completed my Master's degree in Computer Science from UT Arlington. My primary interest lies in the field of unmanned vehicle systems and their diverse applications, specifically in the areas of motion prediction and perception. I thoroughly enjoy working with edge devices such as Nvidia Jetson Xavier and Raspberry Pi to create IoT and robot solutions through hands-on experimentation."
             },
             {
-                "content": "With a solid foundation in mathematics, programming logic, and cross-platform coding, I am eager to leverage my skills to develop innovative solutions in the fields of robotics, artificial intelligence, and computer vision. Adopting a proactive 'do it now' approach has contributed significantly to my growth and understanding of new technologies and research papers. This mindset has propelled me forward in my unwavering quest for knowledge."
+                "content": "In the spring of 2023, as a club president of AutonoBots at UTA, I worked on robot SLAM (with rtabmap) and sensor fusion utilizing lidar, imu and camera data and participated in the National Robotics Challenge"
             },
             {
-                "content": "Thank you for taking the time to learn about my work. If you have any questions or comments, please feel free to reach out to me."
+                "content": "I love cameras, math, coding, and making things work. I want to use my skills to create innovative products in robotics, AI, and computer vision. Adopting a proactive 'do it now' approach has contributed a lot to my growth and understanding of new technologies and research papers"
+            },
+            {
+                "content": "Thank you for taking the time to learn about me and my work. If you have any questions or comments, please feel free to reach out to me."
             }
         ]
     }
