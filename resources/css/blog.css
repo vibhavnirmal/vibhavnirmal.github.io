@@ -1,0 +1,29 @@
+.accuracySideBySide{
+    display: grid; 
+    grid-template-columns: 40% 60%;
+}
+
+/* if phone */
+@media only screen and (max-width: 600px) {
+    .accuracySideBySide{
+        display: grid; 
+        grid-template-columns: 100%;
+    }
+
+    .container-fluid.content{
+        padding: 0px;
+    }
+
+    .content{
+        margin: 0px;
+    }
+
+    #gif{
+        width: 100%;
+    }
+
+    .blog{
+        width: 90%;
+        padding: 10px;
+    }
+}

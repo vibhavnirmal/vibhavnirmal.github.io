@@ -1,6 +1,25 @@
 {
     "projects": [
         {
+            "title": "Hand and Wrist Detection with 6MB model and 30FPS",
+            "titleLink": "#",
+            "description": "This project aims to detect the hand and wrist of a person in a video stream using a small (around 6 MB) model and achieve a frame rate. Model was trained on top of Ultralytics YOLOv8n with 3.2M parameters.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/handDetection.html"
+                }
+            ],
+            "date": "2023-06-01",
+            "image": "",
+            "tags": [
+                "computervision",
+                "python",
+                "machinelearning",
+                "blog"
+            ]
+        },
+        {
             "title": "rtabmap | databaseviewer and localization | Part 2/2",
             "titleLink": "#",
             "description": "The RTAB-Map Database Viewer and Localization demo video showcases the capabilities of RTAB-Map in mapping and localizing in robust environments. By utilizing the RTAB-Map database, users can visualize, optimize, edit, refine, and interact with previously collected map data. The video highlights the flexibility of RTAB-Map in handling various odometry approaches and sensor configurations, making it a powerful tool for SLAM implementation.",
