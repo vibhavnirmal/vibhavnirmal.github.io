@@ -37,14 +37,43 @@
                 </div>
             </div>
 
+            
+            <div class="view-type">
+                <div class="view-type-button" onclick="changeView('list')">
+                    <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
+                </div>
+                <div class="view-type-button" onclick="changeView('grid')">
+                    <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View" class="view-type-icon active">
+                </div>
+            </div>
             <div class="blog-filter"></div>
 
             <div class="mainProjects">
-                <div id="blog-container"></div>
+                <div id="blog-container" class="grid-view"></div>
             </div>
         </div>
     </div>
     <script>
+        function changeView(view) {
+            var container = document.getElementById("blog-container");
+            var gridIcon = document.getElementById("grid-icon");
+            var listIcon = document.getElementById("list-icon");
+
+            if (view === 'grid') {
+                container.classList.remove("list-view");
+                container.classList.add("grid-view");
+
+                gridIcon.classList.add("active");
+                listIcon.classList.remove("active");
+            } else if (view === 'list') {
+                container.classList.remove("grid-view");
+                container.classList.add("list-view");
+
+                listIcon.classList.add("active");
+                gridIcon.classList.remove("active");
+            }
+        }
+
         // only show if specific project has the tag associated with the button clicked
         function filterSelection(tag) {
             var projects = document.getElementsByClassName("blog-listing all");

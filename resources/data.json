@@ -12,12 +12,7 @@
             ],
             "date": "2023-06-01",
             "image": "",
-            "tags": [
-                "computervision",
-                "python",
-                "machinelearning",
-                "blog"
-            ]
+            "tags": ["computervision", "python", "machinelearning", "blog"]
         },
         {
             "title": "rtabmap | databaseviewer and localization | Part 2/2",
@@ -35,13 +30,7 @@
             ],
             "date": "2023-05-22",
             "image": "",
-            "tags": [
-                "computervision",
-                "ros",
-                "python",
-                "cpp",
-                "youtube"
-            ]
+            "tags": ["computervision", "ros", "robotics", "python", "youtube"]
         },
         {
             "title": "rtabmap | teleop and mapping | Part 1/2",
@@ -59,13 +48,7 @@
             ],
             "date": "2023-05-14",
             "image": "",
-            "tags": [
-                "computervision",
-                "cpp",
-                "ros",
-                "python",
-                "youtube"
-            ]
+            "tags": ["computervision", "robotics", "ros", "python", "youtube"]
         },
         {
             "title": "Unreal Engine 5 First Person Shooter Game (blueprints)",
@@ -79,9 +62,23 @@
             ],
             "date": "2023-04-24",
             "image": "",
+            "tags": ["gamedev", "blog", "unrealengine"]
+        },
+        {
+            "title": "Navigation through the unknown maze and cleaning up the blocks with Lego Mindstorms EV3",
+            "titleLink": "#",
+            "description": "This project aims to navigate through an unknown maze and clean up the blocks in the maze using a Lego Mindstorms EV3 robot. The robot uses a color sensor to recognize the blocks and ultrasonic sensors to measure the distance and detect the walls of the maze. It then uses the detected information to navigate through the maze and clean up the blocks.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "link": "https://youtu.be/jDQ4oOVbPnI"
+                }
+            ],
+            "date": "2022-12-01",
+            "image": "",
             "tags": [
-                "gamedev",
-                "blog"
+                "youtube",
+                "robotics"
             ]
         },
         {
@@ -150,7 +147,7 @@
         {
             "title": "The comma.ai Calibration Challenge!",
             "titleLink": "#",
-            "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle’s direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion. (TODO: Demo)",
+            "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle's direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion. (TODO: Demo)",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/GitHub_Logo.png",
@@ -163,6 +160,26 @@
                 "github",
                 "code",
                 "python",
+                "computervision"
+            ]
+        },
+        {
+            "title": "Obstacle Avoidance test runs for the Unmanned Vehicle System",
+            "titleLink": "#",
+            "description": "This project aims to detect obstacles in the path of a 6WD robot vehicle and avoid them by steering the vehicle in the opposite direction with reactive control. It uses a lidar mounted on the vehicle to capture scans of the environment and detect unknown obstacles using scan matching. The vehicle is then steered in the opposite direction to avoid the obstacle.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "link": "https://youtu.be/AnI3iiBqm6w"
+                }
+            ],
+            "date": "2022-05-02",
+            "image": "",
+            "tags": [
+                "youtube",
+                "matlab",
+                "ros",
+                "lidar",
                 "computervision"
             ]
         },
@@ -278,12 +295,7 @@
             ],
             "date": "2020-04-05",
             "image": "",
-            "tags": [
-                "python",
-                "youtube",
-                "machinelearning",
-                "tutorial"
-            ]
+            "tags": ["python", "youtube", "machinelearning", "tutorial"]
         },
         {
             "title": "How to install Unreal Engine 4 in arch linux Article",
@@ -297,13 +309,7 @@
             ],
             "date": "2019-07-20",
             "image": "",
-            "tags": [
-                "medium",
-                "linux",
-                "gamedev",
-                "tutorial",
-                "blog"
-            ]
+            "tags": ["medium", "linux", "gamedev", "tutorial", "blog", "unrealengine"]
         },
         {
             "title": "Maths Equation Solver Blog",
@@ -321,12 +327,7 @@
             ],
             "date": "2018-09-22",
             "image": "",
-            "tags": [
-                "github",
-                "python",
-                "code",
-                "blog"
-            ]
+            "tags": ["github", "python", "code", "blog"]
         },
         {
             "title": "Instagram Chats Save and read offline Blog",
@@ -344,13 +345,7 @@
             ],
             "date": "2018-09-17",
             "image": "",
-            "tags": [
-                "github",
-                "python",
-                "code",
-                "blog",
-                "instagram"
-            ]
+            "tags": ["github", "python", "code", "blog", "instagram"]
         },
         {
             "title": "Kaprekars Constant... 6174",
