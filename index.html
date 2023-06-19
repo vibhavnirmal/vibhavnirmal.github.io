@@ -18,12 +18,6 @@
 
     </div>
     <div class="container">
-        <!-- 
-            <div class="left">
-            </div>
-            <div class="right">
-            </div> 
-        -->
         <div class="content">
             <div id="navBar">
                 <div id="stickLeft">
@@ -37,7 +31,6 @@
                 </div>
             </div>
 
-            
             <div class="view-type">
                 <div class="view-type-button" onclick="changeView('list')">
                     <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
@@ -46,10 +39,13 @@
                     <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View" class="view-type-icon active">
                 </div>
             </div>
-            <div class="blog-filter"></div>
+
+            <div class="blog-filter">
+            </div>
 
             <div class="mainProjects">
-                <div id="blog-container" class="grid-view"></div>
+                <div id="blog-container" class="grid-view">
+                </div>
             </div>
         </div>
     </div>
@@ -74,7 +70,6 @@
             }
         }
 
-        // only show if specific project has the tag associated with the button clicked
         function filterSelection(tag) {
             var projects = document.getElementsByClassName("blog-listing all");
             for (var i = 0; i < projects.length; i++) {
@@ -99,12 +94,133 @@
             }
         });
 
+        function createFilterElement(uniqueTags) {
+            const filterElement = document.createElement('div');
+            filterElement.classList.add('filter');
+
+            const filterNavElement = document.createElement('nav');
+            const filterUlElement = document.createElement('ul');
+
+            // Add all button to show all
+            const filterLiElementAll = createFilterButton('all', '#All');
+            filterUlElement.appendChild(filterLiElementAll);
+
+            uniqueTags.forEach(tag => {
+                const tagText = '#' + tag;
+                const filterLiElement = createFilterButton(tag, tagText);
+                filterUlElement.appendChild(filterLiElement);
+            });
+
+            filterNavElement.appendChild(filterUlElement);
+            filterElement.appendChild(filterNavElement);
+
+            const blogFilterElement = document.getElementsByClassName('blog-filter')[0];
+            blogFilterElement.appendChild(filterElement);
+        }
+
+        function createFilterButton(tag, text) {
+            const filterLiElement = document.createElement('li');
+            filterLiElement.classList.add('filter-button');
+            filterLiElement.onclick = function () { filterSelection(tag); };
+            filterLiElement.textContent = text;
+            return filterLiElement;
+        }
+
+        function createBlogListing(project) {
+            const blogListing = document.createElement('div');
+            blogListing.classList.add('blog-listing');
+            blogListing.classList.add('all');
+
+            project.tags.forEach(tag => {
+                blogListing.classList.add(tag);
+            });
+
+            const titleElement = document.createElement('h2');
+            titleElement.classList.add('blog-title');
+            titleElement.textContent = project.title;
+
+            const linkElement = document.createElement('a');
+            if (project.titleLink === '#') {
+                linkElement.onclick = function () { return false; };
+                linkElement.style.cursor = 'default';
+            } else {
+                linkElement.href = project.titleLink;
+            }
+
+            const excerptElement = document.createElement('p');
+            excerptElement.classList.add('blog-excerpt');
+            excerptElement.textContent = project.description;
+
+            const dateElement = createBlogDateElement(project.date);
+
+            const iconElement = createIconElement(project.multipleLinks);
+
+            blogListing.appendChild(dateElement);
+            linkElement.appendChild(titleElement);
+            blogListing.appendChild(linkElement);
+            blogListing.appendChild(excerptElement);
+            blogListing.appendChild(iconElement);
+
+            return blogListing;
+        }
+
+        function createBlogDateElement(date) {
+            const dateElement = document.createElement('p');
+            dateElement.classList.add('blog-date');
+
+            const dateObject = new Date(date);
+            dateObject.setDate(dateObject.getDate() + 1);
+            const humanDateFormat = dateObject.toLocaleString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+            dateElement.textContent = 'Published on ' + humanDateFormat;
+
+            return dateElement;
+        }
+
+        function createIconElement(multipleLinks) {
+            const iconElement = document.createElement('div');
+            iconElement.classList.add('blog-icons');
+
+            multipleLinks.forEach(link => {
+                if (link.link === '#') {
+                    iconElement.style.display = 'none';
+                } else {
+                    const iconLink = document.createElement('a');
+                    iconLink.href = link.link;
+
+                    const iconImg = document.createElement('img');
+                    iconImg.src = link.icon;
+                    iconImg.alt = 'Icon';
+                    iconImg.classList.add('socialIcon');
+
+                    iconLink.appendChild(iconImg);
+                    iconElement.appendChild(iconLink);
+                }
+            });
+
+            return iconElement;
+        }
+
+        function filterSelection(tag) {
+            const blogListings = document.getElementsByClassName('blog-listing');
+
+            if (tag === 'all') {
+                Array.from(blogListings).forEach(listing => {
+                    listing.style.display = 'block';
+                });
+            } else {
+                Array.from(blogListings).forEach(listing => {
+                    if (listing.classList.contains(tag)) {
+                        listing.style.display = 'block';
+                    } else {
+                        listing.style.display = 'none';
+                    }
+                });
+            }
+        }
+
         fetch('resources/data.json')
             .then(response => response.json())
             .then(data => {
-                const filterElement = document.createElement('div');
-                filterElement.classList.add('filter');
-
                 let alltags = [];
 
                 data.projects.forEach(project => {
@@ -113,117 +229,19 @@
                     });
                 });
 
-                const uniqueTags = new Set(alltags);
+                const uniqueTags = Array.from(new Set(alltags));
 
-                console.log(uniqueTags);
+                createFilterElement(uniqueTags);
 
-                const filterNavElement = document.createElement('nav');
-                const filterUlElement = document.createElement('ul');
-
-                // Add all button to show all
-                const filterLiElementAll = document.createElement('li');
-                filterLiElementAll.classList.add('filter-button');
-                filterLiElementAll.onclick = function () { filterSelection('all'); };
-                filterLiElementAll.textContent = '#All';
-                filterUlElement.appendChild(filterLiElementAll);
-
-                uniqueTags.forEach(tag => {
-                    const filterLiElement = document.createElement('li');
-                    filterLiElement.classList.add('filter-button');
-                    filterLiElement.onclick = function () { filterSelection(tag); };
-                    filterLiElement.textContent = '#' + tag;
-                    filterUlElement.appendChild(filterLiElement);
-                });
-
-                filterNavElement.appendChild(filterUlElement);
-                filterElement.appendChild(filterNavElement);
-
-                // add this under <div class="blog-filter">
-                document.getElementsByClassName('blog-filter')[0].appendChild(filterElement);
+                const blogContainer = document.getElementById('blog-container');
 
                 data.projects.forEach(project => {
-                    // Access data for current project
-                    const title = project.title;
-                    const titleLink = project.titleLink;
-                    const description = project.description;
-                    const multipleLinks = project.multipleLinks;
-                    // const link = project.link;
-                    // const icon = project.icon;
-                    const date = project.date;
-                    const tags = project.tags;
-
-                    const blogContainer = document.getElementById('blog-container');
-
-                    // Create HTML elements and add data
-                    const blogListing = document.createElement('div');
-                    blogListing.classList.add('blog-listing');
-                    blogListing.classList.add('all');
-
-                    tags.forEach(tag => {
-                        blogListing.classList.add(tag);
-                    });
-
-                    const titleElement = document.createElement('h2');
-                    titleElement.classList.add('blog-title');
-                    titleElement.textContent = title;
-
-                    const linkElement = document.createElement('a');
-                    // if titleLink is # then remove href and mouse pointer
-                    if (titleLink === '#') {
-                        linkElement.onclick = function () { return false; };
-                        linkElement.style.cursor = 'default';
-                    }
-                    else {
-                        linkElement.href = titleLink;
-                    }
-
-                    const excerptElement = document.createElement('p');
-                    excerptElement.classList.add('blog-excerpt');
-                    excerptElement.textContent = description;
-
-                    const dateElement = document.createElement('p');
-                    dateElement.classList.add('blog-date');
-
-                    const dateObject = new Date(date);
-                    dateObject.setDate(dateObject.getDate() + 1);
-                    const humanDateFormat = dateObject.toLocaleString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-                    dateElement.textContent = 'Published on ' + humanDateFormat;
-
-                    const iconElement = document.createElement('div');
-                    iconElement.classList.add('blog-icons');
-
-                    multipleLinks.forEach(link => {
-                        if (link.link === '#') {
-                            iconElement.style.display = 'none';
-                        }
-                        else {
-                            const iconLink = document.createElement('a');
-                            iconLink.href = link.link;
-
-                            const iconImg = document.createElement('img');
-                            iconImg.src = link.icon;
-                            iconImg.alt = 'Icon';
-                            // iconImg.height = 36;
-                            iconImg.classList.add('socialIcon');
-
-                            iconLink.appendChild(iconImg);
-                            iconElement.appendChild(iconLink);
-                        }
-                    });
-
-                    // Add elements to the HTML document
-                    blogListing.appendChild(dateElement);
-                    linkElement.appendChild(titleElement);
-                    blogListing.appendChild(linkElement);
-                    blogListing.appendChild(excerptElement);
-                    blogListing.appendChild(iconElement);
-
-                    // const container = document.querySelector('.container'); // replace with appropriate selector
-                    const container = document.getElementById('blog-container');
-                    container.appendChild(blogListing);
+                    const blogListing = createBlogListing(project);
+                    blogContainer.appendChild(blogListing);
                 });
             })
             .catch(error => console.error(error));
+
     </script>
 </body>
 
