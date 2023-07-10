@@ -1,24 +1,6 @@
 {
     "projects": [
         {
-            "title": "Coupler and knuckle pin detection using YOLOv7",
-            "titleLink": "#",
-            "description": "This project aims to detect the coupler and knuckle pin of a train using a YOLOv7 model. The model was trained on a custom dataset of 200 images. The model was trained for 100 epochs and achieved a mAP of 0.996.", 
-            "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Linkedin_Logo.png",
-                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6842228682980284928/"
-                },
-                {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
-                    "link": "https://vibhavnirmal.github.io/blogs/couplerDetection.html"
-                }
-            ],
-            "date": "2023-07-09",
-            "image": "",
-            "tags": ["computervision", "python", "machinelearning", "blog"]
-        },
-        {
             "title": "Hand and Wrist Detection with 6MB model and 30FPS",
             "titleLink": "#",
             "description": "This project aims to detect the hand and wrist of a person in a video stream using a small (around 6 MB) model and achieve a frame rate. Model was trained on top of Ultralytics YOLOv8n with 3.2M parameters.",
