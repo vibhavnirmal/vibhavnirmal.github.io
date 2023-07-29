@@ -1,6 +1,24 @@
 {
     "projects": [
         {
+            "title": "Training and implementing YOLOP: YOLO Panoptic Driving Perception (MIR2022)",
+            "titleLink": "#",
+            "description": "This project aims to train and implement YOLOP: YOLO Panoptic Driving Perception (MIR2022) on the custom highway dataset. YOLOP is a real-time panoptic segmentation model that can simultaneously detect and segment vehicles in a single forward pass",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "link": "https://www.linkedin.com/posts/vibhavnirmal_robot-gopro-train-activity-7089826130152603648-OO0y"
+                },
+                {
+                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "link": "https://www.youtube.com/shorts/R_f41Wi6t6I"
+                }
+            ],
+            "date": "2023-07-28",
+            "image": "",
+            "tags": ["computervision", "python", "machinelearning"]
+        },
+        {
             "title": "Hand and Wrist Detection with 6MB model and 30FPS",
             "titleLink": "#",
             "description": "This project aims to detect the hand and wrist of a person in a video stream using a small (around 6 MB) model and achieve a frame rate. Model was trained on top of Ultralytics YOLOv8n with 3.2M parameters.",
