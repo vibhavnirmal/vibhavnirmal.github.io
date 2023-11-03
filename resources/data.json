@@ -6,11 +6,11 @@
             "description": "This project aims to train and implement YOLOP: YOLO Panoptic Driving Perception (MIR2022) on the custom highway dataset. YOLOP is a real-time panoptic segmentation model that can simultaneously detect and segment vehicles in a single forward pass",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
                     "link": "https://www.linkedin.com/posts/vibhavnirmal_robot-gopro-train-activity-7089826130152603648-OO0y"
                 },
                 {
-                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
                     "link": "https://www.youtube.com/shorts/R_f41Wi6t6I"
                 }
             ],
@@ -24,7 +24,7 @@
             "description": "This project aims to detect the hand and wrist of a person in a video stream using a small (around 6 MB) model and achieve a frame rate. Model was trained on top of Ultralytics YOLOv8n with 3.2M parameters.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/handDetection.html"
                 }
             ],
@@ -38,11 +38,11 @@
             "description": "The RTAB-Map Database Viewer and Localization demo video showcases the capabilities of RTAB-Map in mapping and localizing in robust environments. By utilizing the RTAB-Map database, users can visualize, optimize, edit, refine, and interact with previously collected map data. The video highlights the flexibility of RTAB-Map in handling various odometry approaches and sensor configurations, making it a powerful tool for SLAM implementation.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
                     "link": "https://www.linkedin.com/feed/update/urn:li:activity:7066289437231501312/"
                 },
                 {
-                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
                     "link": "https://youtu.be/QAJaO51hcDo"
                 }
             ],
@@ -56,11 +56,11 @@
             "description": "Real time appearance based mapping is a technique used to create a map of an unknown environment using a single camera. The map is created by extracting features from the camera images and matching them with features from the previous images. The map is then updated with the new features and the camera pose is estimated using the map and the camera images.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
                     "link": "https://www.linkedin.com/feed/update/urn:li:activity:7064180676119433217/"
                 },
                 {
-                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
                     "link": "https://youtu.be/MfN_QANgMqU"
                 }
             ],
@@ -74,7 +74,7 @@
             "description": "The game features a playable character who can move around the map and shoot at static and dynamic targets in the shooting range. The game is timed and has a different score system for different types of targets. The game also features a main menu and a pause menu.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/fps.html"
                 }
             ],
@@ -88,7 +88,7 @@
             "description": "This project aims to navigate through an unknown maze and clean up the blocks in the maze using a Lego Mindstorms EV3 robot. The robot uses a color sensor to recognize the blocks and ultrasonic sensors to measure the distance and detect the walls of the maze. It then uses the detected information to navigate through the maze and clean up the blocks.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
                     "link": "https://youtu.be/jDQ4oOVbPnI"
                 }
             ],
@@ -104,10 +104,7 @@
             "titleLink": "#",
             "description": "Mercado Escolar is an ecommerce website that allows users to purchase school supplies online. The website features a main page, a product page, a shopping cart, and a checkout page. The website also features a login page and a registration page for users to create accounts and login to their accounts. Login credentials required for business, admin, and superadmin accounts (Ping me for credentials).",
             "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/ME_Logo.png",
-                    "link": "https://vxn5253.uta.cloud/"
-                }
+               
             ],
             "date": "2022-11-11",
             "image": "",
@@ -122,11 +119,11 @@
             "description": "A step-by-step guide on how to install PHP and Laravel on a Linux machine using the apt repository",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/laravelOnLinux.html"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb"
                 }
             ],
@@ -145,11 +142,11 @@
             "description": "The Newton-Raphson method is an iterative algorithm that can be used to approximate the square root of a number by improving an initial estimate at each iteration using a formula based on the equation y * y = x.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/squareRoot.html"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3"
                 }
             ],
@@ -165,10 +162,10 @@
         {
             "title": "The comma.ai Calibration Challenge!",
             "titleLink": "#",
-            "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle's direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion. (TODO: Demo)",
+            "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle's direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/calibration_challenge"
                 }
             ],
@@ -187,7 +184,7 @@
             "description": "This project aims to detect obstacles in the path of a 6WD robot vehicle and avoid them by steering the vehicle in the opposite direction with reactive control. It uses a lidar mounted on the vehicle to capture scans of the environment and detect unknown obstacles using scan matching. The vehicle is then steered in the opposite direction to avoid the obstacle.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
                     "link": "https://youtu.be/AnI3iiBqm6w"
                 }
             ],
@@ -207,7 +204,7 @@
             "description": "The Digital Budget Tracker is a tool that helps users track and manage their personal or business finances by providing a platform to input and organize income and expenditure data. The Pig Dice Game is a simple dice game that involves rolling a dice and earning points based on the numbers rolled. Both of these applications are designed with Javascript to be user-friendly and interactive, providing a convenient and enjoyable experience for users.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/learningJS.html"
                 }
             ],
@@ -230,7 +227,7 @@
                     "link": "https://medium.com/@vibhavnirmal/dart-data-set-and-pyplot-scatter-function-f4f98524dc8b?source=friends_link&sk=531f60f39d95646fd7a59e5754569bd6"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/MachineLearningPrograms/tree/master/Classification/dart"
                 }
             ],
@@ -246,44 +243,16 @@
             ]
         },
         {
-            "title": "String compression algorithm",
-            "titleLink": "#",
-            "description": "Iterate through a list of integers and compresses it into a list of tuples, where each tuple represents a number and the number of times it appears in the original list.",
-            "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Linkedin_Logo.png",
-                    "link": "https://www.linkedin.com/posts/vibhavnirmal_vibhav-nirmal-techievin-posted-on-instagram-activity-6692415424782487552-mu-x"
-                },
-                {
-                    "icon": "resources/images/logos/Instagram_Logo.png",
-                    "link": "https://www.instagram.com/p/CDBo9rXgVK9/"
-                },
-                {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
-                    "link": "https://github.com/vibhavnirmal/algorithms/blob/master/compress.py"
-                }
-            ],
-            "date": "2020-07-24",
-            "image": "",
-            "tags": [
-                "python",
-                "code",
-                "github",
-                "linkedin",
-                "instagram"
-            ]
-        },
-        {
             "title": "Knowledge Graph Based QnA Post",
             "titleLink": "#",
             "description": "Our question answering system uses Entity pairs Extraction and Knowledge Graph Construction to extract entities from the input paragraph and construct a knowledge graph for answering user questions. It utilizes dependency parsing tools and techniques, and is effective at answering \"who,\" \"what,\" \"when,\" and \"where\" questions. However, the answers obtained are currently simple and limited in word count.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Linkedin_Logo.png",
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
                     "link": "https://www.linkedin.com/posts/philipvollet_nlp-machinelearning-graphs-activity-6680030817038725120-pczn/"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
                 }
             ],
@@ -303,11 +272,11 @@
             "description": "Implemented a knowledge graph representation project to facilitate question answering by extracting key entities such as subject, predicate, and object. This innovative approach leverages the power of structured data to provide more accurate and brief answers to user inquiries.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Youtube_Logo.png",
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
                     "link": "https://www.youtube.com/watch?v=u9Nr8wjTPZ8"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/Knowledge-Graph-based-QnA"
                 }
             ],
@@ -335,11 +304,11 @@
             "description": "Explored the different types of equation solvers available and how they can be used to solve complex mathematical equations with ease.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/mathsSolver.html"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/MathProblems"
                 }
             ],
@@ -353,11 +322,11 @@
             "description": "This script allows users to save and read Instagram chats in a readable text format offline. It currently only works for personal chats.",
             "multipleLinks": [
                 {
-                    "icon": "resources/images/logos/Blogpost_Logo.png",
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
                     "link": "https://vibhavnirmal.github.io/blogs/instaChatSave.html"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/InstaChatSave"
                 }
             ],
@@ -375,7 +344,7 @@
                     "link": "https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9"
                 },
                 {
-                    "icon": "resources/images/logos/GitHub_Logo.png",
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
                     "link": "https://github.com/vibhavnirmal/misc-scripts/blob/master/oldScripts/kaprekars.py"
                 }
             ],

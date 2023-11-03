@@ -4,246 +4,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN">
     <link rel="shortcut icon" type="image" href="resources\images\logos\vin.png" />
     <meta name="description" content="Robotics enthusiast. Learning new stuff every day.">
     <title>Vibhav Nirmal</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="resources/css/index.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="resources/css/index.css">
+    <link rel="stylesheet" href="resources/css/blog.css">
 </head>
 
 <body>
-    <div class="top-right">
+    <div id="navBar">
+        <div id="stickLeft">
+            <a href="index.html" class="navButton">Vibhav Nirmal</a>
+            <a href="aboutme.html" class="navButton">About Me</a>
+        </div>
 
+        <div class="view-type">
+            <div class="view-type-button" onclick="changeView('list')">
+                <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
+            </div>
+            <div class="view-type-button" onclick="changeView('grid')">
+                <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View" class="view-type-icon active">
+            </div>
+        </div>
+
+        <div id="stickRight">
+            <a href="https://github.com/vibhavnirmal" target="_blank">
+                <img src="resources/images/logos/GitHub_Logo.png" alt="Github" class="socialIcon" height="36">
+            </a>
+        </div>
     </div>
+
     <div class="container">
+
         <div class="content">
-            <div id="navBar">
-                <div id="stickLeft">
-                    <a href="index.html" class="navButton">Code/Blogposts</a>
-                    <a href="aboutme.html" class="navButton">About Me</a>
-                </div>
-                <div id="stickRight">
-                    <a href="https://github.com/vibhavnirmal" target="_blank">
-                        <img src="resources/images/logos/GitHub_Logo.png" alt="Github" class="socialIcon" height="36">
-                    </a>
-                </div>
-            </div>
-
-            <div class="view-type">
-                <div class="view-type-button" onclick="changeView('list')">
-                    <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
-                </div>
-                <div class="view-type-button" onclick="changeView('grid')">
-                    <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View" class="view-type-icon active">
-                </div>
-            </div>
-
-            <div class="blog-filter">
-            </div>
-
             <div class="mainProjects">
+                <div class="filters"></div>
                 <div id="blog-container" class="grid-view">
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        function changeView(view) {
-            var container = document.getElementById("blog-container");
-            var gridIcon = document.getElementById("grid-icon");
-            var listIcon = document.getElementById("list-icon");
 
-            if (view === 'grid') {
-                container.classList.remove("list-view");
-                container.classList.add("grid-view");
+        <script>
+            function activateFilters() {
+                const dropdownButton = document.getElementById('dropdown-button');
+                const dropdownContent = document.querySelector('.dropdown-content');
+                const filterInput = document.getElementById('filter-input');
+                const optionsList = document.getElementById('options-list');
+                const selectedOptions = document.getElementById('selected-options');
+                // const filterButton = document.getElementById('filter-button');
 
-                gridIcon.classList.add("active");
-                listIcon.classList.remove("active");
-            } else if (view === 'list') {
-                container.classList.remove("grid-view");
-                container.classList.add("list-view");
-
-                listIcon.classList.add("active");
-                gridIcon.classList.remove("active");
-            }
-        }
-
-        function filterSelection(tag) {
-            var projects = document.getElementsByClassName("blog-listing all");
-            for (var i = 0; i < projects.length; i++) {
-                if (projects[i].classList.contains(tag)) {
-                    projects[i].style.display = "block";
-                } else {
-                    projects[i].style.display = "none";
-                }
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the current URL or page
-            var currentPage = window.location.href;
-
-            // Find the navigation item that matches the current URL and add the "current" class
-            var navigationItems = document.getElementsByTagName('a');
-            for (var i = 0; i < navigationItems.length; i++) {
-                if (currentPage.indexOf(navigationItems[i].href) > -1) {
-                    navigationItems[i].className = 'current';
-                }
-            }
-        });
-
-        function createFilterElement(uniqueTags) {
-            const filterElement = document.createElement('div');
-            filterElement.classList.add('filter');
-
-            const filterNavElement = document.createElement('nav');
-            const filterUlElement = document.createElement('ul');
-
-            // Add all button to show all
-            const filterLiElementAll = createFilterButton('all', '#All');
-            filterUlElement.appendChild(filterLiElementAll);
-
-            uniqueTags.forEach(tag => {
-                const tagText = '#' + tag;
-                const filterLiElement = createFilterButton(tag, tagText);
-                filterUlElement.appendChild(filterLiElement);
-            });
-
-            filterNavElement.appendChild(filterUlElement);
-            filterElement.appendChild(filterNavElement);
-
-            const blogFilterElement = document.getElementsByClassName('blog-filter')[0];
-            blogFilterElement.appendChild(filterElement);
-        }
-
-        function createFilterButton(tag, text) {
-            const filterLiElement = document.createElement('li');
-            filterLiElement.classList.add('filter-button');
-            filterLiElement.onclick = function () { filterSelection(tag); };
-            filterLiElement.textContent = text;
-            
-            return filterLiElement;
-        }
-
-        function createBlogListing(project) {
-            const blogListing = document.createElement('div');
-            blogListing.classList.add('blog-listing');
-            blogListing.classList.add('all');
-
-            project.tags.forEach(tag => {
-                blogListing.classList.add(tag);
-            });
-
-            const titleElement = document.createElement('h2');
-            titleElement.classList.add('blog-title');
-            titleElement.textContent = project.title;
-
-            const linkElement = document.createElement('a');
-            if (project.titleLink === '#') {
-                linkElement.onclick = function () { return false; };
-                linkElement.style.cursor = 'default';
-            } else {
-                linkElement.href = project.titleLink;
-            }
-
-            const excerptElement = document.createElement('p');
-            excerptElement.classList.add('blog-excerpt');
-            excerptElement.textContent = project.description;
-
-            const dateElement = createBlogDateElement(project.date);
-
-            const iconElement = createIconElement(project.multipleLinks);
-
-            blogListing.appendChild(dateElement);
-            linkElement.appendChild(titleElement);
-            blogListing.appendChild(linkElement);
-            blogListing.appendChild(excerptElement);
-            blogListing.appendChild(iconElement);
-
-            return blogListing;
-        }
-
-        function createBlogDateElement(date) {
-            const dateElement = document.createElement('p');
-            dateElement.classList.add('blog-date');
-
-            const dateObject = new Date(date);
-            dateObject.setDate(dateObject.getDate() + 1);
-            const humanDateFormat = dateObject.toLocaleString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-            dateElement.textContent = 'Published on ' + humanDateFormat;
-
-            return dateElement;
-        }
-
-        function createIconElement(multipleLinks) {
-            const iconElement = document.createElement('div');
-            iconElement.classList.add('blog-icons');
-
-            multipleLinks.forEach(link => {
-                if (link.link === '#') {
-                    iconElement.style.display = 'none';
-                } else {
-                    const iconLink = document.createElement('a');
-                    iconLink.href = link.link;
-
-                    const iconImg = document.createElement('img');
-                    iconImg.src = link.icon;
-                    iconImg.alt = 'Icon';
-                    iconImg.classList.add('socialIcon');
-
-                    iconLink.appendChild(iconImg);
-                    iconElement.appendChild(iconLink);
-                }
-            });
-
-            return iconElement;
-        }
-
-        function filterSelection(tag) {
-            const blogListings = document.getElementsByClassName('blog-listing');
-
-            if (tag === 'all') {
-                Array.from(blogListings).forEach(listing => {
-                    listing.style.display = 'block';
+                // Toggle the dropdown when the button is clicked
+                dropdownButton.addEventListener('click', function () {
+                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
                 });
-            } else {
-                Array.from(blogListings).forEach(listing => {
-                    if (listing.classList.contains(tag)) {
-                        listing.style.display = 'block';
-                    } else {
-                        listing.style.display = 'none';
+
+                // Filter options as the user types
+                filterInput.addEventListener('input', function () {
+                    const filterText = filterInput.value.toLowerCase();
+
+                    for (const checkbox of optionsList.querySelectorAll('.option-checkbox')) {
+                        const label = checkbox.parentNode;
+                        if (label.textContent.toLowerCase().includes(filterText)) {
+                            label.style.display = 'block';
+                        } else {
+                            label.style.display = 'none';
+                        }
                     }
                 });
+
+                // Apply the filter and close the dropdown
+                // filterButton.addEventListener('click', function () {
+                //     dropdownContent.style.display = 'none';
+                // });
+
+                // Update selected options when checkboxes are clicked
+                optionsList.addEventListener('change', function () {
+                    const selected = Array.from(optionsList.querySelectorAll('.option-checkbox:checked')).map(checkbox => checkbox.value);
+                    selectedOptions.textContent = selected.length > 0 ? selected.join(', ') : 'None';
+
+                    // check if selected array is empty
+                    if (selected.length === 0) {
+                        filterSelection('all');
+                    }else{
+                        filterSelection(selected);
+                    }
+                });
+            };
+
+            const changeView = (view) => {
+                const container = document.getElementById("blog-container");
+                const gridIcon = document.getElementById("grid-icon");
+                const listIcon = document.getElementById("list-icon");
+
+                const isGridView = view === 'grid';
+                container.classList.toggle("list-view", !isGridView);
+                container.classList.toggle("grid-view", isGridView);
+
+                gridIcon.classList.toggle("active", isGridView);
+                listIcon.classList.toggle("active", !isGridView);
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the current URL or page
+                let currentPage = window.location.href;
+
+                // Find the navigation item that matches the current URL and add the "current" class
+                let navigationItems = document.getElementsByTagName('a');
+                for (let i = 0; i < navigationItems.length; i++) {
+                    if (currentPage.indexOf(navigationItems[i].href) > -1) {
+                        navigationItems[i].className = 'current';
+                    }
+                }
+            });
+
+            function createFilterElement(uniqueTags) {
+                // Create the main filter container
+                const filterElement = document.createElement('div');
+                filterElement.classList.add('filters');
+
+                // Create the dropdown container
+                const dropdownElement = document.createElement('div');
+                dropdownElement.classList.add('dropdown');
+
+                // Create the dropdown button
+                const dropdownButtonElement = document.createElement('button');
+                dropdownButtonElement.classList.add('dropdown-button');
+                dropdownButtonElement.id = 'dropdown-button';
+                dropdownButtonElement.textContent = 'Filter Tags';
+
+                // Create the dropdown content container
+                const dropdownContentElement = document.createElement('div');
+                dropdownContentElement.classList.add('dropdown-content');
+
+                // Create the filter input field
+                const filterInputElement = document.createElement('input');
+                filterInputElement.type = 'text';
+                filterInputElement.id = 'filter-input';
+                filterInputElement.placeholder = 'Filter options';
+
+                // Create the options list (ul)
+                const optionsListElement = document.createElement('ul');
+                optionsListElement.id = 'options-list';
+
+                // Create the option checkboxes and labels
+                uniqueTags.forEach(tag => {
+                    const optionLiElement = document.createElement('li');
+
+                    const optionLabelElement = document.createElement('label');
+
+                    const optionInputElement = document.createElement('input');
+                    optionInputElement.type = 'checkbox';
+                    optionInputElement.classList.add('option-checkbox');
+                    optionInputElement.value = tag;
+
+                    const optionTextElement = document.createTextNode(tag);
+
+                    optionLabelElement.appendChild(optionInputElement);
+                    optionLabelElement.appendChild(optionTextElement);
+
+                    optionLiElement.appendChild(optionLabelElement);
+
+                    optionsListElement.appendChild(optionLiElement);
+                });
+
+                // Create the selected options container
+                const selectedOptionsElement = document.createElement('p');
+                selectedOptionsElement.id = 'selected-options';
+                selectedOptionsElement.textContent = 'None';
+
+                // Create the filter button
+                // const filterButtonElement = document.createElement('button');
+                // filterButtonElement.id = 'filter-button';
+                // filterButtonElement.textContent = 'Apply Filter';
+                
+                // Add the elements to the DOM
+                dropdownContentElement.appendChild(filterInputElement);
+                dropdownContentElement.appendChild(optionsListElement);
+
+                dropdownElement.appendChild(dropdownButtonElement);
+                dropdownElement.appendChild(dropdownContentElement);
+
+                filterElement.appendChild(dropdownElement);
+                filterElement.appendChild(selectedOptionsElement);
+                // filterElement.appendChild(filterButtonElement);
+
+                const blogFilterElement = document.getElementsByClassName('filters')[0];
+                blogFilterElement.appendChild(filterElement);
+
+                activateFilters();
             }
-        }
 
-        fetch('resources/data.json')
-            .then(response => response.json())
-            .then(data => {
-                let alltags = [];
+            function createBlogListing(project) {
+                const blogListing = document.createElement('div');
+                blogListing.classList.add('blog-listing');
+                blogListing.classList.add('all');
 
-                data.projects.forEach(project => {
-                    project.tags.forEach(tag => {
-                        alltags.push(tag);
+                project.tags.forEach(tag => {
+                    blogListing.classList.add(tag);
+                });
+
+                const titleElement = document.createElement('h2');
+                titleElement.classList.add('blog-title');
+                titleElement.textContent = project.title;
+
+                const linkElement = document.createElement('a');
+                if (project.titleLink === '#') {
+                    linkElement.onclick = function () { return false; };
+                    linkElement.style.cursor = 'default';
+                } else {
+                    linkElement.href = project.titleLink;
+                }
+
+                const excerptElement = document.createElement('p');
+                excerptElement.classList.add('blog-excerpt');
+                excerptElement.textContent = project.description;
+
+                const dateElement = createBlogDateElement(project.date);
+
+                const iconElement = createIconElement(project.multipleLinks);
+
+                blogListing.appendChild(dateElement);
+                linkElement.appendChild(titleElement);
+                blogListing.appendChild(linkElement);
+                blogListing.appendChild(excerptElement);
+                blogListing.appendChild(iconElement);
+
+                return blogListing;
+            }
+
+            function createBlogDateElement(date) {
+                const dateElement = document.createElement('p');
+                dateElement.classList.add('blog-date');
+
+                const dateObject = new Date(date);
+                dateObject.setDate(dateObject.getDate() + 1);
+                const humanDateFormat = dateObject.toLocaleString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+                dateElement.textContent = 'Published on ' + humanDateFormat;
+
+                return dateElement;
+            }
+
+            function createIconElement(multipleLinks) {
+                const iconElement = document.createElement('div');
+                iconElement.classList.add('blog-icons');
+
+                multipleLinks.forEach(link => {
+                    if (link.link === '#') {
+                        iconElement.style.display = 'none';
+                    } else {
+                        const iconLink = document.createElement('a');
+                        iconLink.href = link.link;
+
+                        const iconImg = document.createElement('img');
+                        iconImg.src = link.icon;
+                        iconImg.alt = 'Icon';
+                        iconImg.classList.add('socialIcon');
+
+                        iconLink.appendChild(iconImg);
+                        iconElement.appendChild(iconLink);
+                    }
+                });
+
+                return iconElement;
+            }
+
+            function filterSelection(tag) {
+                const blogListings = document.getElementsByClassName('blog-listing');
+
+                console.log(tag);
+
+                for (const blogListing of blogListings) {
+                    if (tag === 'all') {
+                        blogListing.style.display = 'block';
+                    } 
+                    else if (blogListing.classList.contains(tag)) {
+                        blogListing.style.display = 'block';
+                    } else {
+                        blogListing.style.display = 'None';
+                    }
+                }
+            }
+
+            fetch('resources/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    let alltags = [];
+
+                    data.projects.forEach(project => {
+                        project.tags.forEach(tag => {
+                            alltags.push(tag);
+                        });
                     });
-                });
 
-                const uniqueTags = Array.from(new Set(alltags));
+                    const uniqueTags = Array.from(new Set(alltags));
 
-                createFilterElement(uniqueTags);
+                    createFilterElement(uniqueTags);
 
-                const blogContainer = document.getElementById('blog-container');
+                    const blogContainer = document.getElementById('blog-container');
 
-                data.projects.forEach(project => {
-                    const blogListing = createBlogListing(project);
-                    blogContainer.appendChild(blogListing);
-                });
-            })
-            .catch(error => console.error(error));
+                    data.projects.forEach(project => {
+                        const blogListing = createBlogListing(project);
+                        blogContainer.appendChild(blogListing);
+                    });
+                })
+                .catch(error => console.error(error));
 
-    </script>
+        </script>
 </body>
 
 </html>
