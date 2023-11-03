@@ -43,7 +43,6 @@
 
         <div class="content">
             <div class="mainProjects">
-                <div class="filters"></div>
                 <div id="blog-container" class="grid-view">
                 </div>
             </div>
@@ -84,10 +83,9 @@
 
                 // Update selected options when checkboxes are clicked
                 optionsList.addEventListener('change', function () {
-                    const selected = Array.from(optionsList.querySelectorAll('.option-checkbox:checked')).map(checkbox => checkbox.value);
+                    const selected = Array.from(optionsList.querySelectorAll('.option-checkbox:checked')).map(checkbox => checkbox.value.toLowerCase());
                     selectedOptions.textContent = selected.length > 0 ? selected.join(', ') : 'None';
 
-                    // check if selected array is empty
                     if (selected.length === 0) {
                         filterSelection('all');
                     }else{
@@ -107,6 +105,22 @@
 
                 gridIcon.classList.toggle("active", isGridView);
                 listIcon.classList.toggle("active", !isGridView);
+            };
+
+            // if clicked outside of dropdown, close it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropdown-button') && !event.target.matches('.option-checkbox') && !event.target.matches('#filter-input') && !event.target.matches('#options-list') && !event.target.matches('#selected-options') && !event.target.matches('#filter-button') && !event.target.matches('.option-label')) {
+                    const dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.style.display === "block") {
+                            openDropdown.style.display = "none";
+                        }
+                    }
+                }
+                // else{
+                //     console.log(event.target);
+                // }
             };
 
             document.addEventListener('DOMContentLoaded', function () {
@@ -156,10 +170,13 @@
                     const optionLiElement = document.createElement('li');
 
                     const optionLabelElement = document.createElement('label');
+                    optionLabelElement.classList.add('option-label');
 
                     const optionInputElement = document.createElement('input');
                     optionInputElement.type = 'checkbox';
                     optionInputElement.classList.add('option-checkbox');
+                    // convert to First Letter Capital
+                    tag = tag.charAt(0).toUpperCase() + tag.slice(1);
                     optionInputElement.value = tag;
 
                     const optionTextElement = document.createTextNode(tag);
@@ -171,6 +188,11 @@
 
                     optionsListElement.appendChild(optionLiElement);
                 });
+
+                const filtersSelectedText = document.createElement('p');
+                filtersSelectedText.id = 'filters-selected-text';
+                filtersSelectedText.textContent = 'Tags selected:';
+                filtersSelectedText.style.display = 'inline-block';
 
                 // Create the selected options container
                 const selectedOptionsElement = document.createElement('p');
@@ -190,11 +212,13 @@
                 dropdownElement.appendChild(dropdownContentElement);
 
                 filterElement.appendChild(dropdownElement);
+                filterElement.appendChild(filtersSelectedText);
                 filterElement.appendChild(selectedOptionsElement);
                 // filterElement.appendChild(filterButtonElement);
 
-                const blogFilterElement = document.getElementsByClassName('filters')[0];
-                blogFilterElement.appendChild(filterElement);
+                const mainProjectsElement = document.getElementsByClassName('mainProjects')[0];
+                // append at the top
+                mainProjectsElement.insertBefore(filterElement, mainProjectsElement.childNodes[0]);
 
                 activateFilters();
             }
@@ -273,19 +297,16 @@
                 return iconElement;
             }
 
-            function filterSelection(tag) {
+            function filterSelection(tags) {
                 const blogListings = document.getElementsByClassName('blog-listing');
 
-                console.log(tag);
+                for (const blogList of blogListings) {
+                    const blogListClasses = blogList.classList;
 
-                for (const blogListing of blogListings) {
-                    if (tag === 'all') {
-                        blogListing.style.display = 'block';
-                    } 
-                    else if (blogListing.classList.contains(tag)) {
-                        blogListing.style.display = 'block';
+                    if (tags === 'all' || tags.some(tag => blogListClasses.contains(tag))) {
+                        blogList.style.display = 'block';
                     } else {
-                        blogListing.style.display = 'None';
+                        blogList.style.display = 'none';
                     }
                 }
             }

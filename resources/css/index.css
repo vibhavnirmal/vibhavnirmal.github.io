@@ -1,8 +1,15 @@
 :root {
     /* background color */
-    --primary-background-color: #f0f0f0;
+    /* --primary-background-color: #f0f0f0;
     --primary-text-color: #000000;
-    --secondary-text-color: #3a3a3a;
+    --secondary-text-color: #3a3a3a; */
+
+    --primary-background-color: #F2F2F2;
+    --primary-text-color: #333333;
+    --secondary-text-color: #666666;
+    --button-color: #007BFF;
+    --text-background-color: #FFD700;
+
     --primary-font-family: "Open Sans", sans-serif;
 }
 
@@ -19,13 +26,15 @@ body {
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-grid;
+    margin: 10px;
 }
 
 .dropdown-button {
     padding: 10px;
-    background-color: #3498db;
-    color: #fff;
+    font-size: 20px;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     border: none;
     cursor: pointer;
 }
@@ -34,14 +43,19 @@ body {
     z-index: 1;
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
+    top: 60px;
+    background-color: var(--primary-background-color);
+    border: var(--secondary-text-color) 0.5px solid;
+    border-radius: 2px;
     padding: 10px;
     width:max-content;
+
 }
 
 .filters{
     padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 8fr;
 }
 
 #filter-input {
@@ -60,7 +74,6 @@ body {
 
 li {
     list-style: none;
-    padding: 5px;
 }
 
 .sidebar {
@@ -184,7 +197,7 @@ nav li {
 
 .view-type-icon.active {
     /* opacity: 1; */
-    background-color: lightgray;
+    background-color: var(--primary-background-color);
 }
 
 .grid-view {
@@ -244,7 +257,7 @@ td {
 
 .blog-date {
     font-size: 14px;
-    color: #999;
+    color: var(--secondary-text-color);
     margin-bottom: 10px;
 }
 
@@ -343,6 +356,42 @@ td {
         width: 100%;
     }
 
+    .mainProjects{
+        text-align: center;
+    }
+
+    .filters{
+        padding: 10px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #filters-selected-text{
+        display: none !important;
+    }
+
+    .dropdown-button{
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    .dropdown-content{
+        text-align: left;
+        position: absolute;
+        top: 40px;
+        /* postition center in the view */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #filter-input{
+        display: none;
+    }
+
+    #options-list{
+        padding: 2px;
+        column-count: 2;
+    }
 
     #blog-container {
         width: 100%;
@@ -356,6 +405,16 @@ td {
         grid-template-columns: max-content;
     }
 
+    .blog-title{
+        text-align: center;
+    }
+
+    .blog-excerpt{
+        /* add some space in front for the first line */
+        text-indent: 30px;
+        text-align: left;
+    }
+
     .blog {
         width: 90%;
         padding: 10px;
@@ -364,6 +423,6 @@ td {
     .blog-listing {
         padding: 10px;
         margin: 10px;
-        background-color: #f0f0f0;
+        background-color: var(--primary-background-color);
     }
 }
