@@ -113,31 +113,6 @@ li {
     font-size: 22px;
 }
 
-#writeUp {
-    font-size: 18px;
-    margin: auto;
-    width: 80%;
-}
-
-.mainContent {
-    position: relative;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 20px;
-}
-
-#personalPic {
-    width: 80%;
-    margin-bottom: 20px;
-    height: auto;
-}
-
-.right {
-    text-align: center;
-}
-
-
-
 .socialIcon {
     height: 32px;
 }
@@ -297,26 +272,8 @@ td {
         width: 100% !important;
     }
 
-    #writeUp {
-        font-size: 18px;
-        width: 80%;
-        text-align: justify;
-    }
-
     #navBar #stickLeft a.current {
         font-size: 22px;
-    }
-
-    .left {
-        width: auto;
-        margin: 0;
-        position: relative;
-    }
-
-    .right {
-        width: auto;
-        margin: 0;
-        margin-top: 20px;
     }
 
     .socialIcon {
@@ -327,17 +284,6 @@ td {
     #navBar {
         flex-direction: column;
         align-items: center;
-    }
-
-    #personalPic {
-        display: none;
-        margin-bottom: 20px;
-    }
-
-    .mainContent {
-        position: relative;
-        display: grid;
-        grid-template-columns: 100%;
     }
 
     #stickLeft {
