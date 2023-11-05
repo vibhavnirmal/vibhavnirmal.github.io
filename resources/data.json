@@ -333,29 +333,6 @@
             "date": "2018-09-17",
             "image": "",
             "tags": ["github", "python", "code", "blog", "instagram"]
-        },
-        {
-            "title": "Kaprekars Constant... 6174",
-            "titleLink": "#",
-            "description": "Kaprekar's Constant is the number 6174, which is obtained through the Kaprekar's Routine process involving rearranging the digits of a four-digit number and calculating the difference between the highest and lowest possible numbers until 6174 is reached.",
-            "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Instagram_Logo.png",
-                    "link": "https://www.instagram.com/p/BfJBr3JBVDN/?igshid=142zdwpotg3z9"
-                },
-                {
-                    "icon": "resources/images/logos/GitHub_LogoS.png",
-                    "link": "https://github.com/vibhavnirmal/misc-scripts/blob/master/oldScripts/kaprekars.py"
-                }
-            ],
-            "date": "2018-02-13",
-            "image": "",
-            "tags": [
-                "github",
-                "python",
-                "code",
-                "instagram"
-            ]
         }
     ]
 }
