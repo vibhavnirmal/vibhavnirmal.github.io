@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Vibhav Nirmal's Portfolio">
+    <meta name="keywords" content="Vibhav Nirmal, Vibhav, Nirmal, Portfolio, Vibhav Portfolio, Vibhav Nirmal Portfolio">
+    <meta name="author" content="Vibhav Nirmal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/css/index.css">
@@ -75,30 +79,34 @@
         </div>
     </div>
     <script>
-        $(document).ready(function () {
-            $.getJSON("resources/aboutme.json", function (data) {
-                var paragraphs = data.writeUp.paragraphs;
-                var contentDiv = $("#writeUp");
+        (function ($) {
+            $(document).ready(function () {
+                $.getJSON("resources/aboutme.json", function (data) {
+                    var paragraphs = data.writeUp.paragraphs;
+                    var contentDiv = $("#writeUp");
 
-                $.each(paragraphs, function (index, paragraph) {
-                    var pElement = $("<p>").html(paragraph.content);
-                    contentDiv.append(pElement);
+                    var content = '';
+                    paragraphs.forEach(function (paragraph) {
+                        content += '<p>' + paragraph.content + '</p>';
+                    });
+                    contentDiv.html(content);
+
                 });
             });
-        });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the current URL or page
-            var currentPage = window.location.href;
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the current URL or page
+                var currentPage = window.location.href;
 
-            // Find the navigation item that matches the current URL and add the "current" class
-            var navigationItems = document.getElementsByTagName('a');
-            for (var i = 0; i < navigationItems.length; i++) {
-                if (currentPage.indexOf(navigationItems[i].href) > -1) {
-                    navigationItems[i].className = 'current';
+                // Find the navigation item that matches the current URL and add the "current" class
+                var navigationItems = document.getElementsByTagName('a');
+                for (var i = 0; i < navigationItems.length; i++) {
+                    if (currentPage.indexOf(navigationItems[i].href) > -1) {
+                        navigationItems[i].className = 'current';
+                    }
                 }
-            }
-        });
+            });
+        })(jQuery);
 
     </script>
 </body>
