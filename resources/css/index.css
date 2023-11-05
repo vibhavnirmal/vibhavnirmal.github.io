@@ -55,7 +55,7 @@ body {
 .filters{
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 8fr;
+    grid-template-columns: 1fr 1fr 7fr;
 }
 
 #filter-input {
@@ -100,8 +100,7 @@ li {
 
 #navBar #stickLeft a.current {
     padding: 10px;
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 22px;
     text-decoration: none;
     color: var(--primary-text-color);
     background-color: var(--primary-background-color);
@@ -112,7 +111,6 @@ li {
     text-decoration: none;
     color: var(--primary-text-color);
     font-size: 22px;
-    font-weight: 600;
 }
 
 #writeUp {
@@ -274,6 +272,14 @@ td {
     width: 100%;
     position: relative;
     bottom: 0px;
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+    .filters{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 2fr 2fr 6fr;
+    }
 }
 
 
