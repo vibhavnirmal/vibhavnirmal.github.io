@@ -12,6 +12,7 @@ body.bg {
 }
 
 #desc{
+    text-indent: 20px;
     color: #404040;
 }
 
@@ -56,7 +57,6 @@ hr {
 }
 
 .container-fluid.content {
-    padding: 20px;
     font-size: 16px;
     color: gray;
 }
@@ -67,8 +67,18 @@ hr {
     margin-bottom: 10px;
 }
 
-li {
+ul{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/* <ul id="instasave">
+<li> */
+
+
+ul#instasave.li {
     margin-bottom: 5px;
+    text-decoration: dotted !important;
 }
 
 a {
