@@ -1,6 +1,20 @@
 {
     "projects": [
         {
+            "title": "3D object detection with Kitti dataset and PointRCNN",
+            "titleLink": "#",
+            "description": "This project aims to train and implement a custom PointRCNN model on the Kitti dataset for 3D object detection. PointRCNN is a two-stage model that first generates a set of 3D region proposals from the input point cloud and then refines them in a point-wise manner to obtain the final detection results.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/3dObjectDetection.html"
+                }
+            ],
+            "date": "2023-11-27",
+            "image": "",
+            "tags": ["computervision", "python", "machinelearning"]
+        },
+        {
             "title": "Training and implementing YOLOP: YOLO Panoptic Driving Perception (MIR2022)",
             "titleLink": "#",
             "description": "This project aims to train and implement YOLOP: YOLO Panoptic Driving Perception (MIR2022) on the custom highway dataset. YOLOP is a real-time panoptic segmentation model that can simultaneously detect and segment vehicles in a single forward pass",
