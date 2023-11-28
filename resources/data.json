@@ -1,6 +1,20 @@
 {
     "projects": [
         {
+            "title": "GLPDepth inference with Kitti dataset",
+            "titleLink": "#",
+            "description": "This project aims to learn and implement GLPDepth model on the Kitti dataset for monocular depth estimation. GLPDepth is a single-stage model that uses a global-local-global feature pyramid network to extract global and local features from the input image and then uses a global-local fusion module to fuse the features and predict the depth map.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
+                    "link": "https://github.com/vibhavnirmal/GLPDepth/tree/main"
+                }
+            ],
+            "date": "2023-11-28",
+            "image": "",
+            "tags": ["computervision", "python", "machinelearning", "deeplearning"]
+        },
+        {
             "title": "3D object detection with Kitti dataset and PointRCNN",
             "titleLink": "#",
             "description": "This project aims to train and implement a custom PointRCNN model on the Kitti dataset for 3D object detection. PointRCNN is a two-stage model that first generates a set of 3D region proposals from the input point cloud and then refines them in a point-wise manner to obtain the final detection results.",
@@ -12,7 +26,7 @@
             ],
             "date": "2023-11-27",
             "image": "",
-            "tags": ["computervision", "python", "machinelearning"]
+            "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
             "title": "Training and implementing YOLOP: YOLO Panoptic Driving Perception (MIR2022)",
