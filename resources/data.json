@@ -1,6 +1,20 @@
 {
     "projects": [
         {
+            "title": "4D MOT",
+            "titleLink": "#",
+            "description": "In this project I learned about the different methods used for multi-object tracking and implemented a 4D MOT model. The model was pretrained on the Kitti dataset and evaluated on the Kitti Val set. This extends the 3D object detection project by adding a tracking module to track the objects through time.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Blogpost_LogoS.png",
+                    "link": "https://vibhavnirmal.github.io/blogs/4dmot.html"
+                }
+            ],
+            "date": "2023-12-04",
+            "image": "",
+            "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
+        },
+        {
             "title": "GLPDepth inference with Kitti dataset",
             "titleLink": "#",
             "description": "This project aims to learn and implement GLPDepth model on the Kitti dataset for monocular depth estimation. GLPDepth is a single-stage model that uses a global-local-global feature pyramid network to extract global and local features from the input image and then uses a global-local fusion module to fuse the features and predict the depth map.",
