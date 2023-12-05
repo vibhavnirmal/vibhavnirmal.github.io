@@ -213,12 +213,19 @@ td {
     width: 20% !important;
 }
 
-
-
 .blog-listing {
     padding: 20px;
     margin: 10px 20px;
     background-color: var(--primary-background-color);
+}
+
+.blog-listing:has(.image-title-div){
+    padding: 20px;
+    margin: 10px 20px;
+    background-color: var(--primary-background-color);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
 }
 
 .blog-title {
@@ -237,6 +244,7 @@ td {
 .blog-excerpt {
     font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 /* #blog-container.list-view  */
@@ -248,6 +256,39 @@ td {
     position: relative;
     bottom: 0px;
 }
+
+.list-view .image-title-div .blog-image {
+    width: 100%;
+    object-fit: contain;
+    /* max height will be 400 px */
+    max-height: 300px;
+    height: 100%;
+}
+
+.grid-view .image-title-div .blog-image {
+    width: 100%;
+    object-fit: cover;
+    /* max height will be 400 px */
+    height: 100%;
+}
+
+
+@-moz-document url-prefix() {
+
+    .grid-view .image-title-div .blog-image {
+        width: 100%;
+        object-fit: cover;
+        /* max height will be 400 px */
+        max-height: 300px;
+    }
+    
+    .list-view .image-title-div .blog-image {
+        width: 40%;
+        object-fit: contain;
+        max-height: 400px;
+    }
+}
+
 
 @media screen and (min-width: 701px) and (max-width: 1000px) {
     .filters{
@@ -363,8 +404,8 @@ td {
 
     .blog-excerpt{
         /* add some space in front for the first line */
-        text-indent: 30px;
-        text-align: left;
+        text-indent: 15px;
+        text-align: justify;
     }
 
     .blog {
@@ -376,5 +417,8 @@ td {
         padding: 10px;
         margin: 10px;
         background-color: var(--primary-background-color);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }

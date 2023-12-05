@@ -3,7 +3,7 @@
         {
             "title": "4D MOT",
             "titleLink": "#",
-            "description": "In this project I learned about the different methods used for multi-object tracking and implemented a 4D MOT model. The model was pretrained on the Kitti dataset and evaluated on the Kitti Val set. This extends the 3D object detection project by adding a tracking module to track the objects through time.",
+            "description": "In this project I learned about the different methods used for multi-object tracking and implemented a 4D MOT inference. The model was pretrained on the Kitti dataset and evaluated on the Kitti Val set. This extends the 3D object detection project by adding a tracking module to track the objects through time.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -11,7 +11,7 @@
                 }
             ],
             "date": "2023-12-04",
-            "image": "",
+            "image": "resources\\videos\\tracking_mot.mp4",
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
@@ -25,7 +25,7 @@
                 }
             ],
             "date": "2023-11-28",
-            "image": "",
+            "image": "resources\\images\\stacked_images.gif",
             "tags": ["computervision", "python", "machinelearning", "deeplearning"]
         },
         {
@@ -39,7 +39,7 @@
                 }
             ],
             "date": "2023-11-27",
-            "image": "",
+            "image": "resources\\images\\output_19.gif",
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
@@ -57,7 +57,7 @@
                 }
             ],
             "date": "2023-07-28",
-            "image": "",
+            "image": "resources\\videos\\yolop.mp4",
             "tags": ["computervision", "python", "machinelearning"]
         },
         {
@@ -71,7 +71,7 @@
                 }
             ],
             "date": "2023-06-01",
-            "image": "",
+            "image": "resources\\images\\vinHandDet.gif",
             "tags": ["computervision", "python", "machinelearning", "blog"]
         },
         {
@@ -107,7 +107,7 @@
                 }
             ],
             "date": "2023-05-14",
-            "image": "",
+            "image": "resources\\videos\\rtabmap_mapping.mp4",
             "tags": ["computervision", "robotics", "ros", "python", "youtube"]
         },
         {
@@ -135,7 +135,7 @@
                 }
             ],
             "date": "2022-12-01",
-            "image": "",
+            "image": "resources\\videos\\maze.mp4",
             "tags": [
                 "youtube",
                 "robotics"
@@ -144,16 +144,16 @@
         {
             "title": "Mercado Escolar - School Supplies Ecommerce Website (React)",
             "titleLink": "#",
-            "description": "Mercado Escolar is an ecommerce website that allows users to purchase school supplies online. The website features a main page, a product page, a shopping cart, and a checkout page. The website also features a login page and a registration page for users to create accounts and login to their accounts. Login credentials required for business, admin, and superadmin accounts (Ping me for credentials).",
+            "description": "Mercado Escolar is an ecommerce website that allows users to purchase school supplies online. The website features a main page, a product page, a shopping cart, and a checkout page. The website also features a login page and a registration page for users to create accounts and login to their accounts. Login credentials required for business, admin, and superadmin accounts",
             "multipleLinks": [
-               
+                {
+                    "icon": "resources/images/logos/GitHub_LogoS.png",
+                    "link": "https://vibhavnirmal.github.io/schoolMarketplace"
+                }
             ],
             "date": "2022-11-11",
-            "image": "",
-            "tags": [
-                "webdev",
-                "blog"
-            ]
+            "image": "resources\\videos\\mercadoEscolar.mp4",
+            "tags": ["webdev", "github"]
         },
         {
             "title": "Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)",
@@ -170,13 +170,8 @@
                 }
             ],
             "date": "2022-11-18",
-            "image": "",
-            "tags": [
-                "github",
-                "webdev",
-                "blog",
-                "linux"
-            ]
+            "image": "https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png",
+            "tags": ["github", "webdev", "blog", "linux"]
         },
         {
             "title": "Square root of integer without using sqrt() function",
@@ -231,7 +226,7 @@
                 }
             ],
             "date": "2022-05-02",
-            "image": "",
+            "image": "resources\\videos\\obsAvoidance.mp4",
             "tags": [
                 "youtube",
                 "matlab",
@@ -251,7 +246,7 @@
                 }
             ],
             "date": "2020-10-15",
-            "image": "",
+            "image": "resources\\images\\pigDice.png",
             "tags": [
                 "github",
                 "webdev",
@@ -274,7 +269,7 @@
                 }
             ],
             "date": "2020-07-31",
-            "image": "",
+            "image": "resources\\images\\mediumDart.png",
             "tags": [
                 "medium",
                 "python",
@@ -323,7 +318,7 @@
                 }
             ],
             "date": "2020-04-05",
-            "image": "",
+            "image": "resources\\images\\kwGraph.png",
             "tags": ["python", "youtube", "machinelearning", "tutorial"]
         },
         {
