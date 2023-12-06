@@ -85,6 +85,7 @@
                 optionsList.addEventListener('change', function () {
                     const selected = Array.from(optionsList.querySelectorAll('.option-checkbox:checked')).map(checkbox => checkbox.value.toLowerCase());
                     selectedOptions.textContent = selected.length > 0 ? selected.join(', ') : 'None';
+                    selectedOptions.classList.toggle('noTag', selected.length === 0);
 
                     if (selected.length === 0) {
                         filterSelection('all');
@@ -197,6 +198,7 @@
                 // Create the selected options container
                 const selectedOptionsElement = document.createElement('p');
                 selectedOptionsElement.id = 'selected-options';
+                selectedOptionsElement.classList.add('noTag');
                 selectedOptionsElement.textContent = 'None';
 
                 // Create the filter button

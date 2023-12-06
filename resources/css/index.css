@@ -272,7 +272,6 @@ td {
     height: 100%;
 }
 
-
 @-moz-document url-prefix() {
 
     .grid-view .image-title-div .blog-image {
@@ -360,6 +359,14 @@ td {
     }
 
     #filters-selected-text{
+        display: none !important;
+    }
+
+    .noTag{
+        display: none;
+    }
+
+    #selected-options:empty{
         display: none !important;
     }
 
