@@ -93,6 +93,13 @@ li {
     margin: 10px 0px 10px 0px;
 }
 
+.filtersAndView{
+    margin: auto 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #stickLeft {
     display: flex;
     gap: 10px;
@@ -350,6 +357,10 @@ td {
 
     .mainProjects{
         text-align: center;
+    }
+
+    .filtersAndView{
+        display: inline-block;
     }
 
     .filters{

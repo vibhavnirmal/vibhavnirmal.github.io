@@ -23,15 +23,6 @@
             <a href="aboutme.html" class="navButton">About Me</a>
         </div>
 
-        <div class="view-type">
-            <div class="view-type-button" onclick="changeView('list')">
-                <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
-            </div>
-            <div class="view-type-button" onclick="changeView('grid')">
-                <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View" class="view-type-icon active">
-            </div>
-        </div>
-
         <div id="stickRight">
             <a href="https://github.com/vibhavnirmal" target="_blank">
                 <img src="resources/images/logos/GitHub_Logo.png" alt="Github" class="socialIcon" height="36">
@@ -43,8 +34,19 @@
 
         <div class="content">
             <div class="mainProjects">
+                <div class="filtersAndView">
+                    <div class="view-type">
+                        <div class="view-type-button" onclick="changeView('list')">
+                            <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
+                        </div>
+                        <div class="view-type-button" onclick="changeView('grid')">
+                            <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View" class="view-type-icon active">
+                        </div>
+                    </div>
+                </div>
                 <div id="blog-container" class="grid-view">
                 </div>
+
             </div>
         </div>
 
@@ -218,7 +220,7 @@
                 filterElement.appendChild(selectedOptionsElement);
                 // filterElement.appendChild(filterButtonElement);
 
-                const mainProjectsElement = document.getElementsByClassName('mainProjects')[0];
+                const mainProjectsElement = document.getElementsByClassName('filtersAndView')[0];
                 // append at the top
                 mainProjectsElement.insertBefore(filterElement, mainProjectsElement.childNodes[0]);
 
