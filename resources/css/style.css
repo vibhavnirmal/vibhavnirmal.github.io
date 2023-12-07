@@ -12,7 +12,6 @@ body.bg {
 }
 
 #desc{
-    text-indent: 20px;
     color: #404040;
 }
 
@@ -108,6 +107,10 @@ a:hover {
     padding: 0;
 }
 
+#gameplay{
+    width: 50%;
+}
+
 .resource-link {
     display: block;
     font-size: 1.2em;
@@ -143,6 +146,10 @@ a:hover {
 }
 
 @media screen and (max-width: 700px) {
+
+    #gameplay{
+        width: 100%;
+    }
 
     #backBut{
         width: 100%;

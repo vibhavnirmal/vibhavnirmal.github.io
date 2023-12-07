@@ -1,6 +1,16 @@
 {
     "projects": [
         {
+            "title": "Live 360 3D video streaming with Insta360",
+            "titleLink": "#",
+            "description": "The objective was to live stream 360-degree 3D videos in real-time using the Insta360 camera. This was achieved through the implementation of WebRTC technology and a Linode server, enabling real-time broadcasting to the internet.",
+            "multipleLinks": [
+            ],
+            "date": "2023-12-06",
+            "image": "resources\\videos\\live360.mp4",
+            "tags": []
+        },
+        {
             "title": "4D MOT",
             "titleLink": "#",
             "description": "In this project I learned about the different methods used for multi-object tracking and implemented a 4D MOT inference. The model was pretrained on the Kitti dataset and evaluated on the Kitti Val set. This extends the 3D object detection project by adding a tracking module to track the objects through time.",
@@ -111,7 +121,7 @@
             "tags": ["computervision", "robotics", "ros", "python", "youtube"]
         },
         {
-            "title": "Unreal Engine 5 First Person Shooter Game (blueprints)",
+            "title": "Unreal Engine 5 First Person Shooter Game (using blueprints)",
             "titleLink": "#",
             "description": "The game features a playable character who can move around the map and shoot at static and dynamic targets in the shooting range. The game is timed and has a different score system for different types of targets. The game also features a main menu and a pause menu.",
             "multipleLinks": [
@@ -121,7 +131,7 @@
                 }
             ],
             "date": "2023-04-24",
-            "image": "",
+            "image": "resources\\videos\\gp.mp4",
             "tags": ["gamedev", "blog", "unrealengine"]
         },
         {
