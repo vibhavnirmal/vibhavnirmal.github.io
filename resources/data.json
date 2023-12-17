@@ -15,10 +15,6 @@
             "titleLink": "#",
             "description": "In this project I learned about the different methods used for multi-object tracking and implemented a 4D MOT inference. The model was pretrained on the Kitti dataset and evaluated on the Kitti Val set. This extends the 3D object detection project by adding a tracking module to track the objects through time.",
             "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Blogpost_LogoS.png",
-                    "link": "https://vibhavnirmal.github.io/blogs/4dmot.html"
-                }
             ],
             "date": "2023-12-04",
             "image": "resources\\videos\\tracking_mot.mp4",
@@ -43,10 +39,6 @@
             "titleLink": "#",
             "description": "This project aims to train and implement a custom PointRCNN model on the Kitti dataset for 3D object detection. PointRCNN is a two-stage model that first generates a set of 3D region proposals from the input point cloud and then refines them in a point-wise manner to obtain the final detection results.",
             "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Blogpost_LogoS.png",
-                    "link": "https://vibhavnirmal.github.io/blogs/3dObjectDetection.html"
-                }
             ],
             "date": "2023-11-27",
             "image": "resources\\images\\output_19.gif",
