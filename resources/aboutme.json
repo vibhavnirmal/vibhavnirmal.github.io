@@ -2,20 +2,24 @@
     "writeUp": {
         "paragraphs": [
             {
-                "content": "I grew up in Gujarat, where I attended an immersion school that taught exclusively in Gujarati. I obtained my bachelor's degree in Computer Engineering from LDCE (GTU) in Ahmedabad and have accumulated over 3 years of professional experience in robotics and end to end software development."
+                "content": "From India to Texas, my passion for robots has taken me on a journey of learning and building. With more than 2 years of experience under my belt, I'm a robotics software engineer who loves making things work, especially in the world of unmanned vehicles."
             },
             {
-                "content": "Recently, I completed my Master's degree in Computer Science from UT Arlington. My primary interest lies in the field of unmanned vehicle systems and their diverse applications, specifically in the areas of motion prediction and perception. I thoroughly enjoy working with edge devices such as Nvidia Jetson Xavier and Raspberry Pi to create IoT and robot solutions through hands-on experimentation."
+                "content": "Sensors, Neural Networks and PyTorch - these are my tools, and perception and motion prediction are my playgrounds. I'm hands-on, from tinkering with Nvidia Jetson Xaviers for deep neural networks to fusing lidar, camera, and other sensor data for robot brains."
             },
             {
-                "content": "In the spring of 2023, as a club president of AutonoBots at UTA, I worked on robot SLAM (with rtabmap) and sensor fusion utilizing lidar, imu and camera data and participated in the National Robotics Challenge"
+                "content": "As president of UTA's AutonoBots club, I led the charge in robot SLAM and competed in the National Robotics Challenge. Teamwork and real-world challenges? Bring it on!"
             },
             {
-                "content": "I love cameras, math, coding, and making things work. I want to use my skills to create innovative products in robotics, AI, and computer vision. Adopting a proactive 'do it now' approach has contributed a lot to my growth and understanding of new technologies and research papers"
+                "content": "In my free time, I'm a maker, a gamer, and a musician in the making. I love to build things, whether it's a robot, a game, or a song. I'm also a big fan of the outdoors, and I'm always up for a hike or a camping trip."
             },
             {
-                "content": "Thank you for taking the time to learn about me and my work. If you have any questions or comments, please feel free to reach out to me."
+                "content": "My 'do it now' spirit keeps me pushing boundaries, always hungry for new tech and research. I'm eager to join a team where my skills and passion can fuel innovation in robotics, AI, and beyond."
+            },
+            {
+                "content": "Thanks for taking the time to learn about me and my work. Let's talk!"
             }
+
         ]
     }
 }

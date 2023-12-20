@@ -6,15 +6,18 @@
 }
 
 #writeUp {
-    font-size: 18px;
+    font-size: 20px;
     margin: auto;
     width: 80%;
+    text-align: justify;
 }
 
 #personalPic {
     width: 80%;
     margin-bottom: 20px;
     height: auto;
+    border-radius: 80px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 .right {

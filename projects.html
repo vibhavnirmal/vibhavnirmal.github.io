@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Vibhav Nirmal's Portfolio">
+    <meta name="keywords" content="Vibhav Nirmal, Vibhav, Nirmal, Portfolio, Vibhav Portfolio, Vibhav Nirmal Portfolio">
+    <meta name="author" content="Vibhav Nirmal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Vibhav</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/css/index.css">
+    <link rel="stylesheet" href="resources/css/blog.css">
+
+    <script src="resources/js/script.js"></script>
+    <script src="resources/js/blog-view.js"></script>
+    <script src="resources/js/create-filter.js"></script>
+    <script src="resources/js/blog-listing.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div id="navBar">
+                <div id="stickLeft">
+                    <a href="index.html" class="navButton">Vibhav Nirmal</a>
+                    <a href="projects.html" class="navButton">Projects</a>
+                </div>
+                <div id="stickRight">
+                    <a href="https://github.com/vibhavnirmal" target="_blank">
+                        <img src="resources/images/logos/GitHub_Logo.png" alt="Github" class="socialIcon" height="36">
+                    </a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <div class="mainProjects">
+                        <div class="filtersAndView">
+                            <div class="view-type">
+                                <div class="view-type-button" onclick="changeView('list')">
+                                    <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
+                                </div>
+                                <div class="view-type-button" onclick="changeView('grid')">
+                                    <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View"
+                                        class="view-type-icon active">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="blog-container" class="grid-view"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+   
+</body>
+
+</html>
