@@ -8,7 +8,7 @@
 #writeUp {
     font-size: 20px;
     margin: auto;
-    /* width: 80%; */
+    width: 80%;
     text-align: justify;
 }
 
@@ -46,6 +46,7 @@
 
     #writeUp {
         font-size: 18px;
+        width: 100%;
         text-align: justify;
     }
     
