@@ -299,25 +299,6 @@ td {
     margin: 10px;
     text-align: center;
 }
-    
-
-
-@-moz-document url-prefix() {
-
-    .grid-view .image-title-div .blog-image {
-        width: 100%;
-        object-fit: cover;
-        /* max height will be 400 px */
-        max-height: 300px;
-    }
-    
-    .list-view .image-title-div .blog-image {
-        width: 40%;
-        object-fit: contain;
-        max-height: 400px;
-    }
-}
-
 
 @media screen and (min-width: 701px) and (max-width: 1000px) {
     .filters{
