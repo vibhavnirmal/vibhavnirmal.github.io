@@ -43,6 +43,11 @@
     </div>
 
     <div class="mainContent">
+        
+            
+        <!-- render social.html file here-->
+        <div id="social-placeholder"></div>
+
         <div id="writeUp" class="left"></div>
 
         <div id="personalInfo" class="right">
@@ -62,29 +67,8 @@
                     <image href="resources/images/vin.jpeg" alt="VibhavImage" id="personalPic" x="10" y="15" />
                 </g>
             </svg>
-            
-            
-            <div id="ContactMe">
-                <div id="social">
-                    <a href="https://github.com/vibhavnirmal" class="socialIcon" title="Github">
-                        <i class="fa-brands fa-github" id="iconFA"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vibhavnirmal" class="socialIcon" title="Linkedin">
-                        <i class="fa-brands fa-linkedin" id="iconFA"></i>
-                    </a>
-                    <a href="https://medium.com/@vibhavnirmal" class="socialIcon" title="Medium">
-                        <i class="fa-brands fa-medium" id="iconFA"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@vibhavnirmal" class="socialIcon" title="Youtube">
-                        <i class="fa-brands fa-youtube" id="iconFA"></i>
-                    </a>
-                    <a href="https://www.instagram.com/techie_vin/" class="socialIcon" title="Instagram">
-                        <i class="fa-brands fa-instagram" id="iconFA"></i>
-                    </a>
-                    <a href="https://twitter.com/vibhavnirmal" class="socialIcon" title="Twitter">
-                        <i class="fa-brands fa-x-twitter" id="iconFA"></i>
-                </div>
-            </div>
+
+            <div id="social-placeholder-old"></div>
         </div>
 
     </div>
@@ -117,7 +101,28 @@
                 }
             });
         })(jQuery);
+    </script>
 
+    <script>
+        $(document).ready(function() {
+            adjustSocialIcons(); // Call the function initially
+          
+            $(window).resize(function() {
+              adjustSocialIcons(); // Call the function on resize
+            });
+          });
+          
+          function adjustSocialIcons() {
+            const windowWidth = $(window).width();
+          
+            if (windowWidth > 1000) {
+              $("#social-placeholder").load("social.html");
+              $("#social-placeholder-old").empty(); // Use empty() to clear contents
+            } else {
+              $("#social-placeholder").empty();
+              $("#social-placeholder-old").load("social.html");
+            }
+          }
     </script>
     
     <script src="https://kit.fontawesome.com/3cffeb68ef.js" crossorigin="anonymous"></script>
