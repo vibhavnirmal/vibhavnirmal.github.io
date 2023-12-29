@@ -46,6 +46,10 @@
         grid-template-columns: 100%;
     }
 
+    #social-placeholder{
+        display: none;
+    }
+
     #writeUp {
         font-size: 18px;
         width: 100%;
