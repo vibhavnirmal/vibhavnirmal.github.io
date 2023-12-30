@@ -7,9 +7,15 @@
 
 #writeUp {
     font-size: 20px;
-    margin: auto;
+    margin: 0 auto 0 auto;
     width: 90%;
     text-align: justify;
+}
+
+#writeUp #nametitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 38px;
+    margin-top: 0px;
 }
 
 #personalPic {

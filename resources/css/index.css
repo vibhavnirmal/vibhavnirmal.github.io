@@ -289,7 +289,7 @@ td {
 
 #social-placeholder #ContactMe {
     display: flex;
-    height: min(100%, 75vh);
+    height: min(100%, 80vh);
 }
 
 #social-placeholder #ContactMe #social {
