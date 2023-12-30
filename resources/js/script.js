@@ -74,7 +74,7 @@ function filterSelection(tags) {
         const blogListClasses = blogList.classList;
 
         if (tags === 'all' || tags.some(tag => blogListClasses.contains(tag))) {
-            blogList.style.display = 'block';
+            blogList.style.display = 'grid';
         } else {
             blogList.style.display = 'none';
         }
