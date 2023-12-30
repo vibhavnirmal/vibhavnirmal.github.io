@@ -73,4 +73,8 @@
         margin: 0;
         margin-top: 20px;
     }
+
+    #writeUp #nametitle {
+        font-size: 32px;
+    }
 }
