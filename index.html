@@ -29,22 +29,9 @@
 </head>
 
 <body>
-    <div id="navBar">
-        <div id="stickLeft">
-            <a href="index.html" class="navButton">Vibhav Nirmal</a>
-            <a href="projects.html" class="navButton">Projects</a>
-        </div>
-
-        <div id="stickRight">
-            <a href="https://github.com/vibhavnirmal" target="_blank">
-                <img src="resources/images/logos/GitHub_Logo.png" alt="Github" class="socialIcon" height="36">
-            </a>
-        </div>
-    </div>
+    <div id="navBar"></div>
 
     <div class="mainContent">
-        
-            
         <!-- render social.html file here-->
         <div id="social-placeholder"></div>
 
@@ -104,25 +91,28 @@
     </script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             adjustSocialIcons(); // Call the function initially
-          
-            $(window).resize(function() {
-              adjustSocialIcons(); // Call the function on resize
+
+            $(window).resize(function () {
+                adjustSocialIcons(); // Call the function on resize
             });
-          });
-          
-          function adjustSocialIcons() {
+
+            $("#navBar").load("navbar.html");
+        });
+
+        function adjustSocialIcons() {
             const windowWidth = $(window).width();
-          
+
             if (windowWidth > 1000) {
-              $("#social-placeholder").load("social.html");
-              $("#social-placeholder-old").empty(); // Use empty() to clear contents
+                $("#social-placeholder").load("social.html");
+                $("#social-placeholder-old").empty(); // Use empty() to clear contents
             } else {
-              $("#social-placeholder").empty();
-              $("#social-placeholder-old").load("social.html");
+                $("#social-placeholder").empty();
+                $("#social-placeholder-old").load("social.html");
             }
-          }
+        }
+
     </script>
     
     <script src="https://kit.fontawesome.com/3cffeb68ef.js" crossorigin="anonymous"></script>

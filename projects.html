@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://vibhavnirmal.github.io/projects.html">
     <meta property="og:type" content="website">
 
-    <title>My Portfolio | Vibhav</title>
+    <title>Projects | Vibhav Nirmal</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/css/index.css">
     <link rel="stylesheet" href="resources/css/blog.css">
@@ -28,17 +28,7 @@
 <body>
     <div class="container">
         <div class="content">
-            <div id="navBar">
-                <div id="stickLeft">
-                    <a href="index.html" class="navButton">Vibhav Nirmal</a>
-                    <a href="projects.html" class="navButton">Projects</a>
-                </div>
-                <div id="stickRight">
-                    <a href="https://github.com/vibhavnirmal" target="_blank">
-                        <img src="resources/images/logos/GitHub_Logo.png" alt="Github" class="socialIcon" height="36">
-                    </a>
-                </div>
-            </div>
+            <div id="navBar"></div>
 
             <div class="container">
                 <div class="content">
@@ -65,6 +55,11 @@
         </div>
     </div>
    
+    <script>
+        $(document).ready(function () {
+            $("#navBar").load("navbar.html");
+        });
+    </script>
 </body>
 
 </html>
