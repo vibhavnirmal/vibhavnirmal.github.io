@@ -265,6 +265,11 @@ td {
     height: 100%;
 }
 
+.blog-image:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .grid-view .image-title-div .blog-image {
     width: 100%;
     object-fit: cover;
