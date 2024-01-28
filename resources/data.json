@@ -1,6 +1,19 @@
 {
     "projects": [
         {
+            "title": "Depth Anything: new SOTA Mono-depth estimation",
+            "titleLink": "#",
+            "description": "This project implements Depth Anything: Monocular Depth Estimation. Depth Anything is a single-image depth estimation model which outperforms MiDaS and ZoeDepth in zero-shot depth and metric depthestimation tasks, respectively.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7155365865171951616/"
+                }],
+            "date": "2024-01-23",
+            "image": "resources\\videos\\depthAnything.mp4",
+            "tags": ["computervision", "python", "machinelearning", "deeplearning", "linkedin"]
+        },
+        {
             "title": "Live 360 3D video streaming with Insta360",
             "titleLink": "#",
             "description": "The objective was to live stream 360-degree 3D videos in real-time using the Insta360 camera. This was achieved through the implementation of WebRTC technology and a Linode server, enabling real-time broadcasting to the internet.",
