@@ -58,6 +58,20 @@
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
+            "title": "Testing Visual SLAM with ROS at UTA",
+            "titleLink": "#",
+            "description": "Testing ROS and Visual SLAM with Racecar at The University of Texas at Arlington parking lot with UTA AutonoBots club. Obstacle map made of buckets, not relying on lanes. Uses Lidar and Camera based sensor fusion technique.",
+            "multipleLinks":[
+                {
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7094852628660043777/"
+                }
+            ],
+            "date": "2023-08-09",
+            "image": "resources\\videos\\UTATest.mp4",
+            "tags": ["ros", "computervision", "linkedin", "robotics"]
+        },
+        {
             "title": "Training and implementing YOLOP: YOLO Panoptic Driving Perception (MIR2022)",
             "titleLink": "#",
             "description": "This project aims to train and implement YOLOP: YOLO Panoptic Driving Perception (MIR2022) on the custom highway dataset. YOLOP is a real-time panoptic segmentation model that can simultaneously detect and segment vehicles in a single forward pass",
