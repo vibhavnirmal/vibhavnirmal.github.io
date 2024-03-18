@@ -30,6 +30,10 @@
         <div class="content">
             <div id="navBar"></div>
 
+            <div class="bestviewedin" style="display: none; text-align: center; color: purple">
+                <p>Use Firefox >= 121 or any other browser for best viewing experience</p>
+            </div>
+
             <div class="container">
                 <div class="content">
                     <div class="mainProjects">
@@ -59,6 +63,25 @@
         $(document).ready(function () {
             $("#navBar").load("navbar.html");
         });
+
+        // Get user agent string
+        var userAgent = navigator.userAgent;
+
+        // Check if Firefox
+        if (userAgent.indexOf("Firefox") != -1) {
+            var versionIndex = userAgent.indexOf("Firefox/") + 8;
+            var version = parseInt(userAgent.substring(versionIndex));
+
+            if (version >= 121) {
+                console.log("Firefox version is greater than 121");
+            } else {
+                console.log("Firefox version is not greater than 121");
+                // display 
+                $('.marquee').css('display', 'block');
+            }
+        } else {
+            console.log("This is not Firefox");
+        }
     </script>
 </body>
 
