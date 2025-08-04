@@ -1,6 +1,62 @@
 {
     "projects": [
         {
+            "title": "KAL-M UGV Project: International Collaboration in Robotics Innovation",
+            "titleLink": "#",
+            "description": "Happy to be part of the team KAL-M, an innovative Indian robotics startup developing Unmanned Ground Vehicle (UGV) solutions.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
+                    "link": "https://www.linkedin.com/posts/vibhavnirmal_buildinginpublic-innovation-teamwork-activity-7159401500773863424-HTh1"
+                }
+            ],
+            "date": "2024-02-08",
+            "image": "",
+            "tags": ["robotics", "ros", "linkedin"]
+        },
+        {
+            "title": "Depth Anything v2: Next-Generation Monocular Depth Estimation",
+            "titleLink": "#",
+            "description": "Four months after Depth Anything v1, the revolutionary v2 update delivers incredible improvements in monocular depth estimation. Features finer edge details, enhanced robustness for smaller objects, and training on 62 million pseudo-labeled real images plus 595,000 synthetic images across 13 datasets. Represents a significant leap forward in depth estimation technology with superior performance and accuracy.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
+                    "link": "https://www.linkedin.com/posts/vibhavnirmal_deeplearning-depthestimation-computervision-activity-7207594616663990272-hBQt"
+                }
+            ],
+            "date": "2024-06-15",
+            "image": "resources/images/depthAnythingv2.png",
+            "tags": ["computervision", "linkedin"]
+        },
+        {
+            "title": "Molmo: AI2's State-of-the-Art Vision Language Model",
+            "titleLink": "#",
+            "description": "Exploring AI2's breakthrough Molmo, an open-weight Vision Language Model delivering exceptional image comprehension and actionable insights. Features multi-scale image processing, OpenAI's ViT-L/14 CLIP vision encoder, and flexible LLM options including OLMo, Qwen2, and Mistral. Demonstrates practical applications like analog watch time reading and sets new benchmarks in vision-language understanding.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7244744792331468800/"
+                }
+            ],
+            "date": "2024-09-25",
+            "image": "resources/images/molmoDemo.png",
+            "tags": ["computervision", "machinelearning", "linkedin"]
+        },
+        {
+            "title": "Airport Security & Luggage Tracking with SAM2",
+            "titleLink": "#",
+            "description": "Cutting-edge real-time tracking and optimization solution for airport security using Meta's SAM2 (Segment Anything Model 2) algorithm. Detects, segments, and tracks objects in real-time to solve critical airport challenges including lost luggage tracking, checkpoint optimization, and security monitoring.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Linkedin_LogoS.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7265493389461118977/"
+                }
+            ],
+            "date": "2024-11-21",
+            "image": "https://github.com/vibhavnirmal/samurai/blob/master/image.png?raw=true",
+            "tags": ["computervision", "machinelearning", "deeplearning", "linkedin"]
+        },
+        {
             "title": "TurtleBot3 ROS SLAM Navigation",
             "titleLink": "#",
             "description": "Real-time SLAM (Simultaneous Localization and Mapping) implementation using TurtleBot3 robot with ROS. Demonstrates autonomous navigation, mapping, and localization in static environments using 2D laser scanner.",
@@ -12,7 +68,7 @@
             ],
             "date": "2023-08-27",
             "image": "",
-            "tags": ["ros", "robotics", "slam", "navigation", "youtube"],
+            "tags": ["ros", "robotics", "slam","youtube"],
             "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lierXbnl9KU?si=BYRMMzTC0-4oUUji\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
         },
         {
@@ -84,7 +140,7 @@
             ],
             "date": "2023-08-09",
             "image": "resources/videos/UTATest.mp4",
-            "tags": ["ros", "computervision", "linkedin", "robotics"]
+            "tags": ["ros", "computervision", "linkedin", "robotics", "slam"]
         },
         {
             "title": "YOLOP: Real-Time Panoptic Driving Perception",
@@ -134,7 +190,7 @@
             ],
             "date": "2023-05-22",
             "image": "",
-            "tags": ["computervision", "ros", "robotics", "python", "youtube"],
+            "tags": ["computervision", "ros", "robotics", "python", "youtube","slam"],
             "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/QAJaO51hcDo?si=XUP63Jyoab4-6T85\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
         },
         {
@@ -153,7 +209,7 @@
             ],
             "date": "2023-05-14",
             "image": "resources/videos/rtabmap_mapping.mp4",
-            "tags": ["computervision", "robotics", "ros", "python", "youtube"]
+            "tags": ["computervision", "robotics", "ros", "python", "youtube", "slam"]
         },
         {
             "title": "First-Person Shooter Game in Unreal Engine 5",
@@ -167,7 +223,7 @@
             ],
             "date": "2023-04-24",
             "image": "resources/videos/gp.mp4",
-            "tags": ["gamedev", "blog", "unrealengine"]
+            "tags": ["blog", "unrealengine"]
         },
         {
             "title": "Autonomous Maze Navigation with Lego Mindstorms EV3",
@@ -216,7 +272,7 @@
             ],
             "date": "2022-11-18",
             "image": "https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png",
-            "tags": ["github", "webdev", "blog", "linux"]
+            "tags": ["github", "webdev", "blog"]
         },
         {
             "title": "Square Root Calculation Without Built-in Functions",
@@ -274,9 +330,7 @@
             "image": "resources/videos/obsAvoidance.mp4",
             "tags": [
                 "youtube",
-                "matlab",
                 "ros",
-                "lidar",
                 "computervision"
             ]
         },
@@ -378,7 +432,7 @@
             ],
             "date": "2019-07-20",
             "image": "",
-            "tags": ["medium", "linux", "gamedev", "tutorial", "blog", "unrealengine"]
+            "tags": ["medium", "tutorial", "blog", "unrealengine"]
         },
         {
             "title": "Mathematical Equation Solver: Exploring Different Approaches",
@@ -414,7 +468,7 @@
             ],
             "date": "2018-09-17",
             "image": "",
-            "tags": ["github", "python", "code", "blog", "instagram"]
+            "tags": ["github", "python", "code", "blog"]
         }
     ]
 }

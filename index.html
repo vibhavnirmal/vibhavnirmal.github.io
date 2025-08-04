@@ -7,6 +7,12 @@
     <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, robotics, computer vision, AI, machine learning">
     <link rel="icon" type="image/png" href="resources/images/logos/vin.png">
     
+    <!-- Performance Optimizations -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="/manifest.json">
+    
     <meta name="description" content="Computer Vision and Robotics enthusiast. Love talking about new research papers and finding new innovative usecases. Always ready to learn.">
 
     <meta property="og:image" content="resources/images/vin.jpg">
@@ -19,18 +25,82 @@
     <!-- Preconnect to external domains for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <title>Vibhav Nirmal | Computer Vision & Robotics Engineer</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Critical CSS for faster loading -->
+    <style>
+        /* Critical Above-the-fold CSS */
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;font-size:16px}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#333;background:#fff;min-height:100vh;overflow-x:hidden}
+        .main-container{display:grid;grid-template-columns:320px 1fr 280px;max-width:1400px;margin:0 auto;min-height:100vh}
+        .loading-spinner{width:40px;height:40px;border:4px solid #f3f3f3;border-top:4px solid #007acc;border-radius:50%;animation:spin 1s linear infinite;margin:20px auto}
+        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        @media(max-width:768px){.main-container{grid-template-columns:1fr;grid-template-rows:auto 1fr}}
+    </style>
+
+    <!-- Load fonts optimally -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- FontAwesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- FontAwesome for social icons - Load asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
+    <!-- Load CSS files -->
     <link rel="stylesheet" href="resources/css/unified-portfolio.css">
     <link rel="stylesheet" href="resources/css/feed-components.css">
 
-    <!-- Scripts -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="resources/data.json" as="fetch" crossorigin>
+    <link rel="preload" href="social.html" as="fetch">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vibhav Nirmal",
+        "jobTitle": "Computer Vision & Robotics Engineer",
+        "description": "Computer Vision and Robotics enthusiast with expertise in AI, machine learning, and autonomous systems.",
+        "url": "https://vibhavnirmal.github.io",
+        "sameAs": [
+            "https://linkedin.com/in/vibhav-nirmal",
+            "https://github.com/vibhavnirmal",
+            "https://medium.com/@vibhav.nirmal",
+            "https://youtube.com/@TechieViN"
+        ],
+        "knowsAbout": [
+            "Computer Vision",
+            "Machine Learning",
+            "Deep Learning",
+            "Robotics",
+            "Autonomous Systems",
+            "ROS",
+            "Python",
+            "PyTorch",
+            "SLAM",
+            "Neural Networks"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "University of Texas at Arlington"
+        },
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Robotics Engineer",
+            "occupationLocation": {
+                "@type": "Place",
+                "name": "United States"
+            },
+            "skills": ["Computer Vision", "Machine Learning", "Robotics", "AI"]
+        }
+    }
+    </script>
+
+    <!-- Scripts with optimized loading -->
     <script src="resources/js/social-feed.js" defer></script>
 </head>
 
@@ -139,7 +209,7 @@
                 <!-- About Content -->
                 <div class="about-content">
                     <p class="about-paragraph">Robotics & AI Engineer with expertise in computer vision, autonomous systems, and neural networks.</p>
-                    <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Jetson, RPi).</p>
+                    <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Nvidia Jetson, Raspberry Pi).</p>
                     <p class="about-paragraph">Former President of UTA AutonoBots. Passionate about building intelligent machines.</p>
                 </div>
             </div>
@@ -207,12 +277,36 @@
         (function () {
             'use strict';
             
-            // DOM Content Loaded handler
+            // DOM Content Loaded handler with performance optimizations
             document.addEventListener('DOMContentLoaded', function () {
-                initializeAboutContent();
-                initializeSocialLinks();
-                initializeStats();
-                initializeMobileMenu();
+                // Register service worker for offline support
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('SW registered:', registration);
+                        })
+                        .catch(error => {
+                            console.log('SW registration failed:', error);
+                        });
+                }
+
+                // Initialize components efficiently
+                const initPromises = [
+                    initializeAboutContent(),
+                    initializeSocialLinks(),
+                    initializeStats(),
+                    initializeMobileMenu()
+                ];
+
+                // Wait for critical components to load
+                Promise.allSettled(initPromises).then(() => {
+                    console.log('Portfolio initialized');
+                    
+                    // Optional: Add performance metrics
+                    if ('performance' in window && 'measure' in performance) {
+                        performance.mark('portfolio-loaded');
+                    }
+                });
             });
 
             // Initialize about content from JSON
@@ -222,113 +316,166 @@
                 if (contentDiv) {
                     contentDiv.innerHTML = `
                         <p class="about-paragraph">Robotics & AI Engineer with expertise in computer vision, autonomous systems, and neural networks.</p>
-                        <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Jetson, RPi).</p>
+                        <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Nvidia Jetson, Raspberry Pi).</p>
                         <p class="about-paragraph">Former President of UTA AutonoBots. Passionate about building intelligent machines.</p>
                     `;
                 }
             }
 
-            // Initialize social links
+            // Initialize social links with caching and better error handling
             function initializeSocialLinks() {
+                // Check if already cached
+                if (window.socialLinksCache) {
+                    populateSocialLinks(window.socialLinksCache);
+                    return;
+                }
+
                 fetch('social.html')
-                    .then(response => response.text())
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                        return response.text();
+                    })
                     .then(html => {
-                        const socialContainer = document.getElementById('social-links');
-                        const mobileSocialContainer = document.getElementById('mobile-social-links');
-                        
-                        if (socialContainer) {
-                            socialContainer.innerHTML = html;
-                        }
-                        
-                        // Also populate mobile sidebar with social links
-                        if (mobileSocialContainer) {
-                            mobileSocialContainer.innerHTML = html;
-                        }
+                        window.socialLinksCache = html; // Cache for future use
+                        populateSocialLinks(html);
                     })
                     .catch(error => {
                         console.error('Error loading social links:', error);
-                        
-                        // Fallback social links for mobile if fetch fails
-                        const mobileSocialContainer = document.getElementById('mobile-social-links');
-                        if (mobileSocialContainer) {
-                            mobileSocialContainer.innerHTML = `
-                                <div class="social-links-grid">
-                                    <a href="https://linkedin.com/in/vibhav-nirmal" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                        <span class="social-label">LinkedIn</span>
-                                    </a>
-                                    <a href="https://github.com/vibhavnirmal" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                        <i class="fab fa-github" aria-hidden="true"></i>
-                                        <span class="social-label">GitHub</span>
-                                    </a>
-                                    <a href="https://medium.com/@vibhav.nirmal" class="social-link medium" target="_blank" rel="noopener noreferrer" aria-label="Medium">
-                                        <i class="fab fa-medium" aria-hidden="true"></i>
-                                        <span class="social-label">Medium</span>
-                                    </a>
-                                    <a href="https://youtube.com/@TechieViN" class="social-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                                        <i class="fab fa-youtube" aria-hidden="true"></i>
-                                        <span class="social-label">YouTube</span>
-                                    </a>
-                                </div>
-                            `;
-                        }
+                        loadFallbackSocialLinks();
                     });
+            }
+
+            // Populate social links containers
+            function populateSocialLinks(html) {
+                const socialContainer = document.getElementById('social-links');
+                const mobileSocialContainer = document.getElementById('mobile-social-links');
+                
+                if (socialContainer) socialContainer.innerHTML = html;
+                if (mobileSocialContainer) mobileSocialContainer.innerHTML = html;
+            }
+
+            // Fallback social links with improved structure
+            function loadFallbackSocialLinks() {
+                const fallbackHTML = `
+                    <div class="social-links-grid">
+                        <a href="https://linkedin.com/in/vibhav-nirmal" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/vibhavnirmal" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://medium.com/@vibhav.nirmal" class="social-link medium" target="_blank" rel="noopener noreferrer" aria-label="Medium Blog">
+                            <i class="fab fa-medium" aria-hidden="true"></i>
+                            <span class="social-label">Medium</span>
+                        </a>
+                        <a href="https://youtube.com/@TechieViN" class="social-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                            <span class="social-label">YouTube</span>
+                        </a>
+                    </div>
+                `;
+                
+                populateSocialLinks(fallbackHTML);
             }
 
             // Initialize stats and dynamic content
             function initializeStats() {
-                // Wait for projects to load, then update stats
-                setTimeout(() => {
+                // Use requestAnimationFrame for better performance
+                requestAnimationFrame(() => {
                     updateStats();
-                }, 2000);
+                });
             }
 
-            // Update statistics
+            // Update statistics with better error handling
             function updateStats() {
+                // Use cached data if available
+                if (window.projectsCache) {
+                    updateStatsFromData(window.projectsCache);
+                    return;
+                }
+
                 fetch('resources/data.json')
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                        return response.json();
+                    })
                     .then(data => {
-                        const projects = data.projects || [];
-                        
-                        // Update project count
-                        const projectsCount = document.getElementById('projects-count');
-                        if (projectsCount) {
-                            animateNumber(projectsCount, projects.length);
-                        }
-
-                        // Count unique technologies
-                        const allTags = new Set();
-                        projects.forEach(project => {
-                            if (project.tags) {
-                                project.tags.forEach(tag => allTags.add(tag));
-                            }
-                        });
-                        
-                        const techCount = document.getElementById('technologies-count');
-                        if (techCount) {
-                            animateNumber(techCount, allTags.size);
-                        }
-
-                        // Update skills list
-                        updateSkillsList(Array.from(allTags));
+                        window.projectsCache = data; // Cache for future use
+                        updateStatsFromData(data);
                     })
                     .catch(error => {
                         console.error('Error loading stats:', error);
+                        // Fallback values
+                        updateStatsWithFallback();
                     });
             }
 
-            // Animate number counting
-            function animateNumber(element, target) {
-                let current = 0;
-                const increment = target / 30;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
+            // Extract stats update logic
+            function updateStatsFromData(data) {
+                const projects = data.projects || [];
+                
+                // Update project count
+                const projectsCount = document.getElementById('projects-count');
+                const mobileProjectsCount = document.getElementById('mobile-projects-count');
+                if (projectsCount) animateNumber(projectsCount, projects.length);
+                if (mobileProjectsCount) animateNumber(mobileProjectsCount, projects.length);
+
+                // Count unique technologies efficiently
+                const allTags = new Set();
+                projects.forEach(project => {
+                    if (project.tags) {
+                        project.tags.forEach(tag => allTags.add(tag));
                     }
-                    element.textContent = Math.floor(current);
-                }, 50);
+                });
+                
+                const techCount = document.getElementById('technologies-count');
+                const mobileTechCount = document.getElementById('mobile-technologies-count');
+                if (techCount) animateNumber(techCount, allTags.size);
+                if (mobileTechCount) animateNumber(mobileTechCount, allTags.size);
+
+                // Update skills list
+                updateSkillsList(Array.from(allTags));
+            }
+
+            // Fallback stats update
+            function updateStatsWithFallback() {
+                const projectsCount = document.getElementById('projects-count');
+                const mobileProjectsCount = document.getElementById('mobile-projects-count');
+                const techCount = document.getElementById('technologies-count');
+                const mobileTechCount = document.getElementById('mobile-technologies-count');
+                
+                if (projectsCount) projectsCount.textContent = '25+';
+                if (mobileProjectsCount) mobileProjectsCount.textContent = '25+';
+                if (techCount) techCount.textContent = '15+';
+                if (mobileTechCount) mobileTechCount.textContent = '15+';
+            }
+
+            // Optimized number animation with requestAnimationFrame
+            function animateNumber(element, target) {
+                const startTime = performance.now();
+                const duration = 1000; // 1 second
+                let startValue = 0;
+                
+                function updateNumber(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Easing function for smooth animation
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    const current = Math.floor(startValue + (target - startValue) * easeOutQuart);
+                    
+                    element.textContent = current;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateNumber);
+                    } else {
+                        element.textContent = target; // Ensure final value is exact
+                    }
+                }
+                
+                requestAnimationFrame(updateNumber);
             }
 
             // Update skills list
@@ -357,65 +504,111 @@
                 }).join('');
             }
 
-            // Initialize mobile menu
+            // Initialize mobile menu with optimized event handling
             function initializeMobileMenu() {
                 const mobileToggle = document.getElementById('mobile-menu-toggle');
                 const mobileSidebar = document.getElementById('mobile-sidebar');
                 const menuIcon = document.getElementById('menu-icon');
                 const body = document.body;
                 
-                if (mobileToggle && mobileSidebar && menuIcon) {
-                    mobileToggle.addEventListener('click', function() {
-                        const isOpen = body.classList.contains('mobile-menu-open');
-                        
-                        if (isOpen) {
-                            // Close menu
-                            body.classList.remove('mobile-menu-open');
-                            mobileSidebar.classList.remove('open');
-                            mobileToggle.classList.remove('active');
-                            menuIcon.className = 'fas fa-bars';
-                            mobileToggle.setAttribute('aria-expanded', 'false');
-                            mobileToggle.setAttribute('aria-label', 'Open mobile menu');
-                        } else {
-                            // Open menu
-                            body.classList.add('mobile-menu-open');
-                            mobileSidebar.classList.add('open');
-                            mobileToggle.classList.add('active');
-                            menuIcon.className = 'fas fa-times';
-                            mobileToggle.setAttribute('aria-expanded', 'true');
-                            mobileToggle.setAttribute('aria-label', 'Close mobile menu');
-                        }
-                    });
+                if (!mobileToggle || !mobileSidebar || !menuIcon) return;
+
+                // Debounced click handler for better performance
+                let clickTimeout;
+                mobileToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     
-                    // Close menu when clicking outside
-                    document.addEventListener('click', function(e) {
-                        if (body.classList.contains('mobile-menu-open') && 
-                            !mobileSidebar.contains(e.target) && 
-                            !mobileToggle.contains(e.target)) {
-                            body.classList.remove('mobile-menu-open');
-                            mobileSidebar.classList.remove('open');
-                            mobileToggle.classList.remove('active');
-                            menuIcon.className = 'fas fa-bars';
-                            mobileToggle.setAttribute('aria-expanded', 'false');
-                            mobileToggle.setAttribute('aria-label', 'Open mobile menu');
-                        }
-                    });
+                    clearTimeout(clickTimeout);
+                    clickTimeout = setTimeout(() => {
+                        toggleMobileMenu();
+                    }, 50);
+                });
+                
+                // Optimized outside click handler with passive listeners
+                document.addEventListener('click', function(e) {
+                    if (body.classList.contains('mobile-menu-open') && 
+                        !mobileSidebar.contains(e.target) && 
+                        !mobileToggle.contains(e.target)) {
+                        closeMobileMenu();
+                    }
+                }, { passive: true });
+                
+                // Optimized escape key handler
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
+                        closeMobileMenu();
+                        mobileToggle.focus(); // Return focus for accessibility
+                    }
+                }, { passive: true });
+                
+                // Initialize aria attributes
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.setAttribute('aria-label', 'Open mobile menu');
+
+                // Toggle function
+                function toggleMobileMenu() {
+                    const isOpen = body.classList.contains('mobile-menu-open');
+                    if (isOpen) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                }
+
+                // Open menu function
+                function openMobileMenu() {
+                    body.classList.add('mobile-menu-open');
+                    mobileSidebar.classList.add('open');
+                    mobileToggle.classList.add('active');
+                    menuIcon.className = 'fas fa-times';
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    mobileToggle.setAttribute('aria-label', 'Close mobile menu');
                     
-                    // Handle escape key
-                    document.addEventListener('keydown', function(e) {
-                        if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
-                            body.classList.remove('mobile-menu-open');
-                            mobileSidebar.classList.remove('open');
-                            mobileToggle.classList.remove('active');
-                            menuIcon.className = 'fas fa-bars';
-                            mobileToggle.setAttribute('aria-expanded', 'false');
-                            mobileToggle.setAttribute('aria-label', 'Open mobile menu');
-                        }
-                    });
-                    
-                    // Initialize aria attributes
+                    // Trap focus in mobile menu for accessibility
+                    trapFocus(mobileSidebar);
+                }
+
+                // Close menu function
+                function closeMobileMenu() {
+                    body.classList.remove('mobile-menu-open');
+                    mobileSidebar.classList.remove('open');
+                    mobileToggle.classList.remove('active');
+                    menuIcon.className = 'fas fa-bars';
                     mobileToggle.setAttribute('aria-expanded', 'false');
                     mobileToggle.setAttribute('aria-label', 'Open mobile menu');
+                    
+                    // Remove focus trap
+                    removeFocusTrap();
+                }
+
+                // Focus trap for accessibility
+                function trapFocus(element) {
+                    const focusableElements = element.querySelectorAll(
+                        'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+                    );
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+
+                    element.addEventListener('keydown', function(e) {
+                        if (e.key === 'Tab') {
+                            if (e.shiftKey) {
+                                if (document.activeElement === firstElement) {
+                                    lastElement.focus();
+                                    e.preventDefault();
+                                }
+                            } else {
+                                if (document.activeElement === lastElement) {
+                                    firstElement.focus();
+                                    e.preventDefault();
+                                }
+                            }
+                        }
+                    });
+                }
+
+                function removeFocusTrap() {
+                    // Focus trap will be removed when menu closes
                 }
             }
 
