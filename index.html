@@ -434,9 +434,6 @@
                 const mobileTechCount = document.getElementById('mobile-technologies-count');
                 if (techCount) animateNumber(techCount, allTags.size);
                 if (mobileTechCount) animateNumber(mobileTechCount, allTags.size);
-
-                // Update skills list
-                updateSkillsList(Array.from(allTags));
             }
 
             // Fallback stats update
@@ -476,32 +473,6 @@
                 }
                 
                 requestAnimationFrame(updateNumber);
-            }
-
-            // Update skills list
-            function updateSkillsList(tags) {
-                const skillsContainer = document.getElementById('skills-list');
-                if (!skillsContainer) return;
-
-                const skillMap = {
-                    'computervision': { name: 'Computer Vision'},
-                    'machinelearning': { name: 'Machine Learning'},
-                    'deeplearning': { name: 'Deep Learning'},
-                    'python': { name: 'Python'},
-                    'javascript': { name: 'JavaScript'},
-                    'cpp': { name: 'C++'}
-                };
-
-                const topSkills = tags.filter(tag => skillMap[tag]).slice(0, 6);
-                
-                skillsContainer.innerHTML = topSkills.map(tag => {
-                    const skill = skillMap[tag];
-                    return `
-                        <div class="skill-item">
-                            <span class="skill-name">${skill.name}</span>
-                        </div>
-                    `;
-                }).join('');
             }
 
             // Initialize mobile menu with optimized event handling
