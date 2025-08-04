@@ -1,68 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, computervision, vision, blog, TechieViN">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="Hand and Wrist Detection with ultralytics yolov8 model">
-    <title>Hand Detection | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
-    <link rel="stylesheet" href="..\resources\css\blog.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, computervision, vision, blog, TechieViN, hand detection, YOLOv8">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="Hand and Wrist Detection with ultralytics YOLOv8 model - Computer Vision project by Vibhav Nirmal">
+    <title>Hand Detection with YOLOv8 | Vibhav Nirmal</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div id="goback">
-            <a href="..\index.html">
-                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
             </a>
-        </div>
-        <div id="maintitle">
-            <span id="title">Hand Detection</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">June 1, 2023</span>
-            <hr>
-            <div class="gifClass">
-                <img id="gif" src="..\resources\images\vinHandDet.gif" alt="Hand Detection GIF" style="text-align: center;">
-            </div>
-            <hr>
-        </div>
+        </nav>
 
-        <div class="container-fluid content">
-            <p id="desc">
-                I want to share my method for building a Hand and Wrist detector that uses images of hands and has a model size of less than 6MB and an inference time of about 10ms on CPU. I thought of choosing one of these two object detection algorithms: 
-            </p>
-            <p id="desc"><b>Faster RCNN</b>, which is a two-stage algorithm that first proposes potential regions of interest using a region proposal network (RPN) and then classifies and refines these proposals, and <b>YOLO</b>, which is a one-stage object detection algorithm that provides real-time detection capabilities and is faster than RCNN for edge device computation.</p>
-            <p id="desc">
-                My goal was to create a system that can augment images of tattoos, jewelry, watches, or wristbands, on the detected region of a hand or wrist. I chose the YOLO algorithm because it is suitable for object detection on edge devices. I had previously used semantic segmentation with PyTorch Detectron2, but the model size was too large for my purpose. I needed a small model that could be deployed on cloud or edge devices.
-            </p>
-            <p id="desc">
-                I used the YOLOv8 model and PyTorch for this project. I trained the model on hand and wrist data that I labeled using LabelImg in YOLO format. The model takes an image as input and returns the image with a bounding box and a class label for the detected hand and wrist.
-            </p>
-            <hr>
-            <p id="desc">The dataset had 853 images with hand and wrist bounding box annotations. I split the dataset into 597 training images, 171 validation images, and 85 test images. I used data augmentation techniques such as rotation, translation, scaling, perspective transform, flipping, and cropping to enhance the image quality and generalization. I trained the model for 100 epochs with a batch size of 8 on a 3070 Ti GPU. The training took about 30 minutes</p>
-            </p>
-            <p id="desc">
-                My primary choice for this project was the YOLO (You Only Look Once) architecture, which is known for its fast and efficient object detection performance, making it suitable for edge device computation. YOLOv8 is an <b>anchor-free model</b> that abandons the previous anchor-based approach and directly predicts the object center, reducing the number of box predictions and speeding up the <b>non-maximum suppression (NMS)</b> step. I initialized the model with pre-trained weights from ultralytics and optimized its performance by setting the <b>initial learning rate</b> to lr0 = 0.01, the <b>momentum</b> to 0.937, and applying <b>weight decay</b> to prevent overfitting and <b>promote generalization</b>. It uses <a href="https://docs.ultralytics.com/reference/yolo/utils/loss/#ultralytics.yolo.utils.loss.VarifocalLoss"><b>VFL Loss from VarifocalNet</b></a> and <a href="https://www.mathworks.com/matlabcentral/fileexchange/104395-dual-focal-loss-dfl?s_tid=FX_rc2_behav"><b>DFL Loss</b></a> <b>+</b> <a href="https://arxiv.org/abs/2005.03572"><b>CIOU Loss</b></a> as categorical loss
-            </p>
-            <img src="..\resources\images\handDetResults.png" alt="Trainng" style="text-align: center;" width="100%">
-            
-            <div class="accuracySideBySide">
-            <p id="desc">The model achieved <b>mean average precision (mAP50-95)</b> of 0.8663, which means that it correctly detected 86.63% of the objects in the images. The model also achieved high precision (0.9991) and recall (0.9872)</p>
-                <img src="..\resources\images\handDetF1.png" alt="F1Score" style="text-align: center;" width="100%">
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">Hand Detection with YOLOv8</h1>
+                
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        June 1, 2023
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">Computer Vision</span>
+                    <span class="blog-tag">YOLOv8</span>
+                    <span class="blog-tag">Object Detection</span>
+                    <span class="blog-tag">Edge Computing</span>
+                </div>
             </div>
-        </div>
-        <hr>
-        <h4>References:</h4>
-        <ol class="resources-list">
-            <li>
-                <a href="https://github.com/ultralytics/ultralytics" target="_blank" class="resource-link">Ultralytics YOLOv8</a>
-            </li>
-            <li>
-                <a href="https://blog.csdn.net/qq_29788741/article/details/128626422" target="_blank" class="resource-link">YOLOv8 Explained</a>
-            </li>
-        </ol>
+
+            <!-- Featured Media -->
+            <div class="blog-featured-media">
+                <img src="../resources/images/vinHandDet.gif" alt="Hand Detection demonstration with YOLOv8">
+            </div>
+        </header>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <div class="blog-section">
+                <p>
+                    I want to share my method for building a Hand and Wrist detector that uses images of hands and has a model size of less than 6MB and an inference time of about 10ms on CPU. I thought of choosing one of these two object detection algorithms:
+                </p>
+
+                <p>
+                    <strong>Faster RCNN</strong>, which is a two-stage algorithm that first proposes potential regions of interest using a region proposal network (RPN) and then classifies and refines these proposals, and <strong>YOLO</strong>, which is a one-stage object detection algorithm that provides real-time detection capabilities and is faster than RCNN for edge device computation.
+                </p>
+
+                <h2>Project Motivation</h2>
+                <p>
+                    My goal was to create a system that can augment images of tattoos, jewelry, watches, or wristbands, on the detected region of a hand or wrist. I chose the YOLO algorithm because it is suitable for object detection on edge devices. I had previously used semantic segmentation with PyTorch Detectron2, but the model size was too large for my purpose. I needed a small model that could be deployed on cloud or edge devices.
+                </p>
+
+                <h3>Technical Implementation</h3>
+                <p>
+                    I used the YOLOv8 model and PyTorch for this project. I trained the model on hand and wrist data that I labeled using LabelImg in YOLO format. The model takes an image as input and returns the image with a bounding box and a class label for the detected hand and wrist.
+                </p>
+
+                <h2>Dataset and Training</h2>
+                <p>
+                    The dataset had 853 images with hand and wrist bounding box annotations. I split the dataset into 597 training images, 171 validation images, and 85 test images. I used data augmentation techniques such as rotation, translation, scaling, perspective transform, flipping, and cropping to enhance the image quality and generalization. I trained the model for 100 epochs with a batch size of 8 on a 3070 Ti GPU. The training took about 30 minutes.
+                </p>
+
+                <h3>YOLOv8 Architecture</h3>
+                <p>
+                    My primary choice for this project was the YOLO (You Only Look Once) architecture, which is known for its fast and efficient object detection performance, making it suitable for edge device computation. YOLOv8 is an <strong>anchor-free model</strong> that abandons the previous anchor-based approach and directly predicts the object center, reducing the number of box predictions and speeding up the <strong>non-maximum suppression (NMS)</strong> step.
+                </p>
+
+                <p>
+                    I initialized the model with pre-trained weights from ultralytics and optimized its performance by setting the <strong>initial learning rate</strong> to lr0 = 0.01, the <strong>momentum</strong> to 0.937, and applying <strong>weight decay</strong> to prevent overfitting and <strong>promote generalization</strong>. It uses <a href="https://docs.ultralytics.com/reference/yolo/utils/loss/#ultralytics.yolo.utils.loss.VarifocalLoss" target="_blank" rel="noopener noreferrer"><strong>VFL Loss from VarifocalNet</strong></a> and <a href="https://www.mathworks.com/matlabcentral/fileexchange/104395-dual-focal-loss-dfl?s_tid=FX_rc2_behav" target="_blank" rel="noopener noreferrer"><strong>DFL Loss</strong></a> <strong>+</strong> <a href="https://arxiv.org/abs/2005.03572" target="_blank" rel="noopener noreferrer"><strong>CIOU Loss</strong></a> as categorical loss.
+                </p>
+
+                <img src="../resources/images/handDetResults.png" alt="Training results showing model performance metrics" style="width: 100%; margin: 20px 0;">
+
+                <h2>Results and Performance</h2>
+                <p>
+                    The model achieved <strong>mean average precision (mAP50-95)</strong> of 0.8663, which means that it correctly detected 86.63% of the objects in the images. The model also achieved high precision (0.9991) and recall (0.9872).
+                </p>
+
+                <img src="../resources/images/handDetF1.png" alt="F1 Score and performance metrics visualization" style="width: 100%; margin: 20px 0;">
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">References & Resources</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noopener noreferrer">
+                        Ultralytics YOLOv8 - Official Repository
+                    </a>
+                </li>
+                <li>
+                    <a href="https://blog.csdn.net/qq_29788741/article/details/128626422" target="_blank" rel="noopener noreferrer">
+                        YOLOv8 Architecture Explained
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.ultralytics.com/reference/yolo/utils/loss/#ultralytics.yolo.utils.loss.VarifocalLoss" target="_blank" rel="noopener noreferrer">
+                        VarifocalNet Loss Function Documentation
+                    </a>
+                </li>
+            </ol>
+        </section>
     </div>
 </body>
 

@@ -1,54 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="Save instagram chats offline with python script.">
-    <title>Insta Chat Save | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, instagram, python, automation">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="Save Instagram chats offline with Python script - Data backup tool by Vibhav Nirmal">
+    <title>Instagram Chat Backup Tool | Vibhav Nirmal</title>
     
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div id="goback">
-            <a href="..\index.html">
-                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
             </a>
-        </div>
-        <div id="maintitle">
-            <span id="title">Instagram Chats Offline</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">September 17, 2018</span>
-            <div>
-                <br>
-                <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip">
-                    <button type="button" class="btn btn-primary" id="dload">Download</button>
-                </a>
-            </div>
-            <hr>
-        </div>
+        </nav>
 
-        <div class="container-fluid content">
-            <p id="desc">This is instagram offline chat saving script. I have written this script for those who want to have their instagram chats saved in .txt readable format. This script works completely offline. And it only works for personal chats right now. But I am working to make it for Group chats also. You can fork the script if you want from <a href="https://github.com/vibhavnirmal/InstaChatSave">here</a> and do changes as you wish. If you find any issues fork this repo and send a pull request.</p>
-            <hr>
-            <p id="howto">How To Use:-</p>
-            <ul id="instaSave">
-                <li>Download the chat's backup data from your instagram application settings</li>
-                <li>There will be an option called "Data Download" under privacy and security tab</li>
-                <li>Once you receive the zip file in your mail, download and extract in a folder.</li>
-                <li>Download python script from <a
-                        href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip"
-                        style="text-decoration:underline !important;">here</a>.
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">Instagram Chat Backup Tool</h1>
+                
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        September 17, 2018
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">Python</span>
+                    <span class="blog-tag">Instagram</span>
+                    <span class="blog-tag">Data Backup</span>
+                    <span class="blog-tag">Automation</span>
+                </div>
+
+                <div class="blog-actions">
+                    <a href="https://github.com/vibhavnirmal/InstaChatSave/archive/master.zip" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Script
+                    </a>
+                    <a href="https://github.com/vibhavnirmal/InstaChatSave" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <!-- Archived Notice -->
+            <div style="background: linear-gradient(0deg, #fff3cd 0%, #ffeaa7 100%); border: 2px solid #ffc107; border-radius: 8px; padding: 20px; margin-bottom: 30px; text-align: center; box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px;">
+                    <i class="fas fa-archive" style="font-size: 24px; color: #856404;"></i>
+                    <h3 style="margin: 0; color: #856404; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Archived Project</h3>
+                </div>
+                <p style="margin: 0; color: #856404; font-size: 14px; line-height: 1.5;">
+                    This project is no longer actively maintained but remains available for reference and use. 
+                    The code is stable and functional as of the last update.
+                </p>
+            </div>
+
+            <div class="blog-section">
+                <p>
+                    This Instagram offline chat saving script is designed for users who want to preserve their Instagram conversations in a readable text format. The script operates completely offline, ensuring privacy and security while processing your chat data.
+                </p>
+
+                <p>
+                    Currently, the tool supports personal chats and is actively being developed to include group chat functionality. The script processes Instagram's official data export files and converts them into organized, searchable text files.
+                </p>
+
+                <h2>Features & Capabilities</h2>
+                <ul>
+                    <li><strong>Offline Processing</strong> - No internet connection required after downloading data</li>
+                    <li><strong>Privacy Focused</strong> - All processing happens locally on your machine</li>
+                    <li><strong>Text Format Output</strong> - Easy-to-read .txt files for each conversation</li>
+                    <li><strong>Organized Structure</strong> - Chronologically ordered messages with timestamps</li>
+                    <li><strong>Open Source</strong> - Fully customizable and transparent code</li>
+                </ul>
+
+                <h2>How to Use</h2>
+                <p>
+                    Follow these step-by-step instructions to backup your Instagram chats:
+                </p>
+
+                <ol>
+                    <li><strong>Download Instagram Data</strong> - Go to your Instagram app settings and navigate to Privacy and Security</li>
+                    <li><strong>Request Data Export</strong> - Find the "Data Download" option and request your data</li>
+                    <li><strong>Receive & Extract</strong> - Check your email for the download link and extract the ZIP file</li>
+                    <li><strong>Download Script</strong> - Get the Python script from the GitHub repository</li>
+                    <li><strong>Setup Files</strong> - Copy the Messages.py file to the same folder as your messages.json file</li>
+                    <li><strong>Run Script</strong> - Execute Messages.py and enter the username when prompted</li>
+                    <li><strong>Access Results</strong> - Find your organized chat files in the output folder</li>
+                </ol>
+
+                <h3>Technical Requirements</h3>
+                <p>
+                    The script requires Python 3.x and processes Instagram's JSON export format. It's designed to handle large chat histories efficiently while maintaining data integrity.
+                </p>
+
+                <blockquote>
+                    <strong>Note:</strong> This tool respects Instagram's terms of service by only processing data that users have legitimately exported through Instagram's official data download feature.
+                </blockquote>
+                <h2>Development & Contributions</h2>
+                <p>
+                    This project is archived and no longer actively maintained. However, the existing codebase remains available for reference and use.
+                </p>
+                 <p>
+                    While contributions are no longer being accepted, you are welcome to fork the repository and adapt the code for your own use. The archived state ensures the tool remains accessible for those who find it useful.
+                </p>
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">References & Resources</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://github.com/vibhavnirmal/InstaChatSave" target="_blank" rel="noopener noreferrer">
+                        GitHub Repository - Instagram Chat Save
+                    </a>
                 </li>
-                <li>Now copy/cut Messages.py file in the folder where your messages.json file from instagram
-                    backup data is.</li>
-                <li>Then double click on the Messages.py file and enter the username of the person. </li>
-                <li>All the chats will be saved as .txt file in that folder.</li>
-            </ul>
-        </div>
+                <li>
+                    <a href="https://help.instagram.com/181231772500920" target="_blank" rel="noopener noreferrer">
+                        Instagram Help - Downloading Your Information
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.python.org/3/library/json.html" target="_blank" rel="noopener noreferrer">
+                        Python JSON Documentation
+                    </a>
+                </li>
+            </ol>
+        </section>
     </div>
 </body>
 

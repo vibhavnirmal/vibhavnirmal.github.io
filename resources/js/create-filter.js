@@ -126,9 +126,23 @@ function createFilterElement(uniqueTags) {
     filterElement.appendChild(selectedOptionsElement);
     // filterElement.appendChild(filterButtonElement);
 
-    const mainProjectsElement = document.getElementsByClassName('filtersAndView')[0];
-    // append at the top
-    mainProjectsElement.insertBefore(filterElement, mainProjectsElement.childNodes[0]);
+    // Use our enhanced HTML structure - target the filter-container
+    const filterContainer = document.getElementById('filter-container');
+    if (filterContainer) {
+        // Clear any existing content and append the new filter
+        filterContainer.innerHTML = '';
+        filterContainer.appendChild(filterElement);
+        console.log('Filter element added to filter-container');
+    } else {
+        console.error('filter-container not found');
+        // Fallback: try to find the old structure
+        const mainProjectsElement = document.getElementsByClassName('filtersAndView')[0];
+        if (mainProjectsElement) {
+            mainProjectsElement.insertBefore(filterElement, mainProjectsElement.childNodes[0]);
+        } else {
+            console.error('Neither filter-container nor filtersAndView found');
+        }
+    }
 
     activateFilters();
 }

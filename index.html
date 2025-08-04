@@ -1,119 +1,426 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN">
-    <link rel="shortcut icon" type="image" href="resources\images\logos\vin.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, robotics, computer vision, AI, machine learning">
+    <link rel="icon" type="image/png" href="resources/images/logos/vin.png">
     
     <meta name="description" content="Computer Vision and Robotics enthusiast. Love talking about new research papers and finding new innovative usecases. Always ready to learn.">
 
-    <meta name="image" property="og:image" content="resources/images/vin.jpg">
+    <meta property="og:image" content="resources/images/vin.jpg">
     <meta name="author" content="Vibhav Nirmal">
-    <meta name="description" property="og:description" content="Computer Vision and Robotics enthusiast. Love talking about new research papers and finding new innovative usecases. Always ready to learn.">
-    <meta name="title" property="og:title" content="Vibhav Nirmal | Portfolio">
+    <meta property="og:description" content="Computer Vision and Robotics enthusiast. Love talking about new research papers and finding new innovative usecases. Always ready to learn.">
+    <meta property="og:title" content="Vibhav Nirmal | Portfolio">
     <meta property="og:url" content="https://vibhavnirmal.github.io/">
     <meta property="og:type" content="website">
     
+    <!-- Preconnect to external domains for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <title>Vibhav Nirmal | Computer Vision & Robotics Engineer</title>
 
-    <title>Vibhav Nirmal</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="resources/css/index.css">
-    <link rel="stylesheet" href="resources/css/about.css">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/css/unified-portfolio.css">
+    <link rel="stylesheet" href="resources/css/feed-components.css">
+
+    <!-- Scripts -->
+    <script src="resources/js/social-feed.js" defer></script>
 </head>
 
 <body>
-    <div id="navBar"></div>
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Left Sidebar - Profile & Info -->
+        <aside class="left-sidebar" id="left-sidebar">
+            <div class="profile-section">
+                <!-- Profile Info -->
+                <div class="profile-info">
+                    <h1 class="profile-name">Vibhav Nirmal</h1>
+                    <p class="profile-title">Computer Vision & Robotics Engineer</p>
+                </div>
 
-    <div class="mainContent">
-        <div id="social-placeholder"></div>
+                <!-- About Content -->
+                <div id="about-content" class="about-content">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+            <div class="contact-section">
+                <h3 class="section-title">Get In Touch</h3>
+                <div class="contact-links">
+                    <div id="social-links">
+                        <!-- Additional social links will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </aside>
 
-        <div id="writeUp" class="left"></div>
+        <!-- Center Content - Projects Feed -->
+        <main class="center-content">
+            <div class="feed-container">
+                <!-- Feed Header -->
+                <header class="feed-header">
+                    <p class="feed-subtitle">My journey in AI, Computer Vision & Robotics</p>
+                </header>
 
-        <div id="personalInfo" class="right">      
-            <svg id="vinsvg" viewBox="7 15 90 90" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                        <stop id="stop1" stop-color="rgba(0, 220, 20, 1)" offset="20%"></stop>
-                        <stop id="stop2" stop-color="rgba(0, 130, 10.754, 1)" offset="80%"></stop>
-                    </linearGradient>
-                </defs>
-                <mask id="mask1" mask-type="alpha">
-                    <path fill="url(#sw-gradient)" d="M17.4,-25.6C23.8,-22.9,31.2,-20.3,34.2,-15.2C37.2,-10.1,35.7,-2.6,34.8,5.2C33.9,13,33.7,21,30.3,27.9C26.9,34.9,20.3,40.7,12.8,42.3C5.4,43.8,-2.9,41,-10.9,38.2C-18.8,35.4,-26.5,32.4,-29.6,26.8C-32.8,21.1,-31.6,12.7,-31.9,5.1C-32.3,-2.6,-34.3,-9.6,-33,-16.1C-31.6,-22.5,-26.8,-28.4,-20.8,-31.3C-14.7,-34.2,-7.4,-34,-0.9,-32.5C5.5,-31,10.9,-28.3,17.4,-25.6Z" width="100%" height="100%" transform="translate(50 50)" style="transition: all 0.3s ease 0s;" stroke-width="0" stroke="rgba(248, 117, 55, 1)"></path>
-                </mask>
-                <g mask="url(#mask1)">
-                    <path fill="url(#sw-gradient)" d="M17.4,-25.6C23.8,-22.9,31.2,-20.3,34.2,-15.2C37.2,-10.1,35.7,-2.6,34.8,5.2C33.9,13,33.7,21,30.3,27.9C26.9,34.9,20.3,40.7,12.8,42.3C5.4,43.8,-2.9,41,-10.9,38.2C-18.8,35.4,-26.5,32.4,-29.6,26.8C-32.8,21.1,-31.6,12.7,-31.9,5.1C-32.3,-2.6,-34.3,-9.6,-33,-16.1C-31.6,-22.5,-26.8,-28.4,-20.8,-31.3C-14.7,-34.2,-7.4,-34,-0.9,-32.5C5.5,-31,10.9,-28.3,17.4,-25.6Z" width="100%" height="100%" transform="translate(50 50)" style="transition: all 0.3s ease 0s;" stroke-width="0" stroke="rgba(248, 117, 55, 1)"></path>
-                    <image href="resources/images/vin.jpeg" alt="VibhavImage" id="personalPic" x="10" y="15" />
-                </g>
-            </svg>
+                <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="projects-count">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="technologies-count">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="years-experience">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
 
-            <div id="social-placeholder-old"></div>
-        </div>
 
+                <!-- Search Bar -->
+                <div class="filter-search">
+                    <input type="text" 
+                           class="filter-search-input" 
+                           placeholder="Search projects..." 
+                           id="project-search-input">
+                    <span class="filter-search-icon">🔍</span>
+                    <button class="filter-clear" id="filter-clear-btn">×</button>
+                </div>
+
+                <!-- Feed Posts -->
+                <div id="feed-posts" role="feed" aria-label="Projects feed" aria-live="polite">
+                    <!-- Posts will be dynamically loaded here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Additional Info & Stats -->
+        <aside class="right-sidebar" id="right-sidebar">
+            
+            <!-- Filter Bar -->
+            <div class="feed-filters" id="feed-filters" role="group" aria-label="Project filters">
+                <!-- Filter chips will be dynamically generated -->
+            </div>
+
+            
+        </aside>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+
+        <!-- Combined Mobile Sidebar -->
+        <aside class="mobile-sidebar" id="mobile-sidebar">
+            <div class="profile-section">
+                <!-- Profile Info -->
+                <div class="profile-image-container">
+                    <svg id="vinsvg-mobile" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                        <text x="50" y="58" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#333">VN</text>
+                    </svg>
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">Vibhav Nirmal</h1>
+                    <p class="profile-title">Computer Vision & Robotics Engineer</p>
+                </div>
+
+                <!-- About Content -->
+                <div class="about-content">
+                    <p class="about-paragraph">Robotics & AI Engineer with expertise in computer vision, autonomous systems, and neural networks.</p>
+                    <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Jetson, RPi).</p>
+                    <p class="about-paragraph">Former President of UTA AutonoBots. Passionate about building intelligent machines.</p>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <h3 class="section-title">Portfolio Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="mobile-projects-count">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="mobile-technologies-count">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3 class="section-title">Core Skills</h3>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <i class="skill-icon fab fa-python"></i>
+                        <span class="skill-name">Python/PyTorch</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="skill-icon fas fa-robot"></i>
+                        <span class="skill-name">ROS/Robotics</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="skill-icon fas fa-eye"></i>
+                        <span class="skill-name">Computer Vision</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="skill-icon fas fa-microchip"></i>
+                        <span class="skill-name">Embedded Systems</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="skill-icon fas fa-brain"></i>
+                        <span class="skill-name">Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3 class="section-title">Get In Touch</h3>
+                <div class="contact-links">
+                    <div id="mobile-social-links">
+                        <!-- Social links will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </aside>
     </div>
+
     <script>
-        (function ($) {
-            $(document).ready(function () {
-                $.getJSON("resources/aboutme.json", function (data) {
-                    var paragraphs = data.writeUp.paragraphs;
-                    var contentDiv = $("#writeUp");
-
-                    var content = '';
-                    paragraphs.forEach(function (paragraph) {
-                        content += '<p>' + paragraph.content + '</p>';
-                    });
-                    contentDiv.html(content);
-
-                });
-            });
-
+        // Enhanced initialization for unified portfolio
+        (function () {
+            'use strict';
+            
+            // DOM Content Loaded handler
             document.addEventListener('DOMContentLoaded', function () {
-                // Get the current URL or page
-                var currentPage = window.location.href;
+                initializeAboutContent();
+                initializeSocialLinks();
+                initializeStats();
+                initializeMobileMenu();
+            });
 
-                // Find the navigation item that matches the current URL and add the "current" class
-                var navigationItems = document.getElementsByTagName('a');
-                for (var i = 0; i < navigationItems.length; i++) {
-                    if (currentPage.indexOf(navigationItems[i].href) > -1) {
-                        navigationItems[i].className = 'current';
-                    }
+            // Initialize about content from JSON
+            function initializeAboutContent() {
+                // Use concise, direct content instead of loading from JSON
+                const contentDiv = document.getElementById('about-content');
+                if (contentDiv) {
+                    contentDiv.innerHTML = `
+                        <p class="about-paragraph">Robotics & AI Engineer with expertise in computer vision, autonomous systems, and neural networks.</p>
+                        <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Jetson, RPi).</p>
+                        <p class="about-paragraph">Former President of UTA AutonoBots. Passionate about building intelligent machines.</p>
+                    `;
                 }
-            });
-        })(jQuery);
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            adjustSocialIcons(); // Call the function initially
-
-            $(window).resize(function () {
-                adjustSocialIcons(); // Call the function on resize
-            });
-
-            $("#navBar").load("navbar.html");
-        });
-
-        function adjustSocialIcons() {
-            const windowWidth = $(window).width();
-
-            if (windowWidth > 1000) {
-                $("#social-placeholder").load("social.html");
-                $("#social-placeholder-old").empty(); // Use empty() to clear contents
-            } else {
-                $("#social-placeholder").empty();
-                $("#social-placeholder-old").load("social.html");
             }
-        }
 
+            // Initialize social links
+            function initializeSocialLinks() {
+                fetch('social.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const socialContainer = document.getElementById('social-links');
+                        const mobileSocialContainer = document.getElementById('mobile-social-links');
+                        
+                        if (socialContainer) {
+                            socialContainer.innerHTML = html;
+                        }
+                        
+                        // Also populate mobile sidebar with social links
+                        if (mobileSocialContainer) {
+                            mobileSocialContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading social links:', error);
+                        
+                        // Fallback social links for mobile if fetch fails
+                        const mobileSocialContainer = document.getElementById('mobile-social-links');
+                        if (mobileSocialContainer) {
+                            mobileSocialContainer.innerHTML = `
+                                <div class="social-links-grid">
+                                    <a href="https://linkedin.com/in/vibhav-nirmal" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                        <span class="social-label">LinkedIn</span>
+                                    </a>
+                                    <a href="https://github.com/vibhavnirmal" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                        <span class="social-label">GitHub</span>
+                                    </a>
+                                    <a href="https://medium.com/@vibhav.nirmal" class="social-link medium" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                                        <i class="fab fa-medium" aria-hidden="true"></i>
+                                        <span class="social-label">Medium</span>
+                                    </a>
+                                    <a href="https://youtube.com/@TechieViN" class="social-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                                        <span class="social-label">YouTube</span>
+                                    </a>
+                                </div>
+                            `;
+                        }
+                    });
+            }
+
+            // Initialize stats and dynamic content
+            function initializeStats() {
+                // Wait for projects to load, then update stats
+                setTimeout(() => {
+                    updateStats();
+                }, 2000);
+            }
+
+            // Update statistics
+            function updateStats() {
+                fetch('resources/data.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const projects = data.projects || [];
+                        
+                        // Update project count
+                        const projectsCount = document.getElementById('projects-count');
+                        if (projectsCount) {
+                            animateNumber(projectsCount, projects.length);
+                        }
+
+                        // Count unique technologies
+                        const allTags = new Set();
+                        projects.forEach(project => {
+                            if (project.tags) {
+                                project.tags.forEach(tag => allTags.add(tag));
+                            }
+                        });
+                        
+                        const techCount = document.getElementById('technologies-count');
+                        if (techCount) {
+                            animateNumber(techCount, allTags.size);
+                        }
+
+                        // Update skills list
+                        updateSkillsList(Array.from(allTags));
+                    })
+                    .catch(error => {
+                        console.error('Error loading stats:', error);
+                    });
+            }
+
+            // Animate number counting
+            function animateNumber(element, target) {
+                let current = 0;
+                const increment = target / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current);
+                }, 50);
+            }
+
+            // Update skills list
+            function updateSkillsList(tags) {
+                const skillsContainer = document.getElementById('skills-list');
+                if (!skillsContainer) return;
+
+                const skillMap = {
+                    'computervision': { name: 'Computer Vision'},
+                    'machinelearning': { name: 'Machine Learning'},
+                    'deeplearning': { name: 'Deep Learning'},
+                    'python': { name: 'Python'},
+                    'javascript': { name: 'JavaScript'},
+                    'cpp': { name: 'C++'}
+                };
+
+                const topSkills = tags.filter(tag => skillMap[tag]).slice(0, 6);
+                
+                skillsContainer.innerHTML = topSkills.map(tag => {
+                    const skill = skillMap[tag];
+                    return `
+                        <div class="skill-item">
+                            <span class="skill-name">${skill.name}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Initialize mobile menu
+            function initializeMobileMenu() {
+                const mobileToggle = document.getElementById('mobile-menu-toggle');
+                const mobileSidebar = document.getElementById('mobile-sidebar');
+                const menuIcon = document.getElementById('menu-icon');
+                const body = document.body;
+                
+                if (mobileToggle && mobileSidebar && menuIcon) {
+                    mobileToggle.addEventListener('click', function() {
+                        const isOpen = body.classList.contains('mobile-menu-open');
+                        
+                        if (isOpen) {
+                            // Close menu
+                            body.classList.remove('mobile-menu-open');
+                            mobileSidebar.classList.remove('open');
+                            mobileToggle.classList.remove('active');
+                            menuIcon.className = 'fas fa-bars';
+                            mobileToggle.setAttribute('aria-expanded', 'false');
+                            mobileToggle.setAttribute('aria-label', 'Open mobile menu');
+                        } else {
+                            // Open menu
+                            body.classList.add('mobile-menu-open');
+                            mobileSidebar.classList.add('open');
+                            mobileToggle.classList.add('active');
+                            menuIcon.className = 'fas fa-times';
+                            mobileToggle.setAttribute('aria-expanded', 'true');
+                            mobileToggle.setAttribute('aria-label', 'Close mobile menu');
+                        }
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(e) {
+                        if (body.classList.contains('mobile-menu-open') && 
+                            !mobileSidebar.contains(e.target) && 
+                            !mobileToggle.contains(e.target)) {
+                            body.classList.remove('mobile-menu-open');
+                            mobileSidebar.classList.remove('open');
+                            mobileToggle.classList.remove('active');
+                            menuIcon.className = 'fas fa-bars';
+                            mobileToggle.setAttribute('aria-expanded', 'false');
+                            mobileToggle.setAttribute('aria-label', 'Open mobile menu');
+                        }
+                    });
+                    
+                    // Handle escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
+                            body.classList.remove('mobile-menu-open');
+                            mobileSidebar.classList.remove('open');
+                            mobileToggle.classList.remove('active');
+                            menuIcon.className = 'fas fa-bars';
+                            mobileToggle.setAttribute('aria-expanded', 'false');
+                            mobileToggle.setAttribute('aria-label', 'Open mobile menu');
+                        }
+                    });
+                    
+                    // Initialize aria attributes
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileToggle.setAttribute('aria-label', 'Open mobile menu');
+                }
+            }
+
+        })();
     </script>
-    
-    <script src="https://kit.fontawesome.com/3cffeb68ef.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

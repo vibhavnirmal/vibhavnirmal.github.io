@@ -1,67 +1,620 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, computervision, vision, blog, TechieViN">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="Kitti 4D MOT">
-    <title>4D MOT | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
-    <link rel="stylesheet" href="..\resources\css\blog.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, computer vision, 4D MOT, multi object tracking, LiDAR, point cloud, RCNN, Kalman filter, autonomous vehicles">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="4D Multi Object Tracking using LiDAR point clouds, Point RCNN, and Kalman filters for autonomous vehicle perception - Computer vision project by Vibhav Nirmal">
+    <title>4D Multi Object Tracking | Vibhav Nirmal</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div id="goback">
-            <a href="..\index.html">
-                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
             </a>
-        </div>
-        <div id="maintitle">
-            <span id="title">4D Multi Object Tracking</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">December 04, 2023</span>
-            <hr>
-            <div class="gifClass">
-                <video id="vid" autoplay loop muted>
-                    <source src="..\resources\videos\tracking_mot.mp4" type="video/mp4">
-                </video>
+        </nav>
 
-            </div>
-            <hr>
-        </div>
-
-        <div class="container-fluid content">
-            <p id="desc">
-                Well you might think, Yeah it looks cool but what is 4D Multi Object Tracking? 
-                <br>
-                4D Multi Object Tracking is a method to track multiple objects in a 3D space over time. 
-                <br>
-
-                How can we do that?
-                <br>
-                LiDAR data processing, point rcnn and kalman filter are the key components of this method.
-                <br>
-
-                Point RCNN is used to detect objects in the point cloud data. 
-
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">4D Multi Object Tracking</h1>
                 
-            </p>
-        </div>
-        <hr>
-        <h4>References:</h4>
-        <ol class="resources-list">
-            <li>
-                <a href="https://github.com/hailanyi/3D-Multi-Object-Tracker" target="_blank"  class="resource-link"> Github: 3D Multi
-                    Object Tracker from hailanyi </a>
-            </li>
-            <li>
-                <a href="https://ieeexplore.ieee.org/abstract/document/9352500" target="_blank" class="resource-link">
-                Paper:3D Multi-Object Tracking in Point Clouds Based on Prediction Confidence-Guided Data Association</a>
-            </li>
-        </ol>
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        December 4, 2023
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">Computer Vision</span>
+                    <span class="blog-tag">LiDAR</span>
+                    <span class="blog-tag">Point Cloud</span>
+                    <span class="blog-tag">Object Tracking</span>
+                    <span class="blog-tag">Autonomous Vehicles</span>
+                </div>
+
+                <p class="blog-description">
+                    Advanced computer vision project implementing 4D Multi Object Tracking using LiDAR point clouds, Point RCNN detection, and Kalman filtering for real-time object tracking in autonomous vehicle perception systems.
+                </p>
+            </div>
+        </header>
+
+        <!-- Video Demo Section -->
+        <section class="demo-section">
+            <div class="video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="../resources/videos/tracking_mot.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <i class="fas fa-play-circle"></i>
+                    <span>4D MOT Demonstration</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <!-- Introduction -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-info-circle"></i>
+                    What is 4D Multi Object Tracking?
+                </h2>
+                
+                <p>
+                    4D Multi Object Tracking (4D MOT) represents a significant advancement in computer vision and autonomous vehicle perception. The "4D" refers to tracking objects across three spatial dimensions (X, Y, Z) plus time, enabling comprehensive understanding of object movement and behavior in dynamic environments.
+                </p>
+
+                <p>
+                    This technology is crucial for autonomous vehicles, robotics, and surveillance systems where understanding the temporal evolution of multiple objects in 3D space is essential for safe navigation and decision-making.
+                </p>
+
+                <blockquote>
+                    <strong>Key Challenge:</strong> Unlike traditional 2D tracking, 4D MOT must handle the complexity of 3D spatial relationships, occlusions, object interactions, and temporal consistency across multiple frames while maintaining real-time performance.
+                </blockquote>
+            </div>
+
+            <!-- Technical Architecture -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-cogs"></i>
+                    Technical Architecture
+                </h2>
+
+                <p>
+                    The 4D MOT system integrates several key technologies to achieve robust multi-object tracking in 3D space:
+                </p>
+
+                <div class="architecture-grid">
+                    <div class="architecture-component">
+                        <div class="component-icon">
+                            <i class="fas fa-radar-dish"></i>
+                        </div>
+                        <h3>LiDAR Data Processing</h3>
+                        <p>
+                            High-resolution 3D point cloud data provides accurate spatial information about the environment and objects within it.
+                        </p>
+                        <ul>
+                            <li>Point cloud preprocessing and filtering</li>
+                            <li>Ground plane removal</li>
+                            <li>Region of interest extraction</li>
+                            <li>Noise reduction and outlier detection</li>
+                        </ul>
+                    </div>
+
+                    <div class="architecture-component">
+                        <div class="component-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Point RCNN Detection</h3>
+                        <p>
+                            Deep learning-based object detection specifically designed for 3D point cloud data, providing accurate bounding boxes and classification.
+                        </p>
+                        <ul>
+                            <li>3D region proposal network</li>
+                            <li>Multi-class object classification</li>
+                            <li>3D bounding box regression</li>
+                            <li>Confidence score estimation</li>
+                        </ul>
+                    </div>
+
+                    <div class="architecture-component">
+                        <div class="component-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Kalman Filter Tracking</h3>
+                        <p>
+                            Probabilistic tracking algorithm that predicts object motion and maintains consistent trajectories across frames.
+                        </p>
+                        <ul>
+                            <li>State prediction and estimation</li>
+                            <li>Motion model implementation</li>
+                            <li>Measurement update and correction</li>
+                            <li>Uncertainty quantification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-code"></i>
+                    Implementation Details
+                </h2>
+
+                <h3>Data Processing Pipeline</h3>
+                <div class="pipeline-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Point Cloud Preprocessing</h4>
+                            <p>Raw LiDAR data is filtered, downsampled, and preprocessed to remove noise and irrelevant points.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Object Detection</h4>
+                            <p>Point RCNN processes the point cloud to detect and classify objects, generating 3D bounding boxes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Data Association</h4>
+                            <p>Hungarian algorithm matches detected objects with existing tracks based on spatial and temporal consistency.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>State Estimation</h4>
+                            <p>Kalman filter updates object states, predicts future positions, and maintains track continuity.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Track Management</h4>
+                            <p>New tracks are initialized, lost tracks are terminated, and track quality is continuously assessed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Key Technical Features</h3>
+                <ul>
+                    <li><strong>Real-time Performance:</strong> Optimized algorithms ensure low-latency processing suitable for autonomous driving applications</li>
+                    <li><strong>Robust Tracking:</strong> Handles occlusions, object interactions, and temporary disappearances</li>
+                    <li><strong>Multi-class Support:</strong> Simultaneously tracks different object types (cars, pedestrians, cyclists)</li>
+                    <li><strong>Prediction Confidence:</strong> Uses confidence-guided data association for improved accuracy</li>
+                    <li><strong>Scalability:</strong> Efficiently handles varying numbers of objects in the scene</li>
+                </ul>
+            </div>
+
+            <!-- Applications and Use Cases -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-car"></i>
+                    Applications & Use Cases
+                </h2>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <i class="fas fa-car-side"></i>
+                        <h3>Autonomous Vehicles</h3>
+                        <p>Primary application for self-driving cars to track surrounding vehicles, pedestrians, and obstacles for safe navigation.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Robotics</h3>
+                        <p>Mobile robots use 4D MOT for navigation in dynamic environments and human-robot interaction.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Surveillance</h3>
+                        <p>Security systems benefit from 3D tracking capabilities for comprehensive monitoring.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Industrial Automation</h3>
+                        <p>Factory automation systems use 3D tracking for quality control and process optimization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Challenges -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Technical Challenges & Solutions
+                </h2>
+
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <h3>
+                            <i class="fas fa-eye-slash"></i>
+                            Occlusion Handling
+                        </h3>
+                        <p><strong>Challenge:</strong> Objects can be partially or completely occluded by other objects.</p>
+                        <p><strong>Solution:</strong> Prediction-based tracking and multi-hypothesis tracking to maintain object identity during occlusions.</p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h3>
+                            <i class="fas fa-clock"></i>
+                            Real-time Processing
+                        </h3>
+                        <p><strong>Challenge:</strong> Processing large point clouds in real-time for autonomous applications.</p>
+                        <p><strong>Solution:</strong> Optimized algorithms, GPU acceleration, and efficient data structures.</p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h3>
+                            <i class="fas fa-exchange-alt"></i>
+                            Data Association
+                        </h3>
+                        <p><strong>Challenge:</strong> Correctly associating detections with existing tracks across frames.</p>
+                        <p><strong>Solution:</strong> Confidence-guided association and sophisticated similarity metrics.</p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h3>
+                            <i class="fas fa-adjust"></i>
+                            Variable Conditions
+                        </h3>
+                        <p><strong>Challenge:</strong> Performance degradation in adverse weather or lighting conditions.</p>
+                        <p><strong>Solution:</strong> Robust preprocessing and adaptive algorithms that handle environmental variations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results and Performance -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-chart-line"></i>
+                    Performance Metrics
+                </h2>
+
+                <p>
+                    The 4D MOT system is evaluated using standard tracking metrics that assess both detection accuracy and tracking consistency:
+                </p>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>MOTA</h3>
+                        <p>Multiple Object Tracking Accuracy - Overall tracking performance considering false positives, false negatives, and identity switches.</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3>IDF1</h3>
+                        <p>Identity F1 Score - Measures the accuracy of identity preservation throughout object trajectories.</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>ID Switches</h3>
+                        <p>Number of times object identities are incorrectly switched between tracks.</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>FPS</h3>
+                        <p>Frames per second processing rate, crucial for real-time applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Developments -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-rocket"></i>
+                    Future Developments
+                </h2>
+
+                <p>
+                    The field of 4D Multi Object Tracking continues to evolve with several promising research directions:
+                </p>
+
+                <ul>
+                    <li><strong>Deep Learning Integration:</strong> End-to-end neural networks that jointly optimize detection and tracking</li>
+                    <li><strong>Multi-modal Fusion:</strong> Combining LiDAR with camera and radar data for enhanced robustness</li>
+                    <li><strong>Transformer Architectures:</strong> Attention mechanisms for better temporal modeling and long-range dependencies</li>
+                    <li><strong>Online Learning:</strong> Adaptive algorithms that improve performance during deployment</li>
+                    <li><strong>Edge Computing:</strong> Optimized implementations for resource-constrained embedded systems</li>
+                    <li><strong>Uncertainty Quantification:</strong> Better handling of prediction uncertainty in safety-critical applications</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">References & Resources</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://github.com/hailanyi/3D-Multi-Object-Tracker" target="_blank" rel="noopener noreferrer">
+                        GitHub: 3D Multi Object Tracker - Hailanyi Implementation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9352500" target="_blank" rel="noopener noreferrer">
+                        Paper: 3D Multi-Object Tracking in Point Clouds Based on Prediction Confidence-Guided Data Association
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/1812.04244" target="_blank" rel="noopener noreferrer">
+                        PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.cvlibs.net/datasets/kitti/eval_tracking.php" target="_blank" rel="noopener noreferrer">
+                        KITTI Tracking Benchmark
+                    </a>
+                </li>
+                <li>
+                    <a href="https://motchallenge.net/" target="_blank" rel="noopener noreferrer">
+                        MOT Challenge - Multi Object Tracking Benchmark
+                    </a>
+                </li>
+            </ol>
+        </section>
     </div>
+
+    <style>
+        .demo-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .architecture-component {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .architecture-component:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .component-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .pipeline-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            background: var(--card-background);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin: 0 0 8px 0;
+            color: var(--text-primary);
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .application-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .application-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .application-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .challenge-item {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .challenge-item h3 {
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .challenge-item h3 i {
+            color: var(--accent-color);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .metric-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .metric-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .metric-card h3 {
+            margin: 0 0 8px 0;
+            color: var(--text-primary);
+        }
+
+        .metric-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .architecture-grid,
+            .applications-grid,
+            .challenges-grid,
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pipeline-steps {
+                gap: 16px;
+            }
+        }
+    </style>
 </body>
 
 </html>

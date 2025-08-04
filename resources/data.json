@@ -1,42 +1,57 @@
 {
     "projects": [
         {
-            "title": "Depth Anything: new SOTA Mono-depth estimation",
+            "title": "TurtleBot3 ROS SLAM Navigation",
             "titleLink": "#",
-            "description": "This project implements Depth Anything: Monocular Depth Estimation. Depth Anything is a single-image depth estimation model which outperforms MiDaS and ZoeDepth in zero-shot depth and metric depthestimation tasks, respectively.",
+            "description": "Real-time SLAM (Simultaneous Localization and Mapping) implementation using TurtleBot3 robot with ROS. Demonstrates autonomous navigation, mapping, and localization in static environments using 2D laser scanner.",
+            "multipleLinks": [
+                {
+                    "icon": "resources/images/logos/Youtube_LogoS.png",
+                    "link": "https://youtube.com/shorts/lierXbnl9KU?si=BYRMMzTC0-4oUUji"
+                }
+            ],
+            "date": "2023-08-27",
+            "image": "",
+            "tags": ["ros", "robotics", "slam", "navigation", "youtube"],
+            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lierXbnl9KU?si=BYRMMzTC0-4oUUji\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+        },
+        {
+            "title": "Depth Anything: State-of-the-Art Monocular Depth Estimation",
+            "titleLink": "#",
+            "description": "Implementation of Depth Anything, a single-image depth estimation model that outperforms MiDaS and ZoeDepth in zero-shot depth and metric depth estimation tasks. See how this breakthrough model transforms 2D images into detailed depth maps.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Linkedin_LogoS.png",
                     "link": "https://www.linkedin.com/feed/update/urn:li:activity:7155365865171951616/"
                 }],
             "date": "2024-01-23",
-            "image": "resources\\videos\\depthAnything.mp4",
+            "image": "resources/videos/depthAnything.mp4",
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "linkedin"]
         },
         {
-            "title": "Live 360 3D video streaming with Insta360",
+            "title": "Real-Time 360° Video Streaming with Insta360",
             "titleLink": "#",
-            "description": "The objective was to live stream 360-degree 3D videos in real-time using the Insta360 camera. This was achieved through the implementation of WebRTC technology and a Linode server, enabling real-time broadcasting to the internet.",
+            "description": "Built a real-time 360-degree video streaming system using Insta360 camera, WebRTC technology, and Linode server infrastructure. Experience immersive live broadcasting that brings viewers into the action from every angle.",
             "multipleLinks": [
             ],
             "date": "2023-12-06",
-            "image": "resources\\videos\\live360.mp4",
+            "image": "resources/videos/live360.mp4",
             "tags": []
         },
         {
-            "title": "4D MOT",
+            "title": "4D Multi-Object Tracking for Autonomous Vehicles",
             "titleLink": "#",
-            "description": "In this project I learned about the different methods used for multi-object tracking and implemented a 4D MOT inference. The model was pretrained on the Kitti dataset and evaluated on the Kitti Val set. This extends the 3D object detection project by adding a tracking module to track the objects through time.",
+            "description": "Advanced 4D Multi-Object Tracking system using KITTI dataset and deep learning models. This project extends 3D object detection with temporal tracking, enabling autonomous vehicles to understand dynamic environments in real-time.",
             "multipleLinks": [
             ],
             "date": "2023-12-04",
-            "image": "resources\\videos\\tracking_mot.mp4",
+            "image": "resources/videos/tracking_mot.mp4",
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
-            "title": "GLPDepth inference with Kitti dataset",
+            "title": "GLPDepth: Monocular Depth Estimation with KITTI Dataset",
             "titleLink": "#",
-            "description": "This project aims to learn and implement GLPDepth model on the Kitti dataset for monocular depth estimation. GLPDepth is a single-stage model that uses a global-local-global feature pyramid network to extract global and local features from the input image and then uses a global-local fusion module to fuse the features and predict the depth map.",
+            "description": "Implementation of GLPDepth model for monocular depth estimation using the KITTI dataset. Features a global-local-global feature pyramid network that extracts multi-scale features and fuses them to predict accurate depth maps from single images.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/GitHub_LogoS.png",
@@ -44,23 +59,23 @@
                 }
             ],
             "date": "2023-11-28",
-            "image": "resources\\images\\stacked_images.gif",
+            "image": "resources/images/stacked_images.gif",
             "tags": ["computervision", "python", "machinelearning", "deeplearning"]
         },
         {
-            "title": "3D object detection with Kitti dataset and PointRCNN",
+            "title": "3D Object Detection with PointRCNN and KITTI Dataset",
             "titleLink": "#",
-            "description": "This project aims to train and implement a custom PointRCNN model on the Kitti dataset for 3D object detection. PointRCNN is a two-stage model that first generates a set of 3D region proposals from the input point cloud and then refines them in a point-wise manner to obtain the final detection results.",
+            "description": "Custom PointRCNN model trained on the KITTI dataset for 3D object detection. This two-stage approach generates 3D region proposals from point clouds and refines them for precise object detection in autonomous driving scenarios.",
             "multipleLinks": [
             ],
             "date": "2023-11-27",
-            "image": "resources\\images\\output_19.gif",
+            "image": "resources/images/output_19.gif",
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
-            "title": "Testing Visual SLAM with ROS at UTA",
+            "title": "Visual SLAM Testing with ROS at UTA",
             "titleLink": "#",
-            "description": "Testing ROS and Visual SLAM with Racecar at The University of Texas at Arlington parking lot with UTA AutonoBots club. Obstacle map made of buckets, not relying on lanes. Uses Lidar and Camera based sensor fusion technique.",
+            "description": "Real-world testing of ROS and Visual SLAM with a racecar at The University of Texas at Arlington. Features LiDAR and camera sensor fusion for autonomous navigation through obstacle courses without relying on lane markings.",
             "multipleLinks":[
                 {
                     "icon": "resources/images/logos/Linkedin_LogoS.png",
@@ -68,13 +83,13 @@
                 }
             ],
             "date": "2023-08-09",
-            "image": "resources\\videos\\UTATest.mp4",
+            "image": "resources/videos/UTATest.mp4",
             "tags": ["ros", "computervision", "linkedin", "robotics"]
         },
         {
-            "title": "Training and implementing YOLOP: YOLO Panoptic Driving Perception (MIR2022)",
+            "title": "YOLOP: Real-Time Panoptic Driving Perception",
             "titleLink": "#",
-            "description": "This project aims to train and implement YOLOP: YOLO Panoptic Driving Perception (MIR2022) on the custom highway dataset. YOLOP is a real-time panoptic segmentation model that can simultaneously detect and segment vehicles in a single forward pass",
+            "description": "Training and implementation of YOLOP (YOLO Panoptic Driving Perception) on a custom highway dataset. This real-time model simultaneously detects and segments vehicles in a single forward pass for autonomous driving applications.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Linkedin_LogoS.png",
@@ -86,13 +101,13 @@
                 }
             ],
             "date": "2023-07-28",
-            "image": "resources\\videos\\yolop.mp4",
+            "image": "resources/videos/yolop.mp4",
             "tags": ["computervision", "python", "machinelearning"]
         },
         {
-            "title": "Hand and Wrist Detection with 6MB model and 30FPS",
+            "title": "Lightweight Hand Detection at 30FPS with 6MB Model",
             "titleLink": "#",
-            "description": "This project aims to detect the hand and wrist of a person in a video stream using a small (around 6 MB) model and achieve a frame rate. Model was trained on top of Ultralytics YOLOv8n with 3.2M parameters.",
+            "description": "Efficient hand and wrist detection system achieving 30 FPS with a compact 6MB model. Built on Ultralytics YOLOv8n with 3.2M parameters, demonstrating how to balance accuracy and performance for real-time applications.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -100,31 +115,32 @@
                 }
             ],
             "date": "2023-06-01",
-            "image": "resources\\images\\vinHandDet.gif",
+            "image": "resources/images/vinHandDet.gif",
             "tags": ["computervision", "python", "machinelearning", "blog"]
         },
         {
-            "title": "rtabmap | databaseviewer and localization | Part 2/2",
+            "title": "RTAB-Map Database Viewer and Localization",
             "titleLink": "#",
-            "description": "The RTAB-Map Database Viewer and Localization demo video showcases the capabilities of RTAB-Map in mapping and localizing in robust environments. By utilizing the RTAB-Map database, users can visualize, optimize, edit, refine, and interact with previously collected map data. The video highlights the flexibility of RTAB-Map in handling various odometry approaches and sensor configurations, making it a powerful tool for SLAM implementation.",
+            "description": "Comprehensive demonstration of RTAB-Map's mapping and localization capabilities in complex environments. Shows how to visualize, optimize, and interact with collected map data using various odometry approaches and sensor configurations.",
             "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Linkedin_LogoS.png",
-                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7066289437231501312/"
-                },
-                {
-                    "icon": "resources/images/logos/Youtube_LogoS.png",
-                    "link": "https://youtu.be/QAJaO51hcDo"
-                }
+            {
+                "icon": "resources/images/logos/Linkedin_LogoS.png",
+                "link": "https://www.linkedin.com/feed/update/urn:li:activity:7066289437231501312/"
+            },
+            {
+                "icon": "resources/images/logos/Youtube_LogoS.png",
+                "link": "https://youtu.be/QAJaO51hcDo"
+            }
             ],
             "date": "2023-05-22",
             "image": "",
-            "tags": ["computervision", "ros", "robotics", "python", "youtube"]
+            "tags": ["computervision", "ros", "robotics", "python", "youtube"],
+            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/QAJaO51hcDo?si=XUP63Jyoab4-6T85\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
         },
         {
-            "title": "rtabmap | teleop and mapping | Part 1/2",
+            "title": "Real-Time Appearance-Based Mapping with RTAB-Map",
             "titleLink": "#",
-            "description": "Real time appearance based mapping is a technique used to create a map of an unknown environment using a single camera. The map is created by extracting features from the camera images and matching them with features from the previous images. The map is then updated with the new features and the camera pose is estimated using the map and the camera images.",
+            "description": "Implementation of real-time appearance-based mapping using a single camera. Creates maps of unknown environments by extracting and matching visual features between consecutive frames for accurate pose estimation.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Linkedin_LogoS.png",
@@ -136,13 +152,13 @@
                 }
             ],
             "date": "2023-05-14",
-            "image": "resources\\videos\\rtabmap_mapping.mp4",
+            "image": "resources/videos/rtabmap_mapping.mp4",
             "tags": ["computervision", "robotics", "ros", "python", "youtube"]
         },
         {
-            "title": "Unreal Engine 5 First Person Shooter Game (using blueprints)",
+            "title": "First-Person Shooter Game in Unreal Engine 5",
             "titleLink": "#",
-            "description": "The game features a playable character who can move around the map and shoot at static and dynamic targets in the shooting range. The game is timed and has a different score system for different types of targets. The game also features a main menu and a pause menu.",
+            "description": "Complete FPS game built with Unreal Engine 5 blueprints featuring dynamic shooting mechanics, timed gameplay, and scoring systems. Includes static and moving targets, main menu, and pause functionality for an engaging gaming experience.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -150,13 +166,13 @@
                 }
             ],
             "date": "2023-04-24",
-            "image": "resources\\videos\\gp.mp4",
+            "image": "resources/videos/gp.mp4",
             "tags": ["gamedev", "blog", "unrealengine"]
         },
         {
-            "title": "Navigation through the unknown maze and cleaning up the blocks with Lego Mindstorms EV3",
+            "title": "Autonomous Maze Navigation with Lego Mindstorms EV3",
             "titleLink": "#",
-            "description": "This project aims to navigate through an unknown maze and clean up the blocks in the maze using a Lego Mindstorms EV3 robot. The robot uses a color sensor to recognize the blocks and ultrasonic sensors to measure the distance and detect the walls of the maze. It then uses the detected information to navigate through the maze and clean up the blocks.",
+            "description": "Smart robot that navigates unknown mazes and cleans up colored blocks using Lego Mindstorms EV3. Uses color sensors for block recognition and ultrasonic sensors for wall detection and pathfinding through complex environments.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Youtube_LogoS.png",
@@ -164,16 +180,16 @@
                 }
             ],
             "date": "2022-12-01",
-            "image": "resources\\videos\\maze.mp4",
+            "image": "resources/videos/maze.mp4",
             "tags": [
                 "youtube",
                 "robotics"
             ]
         },
         {
-            "title": "Mercado Escolar - School Supplies Ecommerce Website (React)",
+            "title": "Mercado Escolar: School Supplies E-commerce Platform",
             "titleLink": "#",
-            "description": "Mercado Escolar is an ecommerce website that allows users to purchase school supplies online. The website features a main page, a product page, a shopping cart, and a checkout page. The website also features a login page and a registration page for users to create accounts and login to their accounts. Login credentials required for business, admin, and superadmin accounts",
+            "description": "Full-featured e-commerce website built with React for purchasing school supplies online. Features product catalog, shopping cart, checkout system, and user authentication with different access levels for business and admin accounts.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/GitHub_LogoS.png",
@@ -181,13 +197,13 @@
                 }
             ],
             "date": "2022-11-11",
-            "image": "resources\\videos\\mercadoEscolar.mp4",
+            "image": "resources/videos/mercadoEscolar.mp4",
             "tags": ["webdev", "github"]
         },
         {
-            "title": "Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)",
+            "title": "Installing Laravel on Ubuntu: Complete Setup Guide",
             "titleLink": "#",
-            "description": "A step-by-step guide on how to install PHP and Laravel on a Linux machine using the apt repository",
+            "description": "Step-by-step tutorial for installing PHP and Laravel on Ubuntu 20.04. Covers repository setup, package installation, and getting your first Laravel project running with PHP 8.1.12 and Laravel v9.40.1.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -203,9 +219,9 @@
             "tags": ["github", "webdev", "blog", "linux"]
         },
         {
-            "title": "Square root of integer without using sqrt() function",
+            "title": "Square Root Calculation Without Built-in Functions",
             "titleLink": "#",
-            "description": "The Newton-Raphson method is an iterative algorithm that can be used to approximate the square root of a number by improving an initial estimate at each iteration using a formula based on the equation y * y = x.",
+            "description": "Implementation of the Newton-Raphson method for calculating square roots without using built-in sqrt() functions. Demonstrates iterative mathematical algorithms and numerical computation techniques in Python.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -226,9 +242,9 @@
             ]
         },
         {
-            "title": "The comma.ai Calibration Challenge!",
+            "title": "Camera Calibration Challenge: Pitch and Yaw Estimation",
             "titleLink": "#",
-            "description": "This project aims to estimate the pitch and yaw angles of a camera mounted in a vehicle relative to the vehicle's direction. It uses feature detection and matching techniques to find correspondences between two consecutive frames. It then applies a robust estimation method to compute the essential matrix and decompose it into rotation and translation components. The rotation matrix is then used to calculate the pitch and yaw angles of the camera motion.",
+            "description": "Solution to comma.ai's calibration challenge for estimating camera pitch and yaw angles in vehicle-mounted systems. Uses feature detection, matching, and robust estimation methods to compute camera motion from consecutive frames.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/GitHub_LogoS.png",
@@ -245,9 +261,9 @@
             ]
         },
         {
-            "title": "Obstacle Avoidance test runs for the Unmanned Vehicle System",
+            "title": "LiDAR-Based Obstacle Avoidance for Autonomous Vehicles",
             "titleLink": "#",
-            "description": "This project aims to detect obstacles in the path of a 6WD robot vehicle and avoid them by steering the vehicle in the opposite direction with reactive control. It uses a lidar mounted on the vehicle to capture scans of the environment and detect unknown obstacles using scan matching. The vehicle is then steered in the opposite direction to avoid the obstacle.",
+            "description": "Reactive obstacle avoidance system for a 6WD robot vehicle using LiDAR sensing. Detects unknown obstacles through scan matching and automatically steers the vehicle away from potential collisions using real-time control algorithms.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Youtube_LogoS.png",
@@ -255,7 +271,7 @@
                 }
             ],
             "date": "2022-05-02",
-            "image": "resources\\videos\\obsAvoidance.mp4",
+            "image": "resources/videos/obsAvoidance.mp4",
             "tags": [
                 "youtube",
                 "matlab",
@@ -265,9 +281,9 @@
             ]
         },
         {
-            "title": "Digital Budget Tracker and Pig Dice Game in Javascript",
+            "title": "JavaScript Learning Projects: Budget Tracker and Pig Dice Game",
             "titleLink": "#",
-            "description": "The Digital Budget Tracker is a tool that helps users track and manage their personal or business finances by providing a platform to input and organize income and expenditure data. The Pig Dice Game is a simple dice game that involves rolling a dice and earning points based on the numbers rolled. Both of these applications are designed with Javascript to be user-friendly and interactive, providing a convenient and enjoyable experience for users.",
+            "description": "Two interactive JavaScript applications showcasing fundamental web development skills. Features a digital budget tracker for financial management and a fun pig dice game with scoring mechanics and user-friendly interfaces.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -275,7 +291,7 @@
                 }
             ],
             "date": "2020-10-15",
-            "image": "resources\\images\\pigDice.png",
+            "image": "resources/images/pigDice.png",
             "tags": [
                 "github",
                 "webdev",
@@ -284,9 +300,9 @@
             ]
         },
         {
-            "title": "Dart dataset and PyPlot Scatter function Article",
+            "title": "Data Visualization with Dart Dataset and Python Scatter Plots",
             "titleLink": "#",
-            "description": "The Dart dataset is a collection of data points that can be plotted using the PyPlot Scatter function in Python. This function allows users to create scatter plots, which are visual representations of data points that use Cartesian coordinates to display values for typically two variables for a set of data.",
+            "description": "Comprehensive guide to creating scatter plots using Python's PyPlot library with the Dart dataset. Learn how to visualize data relationships and create meaningful charts for data analysis and presentation.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Medium_Logo.png",
@@ -298,7 +314,7 @@
                 }
             ],
             "date": "2020-07-31",
-            "image": "resources\\images\\mediumDart.png",
+            "image": "resources/images/mediumDart.png",
             "tags": [
                 "medium",
                 "python",
@@ -309,9 +325,9 @@
             ]
         },
         {
-            "title": "Knowledge Graph Based QnA Post",
+            "title": "Knowledge Graph-Based Question Answering System",
             "titleLink": "#",
-            "description": "Our question answering system uses Entity pairs Extraction and Knowledge Graph Construction to extract entities from the input paragraph and construct a knowledge graph for answering user questions. It utilizes dependency parsing tools and techniques, and is effective at answering \"who,\" \"what,\" \"when,\" and \"where\" questions. However, the answers obtained are currently simple and limited in word count.",
+            "description": "Intelligent QA system that extracts entities from text and builds knowledge graphs for answering questions. Uses dependency parsing and entity extraction to handle \"who,\" \"what,\" \"when,\" and \"where\" queries effectively.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Linkedin_LogoS.png",
@@ -333,9 +349,9 @@
             ]
         },
         {
-            "title": "Knowledge Graph Based QnA YouTube Presentation",
+            "title": "Knowledge Graph QA System: YouTube Presentation",
             "titleLink": "#",
-            "description": "Implemented a knowledge graph representation project to facilitate question answering by extracting key entities such as subject, predicate, and object. This innovative approach leverages the power of structured data to provide more accurate and brief answers to user inquiries.",
+            "description": "Complete walkthrough of building a knowledge graph representation system for question answering. Demonstrates entity extraction techniques and structured data approaches for providing accurate, concise answers to user queries.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Youtube_LogoS.png",
@@ -347,13 +363,13 @@
                 }
             ],
             "date": "2020-04-05",
-            "image": "resources\\images\\kwGraph.png",
+            "image": "resources/images/kwGraph.png",
             "tags": ["python", "youtube", "machinelearning", "tutorial"]
         },
         {
-            "title": "How to install Unreal Engine 4 in arch linux Article",
+            "title": "Installing Unreal Engine 4 on Arch Linux",
             "titleLink": "#",
-            "description": "This article outlines the steps to install Unreal Engine 4 on an Arch Linux operating system. It provides detailed instructions on how to properly set up and configure UE4 to run smoothly on the Linux platform",
+            "description": "Comprehensive guide for setting up Unreal Engine 4 on Arch Linux. Covers installation steps, configuration requirements, and troubleshooting tips to get UE4 running smoothly on the Linux platform for game development.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Medium_Logo.png",
@@ -365,9 +381,9 @@
             "tags": ["medium", "linux", "gamedev", "tutorial", "blog", "unrealengine"]
         },
         {
-            "title": "Maths Equation Solver Blog",
+            "title": "Mathematical Equation Solver: Exploring Different Approaches",
             "titleLink": "#",
-            "description": "Explored the different types of equation solvers available and how they can be used to solve complex mathematical equations with ease.",
+            "description": "Analysis of various equation-solving methods and their implementations in Python. Explores different algorithmic approaches for solving complex mathematical equations with practical code examples and performance comparisons.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",
@@ -383,9 +399,9 @@
             "tags": ["github", "python", "code", "blog"]
         },
         {
-            "title": "Instagram Chats Save and read offline Blog",
+            "title": "Instagram Chat Backup Tool: Save Conversations Offline",
             "titleLink": "#",
-            "description": "This script allows users to save and read Instagram chats in a readable text format offline. It currently only works for personal chats.",
+            "description": "Python script for saving Instagram chat conversations in readable text format for offline access. Designed for personal chat backups with easy-to-use interface and organized output formatting.",
             "multipleLinks": [
                 {
                     "icon": "resources/images/logos/Blogpost_LogoS.png",

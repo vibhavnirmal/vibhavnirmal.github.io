@@ -1,53 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="Math equations solver with python.">
-    <title>Math Scripts | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, mathematics, python">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="Mathematical Equations Solver with Python - Numerical methods implementation by Vibhav Nirmal">
+    <title>Mathematical Equations Solver | Vibhav Nirmal</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div id="goback">
-            <a href="..\index.html">
-                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
             </a>
-        </div>
-        <div id="maintitle">
-            <span id="title">Mathematical Equations Solver</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">September 22, 2018</span>
-            <div>
-                <br>
-                <a href="https://github.com/vibhavnirmal/maths4/archive/master.zip">
-                    <button type="button" class="btn btn-primary" id="dload">Download</button>
-                </a>
-            </div>
-            <hr>
-        </div>
+        </nav>
 
-        <div class="container-fluid content" style="text-align: justify;">
-            <p id="desc">This script is used to solve mathematical problems based on bisection method. Edit: I have
-                uploaded new scripts, like euler's method, Milne's Predictor-Corrector method, taylor's method etc.. But
-                I have not tried all the scripts with different parameters, it may work with some parameters. As I am
-                not getting much time to improvise these scripts, must check the logic and code before running the
-                scripts.</p>
-            <hr>
-            <p id="howto">How To Use:-</p>
-            <ol>
-                <li>Download the zip file through the given link</li>
-                <li>Run py file and give inputs as asked</li>
-                <li>All parameters are mandatory to get the answers</li>
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">Mathematical Equations Solver</h1>
+                
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        September 22, 2018
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">Python</span>
+                    <span class="blog-tag">Mathematics</span>
+                    <span class="blog-tag">Numerical Methods</span>
+                    <span class="blog-tag">Open Source</span>
+                </div>
+
+                <div class="blog-actions">
+                    <a href="https://github.com/vibhavnirmal/maths4/archive/master.zip" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Project
+                    </a>
+                    <a href="https://github.com/vibhavnirmal/MathProblems" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <div class="blog-section">
+                <p>
+                    This collection of Python scripts is designed to solve various mathematical problems using numerical methods. The primary focus is on implementing classical algorithms like the bisection method, Euler's method, Milne's Predictor-Corrector method, and Taylor's method for solving differential equations and finding roots of functions.
+                </p>
+
+                <h2>Project Overview</h2>
+                <p>
+                    The mathematical equations solver provides implementations of fundamental numerical methods that are essential in computational mathematics and engineering. These methods are particularly useful when analytical solutions are difficult or impossible to obtain.
+                </p>
+
+                <h3>Implemented Methods</h3>
+                <ul>
+                    <li><strong>Bisection Method</strong> - Root finding algorithm for continuous functions</li>
+                    <li><strong>Euler's Method</strong> - First-order numerical procedure for solving ordinary differential equations</li>
+                    <li><strong>Milne's Predictor-Corrector Method</strong> - Higher-order method for solving ODEs with improved accuracy</li>
+                    <li><strong>Taylor's Method</strong> - Series expansion approach for solving differential equations</li>
+                    <li><strong>Additional Numerical Algorithms</strong> - Various other computational methods</li>
+                </ul>
+
+                <h2>How to Use</h2>
+                <ol>
+                    <li>Download the zip file through the provided link above</li>
+                    <li>Extract the files to your local directory</li>
+                    <li>Run the Python files and provide inputs as prompted</li>
+                    <li>All parameters are mandatory to obtain accurate results</li>
+                    <li>Verify the logic and code before running with different parameters</li>
+                </ol>
+
+                <h3>Technical Notes</h3>
+                <p>
+                    While the core algorithms are implemented and functional, some scripts may require parameter tuning for optimal performance. The implementations serve as educational tools and starting points for more complex numerical computations.
+                </p>
+
+                <blockquote>
+                    <strong>Note:</strong> As this is an ongoing project, please verify the logic and test the scripts with known solutions before applying them to critical calculations. Contributions and improvements are welcome through pull requests.
+                </blockquote>
+
+                <h2>Applications</h2>
+                <p>
+                    These numerical methods have widespread applications in:
+                </p>
+                <ul>
+                    <li>Engineering simulations and modeling</li>
+                    <li>Scientific computing and research</li>
+                    <li>Financial mathematics and risk analysis</li>
+                    <li>Physics and chemistry calculations</li>
+                    <li>Educational purposes and algorithm learning</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">References & Resources</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://github.com/vibhavnirmal/MathProblems" target="_blank" rel="noopener noreferrer">
+                        GitHub Repository - Math Problems Collection
+                    </a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Bisection_method" target="_blank" rel="noopener noreferrer">
+                        Bisection Method - Mathematical Foundation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Euler_method" target="_blank" rel="noopener noreferrer">
+                        Euler's Method for Differential Equations
+                    </a>
+                </li>
             </ol>
-            <hr>
-            <p id="desc"> You can fork and send pull request if you find any issues or wish to update the code from <a
-                    href="https://github.com/vibhavnirmal/MathProblems">this repo</a>.
-            </p>
-        </div>
+        </section>
+    </div>
+</body>
+
+</html>
     </div>
 </body>
 

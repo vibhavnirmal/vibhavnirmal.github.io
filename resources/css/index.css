@@ -1,14 +1,10 @@
 :root {
-    /* background color */
-    /* --primary-background-color: #f0f0f0;
-    --primary-text-color: #000000;
-    --secondary-text-color: #3a3a3a; */
-
-    --primary-background-color: #F2F2F2;
+    /* 2-Color Scheme: Dark and White only */
+    --primary-background-color: #ffffff;
     --primary-text-color: #333333;
-    --secondary-text-color: #666666;
-    --button-color: #007BFF;
-    --text-background-color: #FFD700;
+    --secondary-text-color: #333333;
+    --button-color: #333333;
+    --text-background-color: #ffffff;
 
     --primary-font-family: "Open Sans", sans-serif;
 }
@@ -118,10 +114,45 @@ li {
     text-decoration: none;
     color: var(--primary-text-color);
     font-size: 22px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.navButton:hover {
+    border: 2px solid var(--primary-text-color);
 }
 
 .socialIcon {
     height: 32px;
+    filter: brightness(0); /* Make images black */
+    border: 2px solid var(--primary-text-color);
+}
+
+.socialIcon:hover {
+    filter: brightness(0) invert(1); /* Make images white on hover */
+}
+
+/* New navigation social text styling */
+.nav-social-link {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: all 0.2s ease;
+}
+
+.nav-social-text {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--primary-background-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-text-color);
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-social-link:hover .nav-social-text {
+    background: var(--primary-text-color);
+    color: var(--primary-background-color);
 }
 
 .filter-button {
@@ -290,6 +321,31 @@ td {
 
 #social-placeholder-old #ContactMe #social #iconFA {
     font-size: 30px;
+}
+
+/* New social text styling */
+.social-text-link {
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+.social-text {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--primary-background-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-text-color);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.social-text-link:hover .social-text {
+    background: var(--primary-text-color);
+    color: var(--primary-background-color);
+    transform: translateY(-2px);
 }
 
 #social-placeholder #ContactMe {

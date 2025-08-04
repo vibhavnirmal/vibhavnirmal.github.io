@@ -1,70 +1,409 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="Save instagram chats offline with python script.">
-    <title>JS projects | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, JavaScript, web development, pig dice game, budget tracker">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="JavaScript learning projects including Digital Budget Tracker and Pig Dice Game - Web development journey by Vibhav Nirmal">
+    <title>JavaScript Learning Projects | Vibhav Nirmal</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div>
-            <div id="goback">
-                <a href="..\index.html">
-                    <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
-                </a>
-            </div>
-            <div id="maintitle">
-                <span id="title">1. Digital Budget Tracker</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    id="newdate">October 18, 2020</span>
-                <div>
-                    <br>
-                    <a href="https://vibhavnirmal.github.io/DigitalBudgetTracker">
-                        <button type="button" class="btn btn-primary" id="dload">Open budget Tracker</button>
-                    </a>
-                </div>
-                <hr>
-            </div>
-        </div>
-        <br>
-        <div>
-            <div id="maintitle">
-                <span id="title">2. Pig Dice Game</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">15/10/2020</span>
-            </div>
-            <div class="container-fluid content" style="text-align: justify; padding-top: 0px;">
-                <p id="desc">Greetings everyone! I am pleased to present to you Pig Dice Game, a web game created using
-                    basic JavaScript as part of the Udemy course, "<a
-                        href="https://www.udemy.com/course/the-complete-javascript-course/">The Complete JavaScript
-                        Course
-                        2020: Build Real Projects!</a>" I must extend my sincerest gratitude to Jonas for providing such
-                    an enriching learning experience.</p>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </nav>
 
-                <p id="howto"> <b> Now, let's delve into the rules of the game.</b></p>
-                <p>Each player will take turns rolling a die, with the goal of accumulating points.</p>
-                <ul>
-                    <li>If a player rolls a 1, their turn ends and they do not earn any points.</li>
-                    <li>If the player rolls any other number, it is added to their turn total and their turn continues.
-                    </li>
-                    <li> If the player decides to "hold," their turn total is added to their score and play passes to
-                        the next player.</li>
-                </ul>
-                <p>The first player to reach a score of 100 or more points is declared the winner.</p>
-                <br>
-                <p>Do you have what it takes to emerge victorious in Pig Dice Game?</p>
-                <div>
-                    <a href="https://vibhavnirmal.github.io/PigDiceGame">
-                        <button type="button" class="btn btn-primary" id="dload">Play Pig Dice Game</button>
-                    </a>
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">JavaScript Learning Projects</h1>
+                
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        October 2020
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">JavaScript</span>
+                    <span class="blog-tag">Web Development</span>
+                    <span class="blog-tag">Learning Journey</span>
+                    <span class="blog-tag">Interactive Games</span>
+                </div>
+
+                <p class="blog-description">
+                    A collection of JavaScript projects built during my web development learning journey. These projects demonstrate fundamental JavaScript concepts including DOM manipulation, event handling, and game logic implementation.
+                </p>
+            </div>
+        </header>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <!-- Project 1: Digital Budget Tracker -->
+            <div class="blog-section project-section">
+                <div class="project-header">
+                    <h2>
+                        <i class="fas fa-wallet"></i>
+                        Digital Budget Tracker
+                    </h2>
+                    <span class="project-date">October 18, 2020</span>
+                </div>
+
+                <div class="project-content">
+                    <p>
+                        A practical web application for managing personal finances and tracking expenses. This project demonstrates JavaScript fundamentals including data storage, calculations, and dynamic user interface updates.
+                    </p>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Expense Tracking:</strong> Add and categorize daily expenses</li>
+                        <li><strong>Budget Management:</strong> Set monthly budgets and track spending</li>
+                        <li><strong>Visual Feedback:</strong> Real-time updates and progress indicators</li>
+                        <li><strong>Data Persistence:</strong> Local storage for maintaining data between sessions</li>
+                    </ul>
+
+                    <h3>Technical Implementation</h3>
+                    <ul>
+                        <li>Vanilla JavaScript for all functionality</li>
+                        <li>DOM manipulation for dynamic content updates</li>
+                        <li>LocalStorage API for data persistence</li>
+                        <li>Responsive CSS for cross-device compatibility</li>
+                    </ul>
+
+                    <div class="project-actions">
+                        <a href="https://vibhavnirmal.github.io/DigitalBudgetTracker" class="action-button primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i>
+                            Launch Budget Tracker
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Project 2: Pig Dice Game -->
+            <div class="blog-section project-section">
+                <div class="project-header">
+                    <h2>
+                        <i class="fas fa-dice"></i>
+                        Pig Dice Game
+                    </h2>
+                    <span class="project-date">October 15, 2020</span>
+                </div>
+
+                <div class="project-content">
+                    <p>
+                        An interactive two-player dice game built as part of 
+                        <a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank" rel="noopener noreferrer">
+                            "The Complete JavaScript Course 2020: Build Real Projects!"
+                        </a> 
+                        by Jonas Schmedtmann. This project showcases game logic implementation, state management, and user interaction handling.
+                    </p>
+
+                    <h3>Game Rules</h3>
+                    <div class="game-rules">
+                        <div class="rule-item">
+                            <i class="fas fa-dice-one"></i>
+                            <div>
+                                <strong>Rolling a 1:</strong> Your turn ends immediately and you score 0 points for that turn
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <i class="fas fa-dice-six"></i>
+                            <div>
+                                <strong>Rolling 2-6:</strong> The number is added to your current turn total and you can choose to roll again
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <i class="fas fa-hand-paper"></i>
+                            <div>
+                                <strong>Hold:</strong> Your turn total is added to your overall score and play passes to the other player
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Winning:</strong> First player to reach 100 points wins the game
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Technical Features</h3>
+                    <ul>
+                        <li><strong>Game State Management:</strong> Track player scores, current player, and game status</li>
+                        <li><strong>Random Number Generation:</strong> Simulate dice rolls with Math.random()</li>
+                        <li><strong>Event Handling:</strong> Button clicks and user interactions</li>
+                        <li><strong>DOM Manipulation:</strong> Dynamic UI updates and animations</li>
+                        <li><strong>Game Logic:</strong> Turn-based gameplay and win condition checking</li>
+                    </ul>
+
+                    <h3>Learning Outcomes</h3>
+                    <p>
+                        This project helped me understand:
+                    </p>
+                    <ul>
+                        <li>JavaScript fundamentals and ES6+ features</li>
+                        <li>Event-driven programming concepts</li>
+                        <li>State management in web applications</li>
+                        <li>User interface design principles</li>
+                        <li>Code organization and structure</li>
+                    </ul>
+
+                    <blockquote>
+                        <i class="fas fa-quote-left"></i>
+                        Special thanks to Jonas Schmedtmann for creating such an engaging and comprehensive JavaScript course that made learning these concepts enjoyable and practical.
+                        <i class="fas fa-quote-right"></i>
+                    </blockquote>
+
+                    <div class="project-actions">
+                        <a href="https://vibhavnirmal.github.io/PigDiceGame" class="action-button primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-play"></i>
+                            Play Pig Dice Game
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Journey Section -->
+            <div class="blog-section">
+                <h2>
+                    <i class="fas fa-graduation-cap"></i>
+                    My JavaScript Learning Journey
+                </h2>
+                
+                <p>
+                    These projects represent important milestones in my web development journey. Starting with basic DOM manipulation and progressing to more complex game logic, each project taught me valuable lessons about JavaScript programming and web development best practices.
+                </p>
+
+                <h3>Key Skills Developed</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript ES6+</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <span>DOM Manipulation</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <span>Event Handling</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>Local Storage</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Game Logic</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+
+                <h3>Next Steps</h3>
+                <p>
+                    These foundational projects paved the way for more advanced web development concepts including:
+                </p>
+                <ul>
+                    <li>Modern JavaScript frameworks (React, Vue, Angular)</li>
+                    <li>Backend development with Node.js</li>
+                    <li>Database integration and API development</li>
+                    <li>Advanced state management patterns</li>
+                    <li>Testing and deployment strategies</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">Resources & Inspiration</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank" rel="noopener noreferrer">
+                        The Complete JavaScript Course 2020: Build Real Projects! - Jonas Schmedtmann
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vibhavnirmal.github.io/DigitalBudgetTracker" target="_blank" rel="noopener noreferrer">
+                        Digital Budget Tracker - Live Demo
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vibhavnirmal.github.io/PigDiceGame" target="_blank" rel="noopener noreferrer">
+                        Pig Dice Game - Live Demo
+                    </a>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+                        MDN Web Docs - JavaScript Reference
+                    </a>
+                </li>
+            </ol>
+        </section>
     </div>
+
+    <style>
+        .project-section {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 24px;
+            margin: 40px 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-header h2 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .project-header h2 i {
+            color: var(--accent-color);
+        }
+
+        .project-date {
+            background: var(--accent-color);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-content {
+            margin-top: 20px;
+        }
+
+        .project-actions {
+            margin-top: 24px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .game-rules {
+            display: grid;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .rule-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: var(--card-background);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .rule-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            min-width: 24px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--card-background);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .skill-item i {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        blockquote {
+            position: relative;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 24px 0;
+            padding: 20px;
+        }
+
+        blockquote .fa-quote-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 2rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+        }
+
+        blockquote .fa-quote-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 2rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rule-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+        }
+    </style>
 </body>
 
 </html>

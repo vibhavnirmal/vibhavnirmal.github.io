@@ -3,85 +3,307 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Vibhav Nirmal, Vibhav, Nirmal, Portfolio, Vibhav Portfolio, Vibhav Nirmal Portfolio">
-    <meta name="author" content="Vibhav Nirmal">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="image" property="og:image" content="resources/images/vin.jpg">
+    <meta name="keywords" content="Vibhav Nirmal, Vibhav, Nirmal, Portfolio, Projects, Computer Vision, Robotics, Machine Learning, Deep Learning, AI">
     <meta name="author" content="Vibhav Nirmal">
-    <meta name="description" property="og:description" content="Personal Web Portfolio about my projects and youtube videos. I am a computer Vision and robotics enthusiast with 2+ years of experience.">
-    <meta name="title" property="og:title" content="Vibhav Nirmal | Projects">
+    <meta name="description" content="Personal Web Portfolio showcasing my computer vision, robotics, and AI projects. Featuring 3D object detection, depth estimation, multi-object tracking, and more innovative solutions.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:image" content="resources/images/vin.jpg">
+    <meta property="og:description" content="Personal Web Portfolio showcasing my computer vision, robotics, and AI projects. Featuring 3D object detection, depth estimation, multi-object tracking, and more innovative solutions.">
+    <meta property="og:title" content="Vibhav Nirmal | Projects & Portfolio">
     <meta property="og:url" content="https://vibhavnirmal.github.io/projects.html">
     <meta property="og:type" content="website">
 
-    <title>Projects | Vibhav Nirmal</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Preconnect for better performance -->
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    <link rel="icon" type="image/png" href="resources/images/logos/vin.png">
+
+    <title>Projects & Portfolio | Vibhav Nirmal</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="resources/css/index.css">
     <link rel="stylesheet" href="resources/css/blog.css">
+    <link rel="stylesheet" href="resources/css/projects-enhanced.css">
 
+    <!-- Scripts loaded with defer for better performance -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="resources/js/script.js"></script>
     <script src="resources/js/blog-view.js"></script>
-    <script src="resources/js/create-filter.js"></script>
     <script src="resources/js/blog-listing.js"></script>
+    <script src="resources/js/create-filter.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <div id="navBar"></div>
+    <header>
+        <nav id="navBar" aria-label="Main navigation"></nav>
+    </header>
 
-            <div class="bestviewedin" style="display: none; text-align: center; color: purple">
-                <p>Use Firefox >= 121 or any other browser for best viewing experience</p>
+    <main class="container">
+        <div class="content">
+            <!-- Browser compatibility notice -->
+            <div class="browser-notice" style="display: none; text-align: center; color: #333333; background-color: #ffffff; padding: 10px; margin: 10px 0; border: 2px solid #333333;" role="alert">
+                <p><strong>Notice:</strong> For the best viewing experience, please use Firefox 121+ or any modern browser</p>
             </div>
 
-            <div class="container">
-                <div class="content">
-                    <div class="mainProjects">
-                        <div class="filtersAndView">
-                            <div class="view-type">
-                                <div class="view-type-button" onclick="changeView('list')">
-                                    <img id="list-icon" src="resources\images\list.svg" alt="List View" class="view-type-icon">
-                                </div>
-                                <div class="view-type-button" onclick="changeView('grid')">
-                                    <img id="grid-icon" src="resources\images\grid.svg" alt="Grid View"
-                                        class="view-type-icon active">
-                                </div>
+            <section class="projects-section">
+                <div class="projects-header">
+                    <h1 class="visually-hidden">My Projects Portfolio</h1>
+                    
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <a href="projects-feed.html" style="color: #333333; text-decoration: none; font-size: 14px; padding: 8px 16px; background: #ffffff; display: inline-block; transition: all 0.2s ease;">
+                            📱 View Social Feed Layout
+                        </a>
+                    </div>
+                    
+                    <div class="controls-container">
+                        <div class="view-controls" role="group" aria-label="View type selection">
+                            <h2 class="controls-title">View Options</h2>
+                            <div class="view-type-buttons">
+                                <button type="button" 
+                                        class="view-type-button" 
+                                        onclick="changeView('list')" 
+                                        aria-label="Switch to list view"
+                                        aria-pressed="false">
+                                    <img id="list-icon" 
+                                         src="resources/images/list.svg" 
+                                         alt="" 
+                                         class="view-type-icon"
+                                         aria-hidden="true">
+                                    <span class="view-label">List</span>
+                                </button>
+                                <button type="button" 
+                                        class="view-type-button" 
+                                        onclick="changeView('grid')" 
+                                        aria-label="Switch to grid view"
+                                        aria-pressed="true">
+                                    <img id="grid-icon" 
+                                         src="resources/images/grid.svg" 
+                                         alt="" 
+                                         class="view-type-icon active"
+                                         aria-hidden="true">
+                                    <span class="view-label">Grid</span>
+                                </button>
                             </div>
                         </div>
-                        
-                        <div id="blog-container" class="grid-view"></div>
+
+                        <!-- Filter controls placeholder for future enhancement -->
+                        <div class="filter-controls" role="group" aria-label="Project filters">
+                            <h2 class="controls-title">Filter Projects</h2>
+                            <div id="filter-container" class="filter-buttons">
+                                <!-- Filters will be dynamically generated -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            
-
+                
+                <div id="blog-container" 
+                     class="projects-grid grid-view" 
+                     role="region" 
+                     aria-label="Projects showcase"
+                     aria-live="polite">
+                    <!-- Projects will be loaded here -->
+                    <div class="loading-message" aria-hidden="false">
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                        <p>Loading amazing projects...</p>
+                    </div>
+                </div>
+                
+                <!-- Results counter -->
+                <div id="results-counter" class="results-counter" style="display: none;">
+                    <span id="results-count">0</span> projects found
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
    
     <script>
-        $(document).ready(function () {
-            $("#navBar").load("navbar.html");
-        });
+        // Modern JavaScript with proper error handling and performance optimizations
+        (function() {
+            'use strict';
 
-        // Get user agent string
-        var userAgent = navigator.userAgent;
+            // Initialize when DOM is ready
+            document.addEventListener('DOMContentLoaded', function() {
+                initializeNavigation();
+                checkBrowserCompatibility();
+                // Don't call initializeProjects here - let script.js handle it
+            });
 
-        // Check if Firefox
-        if (userAgent.indexOf("Firefox") != -1) {
-            var versionIndex = userAgent.indexOf("Firefox/") + 8;
-            var version = parseInt(userAgent.substring(versionIndex));
-
-            if (version >= 121) {
-                console.log("Firefox version is greater than 121");
-            } else {
-                console.log("Firefox version is not greater than 121");
-                // display 
-                $('.marquee').css('display', 'block');
+            // Load navigation
+            function initializeNavigation() {
+                fetch('navbar.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const navBar = document.getElementById('navBar');
+                        if (navBar) {
+                            navBar.innerHTML = html;
+                            highlightCurrentPage();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading navigation:', error);
+                    });
             }
-        } else {
-            console.log("This is not Firefox");
-        }
+
+            // Highlight current page in navigation
+            function highlightCurrentPage() {
+                const currentPage = window.location.href;
+                const navLinks = document.querySelectorAll('nav a');
+                
+                navLinks.forEach(link => {
+                    if (currentPage.includes(link.href)) {
+                        link.classList.add('current');
+                        link.setAttribute('aria-current', 'page');
+                    }
+                });
+            }
+
+            // Enhanced browser compatibility check
+            function checkBrowserCompatibility() {
+                const userAgent = navigator.userAgent;
+                const notice = document.querySelector('.browser-notice');
+
+                if (userAgent.includes('Firefox')) {
+                    const versionMatch = userAgent.match(/Firefox\/(\d+)/);
+                    if (versionMatch) {
+                        const version = parseInt(versionMatch[1]);
+                        if (version < 121 && notice) {
+                            notice.style.display = 'block';
+                            notice.setAttribute('aria-hidden', 'false');
+                        }
+                    }
+                }
+                
+                // Check for other outdated browsers
+                const isOldIE = userAgent.includes('MSIE') || userAgent.includes('Trident');
+                const isOldEdge = userAgent.includes('Edge/') && !userAgent.includes('Edg/');
+                
+                if ((isOldIE || isOldEdge) && notice) {
+                    notice.style.display = 'block';
+                    notice.setAttribute('aria-hidden', 'false');
+                    notice.innerHTML = '<p><strong>Notice:</strong> Please upgrade to a modern browser for the best experience</p>';
+                }
+            }
+
+            // Enhanced view change function with accessibility
+            window.changeView = function(view) {
+                console.log(`Changing view to: ${view}`);
+                
+                const container = document.getElementById("blog-container");
+                const gridButton = document.querySelector('[aria-label="Switch to grid view"]');
+                const listButton = document.querySelector('[aria-label="Switch to list view"]');
+                const gridIcon = document.getElementById("grid-icon");
+                const listIcon = document.getElementById("list-icon");
+
+                if (!container) {
+                    console.error('blog-container not found!');
+                    return;
+                }
+
+                const isGridView = view === 'grid';
+                
+                // Clear all view classes first
+                container.className = '';
+                
+                // Add the appropriate view classes
+                if (isGridView) {
+                    container.classList.add('projects-grid', 'grid-view');
+                    console.log('Applied grid view classes');
+                } else {
+                    container.classList.add('projects-list', 'list-view');
+                    console.log('Applied list view classes');
+                }
+
+                // Update button states
+                if (gridButton && listButton) {
+                    gridButton.setAttribute('aria-pressed', isGridView.toString());
+                    listButton.setAttribute('aria-pressed', (!isGridView).toString());
+                    
+                    // Update button appearance
+                    if (isGridView) {
+                        gridButton.style.background = '#333333';
+                        gridButton.style.color = '#ffffff';
+                        listButton.style.background = '#ffffff';
+                        listButton.style.color = '#333333';
+                    } else {
+                        listButton.style.background = '#333333';
+                        listButton.style.color = '#ffffff';
+                        gridButton.style.background = '#ffffff';
+                        gridButton.style.color = '#333333';
+                    }
+                }
+
+                // Update icon states
+                if (gridIcon && listIcon) {
+                    if (isGridView) {
+                        gridIcon.style.filter = 'brightness(1)';
+                        listIcon.style.filter = 'brightness(0)';
+                    } else {
+                        listIcon.style.filter = 'brightness(1)';
+                        gridIcon.style.filter = 'brightness(0)';
+                    }
+                }
+
+                // Announce change to screen readers
+                const announcement = `Switched to ${view} view`;
+                announceToScreenReader(announcement);
+                
+                console.log(`View changed to ${view} successfully`);
+            };
+
+            // Screen reader announcement helper
+            function announceToScreenReader(message) {
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.setAttribute('aria-atomic', 'true');
+                announcement.className = 'visually-hidden';
+                announcement.textContent = message;
+                
+                document.body.appendChild(announcement);
+                
+                setTimeout(() => {
+                    document.body.removeChild(announcement);
+                }, 1000);
+            }
+
+            // Wait for projects to load and hide loading message
+            function waitForProjectsAndHideLoading() {
+                const checkProjects = setInterval(() => {
+                    const projects = document.querySelectorAll('.blog-listing');
+                    const loadingMessage = document.querySelector('.loading-message');
+                    
+                    if (projects.length > 0) {
+                        if (loadingMessage) {
+                            loadingMessage.style.display = 'none';
+                            loadingMessage.setAttribute('aria-hidden', 'true');
+                        }
+                        clearInterval(checkProjects);
+                        console.log(`${projects.length} projects loaded successfully`);
+                    }
+                }, 100);
+                
+                // Failsafe: hide loading message after 5 seconds regardless
+                setTimeout(() => {
+                    const loadingMessage = document.querySelector('.loading-message');
+                    if (loadingMessage) {
+                        loadingMessage.style.display = 'none';
+                        loadingMessage.setAttribute('aria-hidden', 'true');
+                    }
+                    clearInterval(checkProjects);
+                }, 5000);
+            }
+
+            // Start checking for projects after DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(waitForProjectsAndHideLoading, 100);
+            });
+
+        })();
     </script>
 </body>
 

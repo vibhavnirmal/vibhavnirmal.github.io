@@ -1,53 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="Math equations solver with python.">
-    <title>Finding square root | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, newton-raphson, mathematics">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="Square root calculation using Newton-Raphson method without sqrt() function - Mathematical algorithm by Vibhav Nirmal">
+    <title>Square Root with Newton-Raphson Method | Vibhav Nirmal</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div id="goback">
-            <a href="..\index.html">
-                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
             </a>
-        </div>
-        <div id="maintitle">
-            <span id="title">Square root of any integer without using sqrt() function
-            </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">July 26, 2022</span>
-            <div>
-                <br>
-                <a
-                    href="https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3/archive/dc6883f9dd3da42f54a9bf13cbf7dccd091c1bf5.zip">
-                    <button type="button" class="btn btn-primary" id="dload">Download</button>
-                </a>
+        </nav>
+
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">Square Root with Newton-Raphson Method</h1>
+                
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        July 26, 2022
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">Mathematics</span>
+                    <span class="blog-tag">Newton-Raphson</span>
+                    <span class="blog-tag">Algorithms</span>
+                    <span class="blog-tag">Python</span>
+                </div>
+
+                <div class="blog-actions">
+                    <a href="https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3/archive/dc6883f9dd3da42f54a9bf13cbf7dccd091c1bf5.zip" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Code
+                    </a>
+                </div>
             </div>
-            <hr>
-        </div>
+        </header>
 
-        <div class="container-fluid content">
-            <p id="desc">
-                <b>The Newton-Raphson method is a way to find the root of an equation.</b>
-            </p>
-            <p id="desc">
-                It starts with an initial guess and then improvs the guess at each step. To do this, the method uses the equation of the tangent line to the curve defined by the equation at the point of the current guess. The tangent line is a line that touches the curve at a single point and has the same slope as the curve at that point.
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <div class="blog-section">
+                <p>
+                    <strong>The Newton-Raphson method is a powerful numerical technique for finding the roots of equations.</strong>
+                </p>
+                
+                <p>
+                    It starts with an initial guess and then improves the guess at each step through an iterative process. To accomplish this, the method uses the equation of the tangent line to the curve defined by the equation at the point of the current guess. The tangent line touches the curve at a single point and has the same slope as the curve at that point.
+                </p>
 
-                The Newton-Raphson method involves iteratively applying the following formula:
-            </p>
-            <div id="imgsSideBySide">
-                <div class="imgs">
-                    <img id="img" src="/resources/images/equation1.jpg" alt="formula">
+                <h2>Mathematical Foundation</h2>
+                <p>
+                    The Newton-Raphson method involves iteratively applying a specific formula that converges rapidly to the actual root. For calculating square roots, this method is particularly efficient and accurate.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;">
+                    <div>
+                        <img src="../resources/images/equation1.jpg" alt="Newton-Raphson formula mathematical representation">
+                    </div>
+                    <div>
+                        <img src="../resources/images/nr.png" alt="Newton-Raphson Formula derivation and explanation">
+                    </div>
                 </div>
-                <div class="imgs">
-                    <img id="img" src="/resources/images/nr.png" alt="Newton-Raphson Formula And Derivation" title="Newton-Raphson Formula And Derivation">
-                </div>
+
+                <h3>Algorithm Implementation</h3>
+                <p>
+                    To find the square root of a number n without using the built-in sqrt() function, we can reformulate the problem as finding the root of the equation f(x) = x² - n = 0. The Newton-Raphson iteration becomes:
+                </p>
+
+                <blockquote>
+                    x₁ = (x₀ + n/x₀) / 2
+                </blockquote>
+
+                <p>
+                    This formula is repeatedly applied until the desired precision is achieved. The method converges quadratically, meaning the number of correct digits roughly doubles with each iteration.
+                </p>
+
+                <h2>Practical Applications</h2>
+                <p>
+                    The Newton-Raphson method for square root calculation has numerous applications in:
+                </p>
+                <ul>
+                    <li>Computer graphics and 3D rendering</li>
+                    <li>Scientific computing and simulations</li>
+                    <li>Signal processing algorithms</li>
+                    <li>Financial calculations and risk modeling</li>
+                    <li>Embedded systems where efficiency is crucial</li>
+                </ul>
+
+                <h3>Performance Benefits</h3>
+                <p>
+                    This implementation offers several advantages over traditional square root functions:
+                </p>
+                <ul>
+                    <li>Fast convergence with minimal iterations</li>
+                    <li>High precision control</li>
+                    <li>Independence from built-in math libraries</li>
+                    <li>Educational value for understanding numerical methods</li>
+                </ul>
+
+                <img src="../resources/images/sqrt.jpeg" alt="Visual representation of square root calculation process">
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">References & Resources</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Newton%27s_method" target="_blank" rel="noopener noreferrer">
+                        Newton's Method - Mathematical Foundation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mathworld.wolfram.com/NewtonsMethod.html" target="_blank" rel="noopener noreferrer">
+                        Newton's Method - Wolfram MathWorld
+                    </a>
+                </li>
+                <li>
+                    <a href="https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3" target="_blank" rel="noopener noreferrer">
+                        Source Code - GitHub Gist
+                    </a>
+                </li>
+            </ol>
+        </section>
+    </div>
+</body>
+
+</html>
             </div>
             <p>
                 By using this formula, we can calculate a new approximation for the root at each step and get closer and closer to the actual root. We can stop the iteration when the difference between the current approximation and the previous one is small enough, which means that we have found a good enough approximation for the root.

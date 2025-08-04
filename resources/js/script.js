@@ -46,44 +46,93 @@ function createIconElement(multipleLinks) {
     const iconElement = document.createElement('div');
     iconElement.classList.add('blog-icons');
 
+    if (!multipleLinks || multipleLinks.length === 0) {
+        iconElement.style.display = 'none';
+        return iconElement;
+    }
+
     multipleLinks.forEach(link => {
-        if (link.link === '#') {
-            iconElement.style.display = 'none';
-        } else {
-            const iconLink = document.createElement('a');
-            iconLink.href = link.link;
-
-            const iconImg = document.createElement('img');
-            iconImg.src = link.icon;
-            iconImg.alt = 'Icon';
-            iconImg.classList.add('socialIcon');
-
-            iconLink.appendChild(iconImg);
-            iconElement.appendChild(iconLink);
+        if (link.link === '#' || !link.link) {
+            return; // Skip invalid links
         }
+
+        const iconLink = document.createElement('a');
+        iconLink.href = link.link;
+        iconLink.target = '_blank';
+        iconLink.rel = 'noopener noreferrer';
+        iconLink.classList.add('social-link');
+
+        // Create text-based icons instead of images for better reliability
+        const iconText = document.createElement('span');
+        iconText.classList.add('social-icon-text');
+        
+        // Determine icon type based on URL or icon path
+        if (link.link.includes('linkedin') || (link.icon && link.icon.includes('Linkedin'))) {
+            iconText.textContent = 'LinkedIn';
+            iconText.classList.add('linkedin-icon');
+        } else if (link.link.includes('github') || (link.icon && link.icon.includes('GitHub'))) {
+            iconText.textContent = 'GitHub';
+            iconText.classList.add('github-icon');
+        } else if (link.link.includes('medium') || (link.icon && link.icon.includes('Medium'))) {
+            iconText.textContent = 'Medium';
+            iconText.classList.add('medium-icon');
+        } else if (link.link.includes('youtube') || (link.icon && link.icon.includes('Youtube'))) {
+            iconText.textContent = 'YouTube';
+            iconText.classList.add('youtube-icon');
+        } else if (link.link.includes('instagram') || (link.icon && link.icon.includes('Instagram'))) {
+            iconText.textContent = 'Instagram';
+            iconText.classList.add('instagram-icon');
+        } else {
+            iconText.textContent = 'Link';
+            iconText.classList.add('generic-icon');
+        }
+
+        iconLink.appendChild(iconText);
+        iconElement.appendChild(iconLink);
     });
 
     return iconElement;
 }
 
 function filterSelection(tags) {
-
     const blogListings = document.querySelectorAll('.blog-listing');
+    let visibleCount = 0;
 
     blogListings.forEach(blogList => {
         const blogListClasses = blogList.classList;
 
         if (tags === 'all' || tags.some(tag => blogListClasses.contains(tag))) {
-            blogList.style.display = 'grid';
+            blogList.style.display = 'block';
+            visibleCount++;
         } else {
             blogList.style.display = 'none';
         }
     });
+    
+    // Update results counter
+    updateResultsCounter(visibleCount);
+    console.log(`Showing ${visibleCount} projects`);
+}
+
+function updateResultsCounter(count) {
+    const resultsCounter = document.getElementById('results-counter');
+    const resultsCount = document.getElementById('results-count');
+    
+    if (resultsCounter && resultsCount) {
+        resultsCount.textContent = count;
+        resultsCounter.style.display = count > 0 ? 'block' : 'none';
+    }
 }
 
 fetch('resources/data.json')
-    .then(response => response.json())
+    .then(response => {
+        console.log('Fetching data.json...', response.status);
+        return response.json();
+    })
     .then(data => {
+        console.log('Data loaded:', data);
+        console.log('Number of projects:', data.projects.length);
+        
         let alltags = [];
 
         data.projects.forEach(project => {
@@ -93,13 +142,32 @@ fetch('resources/data.json')
         });
 
         const uniqueTags = Array.from(new Set(alltags));
+        console.log('Creating filters for tags:', uniqueTags);
         createFilterElement(uniqueTags);
 
         const blogContainer = document.getElementById('blog-container');
+        console.log('Blog container found:', !!blogContainer);
 
-        data.projects.forEach(project => {
+        if (!blogContainer) {
+            console.error('blog-container element not found!');
+            return;
+        }
+
+        data.projects.forEach((project, index) => {
+            console.log(`Creating blog listing ${index + 1}:`, project.title);
             const blogListing = createBlogListing(project);
-            blogContainer.appendChild(blogListing);
+            if (blogListing) {
+                blogContainer.appendChild(blogListing);
+            } else {
+                console.error(`Failed to create blog listing for project: ${project.title}`);
+            }
         });
+        
+        // Initialize results counter with total count
+        updateResultsCounter(data.projects.length);
+        
+        console.log('All projects loaded successfully!');
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+        console.error('Error loading projects:', error);
+    });

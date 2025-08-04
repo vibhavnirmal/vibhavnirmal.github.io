@@ -1,52 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vibhav Nirmal,vibhav,nirmal,UTA,MachineLearningBlog,TechieViN,game development">
-    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
-    <meta name="description" content="First person shooter game with unreal engine and blueprints">
-    <title>FPS game | ViN Blogs</title>
-    <link rel="stylesheet" href="..\resources\css\index.css">
-    <link rel="stylesheet" href="..\resources\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, UTA, MachineLearningBlog, TechieViN, game development, Unreal Engine, FPS">
+    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
+    <meta name="description" content="First person shooter game with Unreal Engine and Blueprints - Game development project by Vibhav Nirmal">
+    <title>FPS Shooting Range Game | Vibhav Nirmal</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../resources/css/blog-unified.css">
 </head>
 
-<body class="bg">
-    <div class="blog">
-        <div id="goback">
-            <a href="..\index.html">
-                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
+<body>
+    <div class="blog-container">
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
             </a>
-        </div>
-        <div id="maintitle">
-            <span id="title">First person shooter game with Unreal Engine
-            </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">April 24, 2023</span>
-            <div>
-                <br>
-                <a href="https://www.dropbox.com/s/knwbbwgy64nfp2x/ShootingGallaryExeFile.zip?dl=0">
-                    <button type="button" class="btn btn-primary" id="dload">Download Executable (dropbox)</button>
-                </a>
-                <a href="https://www.dropbox.com/s/s2ovhpxet79m3jb/ShootingGallary.zip?dl=0">
-                    <button type="button" class="btn btn-primary" id="dload">Download Project Files (dropbox)</button>
-                </a>
-            </div>
-            <hr>
-        </div>
+        </nav>
 
-        <div class="container-fluid content">
-            <p id="desc">
-                <b>First person shooting range with unreal engine blueprints</b>
-            </p>
-            <p id="desc">
-                Are you ready to create an exciting first-person shooter game using Unreal Engine 5? With the power of
-                Blueprints, you can design your game without ever touching a line of code. In this blog post, I will
-                guide you through the process of creating a thrilling game that features a playable character who can
-                move around the map and shoot at static and dynamic targets in a shooting range.
-            </p>
-            <p id="desc">
-                First, open Unreal Engine and start with an empty template. You can customize the look and feel of your
-                character and gun by using existing assets or creating your own. For my project, I havn't used any
+        <!-- Blog Header -->
+        <header class="blog-header">
+            <div class="blog-title-section">
+                <h1 class="blog-title">First Person Shooter with Unreal Engine</h1>
+                
+                <div class="blog-meta">
+                    <span class="blog-date">
+                        <i class="fas fa-calendar"></i>
+                        April 24, 2023
+                    </span>
+                </div>
+
+                <div class="blog-tags">
+                    <span class="blog-tag">Unreal Engine</span>
+                    <span class="blog-tag">Game Development</span>
+                    <span class="blog-tag">Blueprints</span>
+                    <span class="blog-tag">FPS</span>
+                </div>
+
+                <div class="blog-actions">
+                    <a href="https://www.dropbox.com/s/knwbbwgy64nfp2x/ShootingGallaryExeFile.zip?dl=0" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Game
+                    </a>
+                    <a href="https://www.dropbox.com/s/s2ovhpxet79m3jb/ShootingGallary.zip?dl=0" class="action-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-code"></i>
+                        Project Files
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <div class="blog-section">
+                <p>
+                    <strong>First person shooting range with Unreal Engine Blueprints</strong>
+                </p>
+                
+                <p>
+                    Are you ready to create an exciting first-person shooter game using Unreal Engine 5? With the power of Blueprints, you can design your game without ever touching a line of code. In this blog post, I will guide you through the process of creating a thrilling game that features a playable character who can move around the map and shoot at static and dynamic targets in a shooting range.
+                </p>
+
+                <h2>Getting Started</h2>
+                <p>
+                    First, open Unreal Engine and start with an empty template. You can customize the look and feel of your character and gun by using existing assets or creating your own. For my project, I haven't used any weapon assets or character asset. I have just added a camera and box static mesh for the character.
+                </p>
+
+                <img src="../resources/images/viewport.PNG" alt="Unreal Engine viewport showing the character setup">
+
+                <h3>Level Design</h3>
+                <p>
+                    Next, create a new level and design your shooting range using the level editor. You can add different types of targets, such as small or big targets, and assign different scores to them. You can also set a timer for your game, making it more challenging for the player to complete.
+                </p>
+
+                <img src="../resources/images/crosshair.PNG" alt="Crosshair implementation in the game">
+
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/SMUDBZ1">
+                    <a href="//imgur.com/a/SMUDBZ1">Unreal Engine FPS Shooting Range Game Map</a>
+                </blockquote>
+                <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+                <h2>Blueprint Programming</h2>
+                <p>
+                    Once your level is designed, it's time to create the logic for your game. This is where Blueprints come in. Blueprints are visual scripting tools that allow you to create gameplay mechanics without writing code. You can create new Blueprints by right-clicking in the Content Browser and selecting "Blueprint Class."
+                </p>
+
+                <h3>Shooting Mechanics</h3>
+                <img src="../resources/images/shootingLineTrace.PNG" alt="Line trace implementation for shooting mechanics">
+
+                <h3>Target System</h3>
+                <img src="../resources/images/targetBlueprint.PNG" alt="Target blueprint showing scoring system">
+
+                <h2>Character Movement</h2>
+                <p>
+                    To add movement mechanics, create a new Blueprint for your character and add movement events such as forward, backward, left, and right. You can also add jumping, crouching, and sprinting mechanics to make the movement more dynamic.
+                </p>
+
+                <img src="../resources/images/movement.PNG" alt="Character movement blueprint setup">
+
+                <h3>User Interface</h3>
+                <p>
+                    Finally, add a main menu and a pause menu to your game. This will allow the player to start a new game, continue playing, or quit the game. You can also add options to adjust the graphics, audio, and controls.
+                </p>
+
+                <img src="../resources/images/healthBar.PNG" alt="Health bar UI implementation">
+                <img src="../resources/images/mainMenu.PNG" alt="Main menu design">
+
+                <p>
+                    When I created main menu, I had a cinematic video created by sequencer. By mistake that video got deleted and I was not able to find it again. So, I have a sequencer that's just plain white screen. But, you can add a video to your main menu by adding a sequencer and adding a media player to it.
+                </p>
+
+                <img src="../resources/images/pauseMenuOnLevelBlueprint.PNG" alt="Pause menu blueprint implementation">
+                <img src="../resources/images/gameOver.PNG" alt="Game over screen design">
+
+                <h2>Gameplay Demonstration</h2>
+                <p>
+                    Congratulations! You have now created a thrilling first-person shooter game using Unreal Engine and Blueprints. With the power of Blueprints, you can easily modify and add new features to your game, making it even more exciting for the players.
+                </p>
+
+                <div class="blog-featured-media">
+                    <video controls muted>
+                        <source src="../resources/videos/gp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <p>
+                    If you have any questions or comments, please feel free to reach out to me through email or any other social media. I hope you enjoyed this blog post and found it helpful. Thank you for reading!
+                </p>
+            </div>
+        </main>
+
+        <!-- References Section -->
+        <section class="references-section">
+            <h4 class="section-title">References & Resources</h4>
+            <ol class="references-list">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=g7Npxo1Myg4" target="_blank" rel="noopener noreferrer">
+                        FPS Character Movement and Rotation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.unrealengine.com/5.1/en-US/setting-up-user-inputs-in-unreal-engine/" target="_blank" rel="noopener noreferrer">
+                        Setting up User Inputs in Unreal Engine
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=kumZj_mov58" target="_blank" rel="noopener noreferrer">
+                        How To Create A Main Menu - Unreal Engine 5
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.unrealengine.com/4.27/en-US/InteractiveExperiences/UMG/HowTo/CreateMainMenu/" target="_blank" rel="noopener noreferrer">
+                        Create a Main Menu in Unreal Engine
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=CgPlBjFeu4Y" target="_blank" rel="noopener noreferrer">
+                        Shooting with a Single Line Trace
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=F_nmiotWB24" target="_blank" rel="noopener noreferrer">
+                        Use Array to Create a Shooting Range
+                    </a>
+                </li>
+            </ol>
+        </section>
+    </div>
+</body>
+
+</html>
                 weapon assets or character asset. I have just added a camera and box static mesh for the character.
             </p>
             <img id="img" class="bigFP" src="../resources/images/viewport.PNG" alt="ViewPort person"
