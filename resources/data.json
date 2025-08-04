@@ -1,20 +1,6 @@
 {
     "projects": [
         {
-            "title": "KAL-M UGV Project: International Collaboration in Robotics Innovation",
-            "titleLink": "#",
-            "description": "Happy to be part of the team KAL-M, an innovative Indian robotics startup developing Unmanned Ground Vehicle (UGV) solutions.",
-            "multipleLinks": [
-                {
-                    "icon": "resources/images/logos/Linkedin_LogoS.png",
-                    "link": "https://www.linkedin.com/posts/vibhavnirmal_buildinginpublic-innovation-teamwork-activity-7159401500773863424-HTh1"
-                }
-            ],
-            "date": "2024-02-08",
-            "image": "",
-            "tags": ["robotics", "ros", "linkedin"]
-        },
-        {
             "title": "Depth Anything v2: Next-Generation Monocular Depth Estimation",
             "titleLink": "#",
             "description": "Four months after Depth Anything v1, the revolutionary v2 update delivers incredible improvements in monocular depth estimation. Features finer edge details, enhanced robustness for smaller objects, and training on 62 million pseudo-labeled real images plus 595,000 synthetic images across 13 datasets. Represents a significant leap forward in depth estimation technology with superior performance and accuracy.",
