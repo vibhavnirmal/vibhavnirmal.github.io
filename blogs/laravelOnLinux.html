@@ -1,219 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal, LDCE, MachineLearningBlog, TechieViN, Laravel, Ubuntu, PHP, web development">
-    <link rel="icon" type="image/png" href="../resources/images/logos/vin.png">
-    <meta name="description" content="Step-by-step guide to installing Laravel on Ubuntu 20.04 with PHP 8.1 - Web development tutorial by Vibhav Nirmal">
-    <title>Installing Laravel on Ubuntu 20.04 | Vibhav Nirmal</title>
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../resources/css/blog-unified.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Vibhav Nirmal, vibhav, nirmal ,LDCE , MachineLearningBlog, TechieViN">
+    <link rel="shortcut icon" type="image" href="..\resources\images\logos\vin.png" />
+    <meta name="description" content="Math equations solver with python.">
+    <title>Laravel with Ubuntu | ViN Blogs</title>
+    <link rel="stylesheet" href="..\resources\css\index.css">
+    <link rel="stylesheet" href="..\resources\css\style.css">
 </head>
 
-<body>
-    <div class="blog-container">
-        <!-- Blog Navigation -->
-        <nav class="blog-nav">
-            <a href="../index.html" class="back-button">
-                <i class="fas fa-arrow-left"></i>
-                Back to Portfolio
+<body class="bg">
+    <div class="blog">
+        <div id="goback">
+            <a href="..\index.html">
+                <button id="backBut" type="button" class="btn btn-primary">Home Page</button>
             </a>
-        </nav>
-
-        <!-- Blog Header -->
-        <header class="blog-header">
-            <div class="blog-title-section">
-                <h1 class="blog-title">Installing Laravel on Ubuntu 20.04</h1>
-                
-                <div class="blog-meta">
-                    <span class="blog-date">
-                        <i class="fas fa-calendar"></i>
-                        November 18, 2022
-                    </span>
-                </div>
-
-                <div class="blog-tags">
-                    <span class="blog-tag">Laravel</span>
-                    <span class="blog-tag">Ubuntu</span>
-                    <span class="blog-tag">PHP</span>
-                    <span class="blog-tag">Web Development</span>
-                </div>
-
-                <div class="blog-actions">
-                    <a href="https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb" class="action-button" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-code"></i>
-                        View Gist
-                    </a>
-                </div>
+        </div>
+        <div id="maintitle">
+            <span id="title">Installing Laravel on Ubuntu 20.04: Laravel v9.40.1 (PHP v8.1.12)
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="newdate">November 18, 2022</span>
+            <div>
+                <br>
+                <a href="https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb">
+                    <button type="button" class="btn btn-primary" id="dload">Gist</button>
+                </a>
             </div>
-        </header>
+            <hr>
+        </div>
 
-        <!-- Blog Content -->
-        <main class="blog-content">
-            <div class="blog-section">
-                <p>
-                    This comprehensive guide will walk you through installing Laravel v9.40.1 with PHP v8.1.12 on Ubuntu 20.04. Laravel is a powerful PHP framework that makes web development elegant and enjoyable with its expressive syntax and robust features.
-                </p>
+        <div class="container-fluid content">
+            <div id="desc">
+                <h3>
+                    These steps should get PHP and Laravel installed on your Linux machine and ready for development on your project.
+                </h3>
 
-                <blockquote>
-                    <strong>Prerequisites:</strong> This tutorial assumes you have a fresh Ubuntu 20.04 installation with sudo privileges and basic familiarity with the command line.
-                </blockquote>
-
-                <h2>Step 1: Add PHP Repository</h2>
-                <p>
-                    First, we need to add the Ondřej Surý PPA repository, which provides the latest PHP versions for Ubuntu:
-                </p>
-                
-                <pre><code>sudo add-apt-repository ppa:ondrej/php</code></pre>
-                
-                <p>
-                    <strong>What this does:</strong> This command adds the <code>ppa:ondrej/php</code> repository to your system's package sources. This repository contains various PHP versions and related packages that may not be available in the default Ubuntu repositories.
+                <p>First, add the apt repository by running this command:</p>
+                <pre id="command">sudo add-apt-repository ppa:ondrej/php</pre>
+                <p id="whatItDoes">
+                    This adds the ppa:ondrej/php repository, which contains various PHP versions and related packages, to the list of sources that APT can use to install packages.
                 </p>
 
-                <h2>Step 2: Update Package List</h2>
+                <p>After adding the repository, update the package list with this command:</p>
                 <p>
-                    After adding the new repository, update your package list to include the newly available packages:
+                    <pre id="command">sudo apt update</pre>
+                </p>
+                <p id="whatItDoes">
+                    The apt update command updates the package list from the repositories specified in the sources.list file and the added PPAs (Personal Package Archives). This is necessary to make sure that you have access to the latest versions of packages available in the repository.
                 </p>
                 
-                <pre><code>sudo apt update</code></pre>
-                
-                <p>
-                    <strong>What this does:</strong> The <code>apt update</code> command refreshes the package list from all configured repositories, ensuring you have access to the latest versions of available packages.
+                <p>To check if the repository was added correctly and the package can be found, use this command:</p>
+                <pre id="command">sudo apt-cache search php8.1-curl</pre>
+                <p id="whatItDoes">
+                    The apt-cache search command is used to search the package cache for a package with a specific name. In this case, you are searching for the package php8.1-curl, which is the CURL module for PHP 8.1.
                 </p>
 
-                <h2>Step 3: Verify Repository (Optional)</h2>
+                <p>This should return: <pre>php8.1-curl - CURL module for PHP</pre></p>
+                <p>Now that you've added the repository and updated the package list, you can install the desired PHP package with this command:</p>
+                <pre id="command">sudo apt install php8.1-cgi php8.1-cli php8.1-xml php8.1-curl</pre>
                 <p>
-                    To confirm the repository was added correctly, you can search for a specific PHP package:
-                </p>
-                
-                <pre><code>sudo apt-cache search php8.1-curl</code></pre>
-                
-                <p>
-                    <strong>Expected output:</strong>
-                </p>
-                <pre><code>php8.1-curl - CURL module for PHP</code></pre>
-
-                <h2>Step 4: Install PHP and Required Extensions</h2>
-                <p>
-                    Now install PHP 8.1 along with essential extensions needed for Laravel:
-                </p>
-                
-                <pre><code>sudo apt install php8.1-cgi php8.1-cli php8.1-xml php8.1-curl</code></pre>
-                
-                <p>
-                    <strong>Package breakdown:</strong>
-                </p>
-                <ul>
-                    <li><code>php8.1-cgi</code> - CGI/FastCGI SAPI for PHP 8.1</li>
-                    <li><code>php8.1-cli</code> - Command-line interpreter for PHP 8.1</li>
-                    <li><code>php8.1-xml</code> - XML processing support for PHP 8.1</li>
-                    <li><code>php8.1-curl</code> - CURL library support for PHP 8.1</li>
-                </ul>
-
-                <h2>Step 5: Install Composer</h2>
-                <p>
-                    Composer is PHP's dependency manager and is required to install Laravel:
-                </p>
-                
-                <pre><code>sudo apt install composer</code></pre>
-                
-                <p>
-                    <strong>What this does:</strong> Installs Composer globally on your system, allowing you to manage PHP dependencies and create Laravel projects.
+                In addition to PHP, you'll also need to install the composer package to install Laravel. Do so with this command:</p>
+                <pre id="command">sudo apt install composer</pre>
+                <p id="whatItDoes">
+                    The "apt install" command installs one or more packages. In this case, you are installing four PHP packages: php8.1-cgi, php8.1-cli, php8.1-xml, php8.1-curl and composer.
                 </p>
 
-                <h2>Step 6: Create a New Laravel Project</h2>
-                <p>
-                    Use Composer to create a new Laravel project in your desired directory:
-                </p>
                 
-                <pre><code>composer create-project laravel/laravel myProject</code></pre>
-                
-                <p>
-                    <strong>What this does:</strong> Downloads and installs the latest stable version of Laravel in a directory named "myProject". You can replace "myProject" with your preferred project name.
+
+                <p>After installing composer, you can create a new Laravel project in the current directory with this command:</p>
+                <pre id="command">composer create-project laravel/laravel myProject</pre>
+                <p id="whatItDoes">
+                    The composer create-project command creates a new Laravel project in the current directory, using the latest stable release of Laravel. You can specify the name of the project directory (in this case, myProject) as an argument.
                 </p>
 
-                <h2>Step 7: Navigate and Start Development Server</h2>
-                <p>
-                    Navigate to your project directory and start the Laravel development server:
-                </p>
-                
-                <pre><code>cd myProject
-php artisan serve</code></pre>
-                
-                <p>
-                    <strong>Expected output:</strong>
-                </p>
-                <pre><code>INFO Server running on [http://127.0.0.1:8000]</code></pre>
-
-                <h3>Verification</h3>
-                <p>
-                    Open your web browser and navigate to <code>http://127.0.0.1:8000</code> to see the Laravel welcome page, confirming your installation was successful.
+                Then navigate to the project directory with:
+                <pre id="command">cd myProject</pre>
+                Finally, start the Laravel development server with:
+                <pre id="command">php artisan serve</pre>
+                <p id="whatItDoes">
+                    Finally, the php artisan serve command starts a development server at http://127.0.0.1:8000, which you can use to test your Laravel application.
                 </p>
 
-                <img src="https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png" alt="Laravel welcome page showing successful installation" style="width: 100%; border-radius: 8px; margin: 20px 0;">
-
-                <h2>Next Steps</h2>
-                <p>
-                    Now that Laravel is installed and running, you can:
-                </p>
-                <ul>
-                    <li>Configure your database connection in the <code>.env</code> file</li>
-                    <li>Run migrations to set up your database schema</li>
-                    <li>Install additional PHP extensions as needed (e.g., <code>php8.1-mysql</code>, <code>php8.1-mbstring</code>)</li>
-                    <li>Set up your preferred code editor with Laravel extensions</li>
-                    <li>Begin developing your web application</li>
-                </ul>
-
-                <h3>Troubleshooting Tips</h3>
-                <p>
-                    If you encounter any issues:
-                </p>
-                <ul>
-                    <li>Ensure all PHP extensions are properly installed</li>
-                    <li>Check that Composer is accessible globally</li>
-                    <li>Verify your system meets Laravel's minimum requirements</li>
-                    <li>Check file permissions in your project directory</li>
-                </ul>
+                <p>This should start the server and print:</p>
+                <pre>INFO Server running on [http://127.0.0.1:8000]</pre>
+                <img id="singleImg" src="https://user-images.githubusercontent.com/28863808/202570253-46750e98-51a5-4b1d-a991-39f9bc25e942.png" alt="">
             </div>
-        </main>
-
-        <!-- References Section -->
-        <section class="references-section">
-            <h4 class="section-title">References & Resources</h4>
-            <ol class="references-list">
-                <li>
-                    <a href="https://gist.github.com/vibhavnirmal/83d2e98260bfe69b60d9223fa7e0cebb" target="_blank" rel="noopener noreferrer">
-                        GitHub Gist - Laravel Installation Commands
-                    </a>
-                </li>
-                <li>
-                    <a href="https://laravel.com/docs/9.x/installation" target="_blank" rel="noopener noreferrer">
-                        Laravel 9.x Official Installation Documentation
-                    </a>
-                </li>
-                <li>
-                    <a href="https://getcomposer.org/doc/00-intro.md" target="_blank" rel="noopener noreferrer">
-                        Composer Getting Started Guide
-                    </a>
-                </li>
-                <li>
-                    <a href="https://launchpad.net/~ondrej/+archive/ubuntu/php" target="_blank" rel="noopener noreferrer">
-                        Ondřej Surý PHP PPA Repository
-                    </a>
-                </li>
-            </ol>
-        </section>
+        </div>
     </div>
 </body>
 
