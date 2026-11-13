@@ -139,6 +139,27 @@
             clearButton.addEventListener('click', clearFilterSearch);
             clearButton.setAttribute('data-initialized', 'true');
         }
+
+        const toggleBtn = document.getElementById('filter-toggle-btn');
+        if (toggleBtn && !toggleBtn.hasAttribute('data-initialized')) {
+            toggleBtn.addEventListener('click', () => setFilterPanel(toggleBtn.getAttribute('aria-expanded') !== 'true'));
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.filter-search')) setFilterPanel(false);
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') setFilterPanel(false);
+            });
+            toggleBtn.setAttribute('data-initialized', 'true');
+        }
+    }
+
+    // Open/close filter popover
+    function setFilterPanel(open) {
+        const panel = document.getElementById('feed-filters');
+        const btn = document.getElementById('filter-toggle-btn');
+        if (!panel || !btn) return;
+        panel.hidden = !open;
+        btn.setAttribute('aria-expanded', open);
     }
     
     // Format tag names for display
@@ -205,6 +226,10 @@
             chip.setAttribute('aria-pressed', isActive);
         });
         
+        const toggleBtn = document.getElementById('filter-toggle-btn');
+        if (toggleBtn) toggleBtn.classList.toggle('has-filter', tag !== 'all');
+        setFilterPanel(false);
+
         renderFeedPosts();
         updateFilterResultsInfo();
         updateStatsIfNeeded();
@@ -282,12 +307,15 @@
             const isVideo = project.image.endsWith('.mp4') || project.image.endsWith('.webm');
             
             if (isVideo) {
+                // Poster is a .jpg with the same name next to the video. `loop` posts replace old GIFs.
+                const poster = project.image.replace(/\.(mp4|webm)$/, '.jpg');
+                const playback = project.loop ? 'autoplay loop playsinline' : 'controls preload="none"';
                 return `
                     <div class="post-media">
                         <video class="post-video" 
-                               controls 
+                               ${playback}
                                muted
-                               preload="metadata"
+                               poster="${poster}"
                                aria-label="Project demonstration video">
                             <source src="${project.image}" type="video/mp4">
                             Your browser does not support the video tag.

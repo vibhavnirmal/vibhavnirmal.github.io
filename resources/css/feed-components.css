@@ -356,18 +356,13 @@
 
 /* Feed Filters - Enhanced UI/UX */
 .feed-filters {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 40px;
-    gap: 4px;
-    padding: 24px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 24px 16px;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    flex-wrap: wrap;
-    top: 0;
-    z-index: 100;
-    margin-bottom: 10px;
 }
 
 .feed-filters::-webkit-scrollbar {
@@ -443,9 +438,66 @@
 /* Filter Search Input */
 .filter-search {
     position: relative;
+    display: flex;
+    gap: 8px;
     margin-bottom: 16px;
     padding: 12px 24px;
     border-bottom: 1px solid #333333;
+}
+
+.filter-search-field {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Filter icon button + popover */
+.filter-toggle {
+    position: relative;
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 2px solid #e5e5e5;
+    color: #888888; /* #888 on white is ~3.5:1, passes the 3:1 UI-component minimum */
+    cursor: pointer;
+}
+
+.filter-toggle:hover,
+.filter-toggle[aria-expanded="true"] {
+    border-color: #333333;
+    color: #333333;
+}
+
+.filter-toggle.has-filter::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333333;
+}
+
+.filter-search .feed-filters {
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 24px;
+    right: 24px;
+    z-index: 50;
+    max-height: 60vh;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid #333333;
+    box-shadow: 0 8px 24px rgba(51, 51, 51, 0.15);
+}
+
+.filter-search .feed-filters[hidden] {
+    display: none;
 }
 
 .filter-search-input {
@@ -467,7 +519,7 @@
 
 .filter-search-icon {
     position: absolute;
-    left: 40px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
     color: #666666;

@@ -101,7 +101,8 @@
                 }
             ],
             "date": "2023-11-28",
-            "image": "resources/images/stacked_images.gif",
+            "image": "resources/videos/stacked_images.mp4",
+            "loop": true,
             "tags": ["computervision", "python", "machinelearning", "deeplearning"]
         },
         {
@@ -111,7 +112,8 @@
             "multipleLinks": [
             ],
             "date": "2023-11-27",
-            "image": "resources/images/output_19.gif",
+            "image": "resources/videos/output_19.mp4",
+            "loop": true,
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
@@ -157,7 +159,8 @@
                 }
             ],
             "date": "2023-06-01",
-            "image": "resources/images/vinHandDet.gif",
+            "image": "resources/videos/vinHandDet.mp4",
+            "loop": true,
             "tags": ["computervision", "python", "machinelearning", "blog"]
         },
         {

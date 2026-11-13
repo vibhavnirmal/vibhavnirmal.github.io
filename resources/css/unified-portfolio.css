@@ -24,8 +24,8 @@ body {
 /* Main Container Layout */
 .main-container {
     display: grid;
-    grid-template-columns: 320px 1fr 280px;
-    max-width: 1400px;
+    grid-template-columns: 320px minmax(0, 1fr);
+    max-width: 1100px;
     margin: 0 auto;
     min-height: 100vh;
 }
@@ -259,18 +259,6 @@ border-right: 1px solid #5f5f5f;
     background: #ffffff;
 }
 
-/* Right Sidebar - Stats & Skills */
-.right-sidebar {
-display: flex;
-flex-direction: column;
-gap: 20px;
-border-left: 1px solid #5f5f5f;
-position: sticky;
-top: 0;
-height: 100vh;
-overflow-y: auto;
-}
-
 .stats-section,
 .skills-section,
 .contact-section {
@@ -491,7 +479,7 @@ overflow-y: auto;
 /* Responsive Design */
 @media (max-width: 1200px) {
     .main-container {
-        grid-template-columns: 280px 1fr 260px;
+        grid-template-columns: 280px minmax(0, 1fr);
     }
     
     .left-sidebar,
@@ -504,14 +492,13 @@ overflow-y: auto;
 
 @media (max-width: 1024px) {
     .main-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 0;
         padding: 0;
         max-width: 100%;
     }
     
-    .left-sidebar,
-    .right-sidebar {
+    .left-sidebar {
         position: static;
         max-height: none;
         border: none;
@@ -545,8 +532,7 @@ overflow-y: auto;
     }
     
     /* Hide individual sidebars on mobile */
-    .left-sidebar,
-    .right-sidebar {
+    .left-sidebar {
         display: none;
     }
     
