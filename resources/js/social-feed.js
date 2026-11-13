@@ -528,23 +528,25 @@
         
         // Show floating chip for any filter/search activity or when count is 0
         if (searchTerm || currentFilter !== 'all' || count === 0) {
-            const infoHTML = `
-                <div class="filter-results-info" onclick="this.remove()">
-                    <span>${message}</span>
-                    <button class="close-btn" aria-label="Close">&times;</button>
-                </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', infoHTML);
+            // Built with textContent: the search term is user input and must not be parsed as HTML.
+            const info = document.createElement('div');
+            info.className = 'filter-results-info';
+            const text = document.createElement('span');
+            text.textContent = message;
+            const close = document.createElement('button');
+            close.className = 'close-btn';
+            close.setAttribute('aria-label', 'Close');
+            close.textContent = '\u00d7';
+            info.append(text, close);
+            info.addEventListener('click', () => info.remove());
+            document.body.appendChild(info);
             
             // Auto-hide after 3 seconds if no search term
             if (!searchTerm && count > 0) {
                 setTimeout(() => {
-                    const info = document.querySelector('.filter-results-info');
-                    if (info) {
-                        info.style.opacity = '0';
-                        info.style.transform = 'translateY(20px)';
-                        setTimeout(() => info.remove(), 300);
-                    }
+                    info.style.opacity = '0';
+                    info.style.transform = 'translateY(20px)';
+                    setTimeout(() => info.remove(), 300);
                 }, 3000);
             }
         }

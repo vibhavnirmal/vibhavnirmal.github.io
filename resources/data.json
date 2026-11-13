@@ -11,9 +11,9 @@
                 }
             ],
             "date": "2024-06-15",
-            "image": "resources/images/depthAnythingv2.png",
-            "width": 1918,
-            "height": 486,
+            "image": "resources/images/depthAnythingv2.webp",
+            "width": 1600,
+            "height": 406,
             "tags": ["computervision", "linkedin"]
         },
         {
@@ -27,9 +27,9 @@
                 }
             ],
             "date": "2024-09-25",
-            "image": "resources/images/molmoDemo.png",
-            "width": 1916,
-            "height": 934,
+            "image": "resources/images/molmoDemo.webp",
+            "width": 1600,
+            "height": 780,
             "tags": ["computervision", "machinelearning", "linkedin"]
         },
         {
@@ -364,7 +364,7 @@
                 }
             ],
             "date": "2020-10-15",
-            "image": "resources/images/pigDice.png",
+            "image": "resources/images/pigDice.webp",
             "width": 1366,
             "height": 768,
             "tags": [
@@ -440,9 +440,9 @@
                 }
             ],
             "date": "2020-04-05",
-            "image": "resources/images/kwGraph.png",
-            "width": 1656,
-            "height": 775,
+            "image": "resources/images/kwGraph.webp",
+            "width": 1600,
+            "height": 748,
             "tags": ["python", "youtube", "machinelearning", "tutorial"]
         },
         {
