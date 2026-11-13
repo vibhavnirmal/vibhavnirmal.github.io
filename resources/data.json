@@ -12,6 +12,8 @@
             ],
             "date": "2024-06-15",
             "image": "resources/images/depthAnythingv2.png",
+            "width": 1918,
+            "height": 486,
             "tags": ["computervision", "linkedin"]
         },
         {
@@ -26,6 +28,8 @@
             ],
             "date": "2024-09-25",
             "image": "resources/images/molmoDemo.png",
+            "width": 1916,
+            "height": 934,
             "tags": ["computervision", "machinelearning", "linkedin"]
         },
         {
@@ -55,7 +59,7 @@
             "date": "2023-08-27",
             "image": "",
             "tags": ["ros", "robotics", "slam","youtube"],
-            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lierXbnl9KU?si=BYRMMzTC0-4oUUji\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            "embed": "<iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/lierXbnl9KU?si=BYRMMzTC0-4oUUji\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
         },
         {
             "title": "Depth Anything: State-of-the-Art Monocular Depth Estimation",
@@ -68,6 +72,8 @@
                 }],
             "date": "2024-01-23",
             "image": "resources/videos/depthAnything.mp4",
+            "width": 1280,
+            "height": 480,
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "linkedin"]
         },
         {
@@ -78,6 +84,8 @@
             ],
             "date": "2023-12-06",
             "image": "resources/videos/live360.mp4",
+            "width": 720,
+            "height": 900,
             "tags": []
         },
         {
@@ -88,6 +96,8 @@
             ],
             "date": "2023-12-04",
             "image": "resources/videos/tracking_mot.mp4",
+            "width": 1240,
+            "height": 752,
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
         {
@@ -102,6 +112,8 @@
             ],
             "date": "2023-11-28",
             "image": "resources/videos/stacked_images.mp4",
+            "width": 404,
+            "height": 242,
             "loop": true,
             "tags": ["computervision", "python", "machinelearning", "deeplearning"]
         },
@@ -113,6 +125,8 @@
             ],
             "date": "2023-11-27",
             "image": "resources/videos/output_19.mp4",
+            "width": 1240,
+            "height": 752,
             "loop": true,
             "tags": ["computervision", "python", "machinelearning", "deeplearning", "blog"]
         },
@@ -128,6 +142,8 @@
             ],
             "date": "2023-08-09",
             "image": "resources/videos/UTATest.mp4",
+            "width": 640,
+            "height": 800,
             "tags": ["ros", "computervision", "linkedin", "robotics", "slam"]
         },
         {
@@ -146,6 +162,8 @@
             ],
             "date": "2023-07-28",
             "image": "resources/videos/yolop.mp4",
+            "width": 720,
+            "height": 1280,
             "tags": ["computervision", "python", "machinelearning"]
         },
         {
@@ -160,6 +178,8 @@
             ],
             "date": "2023-06-01",
             "image": "resources/videos/vinHandDet.mp4",
+            "width": 600,
+            "height": 532,
             "loop": true,
             "tags": ["computervision", "python", "machinelearning", "blog"]
         },
@@ -180,7 +200,7 @@
             "date": "2023-05-22",
             "image": "",
             "tags": ["computervision", "ros", "robotics", "python", "youtube","slam"],
-            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/QAJaO51hcDo?si=XUP63Jyoab4-6T85\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            "embed": "<iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/QAJaO51hcDo?si=XUP63Jyoab4-6T85\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
         },
         {
             "title": "Real-Time Appearance-Based Mapping with RTAB-Map",
@@ -198,6 +218,8 @@
             ],
             "date": "2023-05-14",
             "image": "resources/videos/rtabmap_mapping.mp4",
+            "width": 720,
+            "height": 1280,
             "tags": ["computervision", "robotics", "ros", "python", "youtube", "slam"]
         },
         {
@@ -212,6 +234,8 @@
             ],
             "date": "2023-04-24",
             "image": "resources/videos/gp.mp4",
+            "width": 1280,
+            "height": 720,
             "tags": ["blog", "unrealengine"]
         },
         {
@@ -226,6 +250,8 @@
             ],
             "date": "2022-12-01",
             "image": "resources/videos/maze.mp4",
+            "width": 1280,
+            "height": 806,
             "tags": [
                 "youtube",
                 "robotics"
@@ -243,6 +269,8 @@
             ],
             "date": "2022-11-11",
             "image": "resources/videos/mercadoEscolar.mp4",
+            "width": 1280,
+            "height": 734,
             "tags": ["webdev", "github"]
         },
         {
@@ -277,7 +305,7 @@
                     "link": "https://gist.github.com/vibhavnirmal/3870d1ff4a49ad564ea79872e4a16bf3"
                 }
             ],
-            "date": "July 25, 2022",
+            "date": "2022-07-25",
             "image": "",
             "tags": [
                 "github",
@@ -317,6 +345,8 @@
             ],
             "date": "2022-05-02",
             "image": "resources/videos/obsAvoidance.mp4",
+            "width": 1080,
+            "height": 1350,
             "tags": [
                 "youtube",
                 "ros",
@@ -335,6 +365,8 @@
             ],
             "date": "2020-10-15",
             "image": "resources/images/pigDice.png",
+            "width": 1366,
+            "height": 768,
             "tags": [
                 "github",
                 "webdev",
@@ -358,6 +390,8 @@
             ],
             "date": "2020-07-31",
             "image": "resources/images/mediumDart.png",
+            "width": 566,
+            "height": 627,
             "tags": [
                 "medium",
                 "python",
@@ -407,6 +441,8 @@
             ],
             "date": "2020-04-05",
             "image": "resources/images/kwGraph.png",
+            "width": 1656,
+            "height": 775,
             "tags": ["python", "youtube", "machinelearning", "tutorial"]
         },
         {

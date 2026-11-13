@@ -31,7 +31,6 @@
                 
                 createFilterChips();
                 renderFeedPosts();
-                hideLoading();
                 
                 // Update stats in sidebar
                 updateStatsIfNeeded();
@@ -53,11 +52,6 @@
                 </div>
             `;
         }
-    }
-    
-    // Hide loading state
-    function hideLoading() {
-        // Loading will be replaced by rendered posts
     }
     
     // Show error state
@@ -252,9 +246,7 @@
         }
         
         feedContainer.innerHTML = filteredProjects.map(project => createPostHTML(project)).join('');
-        
-        // Add event listeners for interactions
-        addPostInteractions();
+
     }
     
     // Create HTML for a single post
@@ -268,10 +260,10 @@
         return `
             <article class="feed-post" data-project-id="${project.title}">
                 <header class="post-header">
-                    <img src="resources/images/vin.jpeg" 
-                         alt="Vibhav Nirmal" 
+                    <img src="resources/images/avatar.jpg"
+                         alt="Vibhav Nirmal"
                          class="post-avatar"
-                         loading="lazy">
+                         width="48" height="48">
                     <div class="post-user-info">
                         <h3 class="post-username">Vibhav Nirmal</h3>
                         <p class="post-handle">@vibhavnirmal</p>
@@ -305,6 +297,8 @@
         // Priority: 1. Local video/image, 2. Embed if no local media
         if (project.image) {
             const isVideo = project.image.endsWith('.mp4') || project.image.endsWith('.webm');
+            // width/height in data.json let the browser reserve space before media loads.
+            const size = project.width ? `width="${project.width}" height="${project.height}"` : '';
             
             if (isVideo) {
                 // Poster is a .jpg with the same name next to the video. `loop` posts replace old GIFs.
@@ -316,6 +310,7 @@
                                ${playback}
                                muted
                                poster="${poster}"
+                               ${size}
                                aria-label="Project demonstration video">
                             <source src="${project.image}" type="video/mp4">
                             Your browser does not support the video tag.
@@ -328,6 +323,7 @@
                         <img class="post-image" 
                              src="${project.image}" 
                              alt="${project.title} preview"
+                             ${size}
                              loading="lazy">
                     </div>
                 `;
@@ -409,19 +405,12 @@
         return linkTexts[platform] || 'Learn More';
     }
     
-    // Get platform icon using Font Awesome classes
+    // Platform icon from the SVG sprite in index.html
     function getPlatformIcon(platform) {
-        const icons = {
-            'GitHub': '<i class="fab fa-github" aria-hidden="true"></i>',
-            'LinkedIn': '<i class="fab fa-linkedin" aria-hidden="true"></i>',
-            'Medium': '<i class="fab fa-medium" aria-hidden="true"></i>',
-            'YouTube': '<i class="fab fa-youtube" aria-hidden="true"></i>',
-            'External Link': '<i class="fas fa-external-link-alt" aria-hidden="true"></i>'
-        };
-        
-        return icons[platform] || '<i class="fas fa-link" aria-hidden="true"></i>';
+        const ids = { 'GitHub': 'github', 'LinkedIn': 'linkedin', 'Medium': 'medium', 'YouTube': 'youtube', 'External Link': 'external' };
+        return `<svg class="icon" aria-hidden="true"><use href="#i-${ids[platform] || 'link'}"/></svg>`;
     }
-    
+
     // Format date for display
     function formatDate(dateString) {
         const date = new Date(dateString);
@@ -455,63 +444,6 @@
         }
         
         return 'now';
-    }
-    
-    // Add post interactions
-    function addPostInteractions() {
-        // No like functionality needed anymore
-    }
-    
-    // Share post functionality
-    window.sharePost = function(postId) {
-        const project = projectsData.find(p => p.title === postId);
-        if (!project) return;
-        
-        const shareData = {
-            title: project.title,
-            text: project.description,
-            url: window.location.href
-        };
-        
-        if (navigator.share) {
-            navigator.share(shareData).catch(console.error);
-        } else {
-            // Fallback: copy to clipboard
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                showToast('Link copied to clipboard!');
-            }).catch(() => {
-                showToast('Unable to copy link');
-            });
-        }
-    };
-    
-    // Show toast message
-    function showToast(message) {
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.textContent = message;
-        toast.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #333333;
-            color: #ffffff;
-            padding: 12px 24px;
-            z-index: 1000;
-            font-size: 14px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        `;
-        
-        document.body.appendChild(toast);
-        
-        setTimeout(() => toast.style.opacity = '1', 10);
-        setTimeout(() => {
-            toast.style.opacity = '0';
-            setTimeout(() => document.body.removeChild(toast), 300);
-        }, 2000);
     }
     
     // Enhanced filter search functionality

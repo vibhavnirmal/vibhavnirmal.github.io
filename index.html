@@ -25,7 +25,6 @@
     <!-- Preconnect to external domains for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <title>Vibhav Nirmal | Computer Vision & Robotics Engineer</title>
 
@@ -45,17 +44,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- FontAwesome for social icons - Load asynchronously -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Load CSS files -->
     <link rel="stylesheet" href="resources/css/unified-portfolio.css">
     <link rel="stylesheet" href="resources/css/feed-components.css">
 
     <!-- Preload critical resources -->
     <link rel="preload" href="resources/data.json" as="fetch" crossorigin>
-    <link rel="preload" href="social.html" as="fetch">
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -105,6 +99,19 @@
 </head>
 
 <body>
+    <!-- Icons: Font Awesome Free 6.4.0 by @fontawesome, https://fontawesome.com, CC BY 4.0 -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="i-bars" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></symbol>
+        <symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+        <symbol id="i-link" viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+        <symbol id="i-medium" viewBox="0 0 640 512"><path d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></symbol>
+        <symbol id="i-twitter" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></symbol>
+        <symbol id="i-external" viewBox="0 0 512 512"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></symbol>
+        <symbol id="i-xmark" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></symbol>
+        <symbol id="i-youtube" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></symbol>
+    </svg>
     <!-- Main Container -->
     <div class="main-container">
         
@@ -118,15 +125,39 @@
                 </div>
 
                 <!-- About Content -->
-                <div id="about-content" class="about-content">
-                    <!-- Content will be loaded here -->
+                <div class="about-content">
+                    <p class="about-paragraph">Robotics & AI Engineer with expertise in computer vision, autonomous systems, and neural networks.</p>
+                    <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Nvidia Jetson, Raspberry Pi).</p>
                 </div>
             </div>
             <div class="contact-section">
                 <h3 class="section-title">Get In Touch</h3>
                 <div class="contact-links">
-                    <div id="social-links">
-                        <!-- Additional social links will be loaded here -->
+                    <div class="social-links-grid">
+                        <a href="https://linkedin.com/in/vibhavnirmal" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/vibhavnirmal" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://medium.com/@vibhavnirmal" class="social-link medium" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                            <svg class="icon" aria-hidden="true"><use href="#i-medium"/></svg>
+                            <span class="social-label">Medium</span>
+                        </a>
+                        <a href="https://youtube.com/@vibhavnirmal" class="social-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg>
+                            <span class="social-label">YouTube</span>
+                        </a>
+                        <a href="https://instagram.com/vibhav_nirmal" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                            <span class="social-label">Instagram</span>
+                        </a>
+                        <a href="https://twitter.com/vibhavnirmal" class="social-link twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg class="icon" aria-hidden="true"><use href="#i-twitter"/></svg>
+                            <span class="social-label">Twitter</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -188,7 +219,7 @@
 
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <i class="fas fa-bars" id="menu-icon"></i>
+            <svg class="icon" aria-hidden="true"><use id="menu-icon" href="#i-bars"/></svg>
         </button>
 
         <!-- Combined Mobile Sidebar -->
@@ -217,8 +248,31 @@
             <div class="contact-section">
                 <h3 class="section-title">Get In Touch</h3>
                 <div class="contact-links">
-                    <div id="mobile-social-links">
-                        <!-- Social links will be loaded here -->
+                    <div class="social-links-grid">
+                        <a href="https://linkedin.com/in/vibhavnirmal" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/vibhavnirmal" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://medium.com/@vibhavnirmal" class="social-link medium" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                            <svg class="icon" aria-hidden="true"><use href="#i-medium"/></svg>
+                            <span class="social-label">Medium</span>
+                        </a>
+                        <a href="https://youtube.com/@vibhavnirmal" class="social-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg>
+                            <span class="social-label">YouTube</span>
+                        </a>
+                        <a href="https://instagram.com/vibhav_nirmal" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                            <span class="social-label">Instagram</span>
+                        </a>
+                        <a href="https://twitter.com/vibhavnirmal" class="social-link twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg class="icon" aria-hidden="true"><use href="#i-twitter"/></svg>
+                            <span class="social-label">Twitter</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -226,315 +280,69 @@
     </div>
 
     <script>
-        // Enhanced initialization for unified portfolio
         (function () {
             'use strict';
-            
-            // DOM Content Loaded handler with performance optimizations
-            document.addEventListener('DOMContentLoaded', function () {
-                // Register service worker for offline support
-                if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('/sw.js')
-                        .then(registration => {
-                            console.log('SW registered:', registration);
-                        })
-                        .catch(error => {
-                            console.log('SW registration failed:', error);
-                        });
-                }
 
-                // Initialize components efficiently
-                const initPromises = [
-                    initializeAboutContent(),
-                    initializeSocialLinks(),
-                    initializeStats(),
-                    initializeMobileMenu()
-                ];
-
-                // Wait for critical components to load
-                Promise.allSettled(initPromises).then(() => {
-                    console.log('Portfolio initialized');
-                    
-                    // Optional: Add performance metrics
-                    if ('performance' in window && 'measure' in performance) {
-                        performance.mark('portfolio-loaded');
-                    }
-                });
-            });
-
-            // Initialize about content from JSON
-            function initializeAboutContent() {
-                // Use concise, direct content instead of loading from JSON
-                const contentDiv = document.getElementById('about-content');
-                if (contentDiv) {
-                    contentDiv.innerHTML = `
-                        <p class="about-paragraph">Robotics & AI Engineer with expertise in computer vision, autonomous systems, and neural networks.</p>
-                        <p class="about-paragraph">Experience with PyTorch, SLAM, sensor fusion, and embedded systems (Nvidia Jetson, Raspberry Pi).</p>
-                    `;
-                }
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
             }
 
-            // Initialize social links with caching and better error handling
-            function initializeSocialLinks() {
-                // Check if already cached
-                if (window.socialLinksCache) {
-                    populateSocialLinks(window.socialLinksCache);
-                    return;
-                }
+            // social-feed.js fetches data.json and fires this event; no second fetch here.
+            window.addEventListener('projectsLoaded', function (e) {
+                const projects = e.detail.projects;
+                const tags = new Set(projects.flatMap(p => p.tags || []));
+                animateNumber(document.getElementById('projects-count'), projects.length);
+                animateNumber(document.getElementById('technologies-count'), tags.size);
+            }, { once: true });
 
-                fetch('social.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                        return response.text();
-                    })
-                    .then(html => {
-                        window.socialLinksCache = html; // Cache for future use
-                        populateSocialLinks(html);
-                    })
-                    .catch(error => {
-                        console.error('Error loading social links:', error);
-                        loadFallbackSocialLinks();
-                    });
-            }
-
-            // Populate social links containers
-            function populateSocialLinks(html) {
-                const socialContainer = document.getElementById('social-links');
-                const mobileSocialContainer = document.getElementById('mobile-social-links');
-                
-                if (socialContainer) socialContainer.innerHTML = html;
-                if (mobileSocialContainer) mobileSocialContainer.innerHTML = html;
-            }
-
-            // Fallback social links with improved structure
-            function loadFallbackSocialLinks() {
-                const fallbackHTML = `
-                    <div class="social-links-grid">
-                        <a href="https://linkedin.com/in/vibhavnirmal" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                            <span class="social-label">LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/vibhavnirmal" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                            <span class="social-label">GitHub</span>
-                        </a>
-                        <a href="https://medium.com/@vibhavnirmal" class="social-link medium" target="_blank" rel="noopener noreferrer" aria-label="Medium Blog">
-                            <i class="fab fa-medium" aria-hidden="true"></i>
-                            <span class="social-label">Medium</span>
-                        </a>
-                        <a href="https://youtube.com/@vibhavnirmal" class="social-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
-                            <span class="social-label">YouTube</span>
-                        </a>
-                    </div>
-                `;
-                
-                populateSocialLinks(fallbackHTML);
-            }
-
-            // Initialize stats and dynamic content
-            function initializeStats() {
-                // Use requestAnimationFrame for better performance
-                requestAnimationFrame(() => {
-                    updateStats();
-                });
-            }
-
-            // Update statistics with better error handling
-            function updateStats() {
-                // Use cached data if available
-                if (window.projectsCache) {
-                    updateStatsFromData(window.projectsCache);
-                    return;
-                }
-
-                fetch('resources/data.json')
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                        return response.json();
-                    })
-                    .then(data => {
-                        window.projectsCache = data; // Cache for future use
-                        updateStatsFromData(data);
-                    })
-                    .catch(error => {
-                        console.error('Error loading stats:', error);
-                        // Fallback values
-                        updateStatsWithFallback();
-                    });
-            }
-
-            // Extract stats update logic
-            function updateStatsFromData(data) {
-                const projects = data.projects || [];
-                
-                // Update project count
-                const projectsCount = document.getElementById('projects-count');
-                const mobileProjectsCount = document.getElementById('mobile-projects-count');
-                if (projectsCount) animateNumber(projectsCount, projects.length);
-                if (mobileProjectsCount) animateNumber(mobileProjectsCount, projects.length);
-
-                // Count unique technologies efficiently
-                const allTags = new Set();
-                projects.forEach(project => {
-                    if (project.tags) {
-                        project.tags.forEach(tag => allTags.add(tag));
-                    }
-                });
-                
-                const techCount = document.getElementById('technologies-count');
-                const mobileTechCount = document.getElementById('mobile-technologies-count');
-                if (techCount) animateNumber(techCount, allTags.size);
-                if (mobileTechCount) animateNumber(mobileTechCount, allTags.size);
-            }
-
-            // Fallback stats update
-            function updateStatsWithFallback() {
-                const projectsCount = document.getElementById('projects-count');
-                const mobileProjectsCount = document.getElementById('mobile-projects-count');
-                const techCount = document.getElementById('technologies-count');
-                const mobileTechCount = document.getElementById('mobile-technologies-count');
-                
-                if (projectsCount) projectsCount.textContent = '25+';
-                if (mobileProjectsCount) mobileProjectsCount.textContent = '25+';
-                if (techCount) techCount.textContent = '15+';
-                if (mobileTechCount) mobileTechCount.textContent = '15+';
-            }
-
-            // Optimized number animation with requestAnimationFrame
             function animateNumber(element, target) {
-                const startTime = performance.now();
-                const duration = 1000; // 1 second
-                let startValue = 0;
-                
-                function updateNumber(currentTime) {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    
-                    // Easing function for smooth animation
-                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                    const current = Math.floor(startValue + (target - startValue) * easeOutQuart);
-                    
-                    element.textContent = current;
-                    
-                    if (progress < 1) {
-                        requestAnimationFrame(updateNumber);
-                    } else {
-                        element.textContent = target; // Ensure final value is exact
-                    }
+                const start = performance.now();
+                function step(now) {
+                    const progress = Math.min((now - start) / 1000, 1);
+                    element.textContent = Math.floor(target * (1 - Math.pow(1 - progress, 4)));
+                    if (progress < 1) requestAnimationFrame(step);
                 }
-                
-                requestAnimationFrame(updateNumber);
+                requestAnimationFrame(step);
             }
 
-            // Initialize mobile menu with optimized event handling
-            function initializeMobileMenu() {
-                const mobileToggle = document.getElementById('mobile-menu-toggle');
-                const mobileSidebar = document.getElementById('mobile-sidebar');
-                const menuIcon = document.getElementById('menu-icon');
-                const body = document.body;
-                
-                if (!mobileToggle || !mobileSidebar || !menuIcon) return;
+            // Mobile menu
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const sidebar = document.getElementById('mobile-sidebar');
+            const menuIcon = document.getElementById('menu-icon');
+            const body = document.body;
 
-                // Debounced click handler for better performance
-                let clickTimeout;
-                mobileToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    clearTimeout(clickTimeout);
-                    clickTimeout = setTimeout(() => {
-                        toggleMobileMenu();
-                    }, 50);
-                });
-                
-                // Optimized outside click handler with passive listeners
-                document.addEventListener('click', function(e) {
-                    if (body.classList.contains('mobile-menu-open') && 
-                        !mobileSidebar.contains(e.target) && 
-                        !mobileToggle.contains(e.target)) {
-                        closeMobileMenu();
-                    }
-                }, { passive: true });
-                
-                // Optimized escape key handler
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
-                        closeMobileMenu();
-                        mobileToggle.focus(); // Return focus for accessibility
-                    }
-                }, { passive: true });
-                
-                // Initialize aria attributes
-                mobileToggle.setAttribute('aria-expanded', 'false');
-                mobileToggle.setAttribute('aria-label', 'Open mobile menu');
-
-                // Toggle function
-                function toggleMobileMenu() {
-                    const isOpen = body.classList.contains('mobile-menu-open');
-                    if (isOpen) {
-                        closeMobileMenu();
-                    } else {
-                        openMobileMenu();
-                    }
-                }
-
-                // Open menu function
-                function openMobileMenu() {
-                    body.classList.add('mobile-menu-open');
-                    mobileSidebar.classList.add('open');
-                    mobileToggle.classList.add('active');
-                    menuIcon.className = 'fas fa-times';
-                    mobileToggle.setAttribute('aria-expanded', 'true');
-                    mobileToggle.setAttribute('aria-label', 'Close mobile menu');
-                    
-                    // Trap focus in mobile menu for accessibility
-                    trapFocus(mobileSidebar);
-                }
-
-                // Close menu function
-                function closeMobileMenu() {
-                    body.classList.remove('mobile-menu-open');
-                    mobileSidebar.classList.remove('open');
-                    mobileToggle.classList.remove('active');
-                    menuIcon.className = 'fas fa-bars';
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    mobileToggle.setAttribute('aria-label', 'Open mobile menu');
-                    
-                    // Remove focus trap
-                    removeFocusTrap();
-                }
-
-                // Focus trap for accessibility
-                function trapFocus(element) {
-                    const focusableElements = element.querySelectorAll(
-                        'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
-                    );
-                    const firstElement = focusableElements[0];
-                    const lastElement = focusableElements[focusableElements.length - 1];
-
-                    element.addEventListener('keydown', function(e) {
-                        if (e.key === 'Tab') {
-                            if (e.shiftKey) {
-                                if (document.activeElement === firstElement) {
-                                    lastElement.focus();
-                                    e.preventDefault();
-                                }
-                            } else {
-                                if (document.activeElement === lastElement) {
-                                    firstElement.focus();
-                                    e.preventDefault();
-                                }
-                            }
-                        }
-                    });
-                }
-
-                function removeFocusTrap() {
-                    // Focus trap will be removed when menu closes
-                }
+            function setMenu(open) {
+                body.classList.toggle('mobile-menu-open', open);
+                sidebar.classList.toggle('open', open);
+                toggle.classList.toggle('active', open);
+                menuIcon.setAttribute('href', open ? '#i-xmark' : '#i-bars');
+                toggle.setAttribute('aria-expanded', open);
+                toggle.setAttribute('aria-label', open ? 'Close mobile menu' : 'Open mobile menu');
+                if (open) sidebar.querySelector('a[href]')?.focus();
             }
+            setMenu(false);
 
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                setMenu(!body.classList.contains('mobile-menu-open'));
+            });
+            document.addEventListener('click', function (e) {
+                if (body.classList.contains('mobile-menu-open') && !sidebar.contains(e.target)) setMenu(false);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
+                    setMenu(false);
+                    toggle.focus();
+                }
+            });
+            // Keep Tab focus inside the open menu
+            sidebar.addEventListener('keydown', function (e) {
+                if (e.key !== 'Tab') return;
+                const items = sidebar.querySelectorAll('a[href], button');
+                const first = items[0], last = items[items.length - 1];
+                if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+                else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+            });
         })();
     </script>
 

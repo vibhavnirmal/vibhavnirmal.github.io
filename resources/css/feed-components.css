@@ -274,13 +274,13 @@
     box-shadow: 0 4px 12px rgba(0, 122, 204, 0.25);
 }
 
-.external-links-container .external-link i {
+.external-links-container .external-link .icon {
     font-size: 13px;
     transition: transform 0.2s ease;
     flex-shrink: 0;
 }
 
-.external-links-container .external-link:hover i {
+.external-links-container .external-link:hover .icon {
     transform: scale(1.1);
 }
 
@@ -745,7 +745,7 @@
     border-color: #333333;
 }
 
-.social-link i {
+.social-link .icon {
     font-size: 18px;
     width: 20px;
     text-align: center;
@@ -754,7 +754,7 @@
     transition: transform 0.3s ease;
 }
 
-.social-link:hover i {
+.social-link:hover .icon {
     transform: scale(1.1);
 }
 
@@ -789,7 +789,7 @@
         gap: 12px;
     }
     
-    .social-link i {
+    .social-link .icon {
         font-size: 16px;
         width: 18px;
     }
@@ -820,7 +820,7 @@
         background: #f5f5f5;
     }
     
-    .social-link:hover i {
+    .social-link:hover .icon {
         transform: none;
     }
 }
@@ -836,4 +836,14 @@
     .feed-post {
         break-inside: avoid;
     }
+}
+
+/* Inline SVG icons (sprite in index.html) */
+.icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
 }
