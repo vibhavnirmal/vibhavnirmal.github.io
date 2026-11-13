@@ -132,11 +132,12 @@ border-right: 1px solid #5f5f5f;
 }
 
 .feed-title {
-    font-size: 32px;
+    display: none; /* shown in the mobile header, where the profile sidebar is hidden */
+    font-size: 18px;
     font-weight: 700;
     color: #333333;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
 }
 
 .feed-subtitle {
@@ -506,6 +507,11 @@ border-right: 1px solid #5f5f5f;
     
     .mobile-menu-toggle {
         display: flex;
+        top: 10px;
+        right: 12px;
+        width: 44px;
+        height: 44px;
+        box-shadow: none;
     }
     
     /* Combined Mobile Sidebar */
@@ -551,11 +557,16 @@ border-right: 1px solid #5f5f5f;
     .center-content {
         margin: 0;
         padding: 0;
-        padding-top: 80px; /* Space for mobile header */
+        padding-top: 64px; /* Space for mobile header */
     }
     
     .feed-header {
-        padding: 20px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 64px;
+        padding: 0 72px 0 16px; /* right gap clears the menu button */
+        text-align: left;
         margin: 0;
         position: fixed;
         top: 0;
@@ -566,35 +577,18 @@ border-right: 1px solid #5f5f5f;
         backdrop-filter: blur(8px);
         border-bottom: 1px solid #e5e5e5;
     }
+
+    .feed-title {
+        display: block;
+    }
+
+    .feed-subtitle {
+        font-size: 13px;
+        color: #666666;
+    }
 }
 
 @media (max-width: 768px) {
-    .center-content {
-        padding-top: 70px; /* Reduced for smaller screens */
-    }
-    
-    .feed-header {
-        padding: 16px;
-        border-bottom: 1px solid #e5e5e5;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-    }
-    
-    .feed-title {
-        font-size: 22px;
-        margin-bottom: 4px;
-        letter-spacing: -0.3px;
-    }
-    
-    .feed-subtitle {
-        font-size: 13px;
-        color: #777;
-    }
     
     .feed-post {
         margin-bottom: 12px;
@@ -825,20 +819,6 @@ border-right: 1px solid #5f5f5f;
     .main-container {
         padding: 0;
         gap: 0;
-    }
-    
-    .center-content {
-        padding-top: 65px; /* Reduced for very small screens */
-    }
-    
-    .feed-header {
-        padding: 12px 14px;
-    }
-    
-    .feed-title {
-        font-size: 18px;
-        letter-spacing: -0.3px;
-        margin-bottom: 2px;
     }
     
     .feed-subtitle {

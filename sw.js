@@ -1,5 +1,5 @@
 // Service Worker for Vibhav Nirmal Portfolio
-const CACHE_NAME = 'vibhav-portfolio-v2';
+const CACHE_NAME = 'vibhav-portfolio-v3';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
