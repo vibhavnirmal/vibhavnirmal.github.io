@@ -82,8 +82,7 @@
         
         const sortedTags = ['all', ...Array.from(allTags).sort()];
         
-        // Initialize search functionality
-        initializeSearch();
+        initializeFilterPanel();
         
         // Count projects for each tag
         const tagCounts = {};
@@ -112,28 +111,8 @@
         updateFilterResultsInfo();
     }
     
-    // Initialize search functionality
-    function initializeSearch() {
-        const searchInput = document.getElementById('project-search-input');
-        const clearButton = document.getElementById('filter-clear-btn');
-        
-        if (searchInput && !searchInput.hasAttribute('data-initialized')) {
-            // Add debounced search functionality
-            let searchTimeout;
-            searchInput.addEventListener('input', (event) => {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => {
-                    handleFilterSearch(event);
-                }, 300); // 300ms debounce
-            });
-            searchInput.setAttribute('data-initialized', 'true');
-        }
-        
-        if (clearButton && !clearButton.hasAttribute('data-initialized')) {
-            clearButton.addEventListener('click', clearFilterSearch);
-            clearButton.setAttribute('data-initialized', 'true');
-        }
-
+    // Wire up filter popover
+    function initializeFilterPanel() {
         const toggleBtn = document.getElementById('filter-toggle-btn');
         if (toggleBtn && !toggleBtn.hasAttribute('data-initialized')) {
             toggleBtn.addEventListener('click', () => setFilterPanel(toggleBtn.getAttribute('aria-expanded') !== 'true'));
@@ -188,17 +167,6 @@
     // Filter projects with enhanced UI support
     window.filterProjects = function(tag) {
         currentFilter = tag;
-        
-        // Clear search input when changing filters
-        const searchInput = document.getElementById('project-search-input');
-        if (searchInput) {
-            searchInput.value = '';
-            // Hide clear button
-            const clearButton = document.getElementById('filter-clear-btn');
-            if (clearButton) {
-                clearButton.style.opacity = '0';
-            }
-        }
         
         if (tag === 'all') {
             filteredProjects = [...projectsData];
@@ -446,89 +414,24 @@
         return 'now';
     }
     
-    // Enhanced filter search functionality
-    function handleFilterSearch(event) {
-        const searchTerm = event.target.value.toLowerCase();
-        
-        // Apply both search and filter criteria
-        if (searchTerm === '') {
-            // If no search term, just apply current filter
-            if (currentFilter === 'all') {
-                filteredProjects = [...projectsData];
-            } else {
-                filteredProjects = projectsData.filter(project => 
-                    project.tags && project.tags.includes(currentFilter)
-                );
-            }
-        } else {
-            // Apply both search and filter
-            filteredProjects = projectsData.filter(project => {
-                const matchesSearch = 
-                    project.title.toLowerCase().includes(searchTerm) ||
-                    project.description.toLowerCase().includes(searchTerm) ||
-                    (project.tags && project.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
-                
-                const matchesFilter = currentFilter === 'all' || 
-                    (project.tags && project.tags.includes(currentFilter));
-                
-                return matchesSearch && matchesFilter;
-            });
-        }
-        
-        // Sort by date (newest first)
-        filteredProjects.sort((a, b) => new Date(b.date) - new Date(a.date));
-        
-        renderFeedPosts();
-        updateFilterResultsInfo(filteredProjects.length, searchTerm);
-        
-        // Show/hide clear button based on input
-        const clearButton = document.getElementById('filter-clear-btn');
-        if (clearButton) {
-            clearButton.style.opacity = searchTerm ? '1' : '0';
-        }
-    }
-    
-    // Clear search input
-    function clearFilterSearch() {
-        const searchInput = document.getElementById('project-search-input');
-        if (searchInput) {
-            searchInput.value = '';
-            // Trigger search to reset results
-            handleFilterSearch({ target: searchInput });
-        }
-    }
-    
     // Update filter results information
-    function updateFilterResultsInfo(customCount = null, searchTerm = '') {
+    function updateFilterResultsInfo() {
         const existingInfo = document.querySelector('.filter-results-info');
         if (existingInfo) {
             existingInfo.remove();
         }
         
-        const count = customCount !== null ? customCount : filteredProjects.length;
-        const total = projectsData.length;
+        const count = filteredProjects.length;
         
-        let message = '';
-        if (searchTerm) {
-            message = `${count} found: "${searchTerm}"`;
-            if (currentFilter !== 'all') {
-                message = `${count} in ${formatTagName(currentFilter)}: "${searchTerm}"`;
-            }
+        let message = `${count} projects`;
+        if (count === 0) {
+            message = `No projects in ${formatTagName(currentFilter)}`;
         } else if (currentFilter !== 'all') {
             message = `${count} in ${formatTagName(currentFilter)}`;
-        } else {
-            message = `${count} projects`;
         }
         
-        if (count === 0) {
-            message = searchTerm ? 
-                `No matches: "${searchTerm}"` : 
-                `No projects in ${formatTagName(currentFilter)}`;
-        }
-        
-        // Show floating chip for any filter/search activity or when count is 0
-        if (searchTerm || currentFilter !== 'all' || count === 0) {
-            // Built with textContent: the search term is user input and must not be parsed as HTML.
+        // Show floating chip for any active filter or when count is 0
+        if (currentFilter !== 'all' || count === 0) {
             const info = document.createElement('div');
             info.className = 'filter-results-info';
             const text = document.createElement('span');
@@ -541,8 +444,8 @@
             info.addEventListener('click', () => info.remove());
             document.body.appendChild(info);
             
-            // Auto-hide after 3 seconds if no search term
-            if (!searchTerm && count > 0) {
+            // Auto-hide after 3 seconds
+            if (count > 0) {
                 setTimeout(() => {
                     info.style.opacity = '0';
                     info.style.transform = 'translateY(20px)';

@@ -25,4 +25,4 @@
 
 ---
 
-*Built with ❤️ by Vibhav Nirmal | Last Updated: August 2025*
+*Built with ❤️ by Vibhav Nirmal | Last Updated: November 2026*
