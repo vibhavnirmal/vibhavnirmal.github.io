@@ -13,7 +13,7 @@
 ## 📞 Contact
 
 - **Website**: [vibhavnirmal.github.io](https://vibhavnirmal.github.io)
-- **LinkedIn**: [linkedin.com/in/vibhav-nirmal](https://linkedin.com/in/vibhav-nirmal)
+- **LinkedIn**: [linkedin.com/in/vibhavnirmal](https://linkedin.com/in/vibhavnirmal)
 - **GitHub**: [github.com/vibhavnirmal](https://github.com/vibhavnirmal)
 - **Email**: Contact through website or LinkedIn
 
